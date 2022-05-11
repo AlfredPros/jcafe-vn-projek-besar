@@ -73,7 +73,7 @@ label branch2:
         "Jelajahi hutan.":
             r "Semoga ada sesuatu yang berguna di sana."
             r "(Tempat ini kenapa berkabut sekali...)"
-            r "(!!!)"
+            r "(!!!)" with vpunch
             "Aku melihat sesuatu yang berkilauan. Benda apa itu?"
             #show item pisau belati berwarna ungu
             r "Wow, ini pisau belati? Keren sekali."
@@ -122,3 +122,83 @@ label branch2:
     "Beruang tersebut meraung ke arah kami. Karena kakinya terkena jebakan, beruang tersebut terus mencoba untuk melepaskan kakinya menggunakan cakar tajamnya."
     j "sepertinya beruang itu sedang ingin melepaskan dirinya."
     j "Apa yang bisa kamu lakukan Remil?"
+
+    menu:
+        "Atur strategi.":
+            #show beruang ungu
+            r "Biar aku yang urus, kamu tarik perhatian beruang tersebut dengan panah kamu."
+            #Serious M Jeffrey
+            j "Baiklah, aku akan mencoba menarik perhatiannya dari atas pohon dengan panahku."
+            #Jeffrey out
+            "Beruang tersebut mulai menyerang mereka, Aku dan Jeffrey akan membalas serangan tersebut."
+            "Aku mulai menggores tubuh beruang tersebut bersamaan dengan serangan panah beracun dari jeffrey ke arah wajah beruang tersebut."
+            "Karena beruang tersebut dalam kondisi yang hampir dikalahkan, Aku melihat sedikit celah dan dengan penuh percaya diri aku menyerang mata si beruang dari sisi kiri."
+            "Namun tiba tiba serangan spontan dariku berhasil dipatahkan oleh beruang tersebut."
+            #beruang ungu out
+            #SFX: *Bruk!* (suara badan jatuh ke permukaan kasar)
+            r "AAKH!!"
+            r "(Serangannya cepat sekali!)"
+            #show beruang ungu
+            #*AAAAAA!!!*
+            "Beruang tersebut menggunakan cakarnya yang tajam dan berhasil melepaskan dirinya dari jebakan yang menancap pada kakinya."
+            #Angry M in Jeffrey
+            j "Tidak akan kubiarkan!!"
+            "Jeffrey melepaskan anak panah yang dibidiknya ke arah mata beruang dan berhasil membuat beruang kehilangan arah serangan."
+            #*AAAAAAA*
+            r "(!!!)" with vpunch
+            "Teriakan beruang itu membuat kesadaranku kembali."
+            j "Serang lehernya!"
+            #Jeffrey out
+            "Dengan cepat aku bergegas mengambil pisau yang terlempar dan menusukan pisau tersebut ke leher beruang."
+            #*AAAAaaaaa..*
+            #beruang ungu out
+            "Teriakan beruang tersendat. Seketika beruang tumbang serta kehilangan penglihatannya."
+
+            #BG hutan, night
+            "Aku dan Jeffrey akhirnya menarik nafas masing-masing sehabis pertarungan selesai. Kami pun melihat satu sama lain dengan nafas lega."
+            r "(Seketika aku merasa lebih aman dengan Jeffrey.)"
+            r "(Haruskah aku mempercayainya?)"
+            #Happy M in Jeffrey
+            j "Hey gerakan bagus yang kau lakukan tadi."
+            r "..Panahanmu juga hebat."
+            #Normal M Jeffrey
+            j "Hmm.. bagaimana jika malam ini kamu ikut ke tempatku?"
+            r "Ah, tidak usah. Aku tidak mau berjalan ke tempat lebih jauh."
+            #Normal manipulative M Jeffrey
+            j "Oh tidak, tempatku cukup dekat dari sini dan kamu bisa percaya denganku bahwa tidak ada orang disana. Lagipula aku juga tidak suka banyak orang."
+            r "Baiklah aku akan ikut denganmu."
+            #Laugh M Jeffrey
+            j "Bagus! Ada beberapa hasil buruanku juga di sana, jadi kita bisa. menghabiskannya malam ini. Tapi sebelum itu, izinkan aku untuk mengobati kepalamu dulu."
+            #Jeffrey out
+
+        "Serang beruang itu sendiri.":
+            r "Aku akan menyerangnya sendiri."
+            #Surprise M Jeffrey
+            j "Kamu yakin?"
+            j "REMIL AWAS!!"
+            #Jeffrey out
+            #SFX: *Bruk!* (suara badan jatuh ke permukaan kasar)
+            #show beruang ungu
+            "Beruang itu menghantamku dengan keras hingga membuatku terpental ke pohon. Aku bisa mendengar cakaran beruang itu yang sangat tajam hingga berhasil melepaskan dirinya dari jebakan itu."
+            #beruang ungu out
+            #Angry M in Jeffrey
+            j "Sial.."
+            #Jeffrey out
+
+            #Black screen
+            r "(Kepalaku sakit..)"
+            j "Shh.. Jangan membuka mata dan bergerak terlalu banyak dahulu. Kepalamu terbentur cukup parah."
+            r "Jeffrey..? Kenapa kau menyelamatkanku?"
+            j "Bila ada orang terluka dan tidak sadar, siapa yang tidak mau lompat menyelamatkan mereka?"
+            r "Kau benar...Terima kasih."
+            j "Hehe, sama-sama."
+            r "Oh iya bagaimana dengan beruang tadi?"
+            j "Ah sudah ku tangani. Ada beberapa hasil buruan aku di tenda ini, diantaranya ada daging segar. Kamu mau? Jika tidak, Aku ingin memakan semuanya malam ini."
+            r "Jika boleh, aku tidak akan menolak."
+            j "Nah selesai! Kamu boleh membuka matamu sekarang."
+
+    #CG Remil (dengan perban di kepalanya) duduk di samping perapian dengan Jeffrey. Di sekitar perapian banyak daging hasil buruan dan beberapa buah-buahan.
+    #*Kraus* *Kraus*
+    r "Jeffrey, aku ingin bertanya sesuatu."
+    
+    return
