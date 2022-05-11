@@ -84,6 +84,41 @@ label branch2:
             "Rauman dari serigala itu membuat tubuhku terguncang dan tanpa sengaja tangan kananku melepaskan pisau yang barusan aku pungut."
             r "Pisaunya!!"
             #*Roarrr*
+            "Serigala itu melompat ke arah pisau itu terjatuh. Seolah untuk mendapatkan pisau itu, aku harus melawannya."
+            r "Sial, aku tidak akan bisa melawannya sendiri. Aku harus pergi dari sini!"
+            #*Roarrr*
+
+            #BG Hutan, day with fade in 1s
+            r "Huft, nyaris saja. Padahal pisau belati itu keren sekali."
 
         "Kembali.":
-            "a"
+            r "Lupakan saja. Sepertinya aku belum cukup kuat untuk memasuki area itu."
+
+    r " Aku harus lebih gigih latihan bertarung."
+
+    #CHAPTER 1 END
+    #(Black Screen. With Dissolve 1sec)
+    #CHAPTER 2 UWOOOOOOOOOOOH
+
+    #BG Hutan, night with dissolve in 1s
+    r "(Sepertinya malam ini aku akan tidur di atas pohon. Semoga tidak ada ular atau hewan berbahaya lainnya.)"
+    "Aku pun memanjat pohon yang tertinggi."
+    #*AAAAAA!!*
+    r "(Suara teriakan siapa itu?!)"
+    "Aku melompat turun dari pohon, lalu bergegas mendekati sumber suara."
+    #SFX: “Drap Drap” (suara langkah kaki cepat)
+    #show beruang berwarna ungu
+    r "(Suara teriakan tadi.. Berasal dari beruang itu?!)"
+    "Beruang itu terus meraung kesakitan karena jebakan yang melukainya."
+    #beruang berwarna ungu out
+    #SFX: *Ctak* *Ctak* (suara panah)
+    "Sebuah anak panah pun meluncur dan menusuk bagian dadanya, suara teriakan dari beruang itu semakin keras hingga bergema."
+
+    #Sad M in Jeffrey
+    j "Hah.. sepertinya racun yang aku oles di ujung anak panah itu kurang kuat."
+    #Happy M Jeffrey
+    j "Oh, hai Remil, kita bertemu lagi!"
+    #*Roaarr*
+    "Beruang tersebut meraung ke arah kami. Karena kakinya terkena jebakan, beruang tersebut terus mencoba untuk melepaskan kakinya menggunakan cakar tajamnya."
+    j "sepertinya beruang itu sedang ingin melepaskan dirinya."
+    j "Apa yang bisa kamu lakukan Remil?"
