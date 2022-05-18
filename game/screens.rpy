@@ -104,17 +104,34 @@ screen say(who, what):
 
         if who is not None:
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+            #tambahin namebox
+            add "gui/nameboxpanjang.png":
+                zoom 0.5
+                xpos 60
+                ypos -110
+
+            #window:
+                #id "namebox"
+                #style "namebox"
+            text who id "who":
+                
+                text_align 0.5
+                size 30
+                xpos 245
+                ypos -65
+                color "#FFFFFF"
 
 
         if "(" and ")" in what :
             text what id "what":
+                xpos 120
                 color "#808080"
+                size 30
         else:
-            text what id "what"
+            text what id "what":
+                size 30
+                color "#FFFFFF"
+                xpos 120
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -145,13 +162,14 @@ style window:
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos gui.name_xpos
+    xpos 68
     xanchor gui.name_xalign
-    xsize gui.namebox_width
+    xsize 385
     ypos gui.name_ypos
-    ysize gui.namebox_height
-
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    ysize 80
+    #tambah sendiri--------------------------
+    background Frame("gui/nameboxpanjang.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    #----------------------------------------
     padding gui.namebox_borders.padding
 
 style say_label:
