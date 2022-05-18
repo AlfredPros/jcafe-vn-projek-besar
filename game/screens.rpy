@@ -75,7 +75,8 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
-
+#style ukuran_main:
+    #text_size 40
 
 ################################################################################
 ## In-game screens
@@ -365,19 +366,50 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    #frame:
+        #style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    #use navigation
+
+    #VBOX tambahan sendiri
+    text "LOGO":
+        xalign 0.050 yalign 0.1
+        size 148
+    vbox:
+        spacing 10
+        xalign 0.05 yalign 0.85
+
+        textbutton _("New Game"):
+            text_size 50
+            action Start()
+
+        textbutton _("Load Game"):
+            text_size 50
+            action ShowMenu("load")
+
+
+        textbutton _("Preferences"):
+            text_size 50
+            action ShowMenu("preferences")
+
+        textbutton _("Gallery"):
+            text_size 50
+            #nanti ganti gallery
+            action ShowMenu("preferences")
+
+        textbutton _("Quit"):
+            text_size 50
+            action Quit(confirm=not main_menu)
+    #VBOX tambahan sendiri
 
     if gui.show_name:
 
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "Hou Tou Project":
                 style "main_menu_title"
 
             text "[config.version]":
