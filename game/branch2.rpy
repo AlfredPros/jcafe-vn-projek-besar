@@ -1,8 +1,6 @@
 
 label branch2:
     #WOOOOSH CHAPTER 1
-    r "..."
-    r "(Aku tidak bisa mengikuti perintah dia.)"
 
     #BG Perkemahan Alios, night with fade 1s
     #Sad M in  Elena

@@ -14,6 +14,6 @@ define jne = Character("Jeffrey & Elena")
 
 label splashscreen:
 
-    e "ur gae."
+    "test"
 
     return

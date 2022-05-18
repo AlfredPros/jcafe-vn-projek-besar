@@ -5,6 +5,23 @@
 ## may want to uncomment them when appropriate.
 
 
+## Custom Settings #############################################################
+
+define config.default_music_volume = 0.667
+define config.default_sfx_volume = 0.667
+define config.default_voice_volume = 0.667
+
+default preferences.gl_powersave = False  # True if complex any minigame is involved
+
+## OpenGL
+#define config.gl2 = True  # Only if we use blur or camera
+
+define config.skip_sounds = True  # Don't play sound when skipping
+
+## Additional Goodies
+define config.enter_yesno_transition = Dissolve(.125)
+define config.exit_yesno_transition = Dissolve(.125)
+
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window
@@ -30,6 +47,7 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+                      JCafe VN Project! :D
 """)
 
 
@@ -79,17 +97,17 @@ define config.exit_transition = dissolve
 
 ## Between screens of the game menu.
 
-define config.intra_transition = dissolve
+define config.intra_transition = Dissolve(0.4)
 
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = None
+define config.after_load_transition = dissolve
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = None
+define config.end_game_transition = dissolve
 
 
 ## A variable to set the transition used when the game starts does not exist.
@@ -120,7 +138,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 75
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
