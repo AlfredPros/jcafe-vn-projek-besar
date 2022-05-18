@@ -200,5 +200,142 @@ label branch2:
     #CG Remil (dengan perban di kepalanya) duduk di samping perapian dengan Jeffrey. Di sekitar perapian banyak daging hasil buruan dan beberapa buah-buahan.
     #*Kraus* *Kraus*
     r "Jeffrey, aku ingin bertanya sesuatu."
-    
+    j "*Kraus* Hmm?"
+    r "Kamu kenapa membangun tenda disini? Bukannya kamu seharusnya bersama kelompok Alios?"
+    j "..."
+    r "Uhh.. Kamu tidak bisa menjawabnya ya..?"
+    j "Tidak, aku diam karena sedang mengunyah tadi. Kita memang sedang berpencar dan kebetulan saja aku bertemu denganmu."
+    r "Tapi aku sudah bukan bagian dari kelompok Alios lagi."
+    j "Soal itu aku tidak peduli. Lebih seru bertarung denganmu daripada si Alios itu."
+    j "Ini buah berinya tidak mau kamu makan?"
+    "Jeffrey mengambil beberapa buah beri dan hendak memakannya."
+    "Buah beri itu terlihat seperti buah beri beracun yang hampir aku makan tadi, aku pun menepis tangan Jeffrey hingga membuatnya menjatuhkan buah itu."
+    #BG hutan, night with dissolve in  0,5s
+    #Sad M in Jeffrey
+    #show tiga buah beri terjatuh di tanah (menjadi kotor)
+    j "Tidaakk, buah beriku!!"
+    #tiga buah beri terjatuh di tanah (menjadi kotor) out
+    r "Itu beracun."
+    #Surprise M Jeffrey
+    j "Dari mana kamu tahu kalau itu beracun?!"
+
+    menu:
+        "Katakan itu hanya instingmu saja.":
+            r "Itu hanya naluriku saja."
+            #Normal manipulative M Jeffrey
+            j "Oh begitu.."
+            #Laugh M Jeffrey
+            j "Huwah, tidak kebayang kalau di sini tidak ada kamu dan aku malah langsung memakan beri itu. Terima kasih banyak, ya!"
+            "Tanpa kusadari aku tersenyum."
+            r "Omong-omong, aku waktu itu menemukan gubuk tua dan aku ingin pergi kesana lagi besok pagi. Sekarang sudah larut, boleh aku tidur di sini?"
+            #Normal M Jeffrey
+            j "O-Oh iya, tentu saja. Selamat malam."
+            r "Malam..."
+            #Jeffrey out
+
+            #BG hutan, night with fade in 1s
+            #Sad M in Jeffrey
+            j "Huaa.. Aku tidak bisa tidur."
+            #show item buku catatan 1
+            #Serious M Jeffrey
+            j "Eh, buku siapa ini di sebelah Remil?"
+            j "..."
+            j "Dia mencatat semua ini?!"
+            j "..atau jika bukan, siapa yang menulis buku ini?"
+            j "Apa Remil tahu lebih banyak dariku?"
+            #item buku catatan 1 out
+            #Jeffrey out
+
+        "Beri tahu mengenai catatan itu.":
+            #show item buku catatan 1
+            r "Di buku ini tertulis bahwa buah yang kamu petik barusan beracun."
+            #Surprise M Jeffrey
+            j "Hah, buku apa itu?"
+            r "Aku menemukan buku ini di suatu gubuk yang tua, di isi buku ini ada beberapa informasi mengenai buah-buahan dan tanaman di sekitar hutan ini."
+            #item buku catatan 1 out
+            #Normal M Jeffrey
+            j "Hmm.."
+            j "Aneh ya?"
+            r "Eh?"
+            #Serious M Jeffrey
+            j "Tidak mungkin buku dengan tulisan tangan seperti ini ada dengan sendirinya kan? Pasti ada seseorang yang menulisnya."
+            #Happy M Jeffrey
+            j "Hey Remil, bisa kah kamu memperlihatkan kepadaku gubuk tua itu?"
+            r "(Dia bersemangat sekali..)"
+            r "Boleh, mungkin kita bisa kesana besok pagi. Kita harus berhati-hati karena ada monster yang cukup seram di sana."
+            #Normal M Jeffrey
+            j "Ah.. baiklah selamat malam."
+            r "Malam."
+            #Jeffrey out
+
+    #BG hutan, day with fade in 1s
+    #Happy M in Jeffrey
+    j "Remil, ayo bangun! Kamu bilang pagi ini akan menunjukan dimana gubuk tua itu kan?"
+    r "Hmngh? Oh… iya benar."
+    #Jeffrey out
+    "Kami pun bersiap dengan gear masing-masing untuk menelusuri hutan tersebut lagi."
+
+    #CHAPTER 2 END
+    #(Black Screen. With Dissolve 1sec)
+    #CHAPTER 3
+    #BG luar gubuk, day with dissolve in 1s
+    r "Hmm.. gubuknya tidak terlihat seperti yang kulihat sebelumnya.."
+    #Surprise M in Jeffrey
+    j "Maksudmu ini… gubuk yang salah?!"
+    r "Mungkin… aku lupa bentuknya."
+    j "Hahh?!"
+    r "Ayo kita coba masuk."
+    #Jeffrey out
+
+    #BG dalam gubuk, day with dissolve in 1s
+    #Happy M in Jeffrey
+    j "Wah, gubuk ini lebih nyaman dibanding tenda. Tunggu, apa itu?"
+    #show item buku catatan 2
+    r "(Berbeda dari buku yang aku temukan sebelumnya, di buku ini isinya mengenai monster-monster dan kelemahannya.)"
+    #item buku catatan 2 out
+    #Laugh M Jeffrey
+    j "Dengan buku ini kita akan semakin mudah untuk membasmi monster di sini. Benar kan? Ya kan?"
+    r "Benar."
+    r "..."
+    #Normal M Jeffrey
+    j "..."
+    #Normal manipulative M Jeffrey
+    j "Sekarang bagaimana kalau kita berpencar? Aku akan melihat-lihat luar dan kamu yang menyelidiki area dalam."
+    r "Sepertinya itu ide bagus."
+    #Jeffrey out
+    "Jeffrey pun keluar dari gubuk, kini aku sendiri yang berada dalam gubuk ini."
+    r "(Seperti ada sesuatu...)"
+    r "(!!!)" with vpunch
+    r "(Ini..)"
+    #show ukiran kasar di tembok kayu
+    r "(Apa maksud dari gambar ini?!)"
+    #ukiran kasar di tembok kayu out
+    r "(Ada tulisan di bawahnya, tetapi sebagian huruf dan katanya tercoret.)"
+    "S.. r... orang n.. g... u... dan ..n c... s.. g.. l."
+    r "(...Gimana cara membacanya?!)"
+    "Layar dan tali penghubung."
+    r "..."
+    r "(Maksudnya?)"
+    r "(Aku harus memberitahu Jeffrey tentang ukiran dan tulisan ini.)"
+
+    #SFX: “Drap Drap” (suara langkah kaki cepat)
+    #BG luar gubuk, day with dissolve in 1s
+    #Surprise L in Elena
+    #Normal manipulative R in Jeffrey
+    e "Itu Remil!"
+    r "Elena? Apa yang kamu lakukan disini?"
+    #Nervous L Elena
+    r "Anu, Remil.. Jeffrey.."
+    #Normal R Jeffrey
+    j "Hm?"
+    e "Izinkan aku bergabung dengan kalian!"
+    r "Eh?"
+    #Normal R Jeffrey
+    j "Elena maaf.."
+    #Normal manipulative R Jeffrey
+    j "Aku tidak mau terlibat lagi dengan kelompok Alios dan sepertinya Alios menganggapmu berguna."
+    j "Selain itu, aku dan Remil berpetualang bersama karena kita cocok, bagiku tidak pantas untuk disebut rombongan."
+    r "(Jeffrey..)"
+    #Surprise Elena & Jeffrey
+
     return
