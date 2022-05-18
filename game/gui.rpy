@@ -26,14 +26,14 @@ init python:
 define gui.accent_color = u'#0099ff'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#aaaaaa'
+define gui.idle_color = u'#EADCB8'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = u'#888888'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = u'#0099ff'
+define gui.hover_color = u'#E3BD5B'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -48,23 +48,24 @@ define gui.muted_color = u'#66c1ff'
 define gui.hover_muted_color = u'#99d6ff'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = u'#404040'
-define gui.interface_text_color = u'#404040'
+## warna text EADCB8
+define gui.text_color = u'#EADCB8'
+define gui.interface_text_color = u'#0099FF'
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "nanifont.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "nanifont.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "nanifont.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 22
+define gui.text_size = 24
 
 ## The size of character names.
 define gui.name_text_size = 30
@@ -104,8 +105,8 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 240
-define gui.name_ypos = 0
+define gui.name_xpos = 170
+define gui.name_ypos = -93
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -129,7 +130,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 268
-define gui.dialogue_ypos = 50
+define gui.dialogue_ypos = -10
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 744
