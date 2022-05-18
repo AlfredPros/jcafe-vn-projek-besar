@@ -10,9 +10,10 @@ define a = Character("Orang A")
 define b = Character("Orang B")
 define g = Character("Prof. Gordon")
 define k = Character("Prof. Kai")
+define jne = Character("Jeffrey & Elena")
 
 label splashscreen:
 
-    e "ur gae."
+    "test"
 
     return
