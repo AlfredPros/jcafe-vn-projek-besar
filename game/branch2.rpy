@@ -398,4 +398,170 @@ label branch2:
     jne "Ayo."
     #Jeffrey & Elena out
 
+    #BG gua 1 with dissolve
+    #Normal M in Jeffrey
+    j "Tidak ada apa-apa, ayo kita telusuri lebih dalam."
+    #SFX: “Drap Drap Drap” (suara langkah kaki berjalan)
+    #Jeffrey move to L
+    #Sad L Jeffrey
+    j "Kepalaku kok tiba-tiba pusing ya.."
+    #Nervous R in Elena
+    e "Aku juga.."
+    r "(Aneh.. Penglihatanku juga tiba-tiba kabur.)"
+    #Jeffrey out with fade
+    "*Bruk*"
+    #Surprise L Elena
+    e "Jeffrey!!"
+    "*Bruk*"
+    #Elena out with fade
+
+    #CHAPTER 3 END
+    #black screen in 2s
+    #CHAPTER 4
+    #Scene di rumah Kai, day with dissolve in 1s
+    r "Ugh.."
+    #Normal M in Kai
+    n "Kamu sudah sadar?"
+    r "...Kamu siapa?"
+    n "Aku penghuni rumah yang berada di desa kosong ini."
+    r "Desa?"
+    r "Di mana teman-temanku?"
+    k "Teman-temanmu?"
+    r "Iya, seingat aku terakhir kali kita berada di gua."
+    r "Tetapi entah apa yang terjadi, kami sama-sama merasa pusing dan mungkin kami semua pingsan di dalam gua itu."
+    #Serious M Kai
+    n "Gua? hmm.."
+    n "Aku menemukanmu pingsan di hutan tidak jauh dari desa ini."
+    n "-dan kamu sendirian."
+    r " (Apa?!)"
+    n "..."
+    #Normal M Kai
+    n "Mungkin kamu bisa berkeliling sekitar desa untuk menenangkan pikiranmu."
+    r "Baiklah.."
+    r "Ah iya, sebelum itu terima kasih karena telah menolongku. Boleh tahu namamu siapa?"
+    #Happy M Kai
+    k "Kai."
+    #Kai out
+
+    #BG desa Kai, day with dissolve in 1s (disini memakai versi yang tidak hancur)
+    r "(Apa yang barusan terjadi..)"
+    r "(Aku bahkan tidak tahu di mana arah menuju tempat ini.)"
+    "Aku merogoh-rogoh saku dan tas kecilku."
+    #show item pisau belati berwarna hijau in 1s
+    #item pisau belati berwarna hijau out
+    #show item buku catatan 1 in 1s
+    #item buku catatan 1 out
+    r "Syukurlah dua barang itu masih ada."
+    #Normal M in Kai
+    k "Permisi."
+    k "Siapa namamu?"
+    r "Eh, namaku Remil."
+    k "Kamu mau mencari teman-temanmu kan? Ini."
+    #show item peta
+    #Serious M Kai
+    k "Agar kamu tidak nyasar. Tempat ini adalah tempat teraman, kamu bisa beristirahat disana. Saya rasa kamu adalah orang baik."
+    #item peta out
+    "Peta ini.. Tulisan tangannya terasa mirip"
+    #show item buku catatan 1
+    r "Tunggu, kamu yang menulis buku ini?"
+    #Surprise M Kai
+    k "(!!!)" with vpunch
+    #Happy M Kai
+    k "Kamu menemukannya ya. Benar, aku yang menulis buku itu."
+    #item buku catatan 1 out
+    r "Buku ini berguna sekali. Hampir saja aku dan temanku memakan buah beri beracun."
+    r "Kalau begitu, buku ini akan aku kembalikan."
+    #Normal M Kai
+    k "Tidak usah, aku memang sengaja meninggalkan buku itu untuk membantu."
+    k "Lagipula aku tidak butuh buku itu karena aku sudah hafal setiap tanaman dan monster di hutan ini."
+    r "(Orang ini sepertinya sudah lama berada di sini.)"
+    #show item peta
+    r "(Di peta ini sama sekali tidak ada petunjuk keluar hutan, bahkan ada gurun disini?!)"
+    #item peta out
+    r "(Setidaknya aku sudah menemukan tempat yang aman disini. Kai meskipun terlihat dingin, namun dia baik sekali.)"
+    r "(Sekarang aku harus mencari Jeffrey dan Elena.)"
+    r "Terima kasih, Kai. Aku permisi dulu."
+    k "Berhati-hatilah."
+    #Kai out
+
+    #CG lembah, day with dissolve in 1s
+    r "(Aku belum pernah ke tempat ini sebelumnya.)"
+    r "Sepertinya tidak ada apa-apa disini, dari tadi juga aku hanya bertemu dengan monster-monster kecil."
+    #SFX: *Drap* *Drap* (suara langkah kaki terburu-buru)
+    r "(!!!)" with vpunch
+    r "AARGH!!"
+    r "(Mayat ini.. Darahnya masih segar, kemungkinan dia baru saja dibunuh sebelum aku sampai ke tempat ini.)"
+    r "(Tunggu, dia bukannya salah satu anggota kelompok Alios ya?)"
+    #show item pisau belati berwarna hijau
+    "Aku mengeluarkan pisau belati dari saku untuk berjaga-jaga."
+    #item pisau belati berwarna hijau out
+    r "(Aku tidak tahu dia dibunuh oleh manusia atau monster. Tidak aman jika aku diam disini terlalu lama, aku harus segera pergi.)"
+    #SFX: *Drap* *Drap* (suara langkah kaki terburu-buru)
+
+    #BG gurun, day with fade in 1s
+    r "Hah.. aku sudah berlari cukup jauh."
+    n "Tolong!!"
+    r "Siapa disana?!"
+    "Aku bergegas menuju sumber suara."
+    #Serious M in Cherry
+    c "I-Ini kak Remil kan?"
+    r "Iya.. Ada apa?"
+    #Angry M Cherry
+    c "Kak Alios menggila! Dia hampir membunuh semua anggota kelompoknya!"
+    r "(Jangan-jangan mayat yang tadi aku temukan itu..)"
+    r "Kamu tahu di mana keberadaan Alios sekarang?"
+    #Serious M Cherry
+    c "Tidak, terakhir kali kita berada di tengah gurun dan disitu ia mulai menggila."
+    c "Cherry hampir diserang dan untung saja Cherry bisa bersembunyi."
+    #Sad M Cherry
+    c "Sudah seharian Cherry tinggal disini, sekarang cadangan makanan dan minuman Cherry habis."
+    r "Baiklah, kalau begitu kamu ikut saja denganku."
+    #Angry M Cherry
+    c "Mana bisa?! Kak Remil kan tidak sekuat kak Alios."
+    r "...Trus kamu maunya apa?"
+    c "..."
+    #Bored M Cherry
+    c "Baiklah, Cherry ikut."
+    #Cherry out
+    "Aku dan Cherry pun berkeliling gurun."
+    #Normal M in Cherry
+    c "Memangnya kak Remil mencari apa disini?"
+    r "Entahlah."
+    #Angry M Cherry
+    c "Terus ngapain kita dari tadi?! Ayolah mending kita balik saja. Disini panas, Cherry sudah tidak kuat!"
+    r "(Aku merasa di tempat ini ada sesuatu.)"
+    r "Tadi Alios tiba-tiba menggila di tempat ini kan?"
+    r "Aku penasaran apa yang membuatnya menggila."
+    #Normal M Cherry
+    c "Oh, ikut Cherry."
+    #Cherry out
+
+    #BG tengah gurun, day with dissolve in 1s
+    #Normal M in Cherry
+    c "Disini."
+    #Sad M Cherry
+    c "Aku juga.. terpisah dengan Elena di tempat ini."
+    r "Tunggu, kamu sebelumnya bersama Elena?"
+    #Serious M Cherry
+    c "Iya, lalu aku bersembunyi sendiri."
+    c "Elena juga menjadi aneh semenjak dia hilang seharian, tatapannya selalu kosong."
+    r "..."
+    r "(Sepertinya kita bertiga memang terpisah setelah pingsan dari goa itu. Tapi siapa yang memisahkan kita dan ada apa dengan goa itu?)"
+    "Aku memperhatikan tiap puing-puing di gurun itu."
+    #show item bola kristal
+    #Happy M Cherry
+    c "Bola kristal itu cantik sekali! Cherry mau!"
+    r "Hati-hati, sepertinya bola ini sedikit berbahaya. Kalau kamu suka, kamu bisa melihatnya saja."
+    #Sad M Cherry
+    c "Cih."
+    r "(Bisa jadi bola kristal ini ada hubungannya dengan Alios yang tiba-tiba menggila. Lebih baik aku mengamankannya.)"
+    #item bola kristal out
+    #Bored M Cherry
+    c "Hei, kakak sudah menemukan yang kakak cari kan? Ayo kita kembali, Cherry tidak tahan berada di sini lama-lama."
+    r "Baiklah."
+    #Cherry out
+
+    #BG plateau, dusk with dissolve in 1s
+    
+
     return
