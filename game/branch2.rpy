@@ -635,6 +635,54 @@ label branch2:
     k "Hahaha."
     #Normal R Kai
     k "Saya sudah menyiapkan makanan untuk kalian, silahkan dimakan."
+    #Happy L Jeffrey
+    j "*Kraus* Ini enak sekali! Rasanya seperti sudah lama aku tidak memakan makanan berbumbu."
+    r "(Benar, ini enak sekali.)"
+    #Happy R Kai
+    k "Ada beberapa tumbuhan obat-obatan disini yang juga bisa dijadikan bumbu."
+    #Normal L Jeffrey
+    j "*Kraus* Sepertinya tuan sudah lama tinggal di hutan ini ya? *Kraus*"
+    r "(Telan dulu makananmu..)"
+    #Normal R Kai
+    k "Benar, saya tinggal disini bertahun-tahun sebelum kalian."
+    r "(!!!)" with vpunch
+    r "(Bertahun-tahun?!)"
+    #Normal manipulative L Jeffrey
+    j "Tunggu, sepertinya kita kurang seorang."
+    r "Oh iya! Aku melupakan dia."
+    k "Anak berambut pirang itu ya?"
+    k "Dia bangun lebih awal dibanding kalian, tetapi begitu melihatku dia malah memarahiku dengan memanggilku “Orang aneh” lalu kabur."
+    r "Haah.."
+    #Normal L Jeffrey
+    j "Lalu, bagaimana dengan Alios?"
+    k "Saya.. meninggalkannya di tempat tadi."
+    j "Eh Remil, apa habis ini kita cari Cherry saja ya? Masalahnya, dia kan tidak bisa bertarung."
+    r "Boleh."
+
+    #BG hutan, day with dissolve in 1s
+    #Normal M in Jeffrey
+    #show item busur berwarna silver dihiasi bebatuan biru
+    r "Wah, dari mana kamu mendapatkan busur itu?"
+    #Happy M Jeffrey
+    j "Setelah aku sadar dari gua itu, tiba-tiba saja busur ini sudah ada di sebelahku."
+    r "Wow.."
+    #item busur berwarna silver dihiasi bebatuan biru out
+    #Normal manipulative M Jeffrey
+    j "Oh iya, memangnya kamu pergi ke mana setelah sadar dari gua itu?"
+    j "Aku mengira kamu dibawa oleh monster, jadinya aku bertarung hingga ke dasar gua."
+    r "Dasar gua? Lalu kamu menemukan apa saja disana?"
+    #Laugh M Jeffrey
+    j "Yup! Ternyata tidak sedalam yang aku kira dan berkat busur ini aku jadi bisa melawan monster yang tertutupi kristal itu."
+    r "Jadi luka-luka di tangan dan kakimu karena monster-monster di gua itu?"
+    #Normal M Jeffrey
+    j "Yah.. Bisa dikatakan begitu."
+    #Happy M Jeffrey
+    j "Oh iya, lupakan soal tadi! Aku juga menemukan sesuatu di sana."
+    j "Tapi sebelum aku memberitahukannya, bisa kamu berikan kepadaku bola kristal yang kamu temukan di gurun?"
+    r "(Dari mana dia tahu?)"
+
     
+
+
 
     return
