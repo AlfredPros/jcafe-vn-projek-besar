@@ -337,5 +337,67 @@ label branch2:
     j "Selain itu, aku dan Remil berpetualang bersama karena kita cocok, bagiku tidak pantas untuk disebut rombongan."
     r "(Jeffrey..)"
     #Surprise Elena & Jeffrey
+    al "Elena!! Kamu dimana?!"
+    j "Sepertinya itu suara Alios. Aku tidak ingin dia melihatku.. Remil, ayo kita lari."
+    "Jeffrey menarik tanganku dan membawaku ke suatu tempat."
+    #Elena & Jeffrey out
+
+    #BG hutan 2 with fade in 1s
+    #Normal M in Jeffrey
+    j "Huft.. hampir saja."
+    #Nervous L in Elena
+    #Jeffrey move to R
+    e "..."
+    #Surprise R Jeffrey
+    j "Loh, Elena kamu disini?- Ah sudahlah."
+    #Happy R Jeffrey
+    j "Ngomong-ngomong aku baru lihat tempat ini, hawanya berbeda sekali ya."
+    r "(Tempat ini..)"
+    e "Ada apa, Remil?"
+    r "Perasaanku tidak enak."
+    #Happy R Jeffrey
+    j "Hmm~ Karena hutan ini berkabut ya? Tapi tenang saja, kita kan bertiga disini!"
+    j "Kamu bisa menggunakan sihir kan, Elena?"
+    #Happy L Elena
+    e "Iya!"
+    #Happy R Jeffrey
+    j "Bagus bagus, aku dan Elena yang menyerang dari jauh dan Remil akan menjadi penyerang jarak dekat."
+    #Elena & Jeffrey out
+    #show item pisau belati berwarna hijau with dissolve
+    r "(Pisau itu..)"
+    r "Jeffrey, Elena, aku mau mengambil pisau itu. Kalian tolong berjaga ya, aku takut kalau nanti akan ada monster yang menyerangku."
+    #item pisau belati berwarna hijau out
+    #CG serigala dengan bulu yang dihiasi kristal berdiri di belakang Remil 2 with fade in 0,5s
+    "*Grrrr*"
+    "*Roarrr*"
+    e "REMIL AWAS!!"
+    #CG Elena, Jeffrey, dan Remil menyerang serigala itu with dissolve in 0,5s
+    e "Remil, kau tidak apa-apa?!"
+    r "Aku tidak apa-apa, terima kasih Jeffrey sudah menarikku."
+    j "Nanti saja, sekarang kita harus berhadapan dengan serigala ini."
+    #SFX: “Ctak Ctak” (suara anak panah)
+    "Jeffrey melayangkan anak panah ke tubuh serigala itu, sayangnya anak panah tersebut tidak melukai serigala. Begitu juga dengan serangan sihir dari Elena."
+    j "Serigala ini kuat sekali!"
+    e "Sihirku juga tidak mempan!"
+    r "Elena, kamu bisa membuat tameng sihir?"
+    e "Bisa!"
+    r "Jeffrey, kamu pancing serigala ini dan begitu aku melihat celah, aku akan menyerangnya dengan pisau ini."
+    "Dengan gesit Jeffrey mendekat ke serigala itu agar dirinya menjadi umpan. Melihat adanya celah, aku menebas leher serigala dan serigala itu pun langsung tumbang."
+
+    #BG hutan 2 with fade in 1s
+    #Surprise L in Elena
+    #Surprise R in Jeffrey
+    r "(!!!)" with vpunch
+    e "Wow.. hebat sekali."
+    #Happy R Jeffrey
+    j "Pisau belati itu pasti sangat tajam. Kau baru saja mengalahkan serigala itu dengan sekali serangan!"
+    #Sad R Jeffrey
+    j "Semoga ada busur dan anak panah yang bagus di sekitar sini. Aku merasa tidak berguna karena seranganku tadi tidak ada apa-apanya."
+    #Normal L Elena
+    e "Hei ayolah, jangan berpikir seperti itu. Kita akan berjuang bersama disini."
+    r "Aku melihat gua diujung sana. Mau coba masuk ke dalamnya?"
+    #Happy Jeffrey & Elena
+    jne "Ayo."
+    #Jeffrey & Elena out
 
     return
