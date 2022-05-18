@@ -562,6 +562,79 @@ label branch2:
     #Cherry out
 
     #BG plateau, dusk with dissolve in 1s
+    #Happy M in Cherry
+    c "Pisau belati kak Remil bagus dan kuat sekali, dengan pisau itu kakak bisa membunuh monster-monster yang menyerang kita selama perjalanan tadi."
+    c "Dari mana kak Remil mendapatkan pisau itu? Cherry mau tongkat dan buku sihir yang baru!"
+    r "(Hah.. Aku lelah.)"
+    r "(Cherry sama sekali tidak membantu, padahal dia bisa saja meringankan pekerjaanku dengan menyihir monster-monster itu. Tetapi yang dia lakukan hanya meneriaki namaku dan malah membuatku sedikit pusing.)"
+    #Angry M Cherry
+    c "Hei jawab! Kak Remil kok sering mengabaikan Cherry sih."
+    r "Ada hutan yang berkabut di sana. Aku menemukan pisau ini dari tempat itu."
+    #Happy M Cherry
+    c "Wah, hutan berkabut? Cherry mau kesana. Ayo temani Cherry!"
+    r "Jangan sekarang, aku mau beristirahat."
+    r "..."
+    r "(Aku merasakan sesuatu yang aneh dalam diriku.)"
+    r "(Kenapa semenjak aku terbangun di rumah Kai, aku belum merasakan lapar hingga sekarang?)"
+    r "Cherry, apa kamu tidak lapar?"
+    #Bored M Cherry
+    c "Makanan disini aneh dan hambar, membuat nafsu makanku cepat hilang."
+    c "Kalau kak Remil mau makan, makan saja sendiri. Cherry tidak lapar."
+    n "REMILL!!!"
+    r "Suara itu.. Jeffrey?!"
+    #Normal M Cherry move to R
+    #Sad L in Jeffrey
+    j "Remil! Kamu disini rupanya!"
+    #show tangan dan kaki Jeffrey terlihat luka dan diperban
+    r "(Tangan dan kakinya terluka?)"
+    #tangan dan kaki Jeffrey terlihat luka dan diperban out
+    #Serious L Jeffrey
+    j "(!!!)"
+    j "Hati-hati."
+    #Jeffrey & Cherry out
+    #Smirk M in Alios
+    al "Di sini kau rupanya, Remil."
+    #Alios out
+    #Surprise M in Jeffrey
+    j "Remil.. Sepertinya dia benar-benar membencimu."
+    r "Apa? Kenapa bisa?!"
+    #Jeffrey out
+    #Angry M in Alios
+    al "Semua ini gara-gara kau, kelompok aku terpecah belah. Kaulah yang mengacaukan kerajaanku!"
+    r "(Kerajaan?)"
+    al "Remil, ayo bertarung denganku."
+    #Alios out
+    #Surprise M in Cherry
+    c "Kak Remil hati-hati, Kakak tidak akan bisa melawannya seorang!"
+    r "(Cherry benar, terlalu beresiko jika aku bertarung dengannya.)"
+    r "(Aku harus kabur.)"
+    #Cherry out
+    #Angry M in Alios
+    al "Kau tidak akan bisa kabur dariku!"
+    "Tiba-tiba cahaya putih datang menyilaukan pandangan kami."
+    #Alios out
+
+    #CHAPTER 4 END
+    #white screen in 1,5s
+    #CHAPTER 5
+
+    #BG rumah Kai, day with dissolve in 0,5s
+    r "Ugh.."
+    #Happy L in Jeffrey
+    #Normal R in Kai
+    j "Ah, Remil sudah sadar."
+    #Serious R Kai
+    k "Anak itu sangat berbahaya. Jika saja aku terlambat menggunakan sihir untuk melerai kalian, kemungkinan terburuknya kalian semua bisa terbunuh olehnya."
+    #Sad L Jeffrey
+    j "Huaa, terima kasih banyak tuan karena telah menyelamatkan kami."
+    r "Tuan?"
+    #Normal L Jeffrey
+    j "Dari gaya bicaranya kelihatan kalau dia jauh lebih tua dari kita."
+    r "(Tapi tampangnya terlalu muda untuk disebut “tuan”...)"
+    #Laugh R Kai
+    k "Hahaha."
+    #Normal R Kai
+    k "Saya sudah menyiapkan makanan untuk kalian, silahkan dimakan."
     
 
     return
