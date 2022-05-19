@@ -1,7 +1,4 @@
 label branch1:
-    # scene perkemahan dusk
-    r "(Kalau Aku tetap berada di sini…mungkin saja akan membahayakan hidupku…)"
-
     #CHAPTER 1
     #“Pemimpin dari Kelompok yang Berbahaya” with dissolve(3.0)
 
