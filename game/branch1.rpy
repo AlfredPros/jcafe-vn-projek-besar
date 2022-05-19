@@ -145,7 +145,7 @@ label b1deca:
     "Cherry beranjak masuk ke dalam dan mulai menggunakan sihir yang mendorong debu keluar"
     r "Ini mengerikan! (Remil tetap batuk batukmeski menunggu di luar)"
     "Tidak lama kemudian, Cherry keluar"
-    Remil : “Terima kasih! Kamu tidak apa-apa, Cherry?”
+    r "Terima kasih! Kamu tidak apa-apa, Cherry?"
     #show bored cherry as cherry di tengah
     c "Tidak apa, Cherry menghempas debu dari sekeliling jadi tidak kenapa-napa, tidak sepertimu"
     #show normal jeffry as jeffry di kanan
@@ -249,7 +249,7 @@ label b1deca1:
     #hide alios.
     r "Kita harus pergi dari sini. Cepat!"
     #play sound snake hiss
-    ""
+    ur " hiss"
     #show suprised cherry as cherry di kiri
     c "Hiiih, suara apa itu!"
     r "Cherry! Cepat tahan! Di depanmu"
@@ -263,16 +263,17 @@ label b1deca1:
     "Setelah itu, Cherry terpental karena ular menerjang tepat ke arahnya"
 
     #scene bg dekat sungai dusk with fade (1.0)
-    Remil : “Ugh- Sakit.”
+    r "Ugh- Sakit."
     #show suprise cherry as cherry di kiri
-    c "Aah- Tidak bisa, Cherry tidak bisa!” Merangkak ke arah hutan"
+    c "Aah- Tidak bisa, Cherry tidak bisa!" 
+    "Cherry Merangkak ke arah hutan"
     #hide cherry
     #show normal alios  as alios di kanan
     al "Ck, tidak berguna."
     r "(Alios hebat, dia menancapkan kapaknya ke dalam tanah)"
     #show angry alios  as alios di kanan
     al "Bangun, bocah! Kita harus menaklukkan ini berdua"
-    r: "... (Mengangguk)"
+    r "... (Mengangguk)"
     r "Alios! Aku akan menggiringnya, kamu carilah kesempatan!"
     #show normal alios  as alios di kanan
     al "Kau pikir siapa yang kau suruh?"
@@ -494,7 +495,7 @@ label b1deca2:
     al "Kau bicara dengan siapa?"
     r "(Nih orang masih aja..)"
     #hide alios.
-    n : "Heeey!"
+    n  "Heeey!"
     r "Jeffrey?!"
     #show normal cherry  as cherry di kiri
     c "Cherry membawa teman-teman, Alios, Remil!"
@@ -798,16 +799,16 @@ label b1deca2:
 
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with fade(1.0)
     r "..."
-    Remil (??) : “Ah, lama tidak berjumpa, wahai rekanku-”
+    rg "Ah, lama tidak berjumpa, wahai rekanku-"
     k "Kau!"
-    Remil (??) : “Atau harus kubilang, data teman lamaku, Kai!”
+    rg "Atau harus kubilang, data teman lamaku, Kai!"
     k "Gordon!"
-    Remil (??) : “Kukukuku, ini menarik. Aku bisa berbincang denganmu. Aku tidak akan pernah menduga kamu akan membuat desa dan segala macamnya di belakang sana. Kamu bahkan menghalangi tempat itu.”
+    rg "Kukukuku, ini menarik. Aku bisa berbincang denganmu. Aku tidak akan pernah menduga kamu akan membuat desa dan segala macamnya di belakang sana. Kamu bahkan menghalangi tempat itu."
     k "Kau akhirnya keluar! Aku telah lama berusaha menggali core makhluk hidup yang bisa menghubungkanku dengan sistem."
-    Remil (??) : “Lalu apa? Kamu kira bisa meretas sistem ini dari dalam?”
-    Remil (??) : “Kau hanya beruntung! Pada dasarnya, memang Aku tidak begitu peduli dengan satu dua monster yang mati, dan Aku juga beruntung kamu tidak menemukan bonekaku yang berkeliaran.”
+    rg "Lalu apa? Kamu kira bisa meretas sistem ini dari dalam?"
+    rg "Kau hanya beruntung! Pada dasarnya, memang Aku tidak begitu peduli dengan satu dua monster yang mati, dan Aku juga beruntung kamu tidak menemukan bonekaku yang berkeliaran."
     k "Huh?"
-    Remil (??) : “Kukuku, tidurlah, Kai. Aku akan memulai urusan kita setelah anak-anak bangun di pagi hari.”
+    rg "Kukuku, tidurlah, Kai. Aku akan memulai urusan kita setelah anak-anak bangun di pagi hari."
     
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with dissolve(1.0)
     r "Ugh!"
@@ -846,7 +847,7 @@ label b1deca2:
     e "Di atas sana, Remil?"
     #show angry jeffrey as jeffrey di kiri
     j "Remil, cepat ke sini! Di sini kita kesulitan."
-    Remil (??) : “Kaaamu siaaapa?”
+    rg  "Kaaamu siaaapa?"
     j "?"
     al "Remil! Berhenti bercanda, kita semua sedang dihadang monster!"
     # hide alios
@@ -854,7 +855,7 @@ label b1deca2:
     #hide jeffrey
     "Remil menerjang ke arah Alios, tetapi dihadang oleh Elena."
     
-    Remil (??) : “Hmmmmmmmm?” 
+    rg "Hmmmmmmmm?" 
     #show angry cherry as cherry di kanan
     c "Remil, kamu sudah gila! Lepaskan kak Elena!" 
     "Cherrymenciptakan banyak bola api lalu ditembakkan ke arah Remil namun terus-menerus ditangkis"
@@ -897,7 +898,7 @@ label b1deca2:
     #show serious kai as kai di tengah
     k "Remil! Sadarlah!"
     #play soind  Earthquake rumbling
-    Remil (??) : “Hmmmm?”
+    rg "Hmmmm?"
     #show angry  kai as kai di tengah
     k "Haaaaa!” Kai berusaha untuk menekan Remil dengan gravitasi, namun Remil tetap bisa melawan"
     #hide kai
@@ -940,13 +941,13 @@ label b1deca2:
     # scene  BG Lembah - Day with dissolve(1.0)
     #show serious kai as kai di tengah
     k "Sadarlah!!” kata Kai yang mulai kehabisan sebagian mananya"
-    Remil (??) : …
-    Remil (??) : "Hentikan sajalah, Kai."
+    rg " …"
+    rg  "Hentikan sajalah, Kai."
     #show angry kai as kai di tengah
     k "Gordon!"
-    Remil (??) : “Kamu kira bisa melawanku? Di duniaku?”
+    rg "Kamu kira bisa melawanku? Di duniaku?"
     k "Kukira kita hanya akan bicara!"
-    Remil (??) : “Kamu pikir Aku akan dengan senang hati melakukannya?”
+    rg "Kamu pikir Aku akan dengan senang hati melakukannya?"
     k "Ck." 
     "Kai lalu mundur karena sihirnya tidak bekerja pada Remil."
     #hide kai
@@ -954,7 +955,7 @@ label b1deca2:
     al "!"
     #show normal alios as alios di kiri
     al "Bocah putih! Bawa Cherry, kau pasti sudah kehabisan mana!"
-    Remil (??) : “Haha, Kai! Kamu lari?”
+    rg "Haha, Kai! Kamu lari?"
     #hide alios
     "Kai mendekat ke arah Cherry lalu menghilang, meninggalkan Remil yang dikendalikan di sana. Lalu, Alios berlari menghampiri Remil."
     
@@ -967,9 +968,9 @@ label b1deca2:
     
     #show angry alios as alios di tengah
     al "Kau! Ini bukan saatnya bercanda!"
-    Remil (??) : "Hihihi. Bercanda?” Remil kemudian melihat ke arah lain"
+    rg  "Hihihi. Bercanda?” Remil kemudian melihat ke arah lain"
     #hide alios
-    Remil (??) : “Akan kutunjukkan maksudnya bercanda.”
+    rg "Akan kutunjukkan maksudnya bercanda."
     #show normal alios as alios di kiri
     al "Jeffrey! Merunduk!"
     #show suprise jeffrey as jeffrey di tengah
@@ -1003,7 +1004,7 @@ label b1deca2:
     #show smirk alios as alios di tengah
     al "Hahaha, jadi kau masih dendam tentang Aku, lalu kau merencanakan semua ini?"
     
-    Remil (??) : “Berhenti berbicara, bocah.”
+    rg "Berhenti berbicara, bocah."
     #show sad alios as alios di tengah
     al "Kau pasti sangat membenciku, huh?"
     "Kemudian, Remil menghancurkan rusuk Alios dengan pijakannya."
@@ -1024,7 +1025,7 @@ label b1deca2:
     #show sad alios as alios di tenga
     al "Maaf.." 
     al ".. Terima kasih."
-    Remil (??) : …
+    rg "..." 
     b "HAHAHAHAHAHA- RASAKAN ITU! AKU BERHASIL-"
     b "AAAAAAAAAARGH" 
     "Dia terbakar menjadi abu."
@@ -1202,7 +1203,7 @@ label b1deca2:
     k "Maaf, anak sepertimu tidak akan mengerti."
     r "Lalu, bagaimana cara kita kembali?"
     #show serious kai as kai di tengah
-    k :"..." 
+    k "..." 
     "Kai hanya menatap dengan serius."
     #show normal kai as kai di tengah
     k "Aku juga penasaran."
@@ -1247,16 +1248,17 @@ label b1deca2:
     "Di saat Aku melangkahkan kaki di luar, tanganku menembus jantung Kai."
     
     r "AAAAH! Tidak!"
-    (??) : “Bagaimana kabarmu, Kai?” kata Gordon yang berbicara melalui kepala mereka.
+    uv "Bagaimana kabarmu, Kai?"
+    "Gordon yang berbicara melalui kepala mereka"
     #show suprise kai as kai di kanan
     k "!" 
-    (??) : “Dapat kau. Kau tidak boleh lari karena ini akan jadi menyenangkan. Hihihihi.”
+    uv "Dapat kau. Kau tidak boleh lari karena ini akan jadi menyenangkan. Hihihihi."
     #hide kai
     r "Kau, Gordon! Orang sinting, Aku tahu semuanya! Lepaskan Aku!"
-    (??) : “Lalu apa? Kamu merasa kamu bisa mengancamku?”
-    (??) : “Aku adalah penyelamatmu!”
+    uv "Lalu apa? Kamu merasa kamu bisa mengancamku?"
+    uv "Aku adalah penyelamatmu!"
     r "Hah? Berhenti berbicara omong kosong!"
-    (??) : “Kamu hanya anak buangan! Kamu kira kamu bisa hidup kalau bukan karena…”
+    uv "Kamu hanya anak buangan! Kamu kira kamu bisa hidup kalau bukan karena…"
     #show normal kai as kai di kanan
     k "Sh- Jangan dengarkan dia."
     r "!" 
@@ -1271,7 +1273,7 @@ label b1deca2:
     With fade 1s
     #scene BG Plateau - Dusk with fade(1.0)
     r "Cherry, kamu dimana!"
-    (??) : ...
+    uv "..."
     r "Cherry!!"
     #show angry as cherry di tengah
     c "Diam!"
