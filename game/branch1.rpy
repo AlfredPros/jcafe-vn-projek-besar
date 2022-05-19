@@ -587,7 +587,7 @@ label b1deca2:
     #hide jeffrey
     #hide alios
     #show happy kai  as kai di tengah
-    k "Nah bocah-bocah! Kalian harus pakai nih, ‘cairan’.".
+    k "Nah bocah-bocah! Kalian harus pakai nih, ‘cairan’."
     #show item botoh tanah liat
     pause 2.0
     #hide item botol tanah liat
@@ -863,7 +863,7 @@ label b1deca2:
     "Cherry kehabisan tenaganya lalu pingsan."
     #hide cherry
     
-    With fade 1s
+    
     #scene BG Lembah - Day with fade(1.0)
     #show angry kai as kai di tengah
     k "Berhenti di sana, kalian!"
@@ -1109,7 +1109,7 @@ label b1deca2:
     "Aku menyadari, Aku tidak pernah memikirkan ini."   
     r "(Tetapi, sebenarnya dari mana semua monster ini?)"
     
-    With fade 3s
+    
     #BG Plateau - Dusk with fade (3.0)
     "Aku merasakan atmosfer yang berbeda di hadapanku." 
     "Masuk di dalamnya, Aku melihat perkemahan di dalam."
@@ -1270,7 +1270,7 @@ label b1deca2:
     #hide kai
     "Aku teringat pada Cherry."
     
-    With fade 1s
+   
     #scene BG Plateau - Dusk with fade(1.0)
     r "Cherry, kamu dimana!"
     uv "..."
@@ -1296,9 +1296,8 @@ label b1deca2:
     "Aku berusaha untuk menghindar, namun bagian kiri tubuhku terpotong habis."
     "Aku terkapar dan Cherry mulai menghampiriku."
     
-    With fade 3s
-    #show CG Cherry duduk menangis di samping saat Remil kehilangan sebagian badannya (Plateau - Dusk)
-    (Ugh!)
+    #show CG Cherry duduk menangis di samping saat Remil kehilangan sebagian badannya (Plateau - Dusk) with fade(3.0)
+    r "(Ugh!)"
     #play music  sad music
     r "Maafkan Aku, Cherry." 
     "Aku mulai kehabisan tenagaku untuk berbicara."
