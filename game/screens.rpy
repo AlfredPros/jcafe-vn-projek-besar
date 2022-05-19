@@ -75,7 +75,8 @@ style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
-
+#style ukuran_main:
+    #text_size 40
 
 ################################################################################
 ## In-game screens
@@ -103,17 +104,34 @@ screen say(who, what):
 
         if who is not None:
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+            #tambahin namebox
+            add "gui/nameboxpanjang.png":
+                zoom 0.5
+                xpos 60
+                ypos -110
+
+            #window:
+                #id "namebox"
+                #style "namebox"
+            text who id "who":
+                
+                text_align 0.5
+                size 30
+                xpos 245
+                ypos -65
+                color "#FFFFFF"
 
 
         if "(" and ")" in what :
             text what id "what":
+                xpos 120
                 color "#808080"
+                size 30
         else:
-            text what id "what"
+            text what id "what":
+                size 30
+                color "#FFFFFF"
+                xpos 120
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -144,13 +162,14 @@ style window:
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos gui.name_xpos
+    xpos 68
     xanchor gui.name_xalign
-    xsize gui.namebox_width
+    xsize 385
     ypos gui.name_ypos
-    ysize gui.namebox_height
-
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    ysize 80
+    #tambah sendiri--------------------------
+    background Frame("gui/nameboxpanjang.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    #----------------------------------------
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -365,19 +384,50 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    #frame:
+        #style "main_menu_frame"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    #use navigation
+
+    #VBOX tambahan sendiri
+    text "LOGO":
+        xalign 0.050 yalign 0.1
+        size 148
+    vbox:
+        spacing 10
+        xalign 0.05 yalign 0.85
+
+        textbutton _("New Game"):
+            text_size 50
+            action Start()
+
+        textbutton _("Load Game"):
+            text_size 50
+            action ShowMenu("load")
+
+
+        textbutton _("Preferences"):
+            text_size 50
+            action ShowMenu("preferences")
+
+        textbutton _("Gallery"):
+            text_size 50
+            #nanti ganti gallery
+            action ShowMenu("preferences")
+
+        textbutton _("Quit"):
+            text_size 50
+            action Quit(confirm=not main_menu)
+    #VBOX tambahan sendiri
 
     if gui.show_name:
 
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "Hou Tou Project":
                 style "main_menu_title"
 
             text "[config.version]":
