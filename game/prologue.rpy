@@ -313,6 +313,10 @@ label start:
     #All out
     r "(Kalau aku tetap berada di sini... mungkin saja akan membahayakan hidupku...)"
     menu:
+        "Menetap di sini":
+            r "(Kalau Aku tetap berada di sini…mungkin saja akan membahayakan hidupku…)"
+            jump branch1
+
         "Pergi sendiri":
             r "..."
             r "(Aku tidak bisa mengikuti perintah dia.)"

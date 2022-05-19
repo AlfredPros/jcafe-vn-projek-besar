@@ -89,7 +89,7 @@ label branch2:
             #BG Hutan, day with fade in 1s
             r "Huft, nyaris saja. Padahal pisau belati itu keren sekali."
 
-        "Kembali.":
+        "Kembali":
             r "Lupakan saja. Sepertinya aku belum cukup kuat untuk memasuki area itu."
 
     r " Aku harus lebih gigih latihan bertarung."
@@ -122,7 +122,7 @@ label branch2:
     j "Apa yang bisa kamu lakukan Remil?"
 
     menu:
-        "Atur strategi.":
+        "Atur strategi":
             #show beruang ungu
             r "Biar aku yang urus, kamu tarik perhatian beruang tersebut dengan panah kamu."
             #Serious M Jeffrey
@@ -218,7 +218,7 @@ label branch2:
     j "Dari mana kamu tahu kalau itu beracun?!"
 
     menu:
-        "Katakan itu hanya instingmu saja.":
+        "Katakan itu hanya instingmu saja":
             r "Itu hanya naluriku saja."
             #Normal manipulative M Jeffrey
             j "Oh begitu.."
@@ -244,7 +244,7 @@ label branch2:
             #item buku catatan 1 out
             #Jeffrey out
 
-        "Beri tahu mengenai catatan itu.":
+        "Beri tahu mengenai catatan itu":
             #show item buku catatan 1
             r "Di buku ini tertulis bahwa buah yang kamu petik barusan beracun."
             #Surprise M Jeffrey
@@ -681,8 +681,391 @@ label branch2:
     j "Tapi sebelum aku memberitahukannya, bisa kamu berikan kepadaku bola kristal yang kamu temukan di gurun?"
     r "(Dari mana dia tahu?)"
 
-    
+    menu:
+        "Berikan bola kristal":
+            #show bola kristal
+            r "Ini."
+            j "Wah, keren!"
+            r "Kamu tahu fungsi bola kristal ini?"
+            #Normal manipulative M Jeffrey
+            j "..Sedikit."
+            #bola kristal out
+            r "Oh ya, Apa itu?"
+            #SFX: *Srak* *Srak* (suara semak-semak)
+            #Serious M Jeffrey
+            j "Remil, apa kamu mendengar sesuatu?"
+            r "Sepertinya ada sesuatu di sana, entah itu manusia atau monster."
+            #Sad M Jeffrey
+            j "Aku takut jika itu Alios, bagaimana kalau kita berpencar lalu bertemu di gubuk tua?"
+            r "Sepertinya itu yang terbaik."
+            #Jeffrey out
 
+        "Tolak":
+            r "Maaf, aku tidak bisa."
+            #Sad M Jeffrey
+            j "Kenapa? Aku pikir kamu sudah percaya padaku.."
+            r "Ini seperti.. Harus aku yang menjaganya."
+            #SFX: *Srak* *Srak* (suara semak-semak)
+            #Serious M Jeffrey
+            j "Remil, apa kamu mendengar sesuatu?"
+            r "Sepertinya ada sesuatu di sana, entah itu manusia atau monster."
+            #Sad M Jeffrey
+            j "Aku takut jika itu Alios.."
+            r "(Apa yang sudah Alios perbuat hingga Jeffrey ketakutan seperti itu?)"
+            #Serious M Jeffrey
+            j "Remil, sepertinya kamu harus menitipkan bola itu kepadaku. Kamu menganggap itu barang penting kan?"
+            j "Akan bahaya kalau Alios mengejarmu dan merampas bola kristal itu. Apalagi Alios sangat mengincarmu."
+            r "Kamu benar, ini."
+            #show item bola kristal
+            #Normal manipulative M Jeffrey
+            j "Baik, kita bertemu lagi di gubuk tua itu ya."
+            #item bola kristal out
+            #Jeffrey out
+
+    #BG gubuk tua, day with fade in 1s
+    r "Huft.. aku sudah sampai sini saja, tidak terasa."
+    "Aku merogoh tas kecilku."
+    r "Hah?! Petanya kok tidak ada?"
+    r "...sepertinya peta itu terbawa oleh Jeffrey waktu aku kasih bola kristal itu ke dia."
+    r "Hah.. yah, setidaknya aku bisa tinggal di gubuk ini sementara."
+    r "Toh pisau aku sudah cukup kuat untuk melawan monster di hutan ini sendirian."
+    #SFX: *Srak* *Srak* (suara semak-semak)
+    "Aku mencium bau aneh, aku pun berjalan mengelilingi sisi luar gubuk tua itu."
+    r "(!!!)" with vpunch
+    #CG Remil melihat mayat Cherry with fade in 1s
+    r "Cherry!! Hei!"
+    r "Cherry, bangunlah!"
+    r "(Tidak ada respon..)"
+    #Aku pun memeriksa denyut nadi Cherry.
+    r "..."
+    #BG gubuk tua, day with dissolve in 1s
+    r "..."
+    r "(Darah di lukanya juga sudah mengering, sepertinya dia dibunuh lama sebelum aku tiba di sini.)"
+    r "(Seingatku ada beberapa kain di dalam gubuk, mungkin bisa aku gunakan untuk menutupinya.)"
+    #fade in 0,5s
+    "Aku menutupi mayat Cherry dengan kain putih yang tadi aku temukan di dalam gubuk."
+    r "(Luka di sekujur tubuhnya memanjang, seperti tebasan.. pedang?!)"
+    r "(Dan seseorang yang memiliki senjata pedang disini..)"
+    r "(!!!)" with vpunch
+    r "Alios..."
+
+    #BG hutan 2, day with fade in 1,5s
+    #Normal manipulative M in Jeffrey
+    j "..."
+    #Serious M Jeffrey
+    j "Ini semua perbuatan kamu kan, Elena?"
+    #Jeffrey out
+    ##CG Elena berdiri ketakutan di belakang Jeffrey, Jeffrey sedang memeriksa mayat Alios dissolve in 0,5s
+    e "A-Ah.."
+    j "Aku juga menyadarinya bahwa kamu diam-diam mengikutiku semenjak aku memasuki area hutan ini kan."
+    e "A-Aku sama sekali tidak berbuat apa-apa.."
+    j "Lalu kenapa gesture kamu seolah sedang-"
+    j "-berancang-ancang ingin memukulku dengan tongkatmu?"
+    e "(!!!)"
+    #BG hutan 2, day with dissolve in 0,5s
+    #Angry M in Elena
+    e "I-Ini tidak seperti yang kamu kira!"
+    e "Aku tidak membunuh Alios!!"
+    #Elena move to L
+    #Normal manipulative R in Jeffrey
+    j "Lalu? Siapa lagi kalau bukan kamu."
+    j "Kamu sangat membenci Alios kan?"
+    e "H-Hei, tidak hanya aku saja ya! Kamu juga."
+    #Serious R Jeffrey
+    j "Lalu, apa aku punya kesempatan untuk membunuhnya?"
+    j "Di Antara aku, Remil, dan kamu, hanya kamu yang punya kesempatan untuk menemui Alios kapan saja."
+    j "Alios pasti akan menerimamu karena dia membutuhkanmu."
+    e "Memangnya apa yang Alios butuhkan kepadaku hah?!"
+    #Nervous L Elena
+    e "Lagipula aku.. Aku tidak akan bisa membunuh orang.."
+    #show luka di tangan dan kaki Jeffrey
+    #Angry Jeffrey
+    j "Tidak akan bisa katamu?! Lalu luka-luka ini?"
+    #luka di tangan dan kaki Jeffrey out
+    #Surprise L Elena
+    j "Ini semua perbuatanmu."
+    j "Kamu tiba-tiba menyerangku dengan tongkatmu itu!"
+    j "Aku tidak tahu rupanya tongkatmu tajam, goresan di tangan dan kakiku jadi lumayan parah!"
+    e "A-Aku.. Melakukan itu?"
+    e "K-Kamu tidak mengarang kan? Aku tidak mengingat ini semua.."
+    #Normal manipulative R Jeffrey
+    j "Itu karena kamu melakukannya secara tidak sadar, Elena."
+    #Serious R Jeffrey
+    j "Entahlah itu akibat kejadian di gua waktu itu, kamu pernah salah makan, terkena racun monster, atau semacamnya."
+    #Angry R Jeffrey
+    j "Faktanya, kamu menyerangku dengan tatapan kosong."
+    e "..."
+    e "Maafkan.. Maafkan aku… Kumohon maafkan aku!"
+    #Sad L Elena
+    e "Aku tidak bisa berlama-lama di sini!!"
+    #Elena out
+    #SFX: *Drap* *Drap* *Drap* (langkah kaki cepat)
+    #Jeffrey move to M
+    #Surprise M Jeffrey
+    j "Elena tunggu!!"
+    #Angry M Jeffrey
+    j "Disini sangat berbahaya! Kamu harus berhati-hati!!"
+    #Jeffrey out
+    #Black Screen. With Dissolve in 0,3s
+    n "Hahahaha"
+    n "Sangat menarik."
+
+    #CHAPTER 5 END
+    #CHAPTER 6
+
+    #BG dekat sungai, dusk with dissolve in 0,5s
+    r "Ini bekas tendanya Elena waktu itu kan?"
+    r "Entahlah sudah berapa hari berlalu, sepertinya waktu itu aku pingsan cukup lama."
+    r "Aku merasa tertinggal.."
+    n "Remil."
+    r "...!?!"
+    #Normal M in Kai
+    r "Kai?! Kenapa kamu bisa berada disini?"
+    k "Aku khawatir, jadi aku terus mencarimu."
+    k "Ada apa? Kamu terlihat lesu."
+    r "Kamu masih ingat perempuan berambut pirang yang kamu selamatkan bersama aku dan Jeffrey?"
+    k "Ingat."
+    r "Dia dibunuh.."
+    #Surprise M Kai
+    k "..."
+    #Sad M Kai
+    k "Saya turut berduka.."
+    r "Sepertinya.. Dia dibunuh oleh Alios."
+    #Serious M Kai
+    k "..."
+    k "Aku ingin menunjukkan sesuatu."
+    r "Apa itu?"
+    k "Ikutlah denganku."
+    #Kai move to L
+    j "Remil!!"
+    r "Jeffrey?!"
+    #Sad face R in Jeffrey
+    j "Hosh.. Hosh.."
+    #Angry R Jeffrey
+    j "Remil, jangan ikuti dia! Ikut denganku, aku tahu sesuatu."
+    r "(Ada apa ini?)"
+    #Serious R Jeffrey
+    j "Kamu tidak bisa mempercayainya! Dia memang tahu banyak hal dan tinggal di sini lebih lama, tetapi justru itu yang membuatnya makin mencurigakan."
+    r "Jeffrey.."
+    #Normal L Kai
+    k "..."
+    j "Alios dibunuh.."
+    r "Apa?! Bagaimana bisa?!"
+    #Sad R Jeffrey
+    j "Dilihat dari lukanya, sepertinya dia dibunuh oleh pedang."
+    r "(Pedang? Tunggu dulu– tapi..)"
+    #Serious R Jeffrey
+    j "Hanya tuan Kai selain Alios yang memiliki pedang, iya kan?"
+    k "..."
+    #Happy L Kai
+    k "Benar, tapi aku jarang membawanya. Aku lebih nyaman memakai sihirku."
+    #Angry R Jeffrey
+    j "Alasan! Bisa jadi itu hanya alibi jadi-jadian dia karena ada bekas darah di pedang itu."
+    j "Tadi aku mendengarnya ingin menunjukkan sesuatu padamu, apa kamu tahu itu apa?"
+    j "Bagaimana kalau yang dia tunjukkan itu pedang yang ia gunakan untuk membunuh dan akan membunuhmu juga dengan benda itu?!"
+
+    menu:
+        "Ikuti Kai":
+            r "Jeffrey, maaf.."
+            r "Aku percaya kalau Kai adalah orang baik."
+            #Kai out
+            #Jeffrey move to M
+            #Sad M Jeffrey
+            j "Tunggu, Remil!!"
+            #Jeffrey out
+
+            #CG Remil dan Kai di tepi danau with fade in 0,5s
+            "Kai membawaku ke tepi danau."
+            k "Di dalam pusaran air itu ada gua."
+            k "Aku akan mendorongmu. Tenang saja, kamu tidak akan tenggelam."
+            r "Tunggu, apa?!"
+            "Tanpa aba-aba, Kai mendorongku." with vpunch
+
+        "Ikuti Jeffrey":
+            r "Jeffrey.. Aku percaya padamu."
+            #Normal manipulative R Jeffrey
+            j "Terima kasih sudah percaya padaku. Lagipula aku yang selama ini menemanimu berpetualang kan!"
+            #Angry L Kai
+            k "Tidak bisa.."
+            "Kai menarik paksa tanganku."
+            #Kai out
+            #Jeffrey move to M
+            #Angry M Jeffrey
+            j "HEI!!"
+            #Jeffrey out
+
+            #CG Remil dan Kai di tepi danau with fade in 0,5s
+            k "Kamu akan berterima kasih kepadaku nanti."
+            "Kai mendorongku menuju pusaran air di danau." with vpunch
+
+    #BG gua 2 with fade in 1s
+    r "(Tempat ini.. Di bawah air?)"
+    "Aku melihat sekeliling tempat ini, yang paling menarik perhatianku adalah pohon menyala yang berada tepat di tengah gua ini."
+    r "Air disini jernih sekali.."
+    "Aku spontan mengambil air dengan telapak tanganku dan meminumnya."
+    "*Deg*"
+
+    #(blackscreen)
+
+    r "Tunggu, ini..."
+    r "(!!!)" with vpunch
+    r "Bola kristalnya pecah?"
+    r "Ditambah lagi pelakunya.."
+    r "Jeffrey?!"
+    r "Dan dia memecahkannya dengan sengaja?!"
+
+    #BG gua 2 with fade in 0,5s
+    r "(!!!)" with vpunch
+    r "(Apa yang terjadi barusan?)"
+    k "Air yang berada di gua ini memiliki memori para penghuni dunia ini."
+    r "(Penghuni? Tempat ini?)"
+    r "(Tunggu.. Suara ini..)"
+    r "Kai?!"
+    #Happy M in Kai
+    k "Saya adalah salah satu pembuat dunia ini."
+    r "Dunia.. ini?"
+    #Serious M Kai
+    k "Singkat cerita, saya bekerja sama dengan rekan saya untuk menciptakan dunia baru melalui virtual."
+    k "Tetapi saya dikhianati oleh rekan saya, begitu saya sedang mencoba untuk memasuki dunia buatan ini, dia membunuhku diri saya yang berada dunia nyata."
+    k "Akhirnya saya terjebak disini, meskipun saya yang ada di dunia nyata sudah tiada."
+    r "..."
+    "Aku berusaha mencerna penjelasan Kai barusan."
+    r "Aku.. belum begitu paham."
+    r "Semua ini.. Palsu?"
+    r "Bagaimana aku bisa berada di dalam sini?"
+
+    #Black Screen with dissolve in 0,3s
+    r "..."
+
+    #BG gua 2 with dissolve in 0,3s
+    #Serious M in Kai
+    r "(Sudah beberapa kali aku mencoba, kenapa aku tidak bisa mengingatnya?!)"
+    r "(Yang aku ingat hanyalah latar belakangku, aku sudah biasa hidup di kota yang berbahaya tanpa rumah.)"
+    r "Lalu kenapa.."
+    #Normal M Kai
+    k "Jika tebakanku benar, kamu diculik oleh rekan saya dan dijadikan sebagai tikus percobaan untuk dunia buatan ini."
+    r "Kenapa dia membawaku kesini? Kenapa dia memilihku? Lalu bagaimana dengan yang lain, apa mereka juga bernasib sama denganku?"
+    k "Serupa tetapi tidak sama, karena latar belakang tiap orang berbeda-beda bukan?"
+    k "Lalu alasan rekanku menculik kamu dan teman-temanmu, mungkin hanyalah untuk kesenangan pribadinya."
+    #Sad M Kai
+    k "Dia sangat menyukai bermain-main dengan emosi manusia dan membuat kekacauan."
+    r "Seperti.. Alios yang sombong dan pemarah ya?"
+    #Serious M Kai
+    k "..."
+    k "Tepatnya lagi-"
+    #Kai out
+    #SFX: *Bruuk!* (suara badan jatuh)
+    r "(!!!)"
+    r "Kai!!"
+    "Kai jatuh tersungkur akibat ujung pisau menembus dadanya."
+    "Kini aku semakin percaya dengan omongannya barusan karena Kai sama sekali tidak mengeluarkan darah dan setelah ia terjatuh, tubuhnya berubah menjadi kepingan cahaya yang melayang ke atas."
+    #Normal manipulative M in Jeffrey
+    j "Hm? Wah, ternyata benar kalau dia bukan manusia."
+    "Jeffrey mengambil pisau yang tergeletak di permukaan tanah, tadinya pisau itulah yang menancap di tubuh Kai."
+    #show pisau belati bersinar berwarna ungu
+    r "Pisau itu kan.."
+    #pisau belati bersinar berwarna ungu out
+    #Serious M Jeffrey
+    j "Tidak kusangka orang itu benar-benar membawamu kesini."
+    r "Jeffrey?! Kamu juga tahu tempat ini?"
+    #Laugh M Jeffrey
+    j "Iya, tetapi ada informasi yang lebih penting dibanding itu."
+    #show pisau belati bersinar berwarna ungu
+    j "Senjata pembunuhan yang sebenarnya ada di tanganku ini!"
+    #Happy M Jeffrey
+    j "Aku berbohong soal mencurigai Kai, pembunuh mereka adalah diriku sendiri"
+    j "Pisau belati ini sangat tajam, bahkan bisa jadi lebih hebat dibanding punyamu. Aku sengaja membuat seolah mereka dibunuh oleh pedang berkat ketajaman pisau ini."
+    #pisau belati bersinar berwarna ungu out
+    r "J-Jadi.. Pengintai yang dibunuh di lembah.. Cherry.. Bahkan Alios.. Itu semua perbuatanmu?!"
+    #Smile M Jeffrey
+    j "Menggemaskan, kamu polos sekali Remil."
+    j "Aku membunuh mereka semua saat aku tidak berada di pandanganmu."
+    r "Jangan-Jangan.. Elena juga?!"
+    #Happy M Jeffrey
+    j "Untuk Elena lain cerita~ Dia terbawa emosi hingga lari ke tempat yang berbahaya dan malah mati dibunuh oleh monster di sana."
+    #Laugh M Jeffrey
+    j "Hahaha, dia percaya saja waktu aku bilang kalau dia membunuh Alios dengan tidak sadar."
+    r "..."
+    #Sad M Jeffrey
+    j "Aku ditipu."
+    #Normal Manipulative M Jeffrey
+    j "Aku hanyalah seorang murid yang bekerja sambilan menjadi penyanyi sekaligus gitaris di sebuah cafe."
+    j "Aku bekerja untuk memenuhi kebutuhan pribadi dan mengejar cita-citaku karena orang tuaku bukan orang yang mampu."
+    j "Tiba-tiba seorang paman dengan jas hitam memberikan kartu namanya kepadaku, ia bilang bahwa ia akan menjadikanku idola terkenal apabila aku akan menemuinya di suatu tempat."
+    j "Bodohnya aku percaya dengan paman itu."
+    #Sad M Jeffrey
+    j "Paman itu berbohong, ia malah menculikku dan membawaku ke tempat ini."
+    j "Bahkan bisa jadi dia dapat mengendalikanku, begitu juga denganmu."
+    #Serious M Jeffrey
+    j "Dia adalah ‘Mastermind’, orang yang mengatur dan merancang segalanya."
+    r "D-Dari mana kau tahu semua ini?"
+    #show luka di tangan dan kaki Jeffrey
+    #Normal M Jeffrey
+    j "Mungkin.. Hadiah aku membunuh semua monster di gua itu sendirian?"
+    j "Lalu tiba-tiba saja aku teringat soal itu. Sulit loh, lihat saja tangan dan kakiku ini."
+    #luka di tangan dan kaki Jeffrey out
+    j "Lalu.. Kamu mau tahu alasanmu terpisah denganku dan Elena?"
+    j "Setelah aku terbangun di gua itu, aku membawamu dan Elena ke pergi dari gua itu dan membawa kalian ke suatu tempat."
+    #Happy M Jeffrey
+    j "Tentu saja di dua tempat yang berbeda, hanya saja aku menaruhmu di tempat yang sangat aman."
+    #Laugh M Jeffrey
+    j "Aku sama sekali tidak peduli dengan si Elena itu, hahahaha."
+    #Smile M Jeffrey
+    j "Karena aku tidak mau didahului oleh monster-monster itu untuk membunuhmu."
+    r "..Aku tidak peduli apapun masa lalu dan usaha-usahamu."
+    r "Itu tidak bisa dijadikan alasan untuk membunuh yang lain!!"
+    #Serious M Jeffrey
+    j "Hei.. Remil."
+    #Jeffrey out
+
+    #CG Jeffrey menodong Pisau belati ungu ke leher Remil with fade in 0,3s
+    j "Untuk bertahan hidup, kita harus menghabiskan apapun yang menjadi ancaman bagi kita."
+    j "Benar kan~? Anak yang hidup gelandangan sepertimu pasti paham soal ini."
+    j "Dan kamu adalah ancaman terbesarku, karena itu aku sengaja mengikutimu dan berpura-pura ingin menjadi temanmu untuk mendapatkan kepercayaanmu-"
+    j "-agar aku tahu kelemahanmu dan mencari kesempatan untuk membunuhmu."
+    r "T-Tidak.."
+    j "Di buku yang kita temukan ini, ada selipan kertas mengenai jalan keluar dari dunia ini."
+    j "Salah satunya adalah bola kristal yang kamu temukan."
+    j "Cih, sayangnya yang bisa menggunakan itu adalah orang yang pertama kali menyentuhnya."
+    j "Karena itu aku merusaknya, membuatnya pecah berbeling-beling."
+    j "Aku tidak ingin kamu yang berhasil keluar dari tempat ini, Remil."
+    r "K-Kenapa kamu tidak mengajak kita semua untuk keluar bersama-sama?!"
+    j "Hah.."
+    j "Cukup sampai sini saja aku berbicara denganmu."
+    j "Kamu tidak akan paham."
+    "Jeffrey menjauhkan pisaunya dari leherku."
+    "Dia mendorongku.. ke perairan." with vpunch
+
+    #Black Screen with dissolve in 0,2s
+    #SFX: *Byuuurr* (suara orang nyebur ke perairan)
+
+    #CG Remil melayang terjatuh di udara with dissolve in 1s
+    #(backsound/SFX suara air dalam lautan)
+    r "..."
+    "Dibawah sini tidak ada air."
+    "Aku tidak tenggelam."
+    "Rasanya seperti.."
+    "Aku terjatuh selamanya."
+
+    #Black screen in 2s with dissolve
+    #BG gua 2 with dissolve in 1s
+    #Normal manipulative M in Jeffrey
+    #show buku catatan 2
+    j "Menurut buku catatan ini, tempat ini disebut ‘The End’."
+    j "Jika seseorang terjatuh ke dalam perairan ini, ia akan merasakan terjatuh tenggelam selamanya hingga dunia ini hancur."
+    #buku catatan 2 out
+    #Sad M Jeffrey
+    j "Wah~ ngeri juga ya."
+    #Normal manipulative M Jeffrey
+    "Jeffrey mendekati pohon bercahaya."
+    #show tangan Jeffrey menyentuh batang pohon bersinar
+    j "Selamat tinggal, Remil."
+    #Happy M Jeffrey
+    j "Senang bertemu denganmu, sayang sekali kita bertemu di waktu yang tidak tepat."
+    #tangan Jeffrey menyentuh batang pohon bersinar out
+    #Jeffrey out
+    #Fade in 1s
+    #-Bad Ending-
 
 
     return
