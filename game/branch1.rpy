@@ -1340,7 +1340,7 @@ label b1deca2:
     "Catatan: Avatar subjek C dibelah dua oleh subjek R yang dikontrol"
     "Catatan: Avatar subjek R meninggal karena tekanan berat psikologis" 
 
-    "The Alternative Ending
+    "The Alternative Ending"
 
 
 
