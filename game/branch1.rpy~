@@ -1,1 +1,159 @@
+label branch1:
+    # scene perkemahan dusk
+    r "(Kalau Aku tetap berada di sini…mungkin saja akan membahayakan hidupku…)"
+    
+    #CHAPTER 1
+    #“Pemimpin dari Kelompok yang Berbahaya”
 
+    #show angry Alios  as alios di kiri
+    al "Mengerikan? Kau dan pikiran bodohmu! Orang tidak berguna ini pantas mendapatkannya setelah datang dengan sembrono. Mereka bisa menghabisi kita!"
+    # show angry elena as elina di kanan
+    e "Bagaimana bisa kamu mengatakan itu! Laki-laki itu juga teman kita, bukan?"
+    #hide alios
+    #hide elena
+    "Kepala monster tersebut bergelinding di tanah setelah ditebas oleh kapak besar Alios. Namun, Alios baru saja menghabisi orang itu."
+    
+    #show normal alios as alios di kiri
+    al "Daritadi apa yang kau lihat, bocah? Kau tidak senang padaku?"
+    r "(Apa-apaan?)"
+    r "Sombong sekali kamu dengan wajah pembunuhmu itu?"
+    #hide alios
+    #show normal jeffry as jeffry di kanan
+    j "Tenanglah, kawan. Bos tidak akan melakukan hal yang merugikan kita. Ini pastinya lebih baik, bukan? Dibanding kepala kita yang bergelinding di situ."
+    r "(Benar, Aku juga berpikir begitu sekilas… Tunggu, apa yang baru saja kupikirkan!)"
+    r "Kau!” Aku mengarahkan belatiku ke Jeffrey"
+    j "Baiklah, lupakan masalah seriusnya. Kita harus cepat memotong daging itu"
+    #hide jeffry
+    "Setelah itu, Aku memutuskan untuk diam agar tidak merusak suasana. Aku percaya bahwa Alios melakukan ini untuk keselamatan kami."
+    #dissolve selama 3s
+    
+    #scene kantin malam
+    #show jeffrey laugh as jeffry di kiri
+    j "Hahaha"
+    #show jeffrey happy as jeffry di kiri
+    j "Anda berlebihan melakukannya, Bos!"
+    #show sad alios as alios di kanan
+    al "Itu bukan pengalaman yang menyenangkan, tapi terima kasih"
+    #hide jeffrey
+    #show Alios normal as alios di kanan
+    al "Kau tidak masalah bukan? Kalian sendiri yang datang membawa monster seolah-olah ingin menghancurkan tempatku"
+    a "Y-Ya"
+    
+    #hide alios
+    "Dia terlihat seperti menahan amarahnya... aku harus menenangkanya"
+    
+    #show normal  jeffry as jeffry di kiri 
+    J "Hey, Remil, apa yang kamu lakukan dari tadi mengintip ke sana kemari?"
+    r  "Tidak ada"
+    r "Aku akan pergi membawakan makan malam Elena. Aku khawatir dia masih memikirkan tentang masalah saat sore tadi."
+    #show normal cherry di kiri 
+    c "Memang kamu siapanya? Dasar bodoh"
+    
+    #scene perkemahan night with dissolve(1.0)
+    r "Maaf, Aku masuk untuk membawakanmu makan malam"
+    #show sad elena as elena di kanan
+    e "Masuklah"
+    r "Apa kamu masih memikirkan itu?"
+    e "Ya. Aku masih ingat bagimana Alios menghancurkan kepala anak itu"
+    #show confused elena as elena di kanan
+    e "sebenarnya, apa yang dia pikir dia lakukan!"
+    r "...."
+    #show sad elena as elena di kanan
+    e "Terima kasih, tolong ditinggalkan saja di sana"
+    r " Aku akan berada di tendaku kalau kamu butuh sesuatu, jangan lupa makanlah nanti"
+    #hide elena
+    "Setelah itu, Aku memutuskan untuk diam agar tidak merusak suasana. Aku percaya bahwa Alios melakukan ini untuk keselamatan kami"
+    
+    #scene bg kantin night with dissolve(3.0)
+    "Di luar, semua orang berkumpul, kecuali Elena"
+    r "Hei, apa yang terjadi? Kemana Elena"
+    #show sad cherry as cherry di kiri
+    c "Saat bangun, Cherry tidak melihat kak Elena di manapun. Cherry tidak tahu dia ke mana"
+    
+    menu:
+        "Alios! Apa yang telah kamu lakukan pada Elena!":
+            jump b1deca
+        "(Apa Elena pergi memberontak?)":
+            jump b1decb
+    return
+    
+
+label b1decb:
+    r "Elena kemungkinan pergi sendiri.."
+    #show suprise cherry as cherry di kiri
+    c "!!"
+    r "Dan, semua ini salahmu, Alios!"
+    jump b1deca
+    
+    
+label b1deca:
+    r "Alios! Apa yang telah kamu lakukan pada Elena!"
+    #show angry alios as alios di kanan 
+    al "Apa maksudmu, bocah? Kau masih tidak senang dengan apa yang terjadi semalam?"
+    #hide cherry 
+    #show normal jeffrey asjeffrey di kiri
+    j "Tidak, Bos. Dia hanya.."
+    #show normal alios as alios di kanan
+    al "Tenang, bukan Aku. Kau bisa camkan kataku"
+    #hide jeffrey
+    al "Aku tidak akan pernah merugikan diriku sendiri dengan menghilangkan pekerja terbaik kita"
+    b "Maaf, Aku ragu dengan katamu"
+    #hide alios
+    "Raut wajah Alios menatap laki-laki tersebut dengan tidak senang, namun dia tidak mundur"
+    
+    #show angry jeffry as jefrey di tengah
+    j "Ah tolong tenang, kalian! Berpikirlah dengan jernih dulu."
+    r " …"
+    #show normal jeffry as jefrey di tengah
+    j "Untuk masalah ini, kurang lebih Aku bisa diandalkan karena sering pergi berburu bersamanya. Biar kita pergi mencari jejaknya dulu, ya?"
+    "(Bagaimana kita bisa yakin kita bisa menemukan Elena, jika dia masih hidup)"
+    #hide jeffrey
+    "Jeffrey mendekat dan menepuk pundakku"
+    
+    #show normal jeffry as jeffrey di tengah
+    j"Aku menemukan tempat yang menarik kemarin, kita akan mulai mencari dari situ"
+    #show normal alios as alios di kanan
+    al "Baiklah, begini lebih mudah. Aku biarkan kau memimpin, bocah. Kita serahkan jalan ke Jeffrey"
+    #show serious cherry as cherry di kiri 
+    c  "Cherry ikut dengan kalian!"
+    r "Baiklah. Kita bergerak selagi masih pagi. Kemas bawaan kalian secepat mungkin sebelum siang!"
+    
+    #scene hutan day with dissolve(3.0)
+    #show normal alios as alios di kiri
+    al "Kemana kau mengarahkanku, Jeffrey?"
+    #show normal jeffry as jeffrey di kanan
+    j "Tenang saja, Bos- Maksudku, Alios. Lurus dari sini terdapat rahasia yang mendebarkan"
+    #hide alios
+    j "Dan seharusnya kita sudah sampai"
+    "Mereka menemukan sebuah gubuk besar yang dibangun di tengah hutan"
+    #hide jeffrey
+    
+    #scene gubuk luar day with dissolve(1.0)
+    
+    r "ini bukannya gazebo biasa?"
+    #show angry jeffry as jeffrey di tengah
+    j "Kamu pasti bercanda, gubuk ini luar biasa! Lihatlah ke dalam"
+    r "Maaf, ini terlalu berdebu, tolong bersihkan"
+    "Remil mengibas-ngibas sekitar sambil menutup mulutnya."
+    #hide jeffrey
+    #show normal alios as alios di kanan
+    al "Kau dengar? Lakukan, Cherry"
+    #show normal cherry as cherry di kiri
+    c "Baaik!"
+    #hide alios
+    #hide cherry
+    "Cherry beranjak masuk ke dalam dan mulai menggunakan sihir yang mendorong debu keluar"
+    r "Ini mengerikan! (Remil tetap batuk batukmeski menunggu di luar)"
+    "Tidak lama kemudian, Cherry keluar"
+    Remil : “Terima kasih! Kamu tidak apa-apa, Cherry?”
+    #show bored cherry as cherry di tengah
+    c "Tidak apa, Cherry menghempas debu dari sekeliling jadi tidak kenapa-napa, tidak sepertimu"
+    #show normal jeffry as jeffry di kanan
+    j  "Tunggu, apa kamu melihat seseorang di dalam?" 
+    #hide cherry
+    r "Bukankah ini tempat yang sudah ditinggalkan? Habis kayak begini sih tempatnya."
+    #show sad jeffry as jeffry di kanan
+    j "Tidak, kemarin-kemarin Aku melihat tanda-tanda seseorang tinggal di sini, kupikir tadi kita bisa bertanya kepada orang itu."
+
+
+    return
