@@ -491,10 +491,12 @@ screen game_menu(title, scroll=None, yinitial=0.0):
             ## Reserve space for the navigation section.
             frame:
                 style "game_menu_navigation_frame"
-
+                #add "black":
+                    #zoom 0.25
             frame:
                 style "game_menu_content_frame"
-
+                #add "black.png":
+                    #zoom 0.25
                 if scroll == "viewport":
 
                     viewport:
