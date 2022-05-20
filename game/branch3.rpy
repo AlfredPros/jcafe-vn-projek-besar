@@ -1,19 +1,11 @@
 
 label branch3:
-    r "Tegarkan dirimu, Elena. Aku akan berusaha untuk keluar dari tempat ini. Ikutlah denganku."
-    #show normal elena as elena di tengah
-    e "Aku sangat berterima kasih. Tetapi, aku takut bahwa nanti aku yang akan mati. Aku sangat khawatir"
-    r "Aku punya rencana yang lumayan efektif buat kita." 
-    "Remil menjelaskan rencananya ke Elena." 
-    
-    
-    #scene Black dissolve(1.0) 
-    
+
     #Chapter 1
     #“Kabur Bersama” with dissolve(1.0)
-    
+
     #scene BG di kantin, day dissolve(1.0)
-    r " Haduh, demi melakukan rencana ini aku harus bangun pagi ini." 
+    r " Haduh, demi melakukan rencana ini aku harus bangun pagi ini."
     #show normal elena as elena di tengah
     e "Sst, rencana ini harus dilakukan sekarang atau kita akan gagal. Seriuslah dari sekarang"
     r "Baiklah. Sekarang kita sarapan dahulu, ada yang mau aku lakukan."
@@ -27,9 +19,9 @@ label branch3:
     r " *Nyam… nyam… kraus… kraus… gulp*"
     #show laugh jeffrey  as jeffrey di kanan
     j "Memang tidak ada yang bisa mengaturmu, kecuali daging yang manis."
-    
-    #Black screen dissolve 1 sec 
-    
+
+    #Black screen dissolve 1 sec
+
     r "Ugh… Kenyang sekali…"
     #show normal elena as elena di tengah
     e "Hei, kamu tidak apa-apa? Jika sakit perut, istirahat dulu saja. Rencana tersebut akan kita laksanakan di esok hari."
@@ -39,24 +31,24 @@ label branch3:
         "Uh, aku hanya mual. Aku masih sanggup untuk mengikuti rencana.":
             jump b3decb
     return
-    
-    
+
+
 label b3deca:
     #show serious elena as elena di tengah
     e "Apa kamu yakin? Sepertinya orang itu ingin membawa kita ke tempat berburu"
     #show normal jeffrey  as jeffrey di kanan
     j "Biarkan dia, Elena. Dia hanya akan mengambil terlalu banyak kesenangan. Nanti, dia akan merasa kelaparan sebentar lagi."
-    
+
     #Black screen with Dissolve(1.0)
     #scene BG Hutan 1, day with dissolve(1.0)
-    #(Scene melihat monster musuh) 
+    #(Scene melihat monster musuh)
     #show normal jeffrey  as jeffrey di kiri
     j "Itu adalah musuh yang akan kita lawan. Hei pria hebat (Remil), hadiahnya adalah daging monster itu. Aku akan bantu dengan pasukanku yang lainnya."
     r "Dengan senang hati"
     #show normal elena as elena di kanan
-    e "Hati-hati. Bekerjasamalah, Remil." 
+    e "Hati-hati. Bekerjasamalah, Remil."
     #hide jeffrey
-    
+
     #Scene Elena mendekati Remil berbisik
     #show serious elena as elena di tengah
     e "Menurutku, kita bisa keluar dari hutan ini. Tidak jalankan rencana, dan keluar dari pepohonan ini."
@@ -65,7 +57,7 @@ label b3deca:
     e "Hutan itu sangat luas. Bukannya itu adalah hal yang menguntungkan jika ingin kabur?"
     r "Bisa saja kita akan diincar oleh monster itu, bukan?"
     #show normal elena as elena di tengah
-    e "Manusia lebih menakutkan daripada monster itu. Alios membunuh bawahannya sendiri." 
+    e "Manusia lebih menakutkan daripada monster itu. Alios membunuh bawahannya sendiri."
     r "Walaupun…."
     #show serious elena as elena di tengah
     e "Aku tidak rela kalau kamu mati melawan monster itu daripada kabur. Sekarang, pilihlah."
@@ -74,9 +66,9 @@ label b3deca:
             jump b3decaa
         "Melawan monster":
             jump b3decab
-            
+
     return
-    
+
 label b3decaa:
     r "Ayo kita kabur melalui hutan."
     #show normal elena as elena di tengah
@@ -86,32 +78,32 @@ label b3decaa:
     r "Ayo, Elena. Kita kabur"
     #show normal elena as elena di tengah
     e "Mereka tidak akan melihat kita kan?"
-    r "Tentu saja, monster ini sangat besar, dan kita ditutupi oleh badannya yang besar itu. Belum lagi, dirinya akan dihajar oleh Alios karena banyaknya pasukan yang mati." 
+    r "Tentu saja, monster ini sangat besar, dan kita ditutupi oleh badannya yang besar itu. Belum lagi, dirinya akan dihajar oleh Alios karena banyaknya pasukan yang mati."
     #show normal elena as elena di tengah
-    e "Baiklah. Ayo kita lakukan dengan cepat." 
+    e "Baiklah. Ayo kita lakukan dengan cepat."
     # scene BG Hutan, day to noon 12 ish
     #show normal elena as elena di tengah
     "Menurutmu, berapa lama kita akan berjalan di semak-semak ini?"
     r "Sampai kita tidak melihat hijau lagi, Elena. Bertahanlah"
-    
-    #Black Screen. Dissolve(1.0) 
-    #scene BG Hutan 1, night 
+
+    #Black Screen. Dissolve(1.0)
+    #scene BG Hutan 1, night
     r "Huft-huft, akhirnya kita diluar. Elena, apa kamu tidak apa-apa? Perjalanan melalui hutan ini sangat panjang."
     #show normal elena as elena di tengah
     e "Ya, aku tidak apa-apa. Terima kasih. Untuk sekarang, apa yang harus kita lakukan"
     r "Bagaimana kalau kita menggunakan kuda yang ada disana untuk melanjutkan perjalanan?"
     #show normal elena as elena di tengah
-    e "Baiklah." 
-    r "Percayalah kepadaku. Kita akan menemukan sesuatu yang lebih bagus." 
-    
-    # scene Black screenwirh  Dissolve(1.0)  
+    e "Baiklah."
+    r "Percayalah kepadaku. Kita akan menemukan sesuatu yang lebih bagus."
+
+    # scene Black screenwirh  Dissolve(1.0)
     jump b3ch2
     return
-    
+
 label b3decab:
     r "Aku rasa aku sanggup membunuh monster itu. Lagipula, dagingnya terlihat lezat"
     #show serious elena as elena di tengah
-    e "Hei. Monster itu beracun." 
+    e "Hei. Monster itu beracun."
     r "Darimana kamu tahu hal tersebut?"
     #show serious elena as elena di tengah
     e "Banyak orang yang menyerangnya. Dan mereka mengkonsumsi monster tersebut. Semuanya mati dalam keadaan mulut terbuka"
@@ -120,7 +112,7 @@ label b3decab:
     jump b3decaa
     return
 
-    
+
 label b3decb:
     #show sad elena as elena di tengah
     e "Kamu serius? Kita bisa menunda untuk pergi loh."
@@ -164,7 +156,7 @@ label b3decb:
     #show happy jeffrey as jeffrey di kiri
     j "Tenang saja, aku serius! Kalian tunggu saja di luar hutan sana, aku akan mempersiapkan kebutuhan kalian."
     e "Terima kasih banyak Jeffrey."
-    
+
     #scene BG hutan 1, day
     #show happy elena as elena di tengah
     e "Wah aku tidak menyangka Jeffrey akan melakukan itu untuk kita."
@@ -192,24 +184,24 @@ label b3decb:
     r " …Terima kasih."
     #show happy jeffrey as jeffry di kanan
     j "Sama-sama! Sekarang pergilah!"
-    
+
     #scene Black Screen with Dissolve(1.0)
     return
 
-label b3ch2:    
+label b3ch2:
     #Chapter 2
     #“Kai Yang Aneh” with dissolve(1.0)
-    
+
     #scene BG di hutan 1, day
     #show sad elena as elena di tengah
     e "Sudah berapa lama sejak kita pergi? Dan bekal kita sudah semakin menipis…"
-    r " Bertahanlah sebentar lagi." 
+    r " Bertahanlah sebentar lagi."
     #show normal elena as elena di tengah
     e "Iya, aku yakin aku bisa bertahan. 1 hari, dan tidak lebih."
     #hide elena
-    
+
     #scene BG desa Kai, day with dissolve(1.0)
-    r "Kita telah sampai." 
+    r "Kita telah sampai."
     r "Aku sangat lelah. Tenagaku habis."
     #play sound gedebruk
     #use vpunc/hpunch
@@ -226,20 +218,20 @@ label b3ch2:
     #show normal elena as elena di kanan
     e "(Apakah aktingku bagus?)"
     #show happy kai as kai di kiri
-    k "Tentu saja. Aku tidak akan menolak kesempatan untuk membantu orang lain." 
+    k "Tentu saja. Aku tidak akan menolak kesempatan untuk membantu orang lain."
     #show normal kai as kai di kiri
     k "Bawa orang itu dan wanita ini kerumahku."
-    
+
     #scene BG dalam rumah Kai. With Dissolve(2.0)
     #show normal kai as kai di tengah
     k "Istirahatlah dengan tenang. Pria ini hanya tidak punya stamina lagi, sama sepertimu."
     k "Apa ya yang harus ku masak…"
-    
+
     #scene BG dalam rumah Kai with Fade(1.0)
     #show normal kai as kai di tengah
     k "Pagi semuanya, oh kamu bangun terlebih dahulu."
     r "Oh… Kamu siapa? Aku dimana?"
-    k "Namaku Kai. Dulunya aku adalah ********* bidang ***** yang menciptakan area ***** dan ***** dari dunia ***** ini. Aku tahu bahwa kamu tidak percaya, jadi lupakanlah." 
+    k "Namaku Kai. Dulunya aku adalah ********* bidang ***** yang menciptakan area ***** dan ***** dari dunia ***** ini. Aku tahu bahwa kamu tidak percaya, jadi lupakanlah."
     r "(Apa yang dia bilang? Aku tidak dapat mendengarnya)"
     k "Kamu belum makan beberapa hari bukan? Makanlah yang puas sekarang. Aku sudah menyiapkan seluruhnya."
     menu:
@@ -257,7 +249,7 @@ label b3decb2:
     #show sad kai as kai di tengah
     k "Semua orang mengatakan bahwa aku orang gila karena mereka mendengar hal yang kamu tanyakan. Lupakan saja."
     jump b3deca2
-    
+
 label b3deca2:
     r "Izinkan aku ucapkan terima kasih. Apakah kamu melihat temanku, seorang wanita?"
     #show normal kai as kai di tengah
@@ -275,7 +267,7 @@ label b3deca2:
     e "Mil, siapa nama orang ini?"
     r "Namanya adalah Kai. Dia mengatakan bahwa dirinya orang yang sangat hebat, tetapi disini dia sering dipanggil orang gila. Dan menurutku juga dia gila."
     #show suprise elena as elena di kiri
-    e "Jangan mengejutkanku! Aku juga merasa kamu gila." 
+    e "Jangan mengejutkanku! Aku juga merasa kamu gila."
     #show laugh kai as kai di kanan
     k "HAHAHA, sudah lama aku tidak dipanggil gila didepan mataku. Terima kasih. Para ********* memang orang gila."
     #show serious elena as elena di kiri
@@ -335,7 +327,7 @@ label b3deca2:
     r "Dia pergi…"
     #show suprise elena as elena di tengah
     e "Dan… dia kembali membawa sesuatu!"
-    
+
     #hide elena
     #show happy kai as kai di kanan
     k "Ini! Ini!"
@@ -361,7 +353,7 @@ label b3deca2:
     e "Ah terima kasih."
     #hide kai
     #hide elena
-    
+
     #show normal elena as elena di tengah
     e "Remil, Menurutmu soal perkataan Kai…"
     r "Ucapannya memang sangat aneh dan kurang bisa dimengerti, tapi entah kenapa aku merasa kita harus mencoba mencari tahu soal hal itu."
@@ -402,7 +394,7 @@ label b3deca2:
     #show suprise kai as kai di kanan
     k "******, *******! ****** **** *****!"
     r "Haah… sepertinya kita harus menunda untuk pergi sampai memahami apa yang ingin ia katakan."
-    
+
     #scene Black Screen with Fade(1.0)
     #show normal elena as elena di kiri
     e "Baik, akan ku ulangi sekarang… Kita harus pergi ke Utara melewati lembah dan plateau sampai menemukan gurun, lalu di tengah gurun adalah tempat jawaban yang kita cari?"
@@ -417,9 +409,9 @@ label b3deca2:
     e "*Hoam*  aku juga sudah mengantuk,"
     r "Kalau begitu, selamat malam."
     k "Ya, selamat malam."
-    
+
     #scene Black Screen with Dissolve(1.0)
-    
+
     #show happy kai as kai di tengah
     k "Selamat pagi semua! Apa kalian sudah siap untuk pergi?"
     r "(Uugh… dia semangat sekali walau masih pagi.)"
@@ -440,8 +432,8 @@ label b3deca2:
     k "Kamu benar! Sudah, sudah tidak usah terlalu dipikirkan! Makanlah, makan!"
     #show normal elena as elena di kiri
     e "Baiklah… terima kasih."
-    
-    
+
+
     #scene BG desa Kai, day with Fade(1.0)
     #show normal kai as kai di tengah
     k "Semuanya sudah siap kan?"
@@ -456,13 +448,13 @@ label b3deca2:
     #show happy elena as elena di kiri
     e "Tentu saja! Sampai jumpa, jaga dirimu."
     k "Sampai jumpa!"
-    
- 
+
+
     #scene Black Screen with dissolve(1.0)
-    
+
     #Chapter 3
     #“Perjalanan Ke Gurun” with dissolve(1.0)
-    
+
     #scen BG lembah, day. With dissolve(1.0)
     #show happy elena as elena di tengah
     e "Wah tempat ini bagus sekali ya!"
@@ -476,14 +468,14 @@ label b3deca2:
     e "Apa akan baik-baik saja?"
     r "Kai memberi kita pisau. Kita bisa menggunakannya sebagai senjata."
     e "Well kalau begitu mari kita dekati mata air itu."
-    
+
     #CG mereka depan mata air. With dissolve(1.0)
     e "Wah segar sekali!"
     r "Ayo segera isi botolnya sebagai air minum tambahan sebelum pergi dari sini."
     e "Tunggu, aku mau cuci muka juga…"
     r "Hei jangan lama-lama!"
     e "Sebentar saja…"
-    
+
     #scene BG lembah, day. With fade(1.0)
     #show suprise elena as elena di tengah
     e "Uaaah apa itu?!"
@@ -508,12 +500,12 @@ label b3deca2:
     e "Hm… entah lah? Aku hanya merasa begitu, tapi aku tidak bisa ingat."
     r "Aku juga merasa seperti melupakan sesuatu sejak kemarin."
     #show supprise elena as elena di tengah
-    e "Kamu juga?!" 
+    e "Kamu juga?!"
     r "Yah kalau kita melupakannya berarti itu tidak penting kan?"
     #show normal elena as elena di tengah
-    e "Iya mungkin kamu benar." 
+    e "Iya mungkin kamu benar."
     r "(Meski begitu, aku sangat ingin mengetahui apa yang sebenarnya tidak bisa kuingat ini.)"
-    
+
     #scene BG di Plateau, dusk. With Fade(1.0)
     #show happy elena as elena di tengah
     e"Woaah, Remil lihat sunset disana!"
@@ -545,14 +537,14 @@ label b3deca2:
     #show normal elena as elena di tengah
     e "Ah mataharinya sudah hampir menghilang!"
     r "Kalau begitu sebaiknya kita siap siaga sekarang."
-    
+
     # scene Black Screen. With Dissolve(1.0)
-    
+
     #Chapter 4
     #“Benda Misterius” with dissolve(1.0)
-    
+
     #scene BG di padang gurun, day. With Dissolve(1.0)
-    
+
     r "(Kami tiba di padang gurun sekitar dua jam lalu, sudah lama berjalan dan sejak tadi sejauh mata memandang semuanya hanya pasir....)"
     r "Jangan jauh-jauh ya kita bisa kehilangan arah dan tersesat."
     #show normal elena as elena di tengah
@@ -579,9 +571,9 @@ label b3deca2:
     r "(Baru saja dibicarakan, dan tiba-tiba badai pasirnya datang?!)"
     e"Remil pegang tanganku! Jangan sampai kita terpisah!"
     r "Tutup matamu!"
-    
+
     #scene Black screen dissolve(1.0)
-    
+
     r "Hei, Elena! Semua sudah baik-baik saja sekarang!"
     #show happy elena as elena di tengah
     e "Hahaha! Remil, badanmu penuh dengan pasir!"
@@ -594,9 +586,9 @@ label b3deca2:
     #show happy elena as elena di tengah
     e "Bukankah berarti kita beruntung? Mungkin itu yang kita cari!"
     r "Semoga saja begitu. Ayo kita dekati tempat itu."
-    
+
     #scene BG tengah gurun with Dissolve(1.0)
-    
+
     #show confuse elena as elena di tengah
     e "Hmmm… kalau ini benar merupakan tengah gurun, berarti benda itu terkubur di bawah pedestal ini ya?"
     r "Kurasa begitu. Ayo coba kita gali."
@@ -607,7 +599,7 @@ label b3deca2:
     e "Well sudah berhari-hari kita pergi dan sekarang aku baru tahu kita punya sekop."
     r "Sudah tidak perlu dibahas lagi, ayo kita gali."
     #show happy elena as elena di tengah
-    e "Serahkan saja padaku! Aku ini cukup kuat, loh!" 
+    e "Serahkan saja padaku! Aku ini cukup kuat, loh!"
     r "Ya aku percaya. Karena tadi saat badai kamu mencengkramku sangat kuat sampai tanganku memerah."
     #show nervous elena as elena di tengah
     e "Ahahaha aku hanya takut kamu terbawa angin."
@@ -618,11 +610,11 @@ label b3deca2:
     #show happy elena as elena di tengah
     e "Oke, oke aku percaya!"
     #hide elena
-    
+
     #scene Black Screen with dissolve(1.0)
     #play sound digging
     "..Dug"
-    
+
     #show suprised elena as elena di tengah
     e "Hei tampaknya aku mengenai sesuatu!"
     r "Apakah akhirnya kita berhasil menggalinya?! Cepat kita keluarkan benda itu!"
@@ -637,15 +629,15 @@ label b3deca2:
     e "Sekarang kita tinggal berjalan balik sampai keluar gurun ini. Apa kamu masih punya tenaga?"
     r "Kalaupun aku kehabisan tenaga, kita harus berjuang agar bisa keluar dari gurun ini secepatnya. Kamu tidak mau pingsan kepanasan ataupun terkena badai pasir lagi kan?"
     e "Kamu benar. Aku tidak mau ada pasir di rambutku lagi."
-    
- 
+
+
     #scene Black Screen with dissolve(1.0)
-    
+
     #Chapter 5
     #“Pertemuan Tak Terduga” with dissolve(1.0)
-    
-    #scene BG di Plateau, dusk to night. With dissolve(1.0) 
-    
+
+    #scene BG di Plateau, dusk to night. With dissolve(1.0)
+
     r "Akhirnya kita bisa santai sementara ketika berjalan pulang."
     r "(Aku juga merasa harus beristirahat lama)"
     #show  normal elena as elena di tengah
@@ -657,12 +649,12 @@ label b3deca2:
     e "Baiklah kalau begitu. Aku akan menjaganya dengan baik. Kembali ke desa sangatlah jauh, bagaimana jika kita berdiam satu malam terlebih dahulu?"
     r "Ide bagus."
     #hide elena
-    
+
     #scene BG Kelompok Alios camping. With fade(1.0)
     #show normal jeffrey as jeffrey di kanan
     j "Halo, halo. Sudah lama kita tidak bertemu."
     r "(Waduh.. Bagaimana bisa kita bertemu dengan Jeffrey kembali? Ini akan menjadi masalah)"
-    r "Hahaha, halo." 
+    r "Hahaha, halo."
     #hide jeffrey
     #show  normal elena as elena di tengah
     e " (Hei Remil, Apa yang harus kita lakukan?)"
@@ -675,8 +667,8 @@ label b3deca2:
     r "Maaf, tetapi sepertinya kita memiliki sesuatu malam ini. Kita harus pergi."
     #show serious jeffrey as jeffrey di kanan
     j "Serius? Baiklah. Pergi dari sini."
-    
-    
+
+
     #scen BG Lembah,Dusk. With fade(1.0)
     #show  normal elena as elena di tengah
     r "Maafkan aku, Elena. Kita jadi harus mencari tempat lain untuk beristirahat"
@@ -691,7 +683,7 @@ label b3deca2:
         "Mencari tempat istirahat":
             jump b3decb3
     return
-    
+
 label b3deca3:
     #show  normal elena as elena di tengah
     r "Ayo. Aku rasa aku tidak punya tenaga yang kuat, apa kamu punya ide?"
@@ -701,25 +693,25 @@ label b3deca3:
     r "Tidak apa-apa. Semua ide harus kuhargai."
     jump b3decb3
     return
-    
+
 label b3decb3:
     r "Ayo kita mencari tempat istirahat. Kita sudah tidak punya tenaga yang besar karena perjalanan padang gurun."
     #show  normal elena as elena di tengah
     e "DImana? Tempat ini terlalu luas dan kita tidak bisa melakukan perkemahan yang enak."
     r "Kita bisa berkemah yang sederhana saja. Mungkin kita bisa membuat tempat istirahat di dalam hutan, bagaimana menurutmu?"
     e "Apakah itu adalah ide yang aman?"
-    r "Aman, dari serangan manusia." 
+    r "Aman, dari serangan manusia."
     e "Aku tidak bisa percaya."
     r "Aku akan menjaga di area hutan. Bagaimana?"
     #show happy elena as elena di tengah
-    e "Ide yang bagus" 
-    
+    e "Ide yang bagus"
+
     #scene BG hutan 1, night. With dissolve 1sec)
     #show  normal elena as elena di tengah
     r "Tidurlah terlebih dahulu. Kita masih punya bendanya, bukan?"
     e "Ya, kita punya. Benda itu aman denganku, Remil. Aku tidur terlebih dahulu."
     r "Baiklah, aku akan menjaga daerah ini."
-    
+
     #scene BG hutan 1, day. With fade(1.0)
     r "(Gawat aku ketiduran!)"
     r "Hei, Elena. Bangunlah!"
@@ -729,20 +721,20 @@ label b3decb3:
     #show normal elena as elena di tengah
     e "Oh. Tentu saja. Masih ada di sini kok…"
     r "(Untung saja…)"
-    e "Kenapa panik begitu?" 
+    e "Kenapa panik begitu?"
     r "Tidak apa-apa, ayo kita bergegas kembali ke desa."
-    
+
     #scene BG desa kai, day. With fade(1.0)
     #show normal elena as elena di tengah
     r " Apa bendanya masih aman?"
     e "Aku sudah menyimpannya di tempat yang aman. Tenang saja."
     r "Baiklah. Kalau begitu, kita akan melaporkannya kepada Kai."
-    
-    
-    #scene BG Desa Kai. With fade (2.0) 
+
+
+    #scene BG Desa Kai. With fade (2.0)
     #show normal kai as kai di kanan
     #show normal elena elena di kiri
-    
+
     r "Kai, ini adalah benda yang mungkin kamu cari."
     k "Berikan padaku. Aku akan mengeceknya."
     e "(Memberikan benda tersebut ke Kai)"
@@ -769,17 +761,17 @@ label b3decb3:
     e "Baiklah, tapi berjanjilah bahwa kamu akan pulang baik-baik saja."
     r "Tentu saja."
     r "(Aku juga tidak ingin menyelesaikan masalah dengan setengah-setengah)"
-    
- 
-    
+
+
+
     #scene Black screen with dissolve(1.0)
-    
+
     #Chapter 6
     #“Pertarungan” with dissolve(1.0)
-    
+
     #scene BG Perkemahan Alios. Day. with Dissolve(1.0)
     #show normal jeffrey as jeffrey di tengah
-    j "Wah, lihat ada yang datang kembali." 
+    j "Wah, lihat ada yang datang kembali."
     r "(Dia semakin licik. Aku rasa saat ini aku harus lebih keras kepadanya)"
     r "Bagaimana jika aku langsung berbicara saja?"
     j "Kamu ingin kembali kedalam kelompok ini? Silahkan. Aku sangat menyukainya."
@@ -797,7 +789,7 @@ label b3decb3:
     #jeffrey manipulativ(?)
     j "Kalau begitu lawan aku dan pasukanku dulu! Kita lihat seberapa serius kamu menginginkan benda ini… Hahaha"
     r "(Licik sekali. Dia benar-benar menikmati acara seperti ini)"
-    r " Ayo datanglah kepadaku!!" 
+    r " Ayo datanglah kepadaku!!"
     #show serious jeffrey as jeffrey di tengah
     #jeffrey manipulativ(?)
     j "Hancurkan dia!"
@@ -809,7 +801,7 @@ label b3decb3:
             jump b3decb4
 
     return
-    
+
 label b3deca4:
     #scene CG Remil mengincar prajuritnya. Menampilkan Jeffrey di belakang prajurit. with Dissolve(1.0)
     r "(Aku akan mengalahkan prajuritnya dulu)"
@@ -829,12 +821,12 @@ label b3deca4:
     r "Aku masih punya kekuatan untuk menghancurkanmu."
     al "Tolong ampuni aku…"
     r "(Baguslah. Tanpa pasukannya dia sangat menyedihkan.)"
-    r "Pergilah! Dan jangan kembali ke area ini lagi." 
-    al "Aku.. Aku tidak akan memaafkanmu!" 
+    r "Pergilah! Dan jangan kembali ke area ini lagi."
+    al "Aku.. Aku tidak akan memaafkanmu!"
     r "Saatnya pulang, kembali dengan benda ini."
     jump b3ch7
     return
-    
+
 label b3decb4:
     #scene CG Remil mengincar Jeffrey. Tidak ada prajurit. Jeffrey muka emosi. with Dissolve(1.0)
     r "(Aku hanya harus menghancurkan intinya, bukan)"
@@ -848,11 +840,11 @@ label b3decb4:
     j "Aku tidak licik. Aku hanya pintar"
     r "Kalau begitu kamu pintar tapi penakut."
     j "Apa maksudmu?"
-    r "Kamu membawa pasukan dan tidak berani berduel denganku." 
+    r "Kamu membawa pasukan dan tidak berani berduel denganku."
     j "Heh, Baiklah. Ayo kita bertarung. Jangan salahkan aku jika kamu akan mati ditanganku"
     r "Ayo kita lakukan."
-    
-    #scene CG Remil menang melawan Jeffrey. Remil terluka. With fade(2.0) 
+
+    #scene CG Remil menang melawan Jeffrey. Remil terluka. With fade(2.0)
     r "Akhirnya aku menang..."
     al "Hei ada ribut-ribut ap…"
     al "APA YANG KAMU LAKUKAN PADA TEMPATKU?"
@@ -861,16 +853,16 @@ label b3decb4:
     r "Aku masih punya kekuatan untuk menghancurkanmu."
     al "Tolong ampuni aku…"
     r "(Baguslah. Tanpa pasukannya dia sangat menyedihkan.)"
-    r "Pergilah! Dan jangan kembali ke area ini lagi." 
-    al "Aku.. Aku tidak akan memaafkanmu!" 
+    r "Pergilah! Dan jangan kembali ke area ini lagi."
+    al "Aku.. Aku tidak akan memaafkanmu!"
     r "Saatnya pulang, kembali dengan benda ini."
     jump b3ch7
     return
-     
+
 label b3ch7:
     #Chapter 7
     #“Kembali” with dissolve(1.0)
-    
+
     #BG desa Kai, day With fade(2.0)
     r "Kai, aku berhasil mendapatkan benda ini lagi."
     #show suprise kai as kai di tengah
@@ -886,7 +878,7 @@ label b3ch7:
     r "Kalau begitu sekarang apa?"
     k "Ikuti aku sekarang. Kalian tidak akan siap dengan apa yang akan terjadi nanti."
     r " Semoga ini bukan sesuatu yang buruk."
-    
+
     #CG Pedestal di tengah desa With dissolve(1.0)
     e "Apa ini?"
     k "Aku akan menaruh benda ini di sana, lalu kalian bisa kembali."
@@ -900,7 +892,7 @@ label b3ch7:
     r "Siapa orang yang membawa kami kemari?"
     k "Dulunya dia adalah rekanku. Tapi entah kenapa dia berubah menjadi jahat dan berkhianat. Saat kalian kembali nanti, kalian harus menyelamatkan yang lainnya juga."
     e "Tunggu dulu, kenapa kamu bicara seperti itu? Seakan kamu tidak ikut dengan kami…?"
-    
+
     #scene BG desa Kai, day with dissolve(1.0)
     #show sad kai as kai di kanan
     #show normal elena as elena di kiri
@@ -918,7 +910,7 @@ label b3ch7:
     e  "Ooh seandainya ada cara untuk membawamu kembali juga…"
     k "Sudah, sudah. Pesanku hanyalah, setelah kalian kembali, tolong beritahu semua kejahatan rekanku itu pada dunia. Agar tidak ada korban selanjutnya."
     r "Baiklah… akan kuingat pesanmu."
-    k "Terima kasih, Remil. Kalau begitu benda ini akan langsung kutaruh. Lalu kalian segera pergilah lewat portal yang terbuka nanti." 
+    k "Terima kasih, Remil. Kalau begitu benda ini akan langsung kutaruh. Lalu kalian segera pergilah lewat portal yang terbuka nanti."
     "Kai meletakkan benda itu, angin berhembus kencang dan muncul portal di depan mereka"
     #show normal kai as kai di kanan
     k "Selamat tinggal semuanya."
@@ -926,53 +918,53 @@ label b3ch7:
     e "Selamat tinggal Kai. Kami pasti akan melakukan apa yang kamu minta"
     #show happy kai as kai di kanan
     "Terima kasih Elena. Aku percaya pada kalian berdua, sampai jumpa."
-    
+
     #White screen with dissolve(1.0)
-    
-    
+
+
     #Chapter 8
     #“Akhir Dari Semua” with dissolve(1.0)
-    
+
     #CG fasilitas penelitian, ada Gordon duduk. Remil & Elena mau menghampirinya. With white fade(1.0)
     r "Kau…!"
     n "Wah, wah… Ada dua orang yang lolos?"
     e "A… aku ingat semuanya! Kamu adalah orang aneh yang menculik aku!"
     r "Kau juga menarikku dengan paksa untuk ikut denganmu!!"
-    g "Ya, itu semua perbuatanku, Gordon." 
+    g "Ya, itu semua perbuatanku, Gordon."
     e "Apa tujuanmu?! Apa kau orang jahat yang disebut Kai?!"
     g "Kai? Kai katamu? Kukira aku sudah membereskan orang itu, ck."
     r "Apa yang kau gumamkan?!"
     g "Kai adalah orang yang membantuku untuk membangun taman bermain ini. Tapi tidak kusangka dia justru mau menghancurkan taman bermainku dari dalam."
     e "Taman bermain?! Kau menculik orang hanya untuk kesenanganmu?!"
-    g "YA!" 
-    g "Aku membunuhnya karena dia menggangguku, kesalahanku membuat eksistensinya terperangkap dalam sistem." 
-    g "Aku berusaha memperbaiki masalah itu tapi kenapa dia masih ada di sana?!" 
+    g "YA!"
+    g "Aku membunuhnya karena dia menggangguku, kesalahanku membuat eksistensinya terperangkap dalam sistem."
+    g "Aku berusaha memperbaiki masalah itu tapi kenapa dia masih ada di sana?!"
     g "Apa yang salah?! BAGIAN APA? APA YANG SALAH?!"
     e "Dasar orang gila! Kau bisa membunuh orang hanya untuk ini?! Kami akan melaporkan semuanya pada polisi!!"
-    g "Polisi? ahaha… AHAHAHA.." 
+    g "Polisi? ahaha… AHAHAHA.."
     e " Apa yang kau tertawakan?!"
     g "AHAHAHA…!!!"
-    
+
     #scene Black Screen With fade(1.0)
     #scene BG Hitam
-    
-    
+
+
     #show normal gordon as gordon di tengah
-    g "Sebelumnya aku hidup bahagia… keluarga yang saling menyayangi dan pekerjaan yang stabil…" 
+    g "Sebelumnya aku hidup bahagia… keluarga yang saling menyayangi dan pekerjaan yang stabil…"
     g "Tapi tiba-tiba Kai teman lamaku mengajakku untuk membuat sistem, sistem di mana orang dapat masuk ke dalamnya sebagai hiburan atau rekreasi. Seperti game."
     #show smirk gordon as gordon di tengah
     g "Kupikir itu ide yang bagus dan sangat menarik. Aku terlena dengan pekerjaan itu, dan keluargaku…"
     #show angry gordon as gordon di tengah
     g "Keluargaku meninggalkanku karena aku terlalu fokus dengan Sistem itu!! Tempatku bekerja memecatku karena aku tidak bisa fokus!! Semua SALAH Kai yang mengajakku!! Tapi Kai tampak bahagia, dan dia tampak semangat sekali membuat sistem untuk MENYENANGKAN orang-orang!!"
-    g "Angry face M Gordon : KENAPA?! Kenapa aku harus membuat sistem untuk menyenangkan orang lain sedangkan aku sendiri tidak bahagia?!" 
+    g "Angry face M Gordon : KENAPA?! Kenapa aku harus membuat sistem untuk menyenangkan orang lain sedangkan aku sendiri tidak bahagia?!"
     #show smirk gordon as gordon di tengah
     g "Jadi kuputuskan, aku akan sepenuhnya mengambil alih pekerjaan ini. Kai tidak perlu terlibat sama sekali. Dia bisa tidur saja untuk selama-lamanya…"
     #show evil laugh gordon as gordon di tengah
     g "DAN ITU YANG KULAKUKAN!! Aku mengembangkan sistem ini untuk menjadi taman bermainku!! Menculik orang dan memaksa mereka menjalani kehidupan yang kubuat! Menertawai mereka ketika saling membunuh atau terbunuh monster!!"
     g "Tidak ada yang lebih menyenangkan daripada ini!! AHAHAHA! AHAHAHAHAHAHA….!!!"
-    
+
     #play sound *BRUUUK*
-    
+
     #fade in
     #scene CG Gordon nyerang Remil, pisau depan lehernya
     e " REMIL!!!"
@@ -989,34 +981,34 @@ label b3ch7:
     e "A… apa yang harus kulakukan…?"
     r "Elena!!"
     g "ELENA!!!"
-    
+
     menu:
         "Ikuti perkataan Remil":
             jump b3deca5
         "Ikuti perkataan Gordon":
             jump b3decb5
     return
-    
+
 label b3deca5:
     e "Remil… aku akan segera kembali!"
-    r "Ya…" 
+    r "Ya…"
     g "Jadi kau tidak peduli padanya, hah?!"
-    
+
     #scene black
     e "(Aku berlari sekencang mungkin, meninggalkan fasilitas penelitian di bawah tanah itu. Begitu melihat cahaya matahari, aku langsung berteriak. Meminta pertolongan dan bantuan polisi…)"
     e "(Untungnya tempat itu berada di perkotaan. Tidak butuh waktu lama sampai polisi datang dan menggeledah fasilitas penelitian itu.)"
     e "(Gordon ditangkap. Sistem itu dimatikan dan korban penculikan lain yaitu Alios, Jeffrey, Cherry, dan beberapa orang lainnya kembali sadar. Tetapi Kai sudah menghilang sepenuhnya…)"
     e "(Dan Remil… Gordon tidak bohong soal akan membunuhnya. Begitu aku dan polisi tiba tubuh Remil sudah berlumuran darah. Aku sangat panik dan takut. Remil langsung dibawa ke rumah sakit…)"
     e "(Satu minggu sudah berlalu sejak kejadian mengerikan itu. Dan Remil…)"
-    
+
     #fade in
     #scene (CG Remil di rumah sakit dengan perban di lehernya, Elena tersenyum)
     e "(...Remil akhirnya sadar dari koma.)"
-    
+
     "(TRUE ENDING)"
     return
-    
-    
+
+
 label b3decb5:
     e "Baik! Jangan sakiti Remil, kami akan ikuti perkataanmu"
     r "Elena!!"
@@ -1032,4 +1024,3 @@ label b3decb5:
     e "Uuh… uh…"
     jump b3deca5
     return
-

@@ -352,4 +352,13 @@ label start:
             r "(Aku tidak bisa mengikuti perintah dia.)"
             jump branch2
 
+        "Ajak Elena pergi":
+            r "Tegarkan dirimu, Elena. Aku akan berusaha untuk keluar dari tempat ini. Ikutlah denganku."
+            #show normal elena as elena di tengah
+            e "Aku sangat berterima kasih. Tetapi, aku takut bahwa nanti aku yang akan mati. Aku sangat khawatir"
+            r "Aku punya rencana yang lumayan efektif buat kita."
+            "Remil menjelaskan rencananya ke Elena."
+            #scene Black dissolve(1.0)
+            jump branch3
+
     return
