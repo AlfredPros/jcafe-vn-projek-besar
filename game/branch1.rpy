@@ -41,7 +41,7 @@ label branch1:
     "Dia terlihat seperti menahan amarahnya... aku harus menenangkanya"
 
     #show normal  jeffry as jeffry di kiri
-    J "Hey, Remil, apa yang kamu lakukan dari tadi mengintip ke sana kemari?"
+    j "Hey, Remil, apa yang kamu lakukan dari tadi mengintip ke sana kemari?"
     r  "Tidak ada"
     r "Aku akan pergi membawakan makan malam Elena. Aku khawatir dia masih memikirkan tentang masalah saat sore tadi."
     #show normal cherry di kiri
