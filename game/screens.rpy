@@ -114,10 +114,10 @@ screen say(who, what):
                 #id "namebox"
                 #style "namebox"
             text who id "who":
-                
+
                 text_align 0.5
                 size 30
-                xpos 245
+                xpos 205
                 ypos -65
                 color "#FFFFFF"
 
@@ -127,11 +127,13 @@ screen say(who, what):
                 xpos 120
                 color "#808080"
                 size 30
+                xsize 1080
         else:
             text what id "what":
                 size 30
                 color "#FFFFFF"
                 xpos 120
+                xsize 1080
 
 
     ## If there's a side image, display it above the text. Do not display on the
