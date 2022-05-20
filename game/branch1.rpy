@@ -778,7 +778,7 @@ label b1deca2:
     r "Lumayan- Tunggu, jadi kau yang menulisnya!"
     k "Ya."
     r "..."
-    R "Kalau begitu, apa Anda juga yang menculik Elena?"
+    r "Kalau begitu, apa Anda juga yang menculik Elena?"
     k "Tidak, Aku jujur tentang menemukannya. Tetapi, dia diculik dan dibawa ke hutan karena keinginannya sendiri. Sepertinya dia berencana membawa beruang ke perkemahanmu."
     r "Apa?!"
     k "Aku katakan jujur lagi, Elena, temanmu merencanakan banyak hal di belakang kalian. Namun, dia sudah baik-baik saja karena Aku merawatnya di desaku."
