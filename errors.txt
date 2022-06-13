@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 1217: Line is indented, but the preceding idle statement does not expect a block. Please check this line's indentation.
+    zoom 0.75
+    ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Mon Jun 13 16:07:27 2022

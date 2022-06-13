@@ -3,8 +3,11 @@
 ################################################################################
 
 init offset = -1
-
-
+image prompt_yes_button_hover = im.MatrixColor("gui/prompt_screen/prompt_yes_button.png", im.matrix.brightness(+0.2))
+image prompt_back_button_hover = im.MatrixColor("gui/prompt_screen/prompt_back_button.png", im.matrix.brightness(+0.2))
+transform zoom_persen(persen):
+    subpixel True
+    zoom persen
 ################################################################################
 ## Styles
 ################################################################################
@@ -74,6 +77,8 @@ style vslider:
 style frame:
     padding gui.frame_borders.padding
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+
+
 
 #style ukuran_main:
     #text_size 40
@@ -1203,28 +1208,63 @@ screen confirm(message, yes_action, no_action):
     modal True
 
     zorder 200
+    add "black":
+        alpha 0.75
+    #main menu
+    if message == "Are you sure you want to return to the main menu?\nThis will lose unsaved progress.":
+        add "gui/prompt_screen/prompt_backmainmenu.png":
+            align (0.5,0.5)
+            zoom 0.75
+        imagebutton at zoom_persen(0.75):
+            xalign 0.5
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_yes_button.png"
+            hover "prompt_yes_button_hover"
+            action yes_action
+        imagebutton at zoom_persen(0.75):
+            xalign 0.64
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_back_button.png"
+            hover "prompt_back_button_hover"
+            action no_action
 
-    style_prefix "confirm"
+    #quit game
+    elif message == "Are you sure you want to quit?":
+        add "gui/prompt_screen/prompt_exitgame.png":
+            align (0.5,0.5)
+            zoom 0.75
+        imagebutton at zoom_persen(0.75):
+            xalign 0.5
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_yes_button.png"
+            hover "prompt_yes_button_hover"
+            action yes_action
+        imagebutton at zoom_persen(0.75):
+            xalign 0.64
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_back_button.png"
+            hover "prompt_back_button_hover"
+            action no_action
 
-    add "gui/overlay/confirm.png"
+    #overrite save
+    elif message == "Are you sure you want to overwrite your save?":
+        add "gui/prompt_screen/prompt_overwritesave.png":
+            align (0.5,0.5)
+            zoom 0.75
+        imagebutton at zoom_persen(0.75):
+            xalign 0.5
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_yes_button.png"
+            hover "prompt_yes_button_hover"
+            action yes_action
+        imagebutton at zoom_persen(0.75):
+            xalign 0.64
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_back_button.png"
+            hover "prompt_back_button_hover"
+            action no_action
 
-    frame:
 
-        vbox:
-            xalign .5
-            yalign .5
-            spacing 30
-
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
-
-            hbox:
-                xalign 0.5
-                spacing 100
-
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
