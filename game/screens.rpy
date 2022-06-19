@@ -3,8 +3,27 @@
 ################################################################################
 
 init offset = -1
+
+image settings_button_hover = im.MatrixColor("gui/menu/settings_button.png", im.matrix.brightness(+0.2))
+
+image gallery_button_hover = im.MatrixColor("gui/menu/gallery_button.png", im.matrix.brightness(+0.2))
+
+image main_button_hover = im.MatrixColor("gui/menu/main_button.png", im.matrix.brightness(+0.2))
+
+image load_button_hover = im.MatrixColor("gui/menu/load_button.png", im.matrix.brightness(+0.2))
+
+image save_button_hover = im.MatrixColor("gui/menu/save_button.png", im.matrix.brightness(+0.2))
+
 image prompt_yes_button_hover = im.MatrixColor("gui/prompt_screen/prompt_yes_button.png", im.matrix.brightness(+0.2))
+
 image prompt_back_button_hover = im.MatrixColor("gui/prompt_screen/prompt_back_button.png", im.matrix.brightness(+0.2))
+
+image return_button_hover = im.MatrixColor("gui/menu/return_button.png", im.matrix.brightness(+0.2))
+
+image save_button_dark = im.MatrixColor("gui/menu/save_button.png", im.matrix.brightness(-0.5))
+
+image main_button_dark = im.MatrixColor("gui/menu/main_button.png", im.matrix.brightness(-0.5))
+
 transform zoom_persen(persen):
     subpixel True
     zoom persen
@@ -399,9 +418,9 @@ screen main_menu():
     #use navigation
 
     #VBOX tambahan sendiri
-    text "LOGO":
-        xalign 0.050 yalign 0.1
-        size 148
+    add "gui/logo.png":
+        zoom 0.81
+        xalign -0.235 yalign -0.95
     vbox:
         spacing 10
         xalign 0.05 yalign 0.85
@@ -422,7 +441,7 @@ screen main_menu():
         textbutton _("Gallery"):
             text_size 50
             #nanti ganti gallery
-            action ShowMenu("preferences")
+            action ShowMenu("gallery")
 
         textbutton _("Quit"):
             text_size 50
@@ -434,10 +453,10 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "Hou Tou Project":
+            text "":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text "":
                 style "main_menu_version"
 
 
@@ -481,68 +500,6 @@ style main_menu_version:
 
 screen game_menu(title, scroll=None, yinitial=0.0):
 
-    style_prefix "game_menu"
-
-    if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
-
-    frame:
-        style "game_menu_outer_frame"
-
-        hbox:
-
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
-                #add "black":
-                    #zoom 0.25
-            frame:
-                style "game_menu_content_frame"
-                #add "black.png":
-                    #zoom 0.25
-                if scroll == "viewport":
-
-                    viewport:
-                        yinitial yinitial
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
-
-                        side_yfill True
-
-                        vbox:
-                            transclude
-
-                elif scroll == "vpgrid":
-
-                    vpgrid:
-                        cols 1
-                        yinitial yinitial
-
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
-
-                        side_yfill True
-
-                        transclude
-
-                else:
-
-                    transclude
-
-    use navigation
-
-    textbutton _("Return"):
-        style "return_button"
-
-        action Return()
-
-    label title
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
@@ -648,93 +605,147 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 
 screen save():
-
+#masih bermasalah
     tag menu
-
+    add "gui/menu/menu_save.png"
     use file_slots(_("Save"))
 
 
+
 screen load():
-
+# masih bermasalah
     tag menu
-
+    add "gui/menu/menu_load.png"
     use file_slots(_("Load"))
+
+
 
 
 screen file_slots(title):
 
+    tag menu
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    if title == "Save":
+        #setting button
+        imagebutton:
+            xalign 0.1965 yalign 0.267
+            idle "gui/menu/settings_button.png"
+            hover "settings_button_hover"
+            action ShowMenu("preferences")
 
-    use game_menu(title):
+        #load button
+        imagebutton:
+            xalign 0.1963 yalign 0.533
+            idle "gui/menu/load_button.png"
+            hover "load_button_hover"
+            action ShowMenu('load')
 
-        fixed:
+        #main menu button
+        imagebutton:
+            xalign 0.1963 yalign 0.666
+            idle "gui/menu/main_button.png"
+            hover "main_button_hover"
+            action MainMenu()
 
-            ## This ensures the input will get the enter event before any of the
-            ## buttons do.
-            order_reverse True
+        #gallery button
+        imagebutton at zoom_persen(1.01) :
+            xalign 0.197 yalign 0.811
+            idle "gui/menu/gallery_button.png"
+            hover "gallery_button_hover"
+            action Show("gallery")
 
-            ## The page name, which can be edited by clicking on a button.
-            button:
-                style "page_label"
+        #Return button
+        imagebutton:
+            idle "gui/menu/return_button.png"
+            hover "return_button_hover"
+            action Return()
+            yalign 0.932
+    else:
+        #setting button
+        imagebutton:
+            xalign 0.1965 yalign 0.267
+            idle "gui/menu/settings_button.png"
+            hover "settings_button_hover"
+            action ShowMenu("preferences")
 
-                key_events True
-                xalign 0.5
-                action page_name_value.Toggle()
+        if main_menu:
 
-                input:
-                    style "page_label_text"
-                    value page_name_value
+            #save button dark
+            add "save_button_dark":
+                xalign 0.1965 yalign 0.4
 
-            ## The grid of file slots.
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
+        else:
 
-                xalign 0.5
-                yalign 0.5
+            #save button
+            imagebutton:
+                xalign 0.1965 yalign 0.4
+                idle "gui/menu/save_button.png"
+                hover "save_button_hover"
+                action ShowMenu('save')
+        if main_menu:
+            #save button dark
+            add "main_button_dark":
+                xalign 0.1963 yalign 0.666
+        else:
+            #main menu button
+            imagebutton:
+                xalign 0.1963 yalign 0.666
+                idle "gui/menu/main_button.png"
+                hover "main_button_hover"
+                action MainMenu()
 
-                spacing gui.slot_spacing
+        #gallery button
+        imagebutton at zoom_persen(1.01) :
+            xalign 0.197 yalign 0.811
+            idle "gui/menu/gallery_button.png"
+            hover "gallery_button_hover"
+            action Show("gallery")
 
-                for i in range(gui.file_slot_cols * gui.file_slot_rows):
+        #Return button
+        imagebutton:
+            idle "gui/menu/return_button.png"
+            hover "return_button_hover"
+            action Return()
+            yalign 0.932
+
+    vbox:
+        area(413, 250, 1009, 677) # 50 pixels spacing
+
+        viewport:
+            #mousewheel True
+
+            grid 2 2:
+
+                xspacing 16
+                yspacing 10
+
+                for i in range(2*2):
 
                     $ slot = i + 1
 
                     button:
+                        # BG size: 312 x 180 px
+                        #background "gui/ui/save/save.png"
+                        #hover_background "gui/ui/save/save_selected.png"
+                        xsize 325
                         action FileAction(slot)
 
                         has vbox
 
-                        add FileScreenshot(slot) xalign 0.5
+                        add FileScreenshot(slot):
+                            xalign 0.5
+                            size(300, 168)
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        null height 16
+
+                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("empty slot")):  # (#file_time}%A, %B %d %Y, %H:%M
                             style "slot_time_text"
-
-                        text FileSaveName(slot):
-                            style "slot_name_text"
+                            size 24
+                            font "nanifont.ttf"
+                            color "#44527E"
+                            hover_color "#6479B7"
 
                         key "save_delete" action FileDelete(slot)
-
-            ## Buttons to access other pages.
-            hbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 1.0
-
-                spacing gui.page_spacing
-
-                textbutton _("<") action FilePagePrevious()
-
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
-
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
-
-                textbutton _(">") action FilePageNext()
 
 
 style page_label is gui_label
@@ -768,6 +779,59 @@ style slot_button:
 style slot_button_text:
     properties gui.button_text_properties("slot_button")
 
+## Gallery screen ##########################################################
+#ini masih harus ditambahin buat page nya tergantung cg ada berapa
+screen gallery():
+    tag menu
+    add "gui/menu/menu_gallery1.png"
+
+    #setting button
+    imagebutton:
+        xalign 0.1965 yalign 0.267
+        idle "gui/menu/settings_button.png"
+        hover "settings_button_hover"
+        action ShowMenu('preferences')
+
+    if main_menu:
+
+        #save button dark
+        add "save_button_dark":
+            xalign 0.1965 yalign 0.4
+
+    else:
+
+        #save button
+        imagebutton:
+            xalign 0.1965 yalign 0.4
+            idle "gui/menu/save_button.png"
+            hover "save_button_hover"
+            action ShowMenu('save')
+
+    #load button
+    imagebutton:
+        xalign 0.1963 yalign 0.533
+        idle "gui/menu/load_button.png"
+        hover "load_button_hover"
+        action ShowMenu('load')
+
+    if main_menu:
+        #save button dark
+        add "main_button_dark":
+            xalign 0.1963 yalign 0.666
+    else:
+        #main menu button
+        imagebutton:
+            xalign 0.1963 yalign 0.666
+            idle "gui/menu/main_button.png"
+            hover "main_button_hover"
+            action MainMenu()
+
+    #Return button
+    imagebutton:
+        idle "gui/menu/return_button.png"
+        hover "return_button_hover"
+        action Return()
+        yalign 0.932
 
 ## Preferences screen ##########################################################
 ##
@@ -777,6 +841,59 @@ style slot_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
 screen preferences():
+    tag menu
+    add "gui/menu/menu_settings.png"
+
+    if main_menu:
+
+        #save button dark
+        add "save_button_dark":
+            xalign 0.1965 yalign 0.4
+
+    else:
+
+        #save button
+        imagebutton:
+            xalign 0.1965 yalign 0.4
+            idle "gui/menu/save_button.png"
+            hover "save_button_hover"
+            action ShowMenu('save')
+
+    #load button
+    imagebutton:
+        xalign 0.1963 yalign 0.533
+        idle "gui/menu/load_button.png"
+        hover "load_button_hover"
+        action ShowMenu('load')
+
+    if main_menu:
+        #save button dark
+        add "main_button_dark":
+            xalign 0.1963 yalign 0.666
+    else:
+        #main menu button
+        imagebutton:
+            xalign 0.1963 yalign 0.666
+            idle "gui/menu/main_button.png"
+            hover "main_button_hover"
+            action MainMenu()
+
+    #gallery button
+    imagebutton:
+        xalign 0.199 yalign 0.81
+        idle "gui/menu/gallery_button.png"
+        hover "gallery_button_hover"
+        action Show("gallery")
+
+    #Return button
+    imagebutton:
+        idle "gui/menu/return_button.png"
+        hover "return_button_hover"
+        action Return()
+        yalign 0.932
+
+
+screen preferences_backup():
 
     tag menu
 
@@ -1051,67 +1168,17 @@ screen help():
                 textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
             if device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
 
 
 screen keyboard_help():
 
-    hbox:
-        label _("Enter")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
-
-    hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
-
-    hbox:
-        label _("Escape")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Ctrl")
-        text _("Skips dialogue while held down.")
-
-    hbox:
-        label _("Tab")
-        text _("Toggles dialogue skipping.")
-
-    hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
-        label "H"
-        text _("Hides the user interface.")
-
-    hbox:
-        label "S"
-        text _("Takes a screenshot.")
-
-    hbox:
-        label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
-
-    hbox:
-        label "Shift+A"
-        text _("Opens the accessibility menu.")
-
+    add "gui/controls/ctrls_keyboard1.png":
+        xalign -0.5 yalign 0.0
 
 screen mouse_help():
 
