@@ -660,6 +660,45 @@ screen file_slots(title):
             hover "return_button_hover"
             action Return()
             yalign 0.932
+
+
+
+        ## The page name, which can be edited by clicking on a button.
+        button:
+            style "page_label"
+
+            key_events True
+            xalign 0.5
+            action page_name_value.Toggle()
+
+            input:
+                style "page_label_text"
+                value page_name_value
+        hbox:
+            style_prefix "page"
+
+            xalign 0.505
+            yalign 0.1
+
+            spacing gui.page_spacing
+
+
+            if config.has_autosave:
+                textbutton _("{#auto_page}Auto") action FilePage("auto"):
+                    text_size 27
+                    text_kerning -0.3
+                    text_color "#4B0F12"
+                    text_hover_color "#E3BD5B"
+
+
+
+
+            ## range(1, 10) gives the numbers from 1 to 9.
+            for page in range(1, 9):
+                textbutton "[page]" action FilePage(page):
+                    text_size 28
+
+
     else:
         #setting button
         imagebutton:
@@ -708,15 +747,53 @@ screen file_slots(title):
             action Return()
             yalign 0.932
 
+
+
+        ## The page name, which can be edited by clicking on a button.
+        button:
+            style "page_label"
+
+            key_events True
+            xalign 0.5
+            action page_name_value.Toggle()
+
+            input:
+                style "page_label_text"
+                value page_name_value
+        hbox:
+            style_prefix "page"
+
+            xalign 0.5
+            yalign 0.2
+
+            spacing gui.page_spacing
+
+            textbutton _("<") action FilePagePrevious()
+
+            if config.has_autosave:
+                textbutton _("{#auto_page}Auto") action FilePage("auto"):
+                    text_size 24
+
+
+
+            ## range(1, 10) gives the numbers from 1 to 9.
+            for page in range(1, 9):
+                textbutton "[page]":
+                    text_size 24
+                    action FilePage(page)
+
+            textbutton _(">") action FilePageNext()
+
+
     vbox:
-        area(413, 250, 1009, 677) # 50 pixels spacing
+        area(433, 140, 770, 540) # 50 pixels spacing
 
         viewport:
             #mousewheel True
 
             grid 2 2:
 
-                xspacing 16
+                xspacing 104
                 yspacing 10
 
                 for i in range(2*2):
@@ -734,16 +811,18 @@ screen file_slots(title):
 
                         add FileScreenshot(slot):
                             xalign 0.5
-                            size(300, 168)
+                            size(297, 204)
 
-                        null height 16
+                        null height 15
 
-                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("empty slot")):  # (#file_time}%A, %B %d %Y, %H:%M
+                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("Empty")):  # (#file_time}%A, %B %d %Y, %H:%M
+
                             style "slot_time_text"
                             size 24
                             font "nanifont.ttf"
-                            color "#44527E"
-                            hover_color "#6479B7"
+                            color "#4B0F12"
+                            hover_color "#E3BD5B"
+
 
                         key "save_delete" action FileDelete(slot)
 
