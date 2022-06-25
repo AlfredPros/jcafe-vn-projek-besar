@@ -1,11 +1,37 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' u'gui/ui/save/save.png'>:
+While running game code:
   File "renpy/common/00gamemenu.rpy", line 173, in script
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 173, in <module>
     $ ui.interact()
-IOError: Couldn't find file 'gui/ui/save/save.png'.
+  File "game/screens.rpy", line 607, in execute
+    screen save():
+  File "game/screens.rpy", line 607, in execute
+    screen save():
+  File "game/screens.rpy", line 611, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 624, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 624, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 788, in execute
+    vbox:
+  File "game/screens.rpy", line 791, in execute
+    viewport:
+  File "game/screens.rpy", line 794, in execute
+    grid 2 2:
+  File "game/screens.rpy", line 799, in execute
+    for i in range(2*2):
+  File "game/screens.rpy", line 803, in execute
+    button:
+  File "game/screens.rpy", line 810, in execute
+    has vbox
+  File "game/screens.rpy", line 832, in execute
+    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
+  File "game/screens.rpy", line 832, in <module>
+    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
+TypeError: _() takes exactly 1 argument (0 given)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -22,63 +48,53 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3325, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3839, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 2565, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/transition.py", line 368, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 688, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 826, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 1029, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/viewport.py", line 257, in render
-    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 493, in render
-    renders = [ render(i, renwidth, renheight, st, at) for i in children ]
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/behavior.py", line 795, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 1293, in render
-    back = render(style.background, bw, bh, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 263, in renpy.display.render.render
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/im.py", line 625, in render
-    return cache.get(self, render=True)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/im.py", line 287, in get
-    surf = image.load()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/im.py", line 706, in load
-    raise e
-IOError: Couldn't find file 'gui/ui/save/save.png'.
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 607, in execute
+    screen save():
+  File "game/screens.rpy", line 607, in execute
+    screen save():
+  File "game/screens.rpy", line 611, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 624, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 624, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 788, in execute
+    vbox:
+  File "game/screens.rpy", line 791, in execute
+    viewport:
+  File "game/screens.rpy", line 794, in execute
+    grid 2 2:
+  File "game/screens.rpy", line 799, in execute
+    for i in range(2*2):
+  File "game/screens.rpy", line 803, in execute
+    button:
+  File "game/screens.rpy", line 810, in execute
+    has vbox
+  File "game/screens.rpy", line 832, in execute
+    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
+  File "game/screens.rpy", line 832, in <module>
+    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
+TypeError: _() takes exactly 1 argument (0 given)
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 jcafe_vn_projek_besar 1.0
-Sun Jun 19 23:21:36 2022
+Sun Jun 26 00:19:03 2022

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 689: u'kerning' is not a keyword argument or valid child for the textbutton statement.
-    kerning -0.1
-           ^
+File "game/screens.rpy", line 819: u'size' is not a keyword argument or valid child for the vbox statement.
+    size (297,204)
+        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Jun 24 00:47:50 2022
+Sun Jun 26 00:17:13 2022

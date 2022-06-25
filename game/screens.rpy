@@ -808,14 +808,28 @@ screen file_slots(title):
                         action FileAction(slot)
 
                         has vbox
+                        if FileLoadable(slot):
+                            add FileScreenshot(slot):
+                                xalign 0.5
+                                size(297, 204)
+                        else:
+                            viewport:
+                                area (0,0,297, 204)
+                                vbox:
 
-                        add FileScreenshot(slot):
-                            xalign 0.5
-                            size(297, 204)
+                                    text "Empty":
+                                        xpos 118
+                                        ypos 80
+                                        text_align 0.5
+                                        size 24
+                                        font "nanifont.ttf"
+                                        color "#4B0F12"
+                                        hover_color "#E3BD5B"
+
 
                         null height 15
 
-                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("Empty")):  # (#file_time}%A, %B %d %Y, %H:%M
+                        text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("")):  # (#file_time}%A, %B %d %Y, %H:%M
 
                             style "slot_time_text"
                             size 24
