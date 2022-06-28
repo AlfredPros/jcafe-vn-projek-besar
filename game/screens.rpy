@@ -4,6 +4,8 @@
 
 init offset = -1
 
+image delete_button_hover = im.MatrixColor("gui/menu/delete_button.png", im.matrix.brightness(+0.2))
+
 image settings_button_hover = im.MatrixColor("gui/menu/settings_button.png", im.matrix.brightness(+0.2))
 
 image gallery_button_hover = im.MatrixColor("gui/menu/gallery_button.png", im.matrix.brightness(+0.2))
@@ -664,16 +666,9 @@ screen file_slots(title):
 
 
         ## The page name, which can be edited by clicking on a button.
-        button:
-            style "page_label"
 
-            key_events True
-            xalign 0.5
-            action page_name_value.Toggle()
 
-            input:
-                style "page_label_text"
-                value page_name_value
+
         hbox:
             style_prefix "page"
 
@@ -685,8 +680,10 @@ screen file_slots(title):
 
             if config.has_autosave:
                 textbutton _("{#auto_page}Auto") action FilePage("auto"):
-                    text_size 27
-                    text_kerning -0.3
+                    xpos 34
+                    ypos -2
+                    text_kerning -2
+                    text_size 28
                     text_color "#4B0F12"
                     text_hover_color "#E3BD5B"
 
@@ -694,9 +691,22 @@ screen file_slots(title):
 
 
             ## range(1, 10) gives the numbers from 1 to 9.
-            for page in range(1, 9):
+            for page in range(1, 5):
                 textbutton "[page]" action FilePage(page):
-                    text_size 28
+                    xpos 61
+                    text_color "#4B0F12"
+                    text_hover_color "#E3BD5B"
+                    text_size 27
+                null width 7.7
+
+            for page in range(5, 9):
+                textbutton "[page]" action FilePage(page):
+                    xpos 217
+                    ypos 0
+                    text_color "#4B0F12"
+                    text_hover_color "#E3BD5B"
+                    text_size 29
+                null width 9.5
 
 
     else:
@@ -750,43 +760,46 @@ screen file_slots(title):
 
 
         ## The page name, which can be edited by clicking on a button.
-        button:
-            style "page_label"
 
-            key_events True
-            xalign 0.5
-            action page_name_value.Toggle()
-
-            input:
-                style "page_label_text"
-                value page_name_value
         hbox:
             style_prefix "page"
 
-            xalign 0.5
-            yalign 0.2
+            xalign 0.505
+            yalign 0.1
 
             spacing gui.page_spacing
 
-            textbutton _("<") action FilePagePrevious()
-
             if config.has_autosave:
                 textbutton _("{#auto_page}Auto") action FilePage("auto"):
-                    text_size 24
+                    xpos 34
+                    ypos -2
+                    text_kerning -2
+                    text_size 28
+                    text_color "#4B0F12"
+                    text_hover_color "#E3BD5B"
 
 
 
             ## range(1, 10) gives the numbers from 1 to 9.
-            for page in range(1, 9):
-                textbutton "[page]":
-                    text_size 24
-                    action FilePage(page)
+            for page in range(1, 5):
+                textbutton "[page]" action FilePage(page):
+                    xpos 61
+                    text_color "#4B0F12"
+                    text_hover_color "#E3BD5B"
+                    text_size 27
+                null width 7.7
 
-            textbutton _(">") action FilePageNext()
-
+            for page in range(5, 9):
+                textbutton "[page]" action FilePage(page):
+                    xpos 217
+                    ypos 0
+                    text_color "#4B0F12"
+                    text_hover_color "#E3BD5B"
+                    text_size 29
+                null width 9.5
 
     vbox:
-        area(433, 140, 770, 540) # 50 pixels spacing
+        area(433,100, 770, 640)
 
         viewport:
             #mousewheel True
@@ -794,7 +807,7 @@ screen file_slots(title):
             grid 2 2:
 
                 xspacing 104
-                yspacing 10
+                yspacing -30
 
                 for i in range(2*2):
 
@@ -808,18 +821,29 @@ screen file_slots(title):
                         action FileAction(slot)
 
                         has vbox
+
                         if FileLoadable(slot):
-                            add FileScreenshot(slot):
-                                xalign 0.5
-                                size(297, 204)
+
+                            viewport:
+
+                                area (0,0,347, 244)
+                                add FileScreenshot(slot):
+                                    xpos 0
+                                    ypos 40
+                                    size(297, 204)
+                                imagebutton:
+                                    xpos 280
+                                    ypos 10
+                                    idle "gui/menu/delete_button.png"
+                                    hover "delete_button_hover"
+                                    action FileDelete(slot)
                         else:
                             viewport:
-                                area (0,0,297, 204)
+                                area (0,0,347, 244)
                                 vbox:
-
                                     text "Empty":
                                         xpos 118
-                                        ypos 80
+                                        ypos 120
                                         text_align 0.5
                                         size 24
                                         font "nanifont.ttf"
@@ -830,7 +854,7 @@ screen file_slots(title):
                         null height 15
 
                         text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_("")):  # (#file_time}%A, %B %d %Y, %H:%M
-
+                            xalign 0.3
                             style "slot_time_text"
                             size 24
                             font "nanifont.ttf"
@@ -838,7 +862,6 @@ screen file_slots(title):
                             hover_color "#E3BD5B"
 
 
-                        key "save_delete" action FileDelete(slot)
 
 
 style page_label is gui_label

@@ -5,33 +5,7 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 173, in <module>
     $ ui.interact()
-  File "game/screens.rpy", line 607, in execute
-    screen save():
-  File "game/screens.rpy", line 607, in execute
-    screen save():
-  File "game/screens.rpy", line 611, in execute
-    use file_slots(_("Save"))
-  File "game/screens.rpy", line 624, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 624, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 788, in execute
-    vbox:
-  File "game/screens.rpy", line 791, in execute
-    viewport:
-  File "game/screens.rpy", line 794, in execute
-    grid 2 2:
-  File "game/screens.rpy", line 799, in execute
-    for i in range(2*2):
-  File "game/screens.rpy", line 803, in execute
-    button:
-  File "game/screens.rpy", line 810, in execute
-    has vbox
-  File "game/screens.rpy", line 832, in execute
-    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
-  File "game/screens.rpy", line 832, in <module>
-    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
-TypeError: _() takes exactly 1 argument (0 given)
+Exception: Grid overfull.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -58,43 +32,23 @@ Full traceback:
     d.visit_all(callback, seen)
   File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 441, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 570, in visit_all
     callback(self)
   File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3737, in <lambda>
     root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
-    self.update()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 607, in execute
-    screen save():
-  File "game/screens.rpy", line 607, in execute
-    screen save():
-  File "game/screens.rpy", line 611, in execute
-    use file_slots(_("Save"))
-  File "game/screens.rpy", line 624, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 624, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 788, in execute
-    vbox:
-  File "game/screens.rpy", line 791, in execute
-    viewport:
-  File "game/screens.rpy", line 794, in execute
-    grid 2 2:
-  File "game/screens.rpy", line 799, in execute
-    for i in range(2*2):
-  File "game/screens.rpy", line 803, in execute
-    button:
-  File "game/screens.rpy", line 810, in execute
-    has vbox
-  File "game/screens.rpy", line 832, in execute
-    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
-  File "game/screens.rpy", line 832, in <module>
-    text FileTime(slot, format=_("{#file_time}%B %d %Y, %H:%M"), empty=_()):  # (#file_time}%A, %B %d %Y, %H:%M
-TypeError: _() takes exactly 1 argument (0 given)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 546, in per_interact
+    raise Exception("Grid overfull.")
+Exception: Grid overfull.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 jcafe_vn_projek_besar 1.0
-Sun Jun 26 00:19:03 2022
+Tue Jun 28 23:30:23 2022
