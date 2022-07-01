@@ -4,6 +4,12 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
+init python:
+    config.keymap['dismiss'].append('z')
+    config.keymap['button_select'].append('z')
+    config.keymap['rollback'].append('x')
+    config.keymap['game_menu'].append('c')
+
 
 ## Custom Settings #############################################################
 
@@ -21,6 +27,17 @@ define config.skip_sounds = True  # Don't play sound when skipping
 ## Additional Goodies
 define config.enter_yesno_transition = Dissolve(.125)
 define config.exit_yesno_transition = Dissolve(.125)
+
+define config.skip_sounds = True
+
+
+## Important Mode ##############################################################
+
+## For developers who wants to customize, analyze, or make my codes even
+## better and smoother, I welcome you to set this to True. (-Alfred)
+
+define config.developer = True  # Make sure this is set to False when releasing.
+
 
 ## Basics ######################################################################
 
@@ -102,12 +119,12 @@ define config.intra_transition = Dissolve(0.4)
 
 ## A transition that is used after a game has been loaded.
 
-define config.after_load_transition = dissolve
+define config.after_load_transition = Dissolve(0.4)
 
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = dissolve
+define config.end_game_transition = Dissolve(0.4)
 
 
 ## A variable to set the transition used when the game starts does not exist.
@@ -138,7 +155,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 40
+default preferences.text_cps = 60
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
