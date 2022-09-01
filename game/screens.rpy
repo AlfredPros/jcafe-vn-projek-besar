@@ -1447,6 +1447,42 @@ screen confirm(message, yes_action, no_action):
             hover "prompt_back_button_hover"
             action no_action
 
+    #buat load ditengah game
+    elif message == "Loading will lose unsaved progress.\nAre you sure you want to do this?":
+        add "gui/prompt_screen/prompt_load_in_game.png":
+            align (0.5,0.5)
+            zoom 0.75
+        imagebutton at zoom_persen(0.75):
+            xalign 0.5
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_yes_button.png"
+            hover "prompt_yes_button_hover"
+            action yes_action
+        imagebutton at zoom_persen(0.75):
+            xalign 0.64
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_back_button.png"
+            hover "prompt_back_button_hover"
+            action no_action
+
+    #buat delete save
+    elif message == "Are you sure you want to delete this save?":
+        add "gui/prompt_screen/prompt_delete_save.png":
+            align (0.5,0.5)
+            zoom 0.75
+        imagebutton at zoom_persen(0.75):
+            xalign 0.5
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_yes_button.png"
+            hover "prompt_yes_button_hover"
+            action yes_action
+        imagebutton at zoom_persen(0.75):
+            xalign 0.64
+            yalign 0.61
+            idle "gui/prompt_screen/prompt_back_button.png"
+            hover "prompt_back_button_hover"
+            action no_action
+
 
 
     ## Right-click and escape answer "no".
