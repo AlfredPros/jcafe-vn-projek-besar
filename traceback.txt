@@ -5,7 +5,21 @@ While running game code:
     $ ui.interact()
   File "renpy/common/00gamemenu.rpy", line 173, in <module>
     $ ui.interact()
-Exception: Grid overfull.
+  File "game/screens.rpy", line 978, in execute
+    screen preferences():
+  File "game/screens.rpy", line 978, in execute
+    screen preferences():
+  File "game/screens.rpy", line 1026, in execute
+    vbox:
+  File "game/screens.rpy", line 1041, in execute
+    hbox:
+  File "game/screens.rpy", line 1043, in execute
+    imagebutton:
+  File "game/screens.rpy", line 1043, in keywords
+    imagebutton:
+  File "game/screens.rpy", line 1046, in <module>
+    action Preference("skip", Yes)
+NameError: name 'Yes' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -32,23 +46,31 @@ Full traceback:
     d.visit_all(callback, seen)
   File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 441, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 570, in visit_all
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
     callback(self)
   File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3737, in <lambda>
     root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/layout.py", line 546, in per_interact
-    raise Exception("Grid overfull.")
-Exception: Grid overfull.
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 978, in execute
+    screen preferences():
+  File "game/screens.rpy", line 978, in execute
+    screen preferences():
+  File "game/screens.rpy", line 1026, in execute
+    vbox:
+  File "game/screens.rpy", line 1041, in execute
+    hbox:
+  File "game/screens.rpy", line 1043, in execute
+    imagebutton:
+  File "game/screens.rpy", line 1043, in keywords
+    imagebutton:
+  File "game/screens.rpy", line 1046, in <module>
+    action Preference("skip", Yes)
+NameError: name 'Yes' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 jcafe_vn_projek_besar 1.0
-Tue Jun 28 23:30:23 2022
+Sun Sep  4 22:35:37 2022

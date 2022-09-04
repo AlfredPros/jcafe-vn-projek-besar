@@ -297,22 +297,41 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu:
+    if quick_menu and not renpy.get_screen('choice'):
 
         hbox:
-            style_prefix "quick"
+            xalign 0.75
+            yalign 0.68
+            spacing 25
+            imagebutton:
+                idle "gui/detail/back.png"
+                action Rollback()
 
-            xalign 0.5
-            yalign 1.0
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            imagebutton:
+                idle "gui/detail/skip.png"
+                action Skip() alternate Skip(fast=True, confirm=True)
+
+            imagebutton:
+                idle "gui/detail/auto.png"
+                action Preference("auto-forward", "toggle")
+
+            imagebutton:
+                idle "gui/detail/save.png"
+                action ShowMenu('save')
+
+            imagebutton:
+                idle "gui/detail/setting.png"
+                action ShowMenu('preferences')
+
+            imagebutton:
+
+                idle "gui/detail/hide.png"
+                action HideInterface()
+
+
+
+
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -1001,6 +1020,134 @@ screen preferences():
         hover "gallery_button_hover"
         action Show("gallery")
 
+
+
+    #Konten Preferences
+    vbox:
+        xalign 0.534
+        yalign 0.292
+        spacing -19
+        hbox:
+            #fullscreen
+            textbutton "On":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("display", "fullscreen")
+
+            textbutton "Off":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("display", "window")
+        hbox:
+            #skip unseen text
+            textbutton "On":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("skip","all")
+
+            textbutton "Off":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("skip", "seen")
+
+        hbox:
+            #skip after choice
+            textbutton "On":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("after choices","skip")
+
+
+            textbutton "Off":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("after choices", "stop")
+
+
+        hbox:
+            #skip Transition
+            textbutton "On":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("transitions", "none")
+
+
+            textbutton "Off":
+                text_color "#331708"
+                xsize 72
+                ysize 55
+                text_xalign 0.5
+                text_yalign 0.45
+                text_size 16
+
+                text_font "nanifont.ttf"
+                idle_background "gui/detail/idle_background.png"
+                hover_background "gui/detail/idle_background.png"
+                selected_background "gui/detail/selected_background.png"
+                action Preference("transitions", "all")
+
+
     #Return button
     imagebutton:
         idle "gui/menu/return_button.png"
@@ -1522,19 +1669,25 @@ style confirm_button_text:
 screen skip_indicator():
 
     zorder 100
-    style_prefix "skip"
+    add "gui/detail/notif.png":
+        ysize 80
+        xsize 240
+        align (0,0)
 
-    frame:
+    hbox:
+        xpos 30
+        ypos 34
+        spacing 10
 
-        hbox:
-            spacing 6
+        text _("Skipping"):
+            font "nanifont.ttf"
+            size 24
+            yoffset -4
+            outlines [(absolute(1), "567B49", 0,0)]
 
-            text _("Skipping")
-
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
-
+        add "gui/detail/skip_indicator.png"
+        add "gui/detail/skip_indicator.png"
+        add "gui/detail/skip_indicator.png"
 
 ## This transform is used to blink the arrows one after another.
 transform delayed_blink(delay, cycle):
@@ -1578,10 +1731,14 @@ style skip_triangle:
 screen notify(message):
 
     zorder 100
-    style_prefix "notify"
+    add "gui/detail/notif.png":
+        ysize 80
 
-    frame at notify_appear:
-        text "[message!tq]"
+    text "[message!tq]":
+        font "nanifont.ttf"
+        size 23
+        xpos 70
+        ypos 30
 
     timer 3.25 action Hide('notify')
 
