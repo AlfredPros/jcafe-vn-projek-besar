@@ -1147,7 +1147,46 @@ screen preferences():
                 selected_background "gui/detail/selected_background.png"
                 action Preference("transitions", "all")
 
+    vbox:
+        xpos 418
+        ypos 458
+        spacing 45
+        #bar text speed
+        bar value Preference("text speed"):
 
+            xsize 329
+            #sisi kiri"
+            left_bar "gui/detail/filled_bar.png"
+            #sisi kanan
+            right_bar "gui/detail/empty_bar.png"
+
+            #gambar tengah bar
+            thumb "gui/detail/thumb.png"
+
+            #hilangin kotak putih
+            thumb_offset 15
+
+            #pixel batas pojok thumb
+            left_gutter 16
+            right_gutter 16
+
+        #bar auto speed
+        bar value Preference("auto-forward time"):
+            xsize 329
+            #sisi kiri"
+            left_bar "gui/detail/filled_bar.png"
+            #sisi kanan
+            right_bar "gui/detail/empty_bar.png"
+
+            #gambar tengah bar
+            thumb "gui/detail/thumb.png"
+
+            #hilangin kotak putih
+            thumb_offset 15
+
+            #pixel batas pojok thumb
+            left_gutter 16
+            right_gutter 16
     #Return button
     imagebutton:
         idle "gui/menu/return_button.png"
