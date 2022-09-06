@@ -1187,7 +1187,108 @@ screen preferences():
             #pixel batas pojok thumb
             left_gutter 16
             right_gutter 16
-    #Return button
+
+    # buat rollback side
+    hbox:
+        xpos 855
+        ypos 151
+        spacing -3
+
+        textbutton "Disable":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action Preference("rollback side", "disable")
+
+        textbutton "Left":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action Preference("rollback side", "left")
+
+        textbutton "Right":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action Preference("rollback side", "right")
+
+    vbox:
+        xpos 857
+        ypos 345
+        spacing 43
+
+        #bar sound, music, voice
+        bar value Preference("music volume"):
+
+            xsize 329
+            #sisi kiri"
+            left_bar "gui/detail/filled_bar.png"
+            #sisi kanan
+            right_bar "gui/detail/empty_bar.png"
+
+            #gambar tengah bar
+            thumb "gui/detail/thumb.png"
+
+            #hilangin kotak putih
+            thumb_offset 15
+
+            #pixel batas pojok thumb
+            left_gutter 16
+            right_gutter 16
+
+        bar value Preference("sound volume"):
+
+            xsize 329
+            #sisi kiri"
+            left_bar "gui/detail/filled_bar.png"
+            #sisi kanan
+            right_bar "gui/detail/empty_bar.png"
+
+            #gambar tengah bar
+            thumb "gui/detail/thumb.png"
+
+            #hilangin kotak putih
+            thumb_offset 15
+
+            #pixel batas pojok thumb
+            left_gutter 16
+            right_gutter 16
+
+        bar value Preference("voice volume"):
+
+            xsize 329
+            #sisi kiri"
+            left_bar "gui/detail/filled_bar.png"
+            #sisi kanan
+            right_bar "gui/detail/empty_bar.png"
+
+            #gambar tengah bar
+            thumb "gui/detail/thumb.png"
+
+            #hilangin kotak putih
+            thumb_offset 15
+
+            #pixel batas pojok thumb
+            left_gutter 16
+            right_gutter 16
     imagebutton:
         idle "gui/menu/return_button.png"
         hover "return_button_hover"
