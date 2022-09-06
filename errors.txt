@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1117: u'null' is not a keyword argument or valid child for the textbutton statement.
-    null height 1
-        ^
+File "game/branch1.rpy", line 26: end of line expected.
+    show jeffrey_normal at enter r
+                                 ^
 
-Ren'Py Version: Ren'Py 7.4.11.2266
-Sun Sep  4 22:51:01 2022
+Ren'Py Version: Ren'Py 7.4.10.2178
+Tue Sep  6 14:18:11 2022

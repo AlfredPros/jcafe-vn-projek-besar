@@ -14,8 +14,12 @@ define g = Character("Prof. Gordon")
 define k = Character("Prof. Kai")
 define jne = Character("Jeffrey & Elena")
 
-label splashscreen:
-
-    "test"
-
+label test:
+    "For testing"
+    menu:
+        "ke branch 1":
+            jump branch1
+        
+        "ke branch 3 ":
+            jump branch3
     return

@@ -1,4 +1,4 @@
-image cg_end="cgColored/1_remil_elena_rs"
+
 label branch3:
 
     #Chapter 1
@@ -995,7 +995,6 @@ label b3deca5:
     g "Jadi kau tidak peduli padanya, hah?!"
 
     #scene black
-    scene black with dissolve
     e "(Aku berlari sekencang mungkin, meninggalkan fasilitas penelitian di bawah tanah itu. Begitu melihat cahaya matahari, aku langsung berteriak. Meminta pertolongan dan bantuan polisi…)"
     e "(Untungnya tempat itu berada di perkotaan. Tidak butuh waktu lama sampai polisi datang dan menggeledah fasilitas penelitian itu.)"
     e "(Gordon ditangkap. Sistem itu dimatikan dan korban penculikan lain yaitu Alios, Jeffrey, Cherry, dan beberapa orang lainnya kembali sadar. Tetapi Kai sudah menghilang sepenuhnya…)"
@@ -1004,7 +1003,6 @@ label b3deca5:
 
     #fade in
     #scene (CG Remil di rumah sakit dengan perban di lehernya, Elena tersenyum)
-    scene cg_end with fade
     e "(...Remil akhirnya sadar dari koma.)"
 
     "(TRUE ENDING)"

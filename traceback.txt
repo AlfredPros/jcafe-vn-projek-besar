@@ -1,60 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 978, in prepare_screen
-    screen preferences():
-  File "game/screens.rpy", line 978, in prepare
-    screen preferences():
-  File "game/screens.rpy", line 1150, in prepare
-    vbox:
-  File "game/screens.rpy", line 1150, in prepare
-    vbox:
-  File "game/screens.rpy", line 1174, in prepare
-    bar value Preference("auto speed"):
-  File "game/screens.rpy", line 1174, in prepare
-    bar value Preference("auto speed"):
-  File "game/screens.rpy", line 1174, in <module>
-    bar value Preference("auto speed"):
-  File "renpy/common/00preferences.rpy", line 553, in Preference
-    rv = get()
-  File "renpy/common/00preferences.rpy", line 551, in get
-    raise Exception("Preference(%r, %r) is unknown." % (name , value))
-Exception: Preference(u'auto speed', None) is unknown.
+While running game code:
+  File "game/gui.rpy", line 417, in script
+    init python:
+  File "game/gui.rpy", line 417, in script
+    init python:
+  File "game/gui.rpy", line 421, in <module>
+    @gui.variant
+AttributeError: 'StoreModule' object has no attribute 'variant'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
+  File "renpy/bootstrap.py", line 331, in bootstrap
     renpy.main.main()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/main.py", line 662, in main
-    run(restart)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/main.py", line 97, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 955, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 978, in prepare_screen
-    screen preferences():
-  File "game/screens.rpy", line 978, in prepare
-    screen preferences():
-  File "game/screens.rpy", line 1150, in prepare
-    vbox:
-  File "game/screens.rpy", line 1150, in prepare
-    vbox:
-  File "game/screens.rpy", line 1174, in prepare
-    bar value Preference("auto speed"):
-  File "game/screens.rpy", line 1174, in prepare
-    bar value Preference("auto speed"):
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 1174, in <module>
-    bar value Preference("auto speed"):
-  File "renpy/common/00preferences.rpy", line 553, in Preference
-    rv = get()
-  File "renpy/common/00preferences.rpy", line 551, in get
-    raise Exception("Preference(%r, %r) is unknown." % (name , value))
-Exception: Preference(u'auto speed', None) is unknown.
+  File "renpy/main.py", line 550, in main
+    renpy.game.context().run(node)
+  File "game/gui.rpy", line 417, in script
+    init python:
+  File "game/gui.rpy", line 417, in script
+    init python:
+  File "renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/gui.rpy", line 421, in <module>
+    @gui.variant
+AttributeError: 'StoreModule' object has no attribute 'variant'
 
-Windows-10-10.0.19041
-Ren'Py 7.4.11.2266
+Windows-10-10.0.22000
+Ren'Py 7.4.10.2178
 jcafe_vn_projek_besar 1.0
-Mon Sep  5 22:27:30 2022
+Tue Sep  6 14:19:06 2022

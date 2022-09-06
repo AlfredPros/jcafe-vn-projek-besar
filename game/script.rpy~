@@ -1,6 +1,8 @@
 #Define Characters
 define n = Character("???")
+define uv = Character("??")
 define r = Character("Remil")
+define rg = Character("Remil (??)")
 define ur = Character("Ular raksasa")
 define e = Character("Elena")
 define j = Character ("Jeffery")

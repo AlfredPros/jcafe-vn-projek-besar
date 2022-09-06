@@ -1,71 +1,102 @@
+image remi_cg_end= "cgColored/R1_7_remil.png"
+image cg_1 = "cgColored/R1_1_alios_remil_snake.png"
+image cg_2 = "cgColored/R1_2_remil_airterjun.png"
+image cg_3 = "cgColored/R1_3_alios_remil_cherry.png"
+image cg_4 = "cgColored/R1_4_remil_kai.png"
 label branch1:
     #CHAPTER 1
     #“Pemimpin dari Kelompok yang Berbahaya” with dissolve(3.0)
+    scene chp_1 with Dissolve (2.5) 
+    "Pemimpin dari Kelompok yang Berbahaya"
 
+    scene tenda_gelap with Dissolve (2.5)  
     # scene perkemahan dusk with dissolve(3.0)
     #show angry Alios  as alios di kiri
-    al "Mengerikan? Kau dan pikiran bodohmu! Orang tidak berguna ini pantas mendapatkannya setelah datang dengan sembrono. Mereka bisa menghabisi kita!"
+    show alios_angry3 at enterl1
+    al "Mengerikan?{w=0.1} Kau dan pikiran bodohmu!{w=0.1} Orang tidak berguna ini pantas mendapatkannya setelah datang dengan sembrono.{w=0.1} Mereka bisa menghabisi kita!"
     # show angry elena as elina di kanan
-    e "Bagaimana bisa kamu mengatakan itu! Laki-laki itu juga teman kita, bukan?"
+    show elena_angry at enterr1
+    e "Bagaimana bisa kamu mengatakan itu! {w=0.2}Laki-laki itu juga teman kita, bukan?"
+    hide elena_angry
+    hide alios_angry3
     #hide alios
     #hide elena
     "Kepala monster tersebut bergelinding di tanah setelah ditebas oleh kapak besar Alios. Namun, Alios baru saja menghabisi orang itu."
 
     #show normal alios as alios di kiri
-    al "Daritadi apa yang kau lihat, bocah? Kau tidak senang padaku?"
+    show alios_normal at enterl1
+    al "Daritadi apa yang kau lihat, bocah? {w=0.2}Kau tidak senang padaku?"
     r "(Apa-apaan?)"
     r "Sombong sekali kamu dengan wajah pembunuhmu itu?"
-    #hide alios
+    hide alios_normal
     #show normal jeffry as jeffry di kanan
+    show jeffrey_normal at enterr1
     j "Tenanglah, kawan. Bos tidak akan melakukan hal yang merugikan kita. Ini pastinya lebih baik, bukan? Dibanding kepala kita yang bergelinding di situ."
-    r "(Benar, Aku juga berpikir begitu sekilas… Tunggu, apa yang baru saja kupikirkan!)"
-    r "Kau!” Aku mengarahkan belatiku ke Jeffrey"
-    j "Baiklah, lupakan masalah seriusnya. Kita harus cepat memotong daging itu"
+    r "(Benar, Aku juga berpikir begitu sekilas{w=0.3}.{w=0.3}.{w=0.3}. Tunggu, apa yang baru saja kupikirkan!)"
+    r "Kau!"
+    r "(Aku mengarahkan belatiku ke Jeffrey)"
+    j "Baiklah, lupakan masalah seriusnya. {w=0.1}Kita harus cepat memotong daging itu"
+    hide jeffrey_normal
     #hide jeffry
     "Setelah itu, Aku memutuskan untuk diam agar tidak merusak suasana. Aku percaya bahwa Alios melakukan ini untuk keselamatan kami."
     #dissolve selama 3s
 
     #scene kantin malam
+    scene canteen_night2 with Dissolve (2.5) 
     #show jeffrey laugh as jeffry di kiri
+    show jeffrey_laugh at enterl1
     j "Hahaha"
     #show jeffrey happy as jeffry di kiri
+    show jeffrey_happy as jeffrey_laugh
     j "Anda berlebihan melakukannya, Bos!"
+    show alios_sad at enterr1
     #show sad alios as alios di kanan
     al "Itu bukan pengalaman yang menyenangkan, tapi terima kasih"
+    hide jeffrey_laugh
     #hide jeffrey
+    show alios_normal as alios_sad
     #show Alios normal as alios di kanan
     al "Kau tidak masalah bukan? Kalian sendiri yang datang membawa monster seolah-olah ingin menghancurkan tempatku"
     a "Y-Ya"
-
+    hide alios_sad
     #hide alios
     "Dia terlihat seperti menahan amarahnya... aku harus menenangkanya"
 
     #show normal  jeffry as jeffry di kiri
+    show jeffrey_normal at enterl1
     j "Hey, Remil, apa yang kamu lakukan dari tadi mengintip ke sana kemari?"
     r  "Tidak ada"
     r "Aku akan pergi membawakan makan malam Elena. Aku khawatir dia masih memikirkan tentang masalah saat sore tadi."
-    #show normal cherry di kiri
+    #show normal cherry di kanan
+    show cherry_normal at enterr1
     c "Memang kamu siapanya? Dasar bodoh"
 
     #scene perkemahan night with dissolve(1.0)
+    scene tenda_gelap with Dissolve (1.0)
     r "Maaf, Aku masuk untuk membawakanmu makan malam"
     #show sad elena as elena di kanan
+    show elena_sad at enterr1
     e "Masuklah"
     r "Apa kamu masih memikirkan itu?"
     e "Ya. Aku masih ingat bagimana Alios menghancurkan kepala anak itu"
     #show confused elena as elena di kanan
+    show elena_confused as elena_sad
     e "sebenarnya, apa yang dia pikir dia lakukan!"
     r "...."
     #show sad elena as elena di kanan
+    show elena_sad as elena_sad
     e "Terima kasih, tolong ditinggalkan saja di sana"
     r " Aku akan berada di tendaku kalau kamu butuh sesuatu, jangan lupa makanlah nanti"
     #hide elena
+    hide  elena_sad
     "Setelah itu, Aku memutuskan untuk diam agar tidak merusak suasana. Aku percaya bahwa Alios melakukan ini untuk keselamatan kami"
 
     #scene bg kantin night with dissolve(3.0)
+    scene canteen_night2
     "Di luar, semua orang berkumpul, kecuali Elena"
     r "Hei, apa yang terjadi? Kemana Elena"
     #show sad cherry as cherry di kiri
+    show cherry_sadpout at enterl1
     c "Saat bangun, Cherry tidak melihat kak Elena di manapun. Cherry tidak tahu dia ke mana"
 
     menu:
@@ -79,6 +110,7 @@ label branch1:
 label b1decb:
     r "Elena kemungkinan pergi sendiri.."
     #show suprise cherry as cherry di kiri
+    show cherry_surprised as cherry_sadpout
     c "!!"
     r "Dan, semua ini salahmu, Alios!"
     jump b1deca
@@ -87,56 +119,80 @@ label b1decb:
 label b1deca:
     r "Alios! Apa yang telah kamu lakukan pada Elena!"
     #show angry alios as alios di kanan
+    show alios_angry1 at enterr1
     al "Apa maksudmu, bocah? Kau masih tidak senang dengan apa yang terjadi semalam?"
     #hide cherry
-    #show normal jeffrey asjeffrey di kiri
+    hide cherry_sadpout
+    #show normal jeffrey as jeffrey di kiri
+    show jeffrey_normal at enterl1
     j "Tidak, Bos. Dia hanya.."
     #show normal alios as alios di kanan
+    show alios_normal as alios_angry1
     al "Tenang, bukan Aku. Kau bisa camkan kataku"
     #hide jeffrey
+    hide jeffrey_normal
     al "Aku tidak akan pernah merugikan diriku sendiri dengan menghilangkan pekerja terbaik kita"
     b "Maaf, Aku ragu dengan katamu"
+    hide alios_angry1
     #hide alios
     "Raut wajah Alios menatap laki-laki tersebut dengan tidak senang, namun dia tidak mundur"
 
     #show angry jeffry as jefrey di tengah
+    show jeffrey_angry1 at enter
     j "Ah tolong tenang, kalian! Berpikirlah dengan jernih dulu."
     r " …"
     #show normal jeffry as jefrey di tengah
+    show jeffrey_normal as jeffrey_angry1
     j "Untuk masalah ini, kurang lebih Aku bisa diandalkan karena sering pergi berburu bersamanya. Biar kita pergi mencari jejaknya dulu, ya?"
     "(Bagaimana kita bisa yakin kita bisa menemukan Elena, jika dia masih hidup)"
+    hide jeffrey_angry1
     #hide jeffrey
     "Jeffrey mendekat dan menepuk pundakku"
 
     #show normal jeffry as jeffrey di tengah
+    show jeffrey_normal at enter
     j"Aku menemukan tempat yang menarik kemarin, kita akan mulai mencari dari situ"
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "Baiklah, begini lebih mudah. Aku biarkan kau memimpin, bocah. Kita serahkan jalan ke Jeffrey"
     #show serious cherry as cherry di kiri
+    show cherry_serius at enterl1
     c  "Cherry ikut dengan kalian!"
     r "Baiklah. Kita bergerak selagi masih pagi. Kemas bawaan kalian secepat mungkin sebelum siang!"
 
     #scene hutan day with dissolve(3.0)
+    scene hutan with Dissolve (2.5)
     #show normal alios as alios di kiri
+    show alios_normal at enterl1
     al "Kemana kau mengarahkanku, Jeffrey?"
     #show normal jeffry as jeffrey di kanan
+    show jeffrey_normal at enterr1
     j "Tenang saja, Bos- Maksudku, Alios. Lurus dari sini terdapat rahasia yang mendebarkan"
     #hide alios
+    hide alios_normal
     j "Dan seharusnya kita sudah sampai"
     "Mereka menemukan sebuah gubuk besar yang dibangun di tengah hutan"
+    hide jeffrey_normal 
     #hide jeffrey
 
     #scene gubuk luar day with dissolve(1.0)
+    scene gubuk_luar_day with Dissolve (1.0)
     r "ini bukannya gazebo biasa?"
+    show jeffrey_angry2 at enter
     #show angry jeffry as jeffrey di tengah
     j "Kamu pasti bercanda, gubuk ini luar biasa! Lihatlah ke dalam"
     r "Maaf, ini terlalu berdebu, tolong bersihkan"
     "Remil mengibas-ngibas sekitar sambil menutup mulutnya."
     #hide jeffrey
+    hide jeffrey_angry2
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "Kau dengar? Lakukan, Cherry"
+    show cherry_normal at enterl1
     #show normal cherry as cherry di kiri
     c "Baaik!"
+    hide alios_normal
+    hide cherry_normal
     #hide alios
     #hide cherry
     "Cherry beranjak masuk ke dalam dan mulai menggunakan sihir yang mendorong debu keluar"
@@ -144,30 +200,41 @@ label b1deca:
     "Tidak lama kemudian, Cherry keluar"
     r "Terima kasih! Kamu tidak apa-apa, Cherry?"
     #show bored cherry as cherry di tengah
+    show cherry_bored at enter
     c "Tidak apa, Cherry menghempas debu dari sekeliling jadi tidak kenapa-napa, tidak sepertimu"
     #show normal jeffry as jeffry di kanan
+    show  jeffrey_normal at enterr1
     j  "Tunggu, apa kamu melihat seseorang di dalam?"
     #hide cherry
+    hide cherry_bored
     r "Bukankah ini tempat yang sudah ditinggalkan? Habis kayak begini sih tempatnya."
     #show sad jeffry as jeffry di kanan
+    show jeffrey_sad as jeffrey_normal
     j "Tidak, kemarin-kemarin Aku melihat tanda-tanda seseorang tinggal di sini, kupikir tadi kita bisa bertanya kepada orang itu."
 
     #scene bg gubuk dalam day with dissolve(1.0)
+    scene dalam_gubuk_api_mati with Dissolve (1.0)
     #show happy jeffry as jeffry di kiri
+    show jeffrey_happy at enterl1
     j "Hey, tempat ini cukup luas! Tidak bisakah kita pindah ke sini?"
     r "(Orang ini emosinya labil sekali ya)"
+    show alios_surprised at enterr1
     #show suprised alios as alios di kanan
     al "Ini terlihat berguna, mungkinkah ini buatan seseorang?” Melihat ke arah kumpulan botol tanah liat di rak"
+    hide alios_surprised
+    hide jeffrey_happy
     #hide alios
     #hide jeffry
     "Aku masuk ke salah satu ruangan di dalam gubuk?"
 
     r"(Ruangan ini cukup sempit…)"
-    r "Ke mana tempat ini mengarah?” Melihat ke dalam dan berjalan masuk"
+    r "Ke mana tempat ini mengarah? "
     "…"
     "Di dalam sini cahaya sangat minim dan terdapat banyak jasad monster, selain itu juga terdapat potongan organ yang baunya kurang menyenangkan. Di atas meja, Aku menemukan lembaran kertas"
     #show item lembaran penelitian
+    show old_book  
     pause 2.0
+    hide old_book 
     #hide item lembar penelitian
     "(Beruang, serigala, kambing, ikan, semua ini… monster..?)"
     r "Tunggu, ular besar kemarin juga monster, kan? Kenapa tidak ada?"
@@ -179,36 +246,53 @@ label b1deca:
     al "Ada apa, Remil?"
     r  "Ini, baru saja Aku menemukannya"
     #show item lembaran penelitian
+    show old_book 
     pause 2.0
+    hide old_book 
     #hide item lembar penelitian
+    show cherry_bored at enterr1
     #show bored cherry as alios di kanan
     c "Jadi, apa ini sampah yang kamu temukan di dalam?” Seolah menyindir Alios yang membawa botol tanah liat"
     #show happy alios as alios di kiri
+    show alios_happy at enterl1
     al "Kertas? Hahaha, menarik!"
     #show smirk alios as alios di kiri
+    show alios_smirk as alios_happy
     al  "Mungkin mereka yang meninggalkan ini masih di sekitar sini, Aku jadi suka ini"
     #hide cherry
+    hide cherry_bored
     #show normal jeffry as jeffry di kanan
+    show jeffrey_normal at enterr1
     j "Aku kurang yakin, kertas ini mencurigakan. Mungkin saja sesuatu ini yang menculik Elena, kan?"
     #hide alios
+    hide alios_happy
     r " …"
     #hide jeffry
+    hide jeffrey_normal
     #show normal alios as alios di kiri
+    show alios_normal at enterl1
     al "Dengarkan, kurasa jika kita ingin mencari perempuan itu, kita harus berpencar, sampai kita menemukan kota orang-orang."
     #show normal jeffry as jeffry di kanan
+    show jeffrey_normal at enter
     j "Baiklah, jika mereka orang jahatnya kita hanya perlu menghajarnya, bukan?"
     #hide alios
+    hide alios_normal
     r "Kamu pasti bercanda…"
     j "Kalau begitu, tolong ikuti Aku."
     #hide jeffry
+    hide jeffrey_normal
     "Kami berjalan lurus dari arah gubuk"
 
     #show CHAPTER 2
+    scene chp_2 with Dissolve (2.5)
+    "Hukum Rimba: Memangsa atau Dimangsa"
     #“Hukum Rimba: Memangsa atau Dimangsa” with dissolve(3.0)
 
     #show bg Hutan - Day with dissolve(3.0)
+    show hutan with Dissolve(3.0)
     r "Di hutan ini benar-benar tidak ada orangnya ya?"
     #show normal jeffry as jeffry di tengah
+    show jeffrey_normal at enter
     j "Kita tidak bisa mengambil kesimpulan itu, semenjak kita bahkan belum keluar dari hutan ini."
     r "(Sungai ini…)"
     j "Kurasa kita harus berpencar.."
@@ -226,6 +310,7 @@ label b1deca:
 label b1decb1:
     r "Apa kamu yakin? Aku rasa sebaiknya kita tetap jalan bersama"
     #show angry jeffry as jeffry di tengah
+    show jeffrey_angry1 as jeffrey_normal
     j "Remil, nyawa Elena mungkin sedang terancam. Di saat seperti inilah kita harusnya berpencar"
     r "Baiklah. Kalau begitu Aku, Alios, dan Cherry ke kiri"
     jump b1deca1
@@ -233,65 +318,86 @@ label b1decb1:
 
 
 label b1deca1:
-     #scene bg dekat sungai dusk with fade (3.0)
+    #scene bg dekat sungai dusk with fade (3.0)
+    scene dekat_sungai with Fade(1.0,1.0,1.0)
     #show bored cherry as cherry di kiri
+    show cherry_bored at enterl1
     c "“Heei, berapa lama kita akan berjalan?"
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "Diamlah, Cherry. Kau bahkan tidak membawa apapun bersamamu"
     al "Sebentar, lihat ke bawahmu"
     #hide cherry
+    hide cherry_bored
     r "(Jejak ini…)"
     al "Aku baru pertama kali melihat jejak lurus begini, bukankah ini seperti…"
     r "Jejak ular!"
+    hide alios_normal
     #hide alios.
     r "Kita harus pergi dari sini. Cepat!"
+    play sound "audio/sfx_snakehiss.wav"
     #play sound snake hiss
     ur " hiss"
+    show cherry_surprised at enterl1
     #show suprised cherry as cherry di kiri
     c "Hiiih, suara apa itu!"
     r "Cherry! Cepat tahan! Di depanmu"
+    show cherry_serius as cherry_surprised
     #show serious cherry as cherry di kiri
     c "Sungai, penghalang terjadilah!"
     r "(Bodoh! Jangan yang itu!)"
+    show cherry_surprised as cherry_surprised
     #show suprise cherry as cherry di kiri
     c "Kenapa dia mendekat"
     #hide cherry
+    hide cherry_surprised
     "Di saat itu, Alios melemparkan botol ramuan ke ular dan tercipta kabut"
     "Setelah itu, Cherry terpental karena ular menerjang tepat ke arahnya"
 
     #scene bg dekat sungai dusk with fade (1.0)
+    scene dekat_sungai_dusk with fade
     r "Ugh- Sakit."
+    show cherry_surprised at enterl1
     #show suprise cherry as cherry di kiri
     c "Aah- Tidak bisa, Cherry tidak bisa!"
     "Cherry Merangkak ke arah hutan"
+    hide cherry_surprised
     #hide cherry
+    show alios_normal at enterr1
     #show normal alios  as alios di kanan
     al "Ck, tidak berguna."
     r "(Alios hebat, dia menancapkan kapaknya ke dalam tanah)"
     #show angry alios  as alios di kanan
+    show alios_angry2 as alios_normal
     al "Bangun, bocah! Kita harus menaklukkan ini berdua"
     r "... (Mengangguk)"
     r "Alios! Aku akan menggiringnya, kamu carilah kesempatan!"
     #show normal alios  as alios di kanan
+    show alios_normal as alios_normal
     al "Kau pikir siapa yang kau suruh?"
     r "(Orang ini masih saja sombongnya selangit)"
     #hide alios
+    hide alios_normal
     r "(.. Kabut akan mulai menghilang, Aku akan bergerak ke arah yang berbeda mendekati ular)"
 
 
     #scene BG Hutan - Day with dissolve(3.0)
-    "Aku berlari ke dalam hutan. Di saat yang singkat saat ular menerjang dengan kepalanya, Aku menghindar"
-    "Aku mendaki ke atas pohon dan merangkak ke dahan besar, kemudian ular tersebut melihatku lalu memutar badannya ke arahku"
+    scene hutan with Dissolve(3.0)
+    "Remi berlari ke dalam hutan. Di saat yang singkat saat ular menerjang dengan kepalanya, Remi menghindar"
+    "Remi mendaki ke atas pohon dan merangkak ke dahan besar, kemudian ular tersebut melihat Remi lalu memutar badannya ke arah Remi"
 
     #show CG Alios dan Remil melawan ular besar di hutan (Hutan - Day) with fade(3.0)
+    scene cg_1 with Fade (1.0, 1.0, 1.0)
     al "Kemana kau melihat, dasar serangga!” Mengayunkan kapak untuk mensayat perut ular yang melilit pohon"
     #play sound axe slashing
+    play sound sfx_axeslash
     r "(Berhasilkah!?)"
     r "Hah?"
     "Kapak Alios bahkan tidak menggores kulit ular dan dia malah terdorong mundur karena kapaknya yang berat."
 
     al "Duh, sialan! Keras sekali sih sisikmu, cacing!"
     #play sound tree shaking
+    play sound sfx_treeshaking
     r "(Batang pohon ini akan hancur, akan kuserang di saat ini selagi Alios membuka kesempatan)"
     "Aku merunduk dan memegang dahan dengan kuat lalu melompat ke arah kepala ular yang melihat Alios"
 
@@ -299,54 +405,71 @@ label b1deca1:
     "Aku melompat dari dahan pohon dan baru saja mengambil pijakanku dan merunduk di bawah"
 
     #scene  BG Hutan - Day with fade(1.0)
+    scene hutan with fade
     r  "Huf-huf"
-    n "Habis kau, keeeooong!” Melompat"
+    n "Habis kau, keeeooong!"
     #play sound felsh tearing
+    play sound sfx_fleshtearing
     # show alios angry2 as alios di tengah
+    show alios_angry2 at enter
     "Alios merobek mulut ular secara vertikal yang menggeliat kesakitan."
 
     n "M-Menghindar!"
 
     #hide allios
+    hide alios_angry2
     "Racun ular merembes keluar ke punggungku."
     r "Hah!"
     # show normal alios  as alios di tengah
+    show alios_normal at enter
     al "Kau baik-baik saja, bocah?"
     r  "Ya, entah bagaimana.."
     # show happyl alios  as alios di tengah
+    show alios_happy as alios_normal
     al "Kerja bagus, sebaiknya kita mengambil bawaan kita karena mulai gelap"
     r " …"
     # show normal alios  as alios di tengah
+    show alios_normal as alios_normal
     al "Sebelum itu, Kau bau dan lengket. Melompatlah ke sungai"
 
 
     #show BG Dekat Sungai - Dusk with dissolve(3.0)
+    scene  dekat_sungai_dusk with Dissolve(3.0)
     r "Daging ular ini banyak sekali…"
     # show happy alios  as alios di tengah
+    show alios_happy at enter
     al "Ini baru namanya pesta! Hahaha!” Membakar perut ular sangat besar"
     r  "Tunggu, hanya kita berdua yang makan?"
     # show normal alios  as alios di tengah
+    show alios_normal as alios_happy
     al "Kukira kau kuat makan banyak?"
     r "?"
     #hide alios
+    hide alios_happy
     r "Baiklah, tetapi Aku akan pergi mencari Cherry sebentar"
     # show normal cherry  as cherry di kiri
+    show cherry_normal at enterl1
     c "Di sini ada orang? Tolong!"
     r "Oh, Cherry. Panjang umur"
     # show sad cherry  as cherry di kiri
+    show cherry_sadpout as cherry_normal
     c "Hiks, kalian selamat? Cherry sangat takut!"
+    show alios_angry1 at enterr1
     # show angry alios  as alios di kanan
     al "Berhenti menangis, Cherry! Duduklah dan rawat lukamu"
     r  "Biar kubantu"
 
 
     #show BG Perkemahan - Night with fade(3.0)
+    scene tenda_gelap with Fade  (1.0,1.0,1.0)
     # show normal  alios  as alios di tengah
+    show alios_normal at enter
     al "Hei, Aku lelah. Aku istirahat duluan ya"
     r "Baiklah, giliranku. Aku tidak bisa tidur"
     al "“Bagus, terima kasih"
     r "..."
-    "aku mengangguk kepada alios"
+    "Remil mengangguk kepada alios"
+    hide alios_normal
     #hide alios
     "Aku membuka lembar penelitian monster."
 
@@ -355,7 +478,9 @@ label b1deca1:
     r "(Tapi dengan ini, kita jadi punya petunjuk tentang hilangnya Elena)"
 
     #show BG Perkemahan - Day with fade(3.0)
+    show tenda_terang with Fade (1.0,1.0,1.0)
     #show normal  cherry  as cherrydi tengah
+    show cherry_normal at enter
     c "Selamat pagi, Remil! Tidurmu nyenyak?"
     r "Tidak, Aku baru saja tertidur tadi pagi"
     menu:
@@ -376,29 +501,37 @@ label b1decb2:
 
 label b1deca2:
     #show sad  cherry  as cherry di tengah
+    show cherry_sadpout as cherry_normal
     c "hm, kau tidak menanyakan kabarku?"
     r "?"
     #show bored  cherry  as cherry di tengah
+    show cherry_bored as cherry_normal
     c "Alios sedang di sungai mencari ikan"
     r "oke"
 
     #show BG Dekat sungai - Day with dissolve(1.0)
+    scene dekat_sungai with dissolve
     #show angry alios  as alios di tengah
+    show alios_angry1 at enter
     a "Hei-hei! Berhenti bergerak dasar makhluk bodoh berinsang!"
     r "Kamu tidak menggunakan pisau untuk menghabisi mereka?"
     al "Mereka berenang di air, bego. Memang kau bisa menusuk mereka?"
     r "Oh"
     r "Kalau gitu, sebaiknya kamu minta Cherry mengumpulkan mereka dengan sihir."
     #show suprise alios  as alios di tengah
+    show alios_surprised as alios_angry1
     al "!"
     #show happy alios  as alios di tengah
+    show alios_happy as alios_angry1
     al "Hahahaha! Kau benar! Belakangan dia terlihat tidak berguna, Aku lupa"
     r "(Jahat sekali..)"
     r "Kalau begitu, Aku akan coba pergi ke sana dan memeriksa sekitar"
 
 
     #show CG Remil di atas tebing dekat air terjun melihat ke sungai (Dekat Air Terjun - Day) with fade(3.0)
+    scene cg_2 with Fade (1.0,1.0,1.0)
     #play sound waterfall
+    play sound sfx_waterfall 
     r "(Tempat ini mengingatkanku dengan pengalaman buruk..)"
     r "Woah, ikannya banyak sekali di bawah sana"
     r "(Tunggu, Aku merasa pernah melihat mereka)"
@@ -412,36 +545,51 @@ label b1deca2:
 
 
     #scene BG Hutan - Day with fade(0.1)
+    scene hutan with fade
     "Entah mengapa monster-monster di sekitar sini semakin banyak, Aku harus mencari jalan keluar dari hutan. Hutan ini tidak bisa dipakai lagi untuk beristirahat"
     r "(!!)"
     r "Di belakang situ, terdapat tempat yang tidak hijau"
     #scene BG Perkemahan - Dawn with dissolve (3.0)
+    scene tenda_sore with Dissolve (3.0)
     r "Semuanya dengar, Aku rasa kita bisa mulai bergerak. Aku menemukan jalan keluar dari hutan"
     #show happy chery as cherry di kiri
+    show cherry_happy at enterl1
     c "Akhirnya.."
     #show suprise alios as alios di kanan
+    show alios_surprised at enterr1
     al "Kau tidak salah lihat kan!?"
     #hide cherry
+    hide cherry_happy
     r "Tidak, Aku serius melihatnya"
     #show happy alios as alios di kanan
+    show alios_happy as alios_surprised
     al "Baguslah kalau begitu. Pastikan kau pimpin jalannya."
     r "Baiklah, sekarang ayo kemas bawaan kita"
 
     #scene CHAPTER 3
     #“Pada Semua yang Datang Entah Dari Mana Kemudian Pergi” with fade (3.0)
+    scene chp_3 with Fade (1.0,1.0,1.0)
+    "Pada Semua yang Datang Entah Dari Mana Kemudian Pergi"
     # scene BG Hutan - Day
+    scene hutan with dissolve
     #show serious chery as cherry di left
+    show cherry_serius at enterl1
     c "Hey, apa yang akan kalian lakukan setelah keluar dari hutan?"
     r "“Aku ingin menemukan orang untuk mencari petunjuk hilangnya Elena."
     c "Kalau Cherry, ingin beristirahat dan hidup dengan tenang."
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "Ada apa kau tiba-tiba, Cherry? Kau bosan?"
+    hide cherry_serius
+    hide alios_normal
     #hide cherry
     #hide alios
     r "Kurasa tidak ada salahnya bertanya, bukan?"
     #show sad chery as cherry di left
+    show cherry_sadpout at enterl1
     c "Habisnya… Cherry tidak tahu apa yang kalian pikirkan!"
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "..."
     al "Kau terlalu banyak berpikir, Cherry."
     r "(Cherry…)"
@@ -449,6 +597,7 @@ label b1deca2:
 
 
     #show CG Remil, Alios, dan Cherry di jalan setapak alami dari bebatuan di pinggir hutan (Hutan - Day) with fade(3.0)
+    scene cg_3 with Fade (1.0,1.0,1.0)
     al "Hey, Remil. Ini begitu menggangguku sejak kemarin.."
     al  "Bagaimana kalau kita bertarung?"
     r "(?)"
@@ -456,6 +605,7 @@ label b1deca2:
     al "Baiklah, ku anggap itu jawabanmu."
     " Alios memegang pedang besarnya yang dia dapatkan dari membunuh ular"
     #play sound greatsword swing
+    play sound sfx_greatsword
     r "(Aku rasa aku akan lari)"
     r "Cherry, tunggu di sana!"
     c "Ap- Hey! Tunggu!"
@@ -467,112 +617,156 @@ label b1deca2:
 
 
     #scene BG Lembah - Day with fade(1.0)
-    r "Monster!” Aku terhenti di depan lembah. "
+    scene lembah_day with fade
+    r "Monster!” Aku terhenti di depan lembah. "  
+    show alios_smirk at enter
     #show smirk alios as alios di tengah
     al "Akhirnya kau berhenti juga!” kata Alios"
     r "Hah- Kamu mengejarku sampai sini? Dengan pedang itu?"
     "Alios melihat kerumunan monster di depan dan dari samping."
     #show normal alios as alios di tengah
+    show alios_normal as alios_smirk
     al "Namun, kurasa ini bukan saatnya untuk itu."
     r "Ya."
+    hide alios_smirk
     #hide alios
     "Selama beberapa menit, monster-monster turun dari tebing dan terus bertambah jumlahnya di lembah."
 
     r "(Monster-monster ini tidak ada habisnya..)"
     #show angry alios as alios di tengah
+    show alios_angry3 at enter
     al "Sepertinya Aku terkepung."
     r "Kamu kelelahan?"
     al"Tidak. Aku hanya kesulitan menangkis semua serangan proyektill mereka."
     #show angry alios as alios di tengah
+    show alios_angry1 as alios_angry3
     al "Mereka monster yang pengecut."
     "Ini memang sulit… apalagi dia belum terbiasa dengan pedang barunya"
 
     r "Bertahanlah!"
+    show alios_normal as alios_angry3
     #show normal alios as alios di tengah
     al "Kau bicara dengan siapa?"
     r "(Nih orang masih aja..)"
     #hide alios.
+    hide alios_angry3
     n  "Heeey!"
     r "Jeffrey?!"
     #show normal cherry  as cherry di kiri
+    show cherry_normal at enterl1
     c "Cherry membawa teman-teman, Alios, Remil!"
     #show normal elena as elena di kanan
+    show elena_normal at enterr1
     e "..."
     r "(Elena juga ada!)"
     r  "!"
     #hide cherry
+    hide elena_normal
+    hide cherry_normal
     #hide elena
     "Aku merasakan aura bahaya."
 
     #play sound Sword blocking/ parrying a magic
+    play sound sfx_magicblock
     #show normal alios  as alios di tengah
+    show alios_normal at enter
     al "Jangan mengalihkan fokusmu, jangan mati."
     "Alios menghalau proyektil monster"
     r "Terima kasih!"
+    hide alios_normal
     #hide alios
     #show seriousl elena as elena di kanan
+    show elena_angry at enterr1
     e "Kami datang membantu."
     #show normal alios  as alios di kiri
+    show alios_normal at enterl1
     al "Jadi, siapa orang yang kau bawa?"
     #hide elena
+    hide elena_angry
     #show normal jeffrey  as jeffry di kanan
+    show jeffrey_normal at enterr1
     j "Perkenalkan, ini adalah dokter kita, Kai!"
     #show hapy kai  as kai di tengah
+    show kai_smile at enter
     k "Halo kalian! Namaku Kai."
     #hide alios
+    hide alios_normal
+    hide jeffrey_normal
     #hide jeffrey
     r "Ah- Halo."
     k "Halo untukmu, Remil. Aku sudah dengar tentangmu. Kamu hebat."
     r "Ah, iya-"
     #hide kai
+    hide kai_smile 
     #play sound  Bullet whizzing/ whooshing
-    "Aku kemudian menghindar karena ditembaki proyektil dari atas."
+    play sound sfx_bulletwhizzling
+    "Remi kemudian menghindar karena ditembaki proyektil dari atas."
 
     r "(Monster-monster ini tidak bisa tunggu orang selesai bicara ya.)"
     r "Baiklah, kita perkenalkan diri nanti, Aku harus mengurus mereka."
     #show laugh kai  as kai di tengah
+    show kai_laugh at enter
     k "Hahaha- baiklah sana!"
     r "(Nih orang nyebelin.)"
     #show serious kai  as kai di tengah
+    show kai_normal as kai_laugh
     k "Aku juga sudah dengar tentangmu, Alios. Kamu menghabisi manusia, ya?"
     #hide kai
+    hide kai_laugh
     "Kai mengarahkan tongkatnya ke samping muka Alios."
 
     #show angry alios as alios di kiri
+    show alios_angry1 at enterl1
     al "Jauhkan tongkatmu, apa kau tahu bayaran untuk mengganggu pertarunganku?"
     #show serious kai  as kai di kanan
+    show kai_normal at enterr1
     k "Jangan lakukan lagi!"
     #show suprise alios as alios di kiri
+    show alios_surprised as alios_angry1
     al "!"
     #show normal alios as alios di kiri
+    show alios_normal as alios_angry1
     al "Baiklah, tetapi jangan mencoba mengaturku."
     #hide kai
+    hide kai_normal
+    hide alios_angry1
     #hide alios
     "Di saat itu, bantuan teman-teman sangat berarti hingga kami yakin pertarungan ini bisa berakhir dengan cepat."
 
     #scene BG Lembah - Day with dissolve(1.0)
+    scene lembah_day with fade
     r "Huf-huf."
+    show jeffrey_surprised at enterl1
     #show suprise jeffrey  as jeffry di kiri
     j "Oh- Elena, kau terlihat tidak enak badan, kamu baik-baik saja?"
     #show nervous elena  as elena di kanan
+    show elena_nervous at enterr1
     e "Ya, tetapi Aku tidak bisa terbiasa dengan monster-monster ini."
     #show laugh jeffrey  as jeffry di kiri
+    show jeffrey_laugh as jeffrey_surprised
     j  "Hahaha"
     #hide elena
+    hide elena_nervous
     #show normal jeffrey  as jeffry di kiri
+    show jeffrey_normal as jeffrey_surprised
     j " Kalau kalian? Apa kalian baik-baik saja?"
     r "Hanya butuh istirahat."
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "Aku bisa lanjut.."
     r "(Orang ini gak bisa capek ya?)"
-    #show normal kai  as kai di tengah
+    #show normakai  as kai di tengah
+    show kai_normal at enter
     k "Baiklah, mengingat kalian ‘semua’ sudah lelah. Sebaiknya kita beristirahat di sekitar sini. Ikuti Aku."
     #show angry alios as alios di kanan
+    show alios_angry2 as alios_normal
     al "Tunggu!"
+    
     #hide jeffrey
 
     al "Bagaimana kita bisa percaya pada kau? Aku mau Jeffrey yang pimpin jalannya."
     #show normal jeffrey  as jeffry di kiri
+
     j "Maaf, Bos. Jujur saja, anak ini lebih tahu jalan dibanding Aku."
     #show normal kai  as kai di tengah
     k "“Yeah."
@@ -580,195 +774,285 @@ label b1deca2:
     al "Ck. Awas saja kau kalau melakukan sesuatu yang mencurigakan."
     #show laugh kai  as kai di tengah
     k "Hahaha."
+    hide jeffrey_surprised
+    hide kai_normal
+    hide alios_normal
     #hide kai
     #hide jeffrey
     #hide alios
+    pause 2.0
     #show happy kai  as kai di tengah
+    show kai_smile at enter
     k "Nah bocah-bocah! Kalian harus pakai nih, ‘cairan’."
     #show item botoh tanah liat
+    show botol_tanah_liat
     pause 2.0
+    hide botol_tanah_liat
     #hide item botol tanah liat
     r"(Cairan?)"
     #show suprise  alios as alios di kanan
+    show alios_surprised at enterr1
     al "Ini! Kau yang membuatnya!?"
     #show normal kai  as kai di tengah
+    show kai_normal as kai_smile
     k "Benar. Kamu tahu sesuatu?"
     #show happy alios as alios di kanan
+    show alios_happy as alios_surprised
     al "Aku melihatnya cukup banyak di hutan. Itu benda yang berguna sekali!"
     #show seriousl kai  as kai di tengah
+    
     k "Kamu mengambil itu?! Itu barang yang berbahaya, anak bego."
     r "Lalu Anda memberi kami ini?"
     #hide alios
+    hide alios_surprised
     k "Dua itu benda yang berbeda."
     r "Bagaimana aku bisa yakin denganmu?"
     #show normal elena  as elena di kiri
+    show elena_normal at enterl1
     e "Tenanglah, Remil. Kamu bisa percaya dengannya."
     e "Dia sudah menyelamatkanku."
     r "..."
     "Remil membuka tutup botol tanah liat"
     #hide elena
+    hide elena_normal
+    hide kai_smile
     #hide kai
     #show normal  alios as alios di kanan
+    show alios_normal at enterr1
     al "Hei, Kai. Bagaimana cara memakai cairan ini, diminum?"
     #show normal kai  as kai di kiri
+    show kai_normal at enterl1
     k "Lebih baik dioleskan atau disiram, untuk diminum sangat tidak disarankan. Meskipun pada dasarnya itu hanyalah cairan semut."
     r "(Hampir saja, kukira diminum)"
     al "Oke."
     #hide kai
+    hide alios_normal
+    hide kai_normal
     #hide alios
     "Setelah mengoleskan tangan dan wajah dengan ‘cairan’’, kami bergerak mengikuti Kai, orang yang menganggap dirinya dokter."
 
     #scene BG Lembah - Day with dissolve(1.0)
+    scene lembah_day with dissolve
     r "Jadi, Anda datang dari mana? Anda terlihat tahu banyak hal."
     #show normal kai  as kai di tengah
+    show kai_normal at enter
     k "Kamu tanya padaku? Aku sudah beberapa tahun tinggal di tempat ini."
     #show happyl kai  as kai di tengah
+    show kai_smile as kai_normal
     k "Aku kebetulan di sini ingin membantu kalian karena Aku sudah bertemu anak-anak ini saat di desa."
     r "(Anak?)"
     #show normal  alios as alios di kanan
+    show alios_normal at enterr1
     al "Kau tidak terlihat seperti orang yang baik."
     #show normal  jeffry as jeffrey di kiri
+    show jeffrey_normal at enterl1
     j "Benarkah? Dia ramah untukku.” balas Jeffrey"
     al "Dia hanya ramah karena kau menjilatinya, Jeffrey."
     r "..."
+    hide jeffrey_normal
+    hide alios_normal
+    hide kai_normal
     #hide alios
     #hide jeffrey
     #hide kai
     #show serious kai  as kai di tengah
+    show kai_normal at enter
     k "Aku tertarik dengan kalian, bocah yang seolah datang entah dari mana."
     r "(Entah dari mana?)"
+    hide kai_normal
     #hide kai
     "Semua orang terlihat diam, apa mereka sendiri tidak sadar?"
 
     r "Baiklah, lupakan masalah seriusnya. Kita harus membangun perkemahan, benar?"
     #show normal  jeffry as jeffrey di kiri
+    show jeffrey_normal at enterl1
     j "Oh, benar."
     r ".. Apa Anda bisa membangun punyamu sendiri, Kai. Kami tidak punya cukup bahan di sekitar sini."
     #show normal  kai as kai di kanan
+    show kai_normal at enterr1
     k "Oh tidak apa, Aku tidak terlalu menginginkannya."
+    hide jeffrey_normal
+    hide kai_normal
 
 
     #CHAPTER 4
+    scene chp_4 with Dissolve (3.0)
+    " Ketenangan yang Menakutkan Sebelum Badai"
     #“Ketenangan yang Menakutkan Sebelum Badai” with disolve(3.0)
     #scene BG Kantin - Night with dissolve(3.0)
+    scene canteen_night2 with Dissolve (3.0)
     #show happy jeffrey as jeffrey di kiri
+    show jeffrey_happy at enterl1
     j "Selamat datang, Kai. Ini pesta penyambutan untukmu!"
     j "Dan untuk reuni kita!"
     #show happy alios as alios di kanan
+    show alios_happy at enterr1
     al "Kau benar."
     #hide jeffrey
+    hide jeffrey_happy
     r "(Tumben sekali dia terlihat patuh, biasanya sombong banget)"
     r "Aku lelah."
     #show normal alios as alios di kanan
+    show alios_normal as alios_happy
     al "Ya, aku juga."
     al "Jadi, bagaimana kalian bisa berkumpul dan menemukan Elena?"
     #show nervous elena as elena di kiri
+    show elena_nervous at enterl1
     e "Saat itu, Aku-"
     r "(Elena…)"
     #hide elna
+    hide elena_nervous
+    hide alios_happy
     #hide alios
     #show serious  kai as kai di tengah
+    show kai_normal at enter
     k "Jadi begini, Aku menemukan perempuan ini saat di desa yang secara mendadak dikuasai oleh monster."
     k "Saat itu, Aku beberapa hari berjalan ke desa dari tanah di barat. Jadi, dasarnya, Aku adalah orang lewat."
     r "(Kosakatanya ituloh.)"
     #show normal alios as alios di kanan
+    show alios_normal at enterr1
     al "Lalu dari sana kau menyelamatkan Elena dan membawa Jeffrey ke desa?"
     k "Benar, lalu kami tinggal di desa. Beberapa hari setelahnya, kami mengikuti suara teriak perempuan dari kejauhan dan mengikutinya sampai sini."
+    hide alios_normal
+    hide kai_normal
     #hide alios
     #hide kai
     "Aku merasa ini belum menjelaskan semuanya."
     r "Elena, kenapa kamu menghilang? Tidak mungkin tidak ada dari kita yang sadar saat kamu menghilang."
+    show elena_angry at enter
     #show serious elena as elena di tengah
     e "Jadi, saat itu."
     e "Aku sedang pergi ke sungai untuk mengisi air di pagi hari. Lalu, ternyata Aku diincar oleh monster dan kemudian dibawa sampai ke desa."
     #show suprise jeffrey as jeffrey di kiri
+    show jeffrey_surprised at enterl1
     j "Jadi kamu tidak diculik orang?"
     #show happy jeffrey as jeffrey di kiri
+    show jeffrey_happy as jeffrey_surprised
     j "Itu sungguh melegakan!"
     r "Bagian mananya?"
+    show alios_smirk at enterr1
     #show smirk alios as alios di kanan
     al "“Lupakan saja dia, tolong lanjutkan."
     #hide alios
+    hide alios_smirk
+    hide jeffrey_surprised
     #hide jeffrey
     #show serious elena as elena di tengah
+    show elena_angry at enter
     e "Jadi, di desa, Aku melihat beruang besar yang menggunakan sihir untuk mengikatku. Dia terlihat seperti pemimpinnya dan jauh berbeda dengan monster yang kita biasa temui."
     e "Keesokan paginya, Aku terbangun di dalam kamar yang sejuk dan sadar kalau Aku telah diselamatkan oleh Kai."
     #hide elena
+    hide elena_angry
     "Ceritanya lompat sangat jauh jadi tidak masuk akal."
 
     r "Bagaimana caranya kamu menyelamatkan Elena, Kai?"
     #show serious kai as kai di tengah
+    show kai_normal at enter
     k "Malam itu, Aku pergi menyelamatkannya dengan menidurkan semua monster dan mengangkut mereka pergi."
     r "Bagaimana, tepatnya?"
     #show happy kai as kai di tengah
+    show kai_smile as kai_normal
     k "Dengan sihir, kuterbangkan semuanya."
     #show happy alios as alios di kanan
+    show alios_happy at enterr1
     al "Hebat! Kau pasti orang yang kuat. Tidak seperti pengguna sihir kita satu ini."
     r "(Jahat sekali…)"
     #show angry cherry as cherry di kiri
+    show cherry_angry at enterl1
     c "Hei!"
     r "..."
+    hide cherry_angry
+    hide alios_happy
+    hide kai_normal
     #hide cherry
     #hide alios
     #hide kai
     #show serious kai as kai di tengah
+    show kai_normal at enter
     k "Ah maaf, kawan. Kurasa ini saatnya untuk kalian beristirahat. Aku akan berada di belakang sana kalau kamu butuh Aku."
+    hide kai_normal
     #hide kai
     r "Permisi, Aku akan ikuti Kai."
 
     #scene BG Perkemahan - Night with fade(1.0)
+    scene tenda_gelap with fade
     #show normal alios as alios di kiri
+    show alios_normal at enterl1
     al "Cherry."
+    show cherry_normal at enterr1
     #show normal cherry as cherry di kanan
     c "Ya?"
     al "Tentang yang kau katakan sebelumnya. Aku juga takut sepertimu."
     #show serious cherry as cherry di kanan
+    show cherry_serius as cherry_normal
     c "..."
     c "Ada apa tiba-tiba, Alios? Kau bosan?"
     #show happy  alios as alios di kiri
+    show alios_happy as alios_normal
     al "Hahaha! Ya!"
     #show normal cherry as cherry di kanan
+    show cherry_normal as cherry_normal
     c "..."
     #show normal  alios as alios di kiri
+    show alios_normal as alios_normal
     al "Kau mau tahu apa? Aku paling takut saat Remil mulai membalikkan taringnya padaku."
     al "Dia sangat berpotensi, Aku ingin dia jadi tangan kananku sebelum dia bertemu lebih banyak orang."
     #show normal cherry as cherry di kanan
+    show cherry_normal as cherry_normal
     c "Jadi itu yang kamu pikirkan.."
+    hide cherry_normal
+    hide alios_normal
     #hide cherry
     #hide alios
     #show normal jeffrey as jeffrey di kanan
+    show jeffrey_normal at enterr1
     j "Alios terlihat tidak biasa, huh?"
-    #show serious alios as alios di kiri
+    #show serious alios as alios di kiri'
+    show alios_serious at enterl1
     al "Jeffrey!"
     #show supprise jeffrey as jeffrey di kanan
+    show jeffrey_surprised as jeffrey_normal
     j "Hah! Ya?"
     #show normal alios as alios di kiri
+    show alios_normal as alios_serious
     al "Bagaimana kabarmu? Kau benar-benar membantu di sana."
     #show happy jeffrey as jeffrey di kanan
+    show jeffrey_happy as jeffrey_normal
     j "Yah, Aku baik! Dan Elena juga."
     #show nervous elena as elena di tengah
+    show elena_nervous at enter
     e "Ya."
     al".. Bagus."
+    hide elena_nervous
+    hide jeffrey_normal
+    hide alios_serious
     #hide elena
     #hide jeffrey
     #hide alios
     #show normal alios as alios di kiri
+    show alios_normal at enterl1
     al "Jadi, apa yang dilakukan Remil di sana?"
     #show normal jeffrey as jeffrey di kanan
+    show jeffrey_normal at enterr1
     j "Kurasa dia ingin berbicara dengan paman jadi-jadian itu."
     #show normal cherry as cherry di tengah
+    show cherry_normal at enter
     c "Paman itu mencurigakan."
     j "..."
     #hide cherry
+    hide cherry_normal
     al "Lalu, kemana orang yang pergi bersamamu?"
     j "Oh, iya. Dia menghilang kemana ya?"
     j "Dia sebenarnya ikut dengan kami, tapi sepertinya dia tidak ada semenjak pertarungan di lembah."
     #show sad alios as alios di kiri
+    show alios_sad as alios_normal
     al "Kurasa Aku belum cukup meminta maaf padanya."
     j "Lupakan saja, Bos. Dia terlihat sudah baik-baik saja bersamaku."
+    hide alios_normal
 
 
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with fade(3.0)
+    scene cg_4 with Fade (1.0,1.0,1.0)
     r "Aku tahu Anda berbohong dari tadi."
     k "Hmm?"
     k "Kamu mengikutiku, Remil? Ada apa?"
@@ -795,6 +1079,7 @@ label b1deca2:
 
 
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with fade(1.0)
+    scene cg_4 with Fade (0.5,1.0,0.5)
     r "..."
     rg "Ah, lama tidak berjumpa, wahai rekanku-"
     k "Kau!"
@@ -808,6 +1093,7 @@ label b1deca2:
     rg "Kukuku, tidurlah, Kai. Aku akan memulai urusan kita setelah anak-anak bangun di pagi hari."
 
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with dissolve(1.0)
+    scene cg_4 with Fade (0.5,1.0,0.5)
     r "Ugh!"
     k "Kamu kembali, anak muda!"
     r ".. Apa yang terjadi?"
@@ -816,116 +1102,166 @@ label b1deca2:
 
 
     #CHAPTER 5
+    scene chp_5 with Fade (1.0,1.0,1.0)
+    "Kebencian seperti Meminum Racun, Namun Berharap Musuhmu Terbunuh"
     #“Kebencian seperti Meminum Racun, Namun Berharap Musuhmu Terbunuh” with fade(3.0)
     #scene BG Perkemahan - Day with fade(3.0)
+    scene tenda_terang Dissolve (3.0)
     #show happy jeffrey as jeffrey di tengah
+    show jeffrey_happy at enter
     j "Halo, Remil. Tidurmu nyenyak?"
     r "Tidak juga.."
+    show jeffrey_normal as jeffrey_happy
     #show normal jeffrey as jeffrey di tengah
     j "Ngomong-ngomong, kita sudah berencana kembali ke desa pagi ini. Sebaiknya kamu berkemas."
     r "Baiklah."
 
 
     #scene BG Lembah - Day with dissolve (1.0)
+    scene lembah_day with dissolve
     r "Monster! Dan dalam jumlah yang banyak sekali."
     "b “HAHAHAHAHHAA- AKU KEMBALI, ALIOS!"
     #show suprise alios as alios di tengah
+    show alios_surprised at enter
     al "Kau!"
     #show angry alios as alios di tengah
+    show alios_angry as alios_surprise
     al "Aku tahu kau sampah, tetapi kau jatuh sedalam ini dan sampai melibatkan semuanya!"
     b "AKU TIDAK PEDULI LAGI. MATI KALIAN!"
     #show suprise jeffrey as jeffrey di kiri
+    show jeffrey_surprised at enterl1
     j "Waduh, beruangnya banyak banget."
     #show normal jeffrey as jeffrey di kiri
+    show jeffrey_normal as jeffrey_surprised
     j "Tunggu, kemana Remil?"
     #show serious elena as elena di kanan
+    show elena_angry at enterr1
     e "!"
     #show suprise elena as elena di kanan
+    show elena_surprised as elena_angry
     e "Di atas sana, Remil?"
     #show angry jeffrey as jeffrey di kiri
+    show jeffrey_angry as jeffrey_surprise
     j "Remil, cepat ke sini! Di sini kita kesulitan."
     rg  "Kaaamu siaaapa?"
     j "?"
     al "Remil! Berhenti bercanda, kita semua sedang dihadang monster!"
     # hide alios
+    hide alios_surprise
     #hide elena
+    hide elena_angry
     #hide jeffrey
+    hide jeffrey_surprise
     "Remil menerjang ke arah Alios, tetapi dihadang oleh Elena."
 
     rg "Hmmmmmmmm?"
     #show angry cherry as cherry di kanan
+    show cherry_angry at enterr1
     c "Remil, kamu sudah gila! Lepaskan kak Elena!"
     "Cherrymenciptakan banyak bola api lalu ditembakkan ke arah Remil namun terus-menerus ditangkis"
     c "Hah- Lepaskan.."
     "Cherry kehabisan tenaganya lalu pingsan."
     #hide cherry
-
+    hide cherry_anggry
+    
     #With fade 1
     #scene BG Lembah - Day with fade(1.0)
+    scene lembah_day with fade
     #show angry kai as kai di tengah
+    show kai_normal at enter
     k "Berhenti di sana, kalian!"
-    #hide kai
+    hide kai_normal
     "Saat itu, Kai bertukar posisi dengan Elena dan membuat lengan bawah Remil patah."
 
     #show serious kai as kai di tengah
+    show kai_normal at enter
     k "Kalian, tolong urus beruangnya dan jaga anak perempuan di sana."
     #show angry alios as alios di kanan
+    show alios_angry at enterr1
     al "Ck, darimana saja kau?"
     k "Maafkan Aku."
     #hide kai
+    hide kai_normal
     #show normal alios as alios di kanan
+    show alios_normal as alios_angry
     al "Baiklah. Jeffrey! Pindahkan Cherry!"
     #show normal jeffry as jeffry di kiri
+    show jeffrey_normal at enterl1
     j ".. Bagaimana dengan Elena?"
     #show sad alios as alios di kanan
+    show alios_sad as alios_angry
     al "Keadaannya sudah tidak bagus. Dia mati."
     #show sad jeffry as jeffry di kiri
+    show jeffry_sad as jeffry_normal
     j "..."
     #show serious jjeffry as jeffry di kiri
+    show jeffry_serious as jeffry_normal
     j "Baiklah, Aku akan menembak dari belakang."
     #hide jeffrey
+    hide jeffrey_normal
     #show normal alios as alios di kanan
     al "Dan kau bocah putih, kita bicarakan masalah ini nanti!"
+    show alios_normal as alios_angry
     #show normal kai as kai di kiri
+    show kai_normal at enterl1
     k "Bocah.."
     #hide kai
+    hide kai_normal
+    hide alios_angry
     #hide alios
     "Kai melempar Remil dengan sihirnya lalu membuatnya lumpuh sementara."
 
     #show serious kai as kai di tengah
+    show kai_normal at enter
     k "Remil! Sadarlah!"
     #play soind  Earthquake rumbling
+    play sound sfx_earthquake
     rg "Hmmmm?"
     #show angry  kai as kai di tengah
     k "Haaaaa!” Kai berusaha untuk menekan Remil dengan gravitasi, namun Remil tetap bisa melawan"
     #hide kai
+    hide kai_normal
     "Kai pun mencoba sihir pelumpuh, pembuat tidur, penekan darah, namun tidak bekerja."
 
 
     #scene BG Lembah - Day with dissolve(1.0)
+    scene lembah_day with dissolve
     #show angry alios as alios di kanan
+    show alios_angry1 at enterr1
     al "Jeffrey!"
     al "Jeffrey, kuatkan dirimu! Tembakkan panahmu dengan benar!"
     #show angry jeffry as jeffry di kiri
+    show jeffrey_angry at enterl1
     j "Aku tahu!"
     #show normal alios as alios di kanan
+    show alios_normal as alios_angry1
     al "Saat kuberi tanda, kau tembaklah perutnya. Aku akan tangkis sihirnya!"
     #hide jeffrey
+    hide jeffrey_angry
+    hide alios_angry1
     #hide alios
     "Alios kemudian menerjang ke arah beruang dan memanfaatkan pedangnya yang besar untuk menerobos ke depan. Lalu, dia menghantam beruang besar dengan sisi pedangnya."
     #show normal alios as alios di kiri
+    show alios_normal at enterl1
     al "Sekarang!"
 
     #play sound  Bow drawing
+    play sound sfx_bow
     #show serious jeffry as jeffry di kanan
+    show jeffrey_serious at enterr1
     j "!"
     "Jeffrey kemudian menembak panah yang telah dilumuri racun ke perut beruang."
     #hide jeffrey
+    hide jeffrey_serious
     #show angry alios as alios di kiri
+    show alios_angry2 as alios_normal
     al "Habis kau!” Menebas secara diagonal ke arah bahu beruang"
     #play sound  Flesh tearing
+    play sound sfx_fleshtearing
     #hide alios
+    hide alios_normal
     #show happy jeffry as jeffry di kanan
+    show jeffry_happy at enter1
     j "Bagus, Alios! Rajanya sudah dikalahkan."
     #show normal alios as alios di kiri
     al "Belum, masih ada keroco lainnya."
@@ -1297,6 +1633,7 @@ label b1deca2:
     #show CG Cherry duduk menangis di samping saat Remil kehilangan sebagian badannya (Plateau - Dusk)
     "(Ugh!)"
     #play music  sad music
+    play music sad_song
     r "Maafkan Aku, Cherry."
     "Aku mulai kehabisan tenagaku untuk berbicara."
     "(Cherry..)"
@@ -1308,35 +1645,39 @@ label b1deca2:
 
 
     #BG Plateau - Dusk with fade(1.0)
+    scene plateau with fade
     "Di saat itu, badan Cherry terpisah dua atas bawah."
     "Tubuhku kembali utuh dan barrier sudah lenyap, seutuhnya."
 
     #scene CG Remil berjalan ke ujung tebing di plateau (Plateau - Dusk) wirth dissolve(3.0)
+    scene remi_cg_end with Dissolve(3.0)
     r "Hahahaha- Akhirnya begini!"
     c "Hentikan- Remil"
-    r "GORDON, HABISI SAJA AKU!"
-    r "Kalau kau tidak, Aku akan melompat!"
+    r "GORDON{w=0.1}, HABISI SAJA AKU!"
+    r "Kalau kau tidak{w=0.1}, Aku akan melompat!"
     g "Kikikik-"
     "Aku berjalan ke ujung tebing."
 
-    r "3.."
+    r "3{w=0.3}.{w=0.3}."
     g "KAAHAHAHAHAHAHAH!"
-    r "2.."
-    r " : …"
-    r "“1."
+    r "2{w=0.3}.{w=0.3}."
+    r " {w=0.3}.{w=0.3}.{w=0.3}."
+    r "1{w=0.3}."
     "(Selamat tinggal, semuanya..)"
     "Di bawah sana, Aku melihat badan Kai yang tertusuk oleh batuan."
 
     "Aku menutup mataku dan berharap ini akan berakhir. Dunia yang penuh penderitaan ini."
 
     #With fade to black 3s
+    scene black with Fade(1.0, 1.0, 1.0)  
     "Jumlah karakter hidup tersisa = 0."
-    "Catatan: Avatar subjek E dicekik oleh subjek R yang berada di luar kendali setelah otaknya beresonansi dengan AI"
-    "Catatan: Avatar subjek J dipenggal oleh subjek R yang dikontrol"
-    "Catatan: Avatar subjek A keberadaannya menghilang oleh kekuatan misterius"
-    "Catatan: Avatar subjek C dibelah dua oleh subjek R yang dikontrol"
-    "Catatan: Avatar subjek R meninggal karena tekanan berat psikologis"
+    "Catatan: Avatar subjek E{w=0.3} dicekik oleh subjek R yang berada di luar kendali setelah otaknya beresonansi dengan AI"
+    "Catatan: Avatar subjek J{w=0.3} dipenggal oleh subjek R yang dikontrol"
+    "Catatan: Avatar subjek A{w=0.3} keberadaannya menghilang oleh kekuatan misterius"
+    "Catatan: Avatar subjek C{w=0.3} dibelah dua oleh subjek R yang dikontrol"
+    "Catatan: Avatar subjek R{w=0.3} meninggal karena tekanan berat psikologis"
 
+    scene end_alternative with Dissolve (3.0)
     "The Alternative Ending"
 
 
