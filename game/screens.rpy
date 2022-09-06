@@ -935,11 +935,46 @@ style slot_button_text:
 #ini masih harus ditambahin buat page nya tergantung cg ada berapa
 screen gallery():
     tag menu
-    add "gui/menu/menu_gallery1.png"
-
 
     #inisialisasi variabel halaman
     default halaman_g = 1
+    text "[halaman_g]":
+        ypos 200
+        xpos 200
+
+    #hellish part
+
+    if halaman_g ==1: #kalo halaman pertama gk ada simbol previous page
+        add "gui/menu/menu_gallery1.png"
+        imagebutton:
+            xpos 1130
+            ypos 70
+            idle "gui/detail/next_page.png"
+            hover "gui/detail/next_page.png"
+            action SetScreenVariable("halaman_g",halaman_g+1)
+
+    elif halaman_g !=1: #kalo halaman bukan pertama ada simbol previous page sama next page
+        add "gui/menu/menu_gallery2.png"
+
+        imagebutton:
+            xpos 410
+            ypos 70
+            idle "gui/detail/previous_page.png"
+            hover "gui/detail/previous_page.png"
+            action SetScreenVariable("halaman_g",halaman_g-1)
+        imagebutton:
+            sensitive halaman_g <7
+            xpos 1130
+            ypos 70
+            idle "gui/detail/next_page.png"
+            hover "gui/detail/next_page.png"
+            action SetScreenVariable("halaman_g",halaman_g+1)
+
+
+    text "[halaman_g]": #buat tes page gallery
+        ypos 200
+        xpos 200
+
 
     #setting button
     imagebutton:
@@ -981,10 +1016,6 @@ screen gallery():
             idle "gui/menu/main_button.png"
             hover "main_button_hover"
             action MainMenu()
-
-
-    #The hell began here
-
 
     #Return button
     imagebutton:
