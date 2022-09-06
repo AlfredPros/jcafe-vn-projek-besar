@@ -2,6 +2,9 @@
 ## Initialization
 ################################################################################
 
+define config.mouse = { }
+define config.mouse['default'] = [ ( "gui/detail/cursor.png", 0, 0) ]
+
 init offset = -1
 
 image delete_button_hover = im.MatrixColor("gui/menu/delete_button.png", im.matrix.brightness(+0.2))
@@ -261,7 +264,21 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            if i.caption == "Iya, aku tidak apa-apa. Jangan hiraukan aku dan lanjutkan rencana ":
+                textbutton i.caption action i.action:
+                    text_size 28
+                    text_ypos -5
+                    ysize 100
+
+            elif i.caption == "Uh, aku hanya mual. Aku masih sanggup untuk mengikuti rencana.":
+                textbutton i.caption action i.action:
+                    text_size 28
+                    text_ypos -5
+                    ysize 100
+            else:
+                textbutton i.caption action i.action
+
+
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -297,7 +314,7 @@ screen quick_menu():
     ## Ensure this appears on top of other screens.
     zorder 100
 
-    if quick_menu and not renpy.get_screen('choice'):
+    if quick_menu and not renpy.get_screen('choice')and renpy.get_screen('say'):
 
         hbox:
             xalign 0.75
@@ -920,6 +937,10 @@ screen gallery():
     tag menu
     add "gui/menu/menu_gallery1.png"
 
+
+    #inisialisasi variabel halaman
+    default halaman_g = 1
+
     #setting button
     imagebutton:
         xalign 0.1965 yalign 0.267
@@ -961,12 +982,109 @@ screen gallery():
             hover "main_button_hover"
             action MainMenu()
 
+
+    #The hell began here
+
+
     #Return button
     imagebutton:
         idle "gui/menu/return_button.png"
         hover "return_button_hover"
         action Return()
         yalign 0.932
+
+
+## Credits screen###############################################################
+################################################################################
+## For what reason??? of course for crediting, Duh!!############################
+screen kredit:
+    modal True
+    add "black":
+        alpha 0.5
+
+    add "gui/credit/credits.png"
+    imagebutton:
+        idle "gui/detail/exit.png"
+        hover "gui/detail/exit.png"
+        xpos 340
+        ypos 130
+        action Hide("kredit")
+
+## Credits screen###############################################################
+################################################################################
+## For what reason??? of course for controls, Duh!!#############################
+screen kontrol():
+    modal True
+    add "black":
+        alpha 0.5
+
+    default device = "keyboard"
+    default halaman = 1
+
+    if device == "keyboard":
+        if halaman == 1:
+            add "gui/controls/ctrls_keyboard1.png"
+
+            imagebutton:
+                idle "gui/detail/next_page.png"
+                hover "gui/detail/next_page.png"
+                xpos 1040
+                ypos 125
+                action SetScreenVariable("halaman",2)
+
+        elif halaman ==2:
+            add "gui/controls/ctrls_keyboard2.png"
+
+            imagebutton:
+                idle "gui/detail/previous_page.png"
+                hover "gui/detail/previous_page.png"
+                xpos 980
+                ypos 125
+                action SetScreenVariable("halaman",1)
+
+
+    elif device == "mouse":
+        add "gui/controls/ctrls_mouse.png"
+
+    #button buat milih komputer ato mouse
+    hbox:
+        xpos 750
+        ypos 110
+
+        textbutton "Computer":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action SetScreenVariable("device", "keyboard")
+
+        textbutton "Mouse":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action SetScreenVariable("device", "mouse")
+
+    #exit button
+    imagebutton:
+        idle "gui/detail/exit.png"
+        hover "gui/detail/exit.png"
+        xpos 210
+        ypos 125
+        action Hide("kontrol")
+
+
+
 
 ## Preferences screen ##########################################################
 ##
@@ -1289,6 +1407,39 @@ screen preferences():
             #pixel batas pojok thumb
             left_gutter 16
             right_gutter 16
+
+    hbox:
+        #buat menu controls sama credit di pojok kanan bawah
+        xpos 890
+        ypos 500
+        spacing 37
+
+        textbutton "Controls":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action ShowMenu("kontrol")
+
+        textbutton "Credits":
+            text_font "nanifont.ttf"
+            text_color "#331708"
+            xsize 111
+            ysize 84
+            text_xalign 0.5
+            text_yalign 0.5
+            idle_background "gui/detail/big_idle_background.png"
+            hover_background "gui/detail/big_idle_background.png"
+            selected_background "gui/detail/big_selected_background.png"
+            action ShowMenu("kredit")
+
+
+    #return button
     imagebutton:
         idle "gui/menu/return_button.png"
         hover "return_button_hover"
