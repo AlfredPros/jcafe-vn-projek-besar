@@ -180,12 +180,17 @@ label start:
     #Elena R in
     show jeffrey_surprised as jeffrey_surprised at m2
     show elena_happy at enterr
+    pause 0.3
     #Jeffery go left
     #*Happy face R Elena
+    show elena_happy as elena_happy at talk
     e "Namaku Elena!{w=0.3} Kelompok yang tadi anda ceritakan{w=0.1}.{w=0.1}.{w=0.1}. Apakah ada banyak orang di sana?"
+    show elena_happy as elena_happy at notalk
     #*Surprise face L Jeffrey
+    show jeffrey_surprised as jeffrey_surprised at talk
     j "Iya lumayan banyak."
     j "Elena apa kamu mengikutiku?!"
+    show jeffrey_surprised as jeffrey_surprised at notalk
     #*Sad face R Elena
     show elena_sad as elena_happy at sigh
     e "Habis aku khawatir dengan lukamu!{w=0.3} Dan aku juga{w=0.1}.{w=0.1}.{w=0.1}. tidak mau sendirian lagi."
@@ -197,9 +202,11 @@ label start:
     e "Boleh?!{w=0.3} Hore!"
     r "Tapi aku tidak bilang{w=0.1}.{w=0.1}.{w=0.1}."
     #*Normal face R Elena
-    show elena_normal as elena_happy
+    show elena_normal as elena_happy at talk
     e "Ayolah Remil!{w=0.3} Aku tahu kamu pasti kelaparan kan setelah berjalan sangat jauh?"
+    show elena_normal as elena_happy at notalk
     r "Uuugh{w=0.1}.{w=0.1}.{w=0.1}."
+    show jeffrey_happy as jeffrey_surprised at talk
     j "Sudah diputuskan!{w=0.3} Sekarang,{w=0.3} ayo kita pergi ke perkemahan Alios."
     scene black with dissolve
     pause 1
@@ -213,50 +220,94 @@ label start:
 
     #(BG di perkemahan Alios, dusk with dissolve)
     scene tenda_gelap with dissolve
+    show jeffrey_happy at enterl
+    show elena_happy at enterr
     #Jeffrey L in & Elena R in
-    #*Happy face L Jeffrey
+    #Happy face L Jeffrey
+    pause 0.3
+    show jeffrey_happy as jeffrey_happy at talk
     j "Baik,{w=0.3} kita sudah sampai!"
-    #*Happy face R Elena
+    show jeffrey_happy as jeffrey_happy at notalk
+    #Happy face R Elena
+    show elena_happy as elena_happy at talk
     e "Wah ada banyak orang!"
+    show elena_happy as elena_happy at notalk
+    show jeffrey_happy as jeffrey_happy at talk
     j "Ayo kuajak kalian bertemu pemimpin kelompok ini dulu!"
+    show jeffrey_happy as jeffrey_happy at notalk
     r "(Kira-kira seperti apa ya pemimpinnya{w=0.1}.{w=0.1}.{w=0.1}.)"
-    #*Normal face L Jeffrey
+    show jeffrey_normal as jeffrey_happy at talk
+    #Normal face L Jeffrey
     j "Hei Alios!{w=0.3} Aku bertemu dengan dua orang ketika berburu tadi."
+    show jeffrey_normal as jeffrey_happy at notalk
+    hide elena_happy
+    show alios_normal at enterr
+    pause 0.3
     #Elena out & Alios R in
-    #*Normal face R Alios
+    #Normal face R Alios
+    show alios_normal as alios_normal at talk
     al "Huh?{w=0.3} Siapa mereka?"
+    show alios_normal as alios_normal at notalk
+    show jeffrey_normal as jeffrey_happy at talk
     j "Mereka adalah Elena dan Remil."
+    show jeffrey_normal as jeffrey_happy at notalk
+    show alios_normal as alios_normal at talk
     al "Selama kalian berguna untukku,{w=0.3} kalian diterima di sini."
+    show alios_normal as alios_normal at notalk
     r "(Orang ini tampak kuat dan sombong sekali{w=0.1}.{w=0.1}.{w=0.1}.)"
-    #*Happy face L Jeffrey
+    #Happy face L Jeffrey
+    show jeffrey_happy as jeffrey_happy at talk
     j "Ya,{w=0.3} aku melihat potensi bahwa Remil bisa sangat membantu di sini.{w=0.3} Makanya aku ajak kemari,{w=0.3} hahaha!"
-    #*Happy face R Alios
+    show jeffrey_happy as jeffrey_happy at notalk
+    #Happy face R Alios
+    show alios_happy as alios_normal at talk
     al "Heh,{w=0.3} sebaiknya memang begitu."
-    #Alios out
+    show alios_happy as alios_normal at notalk
+    pause 0.3
+    #alios out
+    hide alios_normal
     r "{w=0.1}.{w=0.1}.{w=0.1}."
-    #*Normal face L Jeffrey
+    #Normal face L Jeffrey
+    show jeffrey_normal as jeffrey_happy
     j "Kalau begitu aku akan mengantar kalian ke tenda masing-masing.{w=0.3} Istirahatlah dulu sampai waktu makan malam."
     #Elena R in
-    #*Happy face R Elena
+    show elena_happy at enterr
+    #Happy face R Elena
     e "Baik!{w=0.3} Terima kasih!"
 
     #(BG di kantin, Night) Dissolve 1s
-    scene canteen with dissolve
+    scene canteen_night2 with dissolve
     #Elena L in & Jeffrey R in
     #*Happy face L Elena
+    show jeffrey_normal at enterl
+    show elena_happy at enterr
+    pause 0.3
+    show elena_happy as elena_happy at talk
     e "Waah banyak sekali makanannya!"
+    show elena_happy as elena_happy at notalk
     #*Normal face R Jeffrey
+    show jeffrey_normal as jeffrey_normal at talk
     j "Tentu saja!{w=0.3} Ini jatah untuk puluhan orang."
+    show jeffrey_normal as jeffrey_normal at notalk
     #*Normal face L Elena
+    show elena_normal as elena_happy at talk
     e "Kalau begitu kita tidak boleh rakus,{w=0.3} ya kan Remil?"
+    show elena_normal as elena_happy at notalk
     r "*Kraus kraus*"
+    show elena_surprise as elena_happy
     #*Surprise face L Elena
     e "{w=0.1}.{w=0.1}.{w=0.1}."
     #*Happy face R Jeffrey
+    show jeffrey_happy as jeffrey_normal at talk
     j "Hahaha!{w=0.3} Tidak masalah kok,{w=0.3} makan saja yang banyak!"
+    show jeffrey_happy as jeffrey_normal at notalk
     n "Hei Jeffrey,{w=0.3} siapa mereka?"
     #*Normal face R Jeffrey
+    show jeffrey_normal as jeffrey_normal at talk
     j "Oh ya,{w=0.3} Cherry,{w=0.1} mereka adalah Remil dan Elena,{w=0.3} orang yang baru bergabung dengan kita."
+    show jeffrey_normal as jeffrey_normal at m21
+    show elena_surprise as elena_happy at m34
+    show cherry_normal at enter
     #Cherry M in
     #*Normal face M Cherry
     c "Oh?"

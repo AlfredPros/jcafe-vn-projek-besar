@@ -14,12 +14,15 @@ define g = Character("Prof. Gordon")
 define k = Character("Prof. Kai")
 define jne = Character("Jeffrey & Elena")
 
-label test:
-    "For testing"
-    menu:
-        "ke branch 1":
-            jump branch1
-        
-        "ke branch 3 ":
-            jump branch3
+label splashscreen:
+
+
+    scene white with Dissolve (2)
+    pause 2
+    show logojcafe with dissolve:
+        zoom 0.6
+        align (0.5, 0.5)
+    pause 4
+    scene black with Dissolve (2)
+
     return
