@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1013: add expects a non-empty block.
-    add "gui/controls/ctrls_keyboard1.png":
-                                           ^
+File "game/screens.rpy", line 980: u'action' is not a keyword argument or valid child for the grid statement.
+    action ShowMenu("tunjuk","images/cgColored/3_orb_trio2.png")
+          ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Sep  6 18:01:15 2022
+Tue Sep  6 23:51:04 2022
