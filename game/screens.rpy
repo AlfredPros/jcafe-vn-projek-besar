@@ -29,9 +29,14 @@ image save_button_dark = im.MatrixColor("gui/menu/save_button.png", im.matrix.br
 
 image main_button_dark = im.MatrixColor("gui/menu/main_button.png", im.matrix.brightness(-0.5))
 
+
 transform zoom_persen(persen):
     subpixel True
     zoom persen
+
+transform resolusi(xsaiz,ysaiz):
+    subpixel True
+    xsize xsaiz ysize ysaiz
 ################################################################################
 ## Styles
 ################################################################################
@@ -938,6 +943,7 @@ screen gallery():
 
     #inisialisasi variabel halaman
     default halaman_g = 1
+
     text "[halaman_g]":
         ypos 200
         xpos 200
@@ -952,6 +958,27 @@ screen gallery():
             idle "gui/detail/next_page.png"
             hover "gui/detail/next_page.png"
             action SetScreenVariable("halaman_g",halaman_g+1)
+
+        grid 2 2:
+            xpos 438 ypos 147
+            xspacing 136 yspacing 60
+            imagebutton at resolusi (294,202):
+                idle "images/cgColored/1_remil_elena_rs.png"
+                action ShowMenu("tunjuk","images/cgColored/1_remil_elena_rs.png")
+
+            imagebutton at resolusi (297,205):
+                idle "images/cgColored/2_remil_vs_gordon.png"
+                action ShowMenu("tunjuk","images/cgColored/2_remil_vs_gordon.png")
+
+            imagebutton at resolusi (294,204):
+                idle "images/cgColored/3_orb_trio.png"
+                action ShowMenu("tunjuk","images/cgColored/3_orb_trio.png")
+                yoffset -3
+
+            imagebutton at resolusi (297,203):
+                idle "images/cgColored/3_orb_trio2.png"
+                action ShowMenu("tunjuk","images/cgColored/3_orb_trio2.png")
+
 
     elif halaman_g !=1: #kalo halaman bukan pertama ada simbol previous page sama next page
         add "gui/menu/menu_gallery2.png"
@@ -970,10 +997,123 @@ screen gallery():
             hover "gui/detail/next_page.png"
             action SetScreenVariable("halaman_g",halaman_g+1)
 
+        if halaman_g ==2:
+            grid 2 2:
+                xpos 438 ypos 147
+                xspacing 136 yspacing 60
+                imagebutton at resolusi (294,202):
+                    idle "images/cgColored/4_RemilElena_vs_gordon.png"
+                    action ShowMenu("tunjuk","images/cgColored/4_RemilElena_vs_gordon.png")
 
-    text "[halaman_g]": #buat tes page gallery
-        ypos 200
-        xpos 200
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/5_remil_elena_lake.png"
+                    action ShowMenu("tunjuk","images/cgColored/5_remil_elena_lake.png")
+
+                imagebutton at resolusi (294,204):
+                    idle "images/cgColored/6_remil_jeff_prajurit.png"
+                    action ShowMenu("tunjuk","images/cgColored/6_remil_jeff_prajurit.png")
+                    yoffset -3
+
+                imagebutton at resolusi (297,203):
+                    idle "images/cgColored/7_remil_jeff_prajurit_pingsan.png"
+                    action ShowMenu("tunjuk","images/cgColored/7_remil_jeff_prajurit_pingsan.png")
+
+        if halaman_g ==3:
+            grid 2 2:
+                xpos 438 ypos 147
+                xspacing 136 yspacing 60
+                imagebutton at resolusi (294,202):
+                    idle "images/cgColored/8_remil_jeff_pingsan.png"
+                    action ShowMenu("tunjuk","images/cgColored/8_remil_jeff_pingsan.png")
+
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/9_remil_jeff_marah.png"
+                    action ShowMenu("tunjuk","images/cgColored/9_remil_jeff_marah.png")
+
+                imagebutton at resolusi (294,204):
+                    idle "images/cgColored/R1_1_alios_remil_snake.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_1_alios_remil_snake.png")
+                    yoffset -3
+
+                imagebutton at resolusi (297,203):
+                    idle "images/cgColored/R1_2_remil_airterjun.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_2_remil_airterjun.png")
+
+        if halaman_g ==4:
+            grid 2 2:
+                xpos 438 ypos 147
+                xspacing 136 yspacing 60
+                imagebutton at resolusi (294,202):
+                    idle "images/cgColored/R1_3_alios_remil_cherry.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_3_alios_remil_cherry.png")
+
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/R1_4_remil_kai.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_4_remil_kai.png")
+
+                imagebutton at resolusi (294,204):
+                    idle "images/cgColored/R1_5_remil_jalan_pincang.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_5_remil_jalan_pincang.png")
+                    yoffset -3
+
+                imagebutton at resolusi (297,203):
+                    idle "images/cgColored/R1_6_cherry_remil.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_6_cherry_remil.png")
+
+        if halaman_g ==5:
+            grid 2 2:
+                xpos 438 ypos 147
+                xspacing 136 yspacing 60
+                imagebutton at resolusi (294,202):
+                    idle "images/cgColored/R1_7_remil.png"
+                    action ShowMenu("tunjuk","images/cgColored/R1_7_remil.png")
+
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/R2_1_wolf_remil_1.png"
+                    action ShowMenu("tunjuk","images/cgColored/R2_1_wolf_remil_1.png")
+
+                imagebutton at resolusi (294,204):
+                    idle "images/cgColored/R2_1_wolf_remil_2.png"
+                    action ShowMenu("tunjuk","images/cgColored/R2_1_wolf_remil_2.png")
+                    yoffset -3
+
+                imagebutton at resolusi (297,203):
+                    idle "images/cgColored/R2_2_rem_jef.png"
+                    action ShowMenu("tunjuk","images/cgColored/R2_2_rem_jef.png")
+
+        if halaman_g ==6:
+            grid 2 2:
+                xpos 438 ypos 147
+                xspacing 136 yspacing 60
+                imagebutton at resolusi (294,202):
+                    idle "images/cgColored/R2_3_remil_jeff_elena_wolf.png"
+                    action ShowMenu("tunjuk","images/cgColored/R2_3_remil_jeff_elena_wolf.png")
+
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/R2_4_remil_deadcherry.PNG"
+                    action ShowMenu("tunjuk","images/cgColored/R2_4_remil_deadcherry.PNG")
+
+                imagebutton at resolusi (294,204):
+                    idle "images/cgColored/R2_5_elena_jeffrey_alios.PNG"
+                    action ShowMenu("tunjuk","images/cgColored/R2_5_elena_jeffrey_alios.PNG")
+                    yoffset -3
+
+                imagebutton at resolusi (297,203):
+                    idle "images/cgColored/R2_6_rem_kai.PNG"
+                    action ShowMenu("tunjuk","images/cgColored/R2_6_rem_kai.PNG")
+
+        if halaman_g ==7:
+            grid 2 1:
+                xpos 438 ypos 147
+                xspacing 136 yspacing 60
+                imagebutton at resolusi (294,202):
+                    idle "images/cgColored/R2_7_ jef_rem.PNG"
+                    action ShowMenu("tunjuk","images/cgColored/R2_7_ jef_rem.PNG")
+
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/R2_8_remil_drown.PNG"
+                    action ShowMenu("tunjuk","images/cgColored/R2_8_remil_drown.PNG")
+
 
 
     #setting button
@@ -1023,6 +1163,16 @@ screen gallery():
         hover "return_button_hover"
         action Return()
         yalign 0.932
+
+##Tunjuk Screen #######################################################
+#######################################################################
+## Buat zoom gambar waktu diklik di galery
+
+screen tunjuk(gambar):
+
+    imagebutton:
+        idle gambar
+        action Hide("tunjuk")
 
 
 ## Credits screen###############################################################
