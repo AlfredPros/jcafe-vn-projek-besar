@@ -16,6 +16,13 @@ define jne = Character("Jeffrey & Elena")
 
 label splashscreen:
 
-    "test"
+
+    scene white with Dissolve (2)
+    pause 2
+    show logojcafe with dissolve:
+        zoom 0.6
+        align (0.5, 0.5)
+    pause 4
+    scene black with Dissolve (2)
 
     return
