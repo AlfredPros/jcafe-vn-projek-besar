@@ -4,13 +4,14 @@ label start:
     n "{w=0.1}.{w=0.1}.{w=0.1}.?"
 
     #(BG di hutan, day) Dissolve 1s
-    scene forest_path_2 with dissolve
+    scene hutan with dissolve
     n "Di mana aku{w=0.1}.{w=0.1}.{w=0.1}.?{w=0.3} Aku tidak bisa mengingat apa-apa.{w=0.3} Kecuali{w=0.1}.{w=0.1}.{w=0.1}."
     r "Remil{w=0.1}.{w=0.1}.{w=0.1}. namaku adalah Remil."
     r "{w=0.1}.{w=0.1}.{w=0.1}. Kenapa aku berada di tengah hutan begini?"
     r "Tidak ada waktu untuk hanya berdiam diri{w=0.1}.{w=0.1}.{w=0.1}. Aku harus segera pergi dari hutan ini!"
 
     #(BG di hutan, night) Fade 2s
+    scene hutan_night with dissolve
     r "*Grooowl*"
     r "Perutku terasa lapar sekali{w=0.1}.{w=0.1}.{w=0.1}. Aku tidak sanggup berjalan kalau tidak makan sesuatu dulu."
     r "Tunggu,{w=0.3} sepertinya di pohon itu ada buah.{w=0.3} Bentuknya agak aneh tapi mungkin bisa dimakan?"
@@ -64,16 +65,20 @@ label start:
             scene black
             pause 5
 
-    scene river_side with dissolve
+    scene dekat_sungai_dusk with Dissolve (2.0)
     r "Haaa{w=0.1}.{w=0.1}.{w=0.1}. haa{w=0.1}.{w=0.1}.{w=0.1}. tidak kusangka aku akan terjun bebas dan masih selamat,{w=0.3} sekarang aku hanyut entah di mana{w=0.1}.{w=0.1}.{w=0.1}. paling tidak aku sudah aman dari ular itu."
     r "Hei,{w=0.3} di sebelah sana ada tenda!{w=0.3} Apakah ada yang tinggal di sini?"
     #Elena M in
+    show elena_surprise:
+        align (0.5, -0.1)
     #*Surprise face M Elena
     n "Aaah!"
     r "(!!!)" with vpunch
     #*Surprise face M Elena
     n "Kamu terluka!{w=0.3} Tunggu sebentar,{w=0.3} biar aku lihat!"
     r "Ini hanya tergores!"
+    show elena_sad as elena_surprise:
+        align (0.5, -0.1)
     #*Sad face M Elena
     n "Ini tidak bisa dibiarkan,{w=0.3} aku akan mengobatinya sebelum terinfeksi!{w=0.3} Jadi aku olesi ini dulu{w=0.1}.{w=0.1}.{w=0.1}. lalu{w=0.1}.{w=0.1}.{w=0.1}."
     r "{w=0.1}.{w=0.1}.{w=0.1}."
