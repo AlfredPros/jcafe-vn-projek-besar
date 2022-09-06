@@ -313,9 +313,7 @@ label start:
     pause 0.3
     show cherry_normal as cherry_normal at talk
     c "Oh?"
-    show cherry_normal as cherry_normal at notalk
-    pause 0.3
-    show cherry_happy as cherry_normal at talk
+    show cherry_happy as cherry_normal
     #*Happy face M Cherry
     c "Hehe!{w=0.3} Halo,{w=0.1} aku Cherry!"
     show cherry_happy as cherry_normal at notalk
@@ -342,7 +340,7 @@ label start:
     show jeffrey_normal as jeffrey_normal at notalk
     #*Normal face M Cherry
     show cherry_normal as cherry_normal at talk
-    c "Tentu saja,{w=0.3} Hmp!"
+    c "Tentu saja,{w=0.3} Hmph!"
     show cherry_normal as cherry_normal at notalk
     #(black screen with dissolve)
     scene black with dissolve
@@ -352,7 +350,7 @@ label start:
     r "(Wah ini pertama kalinya aku makan daging sepuas itu{w=0.1}.{w=0.1}.{w=0.1}.)"
     #Jeffrey M in
     #*Normal face M Jeffrey
-    show jeffery_normal at enter
+    show jeffrey_normal at enter
     j "Remil,{w=0.3} apa kamu sudah selesai makan?"
     r "Iya.{w=0.3} Terima kasih untuk santapannya."
     j "Lagipula itu tidak gratis,{w=0.3} istirahatlah sekarang karena besok kamu akan ikut pergi bersamaku."
@@ -361,8 +359,9 @@ label start:
     pause(5)
 
     #(BG di hutan, day) Dissolve 1s
-    scene hutan_2
+    scene hutan with dissolve
     #*Normal face M Jeffrey
+    show jeffrey_normal at enter
     j "Sekarang kamu mungkin belum bisa memanah,{w=0.3} jadi cukup perhatikan aku saja nanti."
     r "Baiklah."
     play sound sfx_drap3x
@@ -373,80 +372,138 @@ label start:
     j "Agar tempat ini tetap aman dari hewan berbahaya dan untuk mencari sumber daya baru juga."
     r "Tampaknya tugas mereka penting sekali{w=0.1}.{w=0.1}.{w=0.1}."
     #*Happy face M Jeffrey
+    show jeffrey_happy as jeffrey_normal
     j "Tugas kita tidak kalah penting tahu!{w=0.3} Memangnya nanti malam kamu mau makan apa?"
     #*Normal face M Jeffrey
+    show jeffrey_normal as jeffrey_normal
     j "Tapi,{w=0.3} tugas mereka memang lebih berbahaya daripada berburu."
     r "Begitu ya{w=0.1}.{w=0.1}.{w=0.1}."
 
     #(BG di perkemahan Alios, dusk) Dissolve 1s
-    scene campsite with dissolve
+    scene tenda_sore with dissolve
     #Elena L in & Jeffrey R in
     show jeffrey_normal at enterl
     show elena_happy at enterr
     #*Happy face L Elena
+    pause 0.3
+    show elena_happy as elena_happy at talk
     e "Ah kalian sudah kembali!"
+    show elena_happy as elena_happy at notalk
     #*Normal face R Jeffrey
+    show jeffrey_normal as jeffrey_normal at talk
     j "Hari ini pun tangkapan besar!"
+    show jeffrey_normal as jeffrey_normal at notalk
     r "Dan aku tidak melakukan apa-apa selain mengangkut hasil buruan{w=0.1}.{w=0.1}.{w=0.1}."
+    show elena_happy as elena_happy at talk
     e "Aku juga bekerja dari tadi pagi dan sekarang tugasku baru selesai!"
+    show elena_happy as elena_happy at notalk
+    show jeffrey_normal as jeffrey_normal at talk
     j "Wah kamu sepertinya semangat sekali ya."
+    show jeffrey_normal as jeffrey_normal at notalk
+    show elena_happy as elena_happy at talk
     e "Tentu saja!{w=0.3} Rasanya aku sudah biasa bekerja keras seperti ini."
+    show elena_happy as elena_happy at notalk
     a "TOLONG{w=0.1}.{w=0.1}.{w=0.1}.!!!"
+    show elena_surprise as elena_happy
+    show jeffrey_surprised as jeffrey_normal
     #*Surprise face L Elena
     e "!!!"
     r "!!!"
     r "(Hei,{w=0.3} mereka regu pengintai tadi pagi!)"
     #*Angry face R Jeffrey
+    show jeffrey_angry2 as jeffrey_normal at talk
     j "Hei jangan bawa monster itu kemari!!!"
+    show jeffrey_angry2 as jeffrey_normal at notalk
     b "DIA MENGEJAR KAMI!!!"
+    show jeffrey_angry2 as jeffrey_normal at talk
     j "Jangan kemari!!{w=0.3} Kalian akan menghancurkan perkemahannya!!!"
-
-    "*Syuuung{w=0.1}.{w=0.1}.{w=0.1}.{w=0.1}. Jleeeb!!*" #sfx
+    show jeffrey_angry2 as jeffrey_normal at notalk
+    play sound sfx_greatsword
+    pause 0.7
+    play sound sfx_fleshtearing
+    "*Syuuung{w=0.1}.{w=0.1}.{w=0.1}.{w=0.1}. Jleeeb!!*"
+    #sfx
     #*Surprise face L Elena
+    show elena_surprise as elena_happy at talk
     e "Ah!"
+    show elena_surprise as elena_happy at notalk
     r "He{w=0.1}.{w=0.1}.{w=0.1}. hebat{w=0.1}.{w=0.1}.{w=0.1}. hanya dengan satu tebasan bisa membunuh monster itu{w=0.1}.{w=0.1}.{w=0.1}."
+    hide elena_happy
+    hide jeffrey_normal
+    pause 0.5
+    show alios_angry2 at enter
     #All out & Alios M in
     #*Angry face M Alios
     al "Apa yang kalian pikirkan?!"
     a "Maafkan kami!{w=0.3} Tiba-tiba saja kami dikejar ketika sedang mengintai{w=0.1}.{w=0.1}.{w=0.1}."
+    show alios_angry3 as alios_angry2
     al "Alasan kalian tidak bisa diterima!!{w=0.3} Apa kalian mau menghancurkan kerajaanku?!"
+    hide alios_angry2
+    pause 0.5
+    show jeffrey_surprised at enter
     #Alios out & Jeffrey M in
     #*Surprise face M Jeffrey
     j "Hei setidaknya sekarang sudah baik-baik sa-"
     play sound sfx_greatsword
+    pause 0.7
+    play sound sfx_fleshtearing
     a "UAAAAH!!" with vpunch #sfx sword?
+    show jeffrey_angry2 as jeffrey_surprised
     j "Alios!!{w=0.1} Apa yang kau lakukan?!{w=0.1} Ka{w=0.1}.{w=0.1}.{w=0.1}. kau membunuhnya!!"
+    hide jeffrey_surprised
     #Jeffrey out & Alios M in
     #*Angry face M Alios
+    show alios_angry2 at enter
     al "Aku tidak membutuhkan orang yang tidak berguna!!"
     b "Ti{w=0.1}.{w=0.1}.{w=0.1}. tidak tolong jangan bunuh aku{w=0.1}.{w=0.1}.{w=0.1}.!{w=0.2} Kasihani aku{w=0.1}.{w=0.1}.{w=0.1}.!"
     r "(Ini gila!{w=0.3} Aku harus menghentikannya!)"
+    show alios_angry3 as alios_angry2
     al "Kalau kau memang mau kumaafkan,{w=0.3} kau harus menjadi lebih berguna!!"
     b "A{w=0.1}.{w=0.1}.{w=0.1}. aku mengerti!{w=0.3} Aku tidak akan kabur lagi!{w=0.3} A{w=0.1}.{w=0.1}.{w=0.1}. aku akan menghadapi musuh dengan mempertaruhkan nyawaku!{w=0.3} Ja{w=0.1}.{w=0.1}.{w=0.1}. jadi{w=0.1}.{w=0.1}.{w=0.1}."
     #*Happy face M Alios
+    show alios_happy as alios_angry2
     al "Hahaha!{w=0.3} Bagus,{w=0.1} bagus,{w=0.1} kau akan mempertaruhkan nyawamu kan?"
+    show alios_smirk as alios_angry2
     #*Smirk face M Alios
     al "Kalau begitu sekarang saatnya."
     r "He{w=0.1}.{w=0.1}.{w=0.1}. hei!!"
+    show alios_normal as alios_angry2
     #*Normal face M Alios
     al "Apa masalahmu anak baru?"
     r "Kau tidak bisa bersikap seenaknya seperti itu!{w=0.3} Kau adalah pemimpin kan?!"
     #*Angry face M Alios
+    show alios_angry1 as alios_angry2
     al "Hah?!{w=0.2} Apa kau punya masalah denganku?!{w=0.2} Apa kau menentang caraku?!"
     r "(Tentu saja!{w=0.1} Tidak mungkin aku membiarkan pembunuhan apapun yang terjadi!)"
+    show alios_angry3 as alios_angry2
     al "Katakan sesuatu!!"
+    show alios_angry3 as alios_angry2 at m4
+    show elena_angry at enterl
+    pause 0.3
+    show elena_angry as elena_angry at talk
     #Elena L in
     #*Angry face L Elena
     e "Tentu saja kami menentang hal itu!{w=0.3} Kau telah membunuh seseorang!"
+    show elena_angry as elena_angry at notalk
+    show alios_angry3 as alios_angry2 at talk
     al "Jeffrey!!{w=0.3} Beritahu mereka peraturan di tempat ini!!{w=0.1} Kalau kalian masih ingin berada di sini,{w=0.1} sebaiknya jangan pernah melawanku!!"
+    show alios_angry3 as alios_angry2 at notalk
     #*Surprise face L Elena
+    show elena_surprise as elena_angry
     e "{w=0.1}.{w=0.1}.{w=0.1}.!"
     #Alios out & Jeffrey R in
     #*Sad face R Jeffrey
+    hide alios_angry2
+    pause 0.3
+    show jeffrey_sad at enterr
     j "Maaf semuanya,{w=0.3} kalian harus menyaksikan hal mengerikan seperti itu{w=0.1}.{w=0.1}.{w=0.1}."
     #*Sad face L Elena
+    show elena_sad as elena_angry
     e "{w=0.1}.{w=0.1}.{w=0.1}."
     r "{w=0.1}.{w=0.1}.{w=0.1}."
+    hide elena_angry
+    hide jeffrey_sad
+    show vignette with dissolve
     #All out
     r "(Kalau aku tetap berada di sini{w=0.1}.{w=0.1}.{w=0.1}. mungkin saja akan membahayakan hidupku{w=0.1}.{w=0.1}.{w=0.1}.)"
     menu:
@@ -461,11 +518,12 @@ label start:
 
         "Ajak Elena pergi":
             r "Tegarkan dirimu, Elena. Aku akan berusaha untuk keluar dari tempat ini. Ikutlah denganku."
-            #show normal elena as elena di tengah
+            show elena_normal at enter
             e "Aku sangat berterima kasih. Tetapi, aku takut bahwa nanti aku yang akan mati. Aku sangat khawatir"
             r "Aku punya rencana yang lumayan efektif buat kita."
             "Remil menjelaskan rencananya ke Elena."
-            #scene Black dissolve(1.0)
+            scene black with dissolve
+
             jump branch3
 
     return
