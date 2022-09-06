@@ -310,28 +310,49 @@ label start:
     show cherry_normal at enter
     #Cherry M in
     #*Normal face M Cherry
+    pause 0.3
+    show cherry_normal as cherry_normal at talk
     c "Oh?"
+    show cherry_normal as cherry_normal at notalk
+    pause 0.3
+    show cherry_happy as cherry_normal at talk
     #*Happy face M Cherry
     c "Hehe!{w=0.3} Halo,{w=0.1} aku Cherry!"
+    show cherry_happy as cherry_normal at notalk
     #*Normal face L Elena
+    show elena_normal as elena_happy at talk
     e "Ah halo{w=0.1}.{w=0.1}.{w=0.1}. kamu imut sekali."
+    show elena_normal as elena_happy at notalk
+    show jeffrey_normal as jeffrey_normal at talk
     j "Cherry ini yang paling muda di sini.{w=0.3} Jadi dia diperlakukan seperti anak bawang."
+    show jeffrey_normal as jeffrey_normal at notalk
+    show cherry_happy as cherry_normal at talk
     c "Itu benar!{w=0.3} Jadi sebaiknya kalian berlaku baik pada Cherry!"
+    show cherry_happy as cherry_normal at notalk
+    show elena_normal as elena_happy at talk
     e "Ahahaha{w=0.1}.{w=0.1}.{w=0.1}. Ngomong-ngomong Remil,{w=0.3} kamu diam saja dari tadi?"
+    show elena_normal as elena_happy at notalk
     r "*Kraus kraus* Hm?"
     #*Angry face M Cherry
+    show cherry_angry as cherry_normal at talk
     c "Hei!{w=0.3} Apa dia mendengarkanku?!"
+    show cherry_angry as cherry_normal at notalk
+    show jeffrey_normal as jeffrey_normal at talk
     j "Sudahlah Cherry,{w=0.3} sekarang kita nikmati makan malam dulu oke?"
+    show jeffrey_normal as jeffrey_normal at notalk
     #*Normal face M Cherry
+    show cherry_normal as cherry_normal at talk
     c "Tentu saja,{w=0.3} Hmp!"
+    show cherry_normal as cherry_normal at notalk
     #(black screen with dissolve)
     scene black with dissolve
     pause(3)
     #(BG di kantin, Night) Dissolve 1s
-    scene canteen with dissolve
+    scene canteen_night2 with dissolve
     r "(Wah ini pertama kalinya aku makan daging sepuas itu{w=0.1}.{w=0.1}.{w=0.1}.)"
     #Jeffrey M in
     #*Normal face M Jeffrey
+    show jeffery_normal at enter
     j "Remil,{w=0.3} apa kamu sudah selesai makan?"
     r "Iya.{w=0.3} Terima kasih untuk santapannya."
     j "Lagipula itu tidak gratis,{w=0.3} istirahatlah sekarang karena besok kamu akan ikut pergi bersamaku."
