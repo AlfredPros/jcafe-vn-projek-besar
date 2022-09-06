@@ -3,6 +3,9 @@ image cg_1 = "cgColored/R1_1_alios_remil_snake.png"
 image cg_2 = "cgColored/R1_2_remil_airterjun.png"
 image cg_3 = "cgColored/R1_3_alios_remil_cherry.png"
 image cg_4 = "cgColored/R1_4_remil_kai.png"
+image cg_5 ="cgColored/R1_5_remil_jalan_pincang.png"
+image cg_6 ="cgColored/R1_6_cherry_remil.png"
+ 
 label branch1:
     #CHAPTER 1
     #“Pemimpin dari Kelompok yang Berbahaya” with dissolve(3.0)
@@ -1264,15 +1267,21 @@ label b1deca2:
     show jeffry_happy at enter1
     j "Bagus, Alios! Rajanya sudah dikalahkan."
     #show normal alios as alios di kiri
+    show alios_normal at enterl1
     al "Belum, masih ada keroco lainnya."
     #show serious jeffry as jeffry di kanan
+    show jeffrey_serious as jeffry_happy
     j "..."
     #hide alios
+    hide alios_nomal
     #hide jeffrey
+    hide jeffrey_happy
     "Alios kemudian menerjang ke depan dan melawan beruang-beruang di depannya dan Jeffrey menjaganya dari belakang."
 
     # scene  BG Lembah - Day with dissolve(1.0)
+    scene lemabah_day
     #show serious kai as kai di tengah
+    show kai_normal as enter
     k "Sadarlah!!” kata Kai yang mulai kehabisan sebagian mananya"
     rg " …"
     rg  "Hentikan sajalah, Kai."
@@ -1284,78 +1293,104 @@ label b1deca2:
     k "Ck."
     "Kai lalu mundur karena sihirnya tidak bekerja pada Remil."
     #hide kai
+    hide kai_normal
     #show suprise alios as alios di kiri
+    show alios_surprised at enterl1
     al "!"
     #show normal alios as alios di kiri
+    show alios_normal as alios_surprised
     al "Bocah putih! Bawa Cherry, kau pasti sudah kehabisan mana!"
     rg "Haha, Kai! Kamu lari?"
     #hide alios
+    hide alios_surprised
     "Kai mendekat ke arah Cherry lalu menghilang, meninggalkan Remil yang dikendalikan di sana. Lalu, Alios berlari menghampiri Remil."
 
     #show angry alios as alios di tengah
+    show alios_angry3 at enter
     al "REMIL! Sadarlah!"
     "Alios mengayunkan pedang besarnya ke Remil"
     #play sound Heavy sword swinging
+    play sound sfx_greatsword
     #hide alios.
+    hide alios_angry3
     "Lalu, Remil menghindar."
 
     #show angry alios as alios di tengah
+    show alios_angry2 at enter
     al "Kau! Ini bukan saatnya bercanda!"
     rg  "Hihihi. Bercanda?” Remil kemudian melihat ke arah lain"
     #hide alios
+    hide alios_angry2
     rg "Akan kutunjukkan maksudnya bercanda."
     #show normal alios as alios di kiri
+    show alios_normal  at enterl1
     al "Jeffrey! Merunduk!"
+    show jeffrey_surprised at enter
     #show suprise jeffrey as jeffrey di tengah
     j "Ap-"
     #hide alios
+    hide alios_normal
     #hide jeffrey
+    hide jeffrey_surprised
     "Kepalanya terpenggal."
 
 
     #scene BG Lembah - Day with fade(1.0)
+    scene lemabah_day with fade
     #show angry alios as alios di tengah
+    show alios_angry1 at enter
     al "Kaaaaaau!"
     "Alios mengayunkan pedang besarnya."
     #hide alios.
+    hide alios_angry1
     "Remil menangkap pedang tersebut, lalu dihancurkan."
     #play sound Sword breaking
+    play sound sfx_sword
 
     #show angry alios as alios di tengah
+    show alios_angry1 at enter
     al "Ck, pedang baruku sangat tidak berguna."
     al "Kalau begitu Aku gunakan kapak lamaku, khusus untukmu!"
     "Lalu, Alios mengayunkan kapaknya, namun perutnya ditendang oleh Remil dan genggamannya pada kapak terlepas."
     #play sound Object dropping on sand
-
+    play sound sfx_sanddrop
     #hide alios
     pause 1.5
     #play sound  Body falling
+    play sound sfx_bodydrop
     "Alios terkapar di tanah."
 
 
     #play music  sad music loop
+    play music sad_song
     #show smirk alios as alios di tengah
     al "Hahaha, jadi kau masih dendam tentang Aku, lalu kau merencanakan semua ini?"
 
     rg "Berhenti berbicara, bocah."
     #show sad alios as alios di tengah
+    show alios_sad at enter
     al "Kau pasti sangat membenciku, huh?"
     "Kemudian, Remil menghancurkan rusuk Alios dengan pijakannya."
     #play sound  Bone cracking
-    #show suprise alios as alios di tengah
+    play sound sfx_bonecrack
+    #show suprise alios as alios di tengah'
+    show alios_surprised as alios_sad
     al "!"
     "Alios batuk darah."
     #show sad alios as alios di tengah
+    show alios_sad as alios_sad
     al "Harusnya kita adalah keluarga. Aku merasa dikhianati..” Alios kehilangan tenaganya untuk bicara"
     #hide alios.
-
+    hide alios_sad
 
     # scene BG Lembah - Day with dissolve(1.0)
+    scene lembah_day with dissolve
     n "Gordon! Kau sudah keterlaluan!!"
     n "Dengan sisa manaku, kau akan kubakar! Gordooon!"
     "Dari atas, lembah tersebut tertutupi sinar dan semua beruang terbakar api membara, termasuk Alios yang masih dalam keadaan kritis."
 
     #show sad alios as alios di tenga
+    show alios_sad at enter
     al "Maaf.."
     al ".. Terima kasih."
     rg "..."
@@ -1363,12 +1398,14 @@ label b1deca2:
     b "AAAAAAAAAARGH"
     "Dia terbakar menjadi abu."
     #hide alios
+    hide alios_sad
     "Di atas sana, Remil sadar kembali sesaat dan menengadah ke atas. Dia sekilas melihat Kai yang mengangkat tongkatnya dan Cherry yang terkapar."
     " (..!)"
     "Remil kemudian pingsan."
 
 
     #scene CG Lembah dan Remil di tengah jalan yang sedang pincang (Lembah - Day) With fade(3.0)
+    scene cg_5 with fade(1.0,1.0,1.0)
     "Aku terbangun di daratan yang tidak kuketahui."
 
     r "Dimana ini?"
@@ -1397,9 +1434,11 @@ label b1deca2:
     r "Hah- Jeffrey! Elena! Alios!"
     r "AAAAAAAARGHH!"
     #stop music fadeout 1.0
+    stop music fadeout 2.0
 
 
     # BG Lembah - Day with fade(1.0)
+    scene lembah_day with fade
     "Aku teringat, hari itu, Aku ingat pisauku yang berlumuran darah dan menghabisi mereka semua."
 
     r "Maaf! Maafkan Aku!"
@@ -1417,47 +1456,58 @@ label b1deca2:
     "Beberapa minggu kemudian."
 
     #CHAPTER 6
+    scene chp_6 with Dissolve (2.5)
+    "Akhir dari Perjalanan Para Pengembara di Dunia Lain"
     #“Akhir dari Perjalanan Para Pengembara di Dunia Lain” with dissolve (3.0)
     # scene BG Hutan with disolve(3.0)
+    scene hutan with Dissolve (2.5)
     "Aku mengalahkan banyak monster di perjalanan dengan kekuatan listrik aneh yang kudapatkan setelah pertarungan di lembah hari itu."
     "Beberapa bulan kemudian."
 
     #BG Padang Gurun - Day with dissolve(3.0)
+    scene padang_gurun_day with Dissolve (2.5)
     "Aku telah mengalahkan banyak monster di perjalanan dan Aku mulai terbiasa membunuh dengan tangan kosong."
     "Akan tetapi, kurasa tanganku berkata lain. Rasanya aneh saat mencengkeram sesuatu yang berdenyut."
     "Meski di sini dan di sana banyak monster, Aku sangat jarang bertemu orang lain"
 
     #BG Desa Kai - Day with fade(1.0)
+    scene desa_kai with Dissolve (1.5)
     a "Terima kasih sudah datang membantu, tuan Kai sudah lama tidak kembali, sehingga anda menyelamatkan kami."
     r "“Ya, Aku juga berterima kasih untuk perawatanmu."
     a "Sama-sama."
 
     #BG Hutan - Day with dissolve(3.0)
+    scene hutan with Dissolve (2.5)
     r "(Aku dengar jika kita memutari lembah, ada dataran tinggi yang dijaga monster di sana.)"
     "Aku masih dalam perjalananku mencari alasan untuk hidup. Bahkan, jika itu artinya Aku harus mati."
 
 
     #BG Lembah - Daywith dissolve(3.0)
+    scene  lembah_dusk with Dissolve (2.5)
     r "(Monster di sini memang semakin banyak)"
     "Aku menyadari, Aku tidak pernah memikirkan ini."
     r "(Tetapi, sebenarnya dari mana semua monster ini?)"
 
     #With fade 3
     #BG Plateau - Dusk with fade (3.0)
+    scene  plateau with Fade (1.0,1.0,1.0)
     "Aku merasakan atmosfer yang berbeda di hadapanku."
     "Masuk di dalamnya, Aku melihat perkemahan di dalam."
 
     r "!"
     "Aku hampir menginjak jebakan di dalam."
     #show suprise kai as kai di kanan
+    show kai_normal at enterr1
     k "Oh! Hey, Remil!"
     r "Kai.."
     #show normal kai as kai di kanan
     k "Kamu butuh tiga bulan untuk sampai di sini. Apa kepala desa yang memberitahumu?"
     r "Ya. Maaf, Aku-"
     #show happy kai as kai di kanan
+    show kai_smile as kai_normal
     k "Tidak apa, kamu pasti telah menderita sangat lama dalam perjalanan yang melelahkan."
     #show sad kai as kai di kanan
+    show kai_normal as kai_normal
     k "Tidak, malah. Ini sebenarnya terlalu jahat untuk anak kecil sepertimu."
     "(Anak kecil?)"
     #show normal kai as kai di kanan
@@ -1465,14 +1515,18 @@ label b1deca2:
     r "..."
     r "Tidak bisa, Aku akan pergi."
     #show happy kai as kai di kanan
+    show kai_laugh as kai_normal
     k "Aku ada bakar daging juga."
     r "(...)"
     r "Satu aja deh."
     #hide kai
+    hide kai_normal
     "Aku memutuskan untuk duduk bersama Kai di tanah yang luas itu."
 
     #scene BG Plateau - Dusk with dissolve(1.0)
+    scene plateau with dissolve
     #show happy kai as kai di kanan
+    show kai_smile at enterr1
     k "Dagingnya enak bukan?"
     r "(Benar, daging apa siih ini)"
     #show laugh kai as kai di kanan
@@ -1483,6 +1537,7 @@ label b1deca2:
     "Aku menelan dagingku dan menenggak air."
     r "Jadi, tentang di lembah pada hari itu."
     #show normal kai as kai di kanan
+    show kai_normal as kai_smile
     k "Ya?"
     r "Aku hanya ingat sedikit, tentang Alios, tentang Elena, tentang Jeffrey.."
     r "Sebenarnya, apa yang terjadi padaku? Mengapa ini semua terjadi?"
@@ -1495,11 +1550,13 @@ label b1deca2:
     k "Apa kamu ingat pernah tergigiti sesuatu atau terluka jauh sebelum di lembah?"
     r "Tergigit? Kurasa tidak.."
     #hide kai
+    hide kai_smile
     "Tergigit? Aku mencoba mengingat yang pernah kulakukan."
 
     r "(!!)"
     r "Racun ular!"
     #show suprise kai as kai di kanan
+    show kai_normal at enterr1
     k "Ular? Ada hewan seperti itu ya di dunia ini?"
     r "Ada! Kami menemukan satu yang sangat besar!"
     #show serious kai as kai di kanan
@@ -1513,10 +1570,13 @@ label b1deca2:
     k "Ayo kita berbicara di belakang."
     r "(?)"
     #hide kai
+    hide kai_normal
 
     #scene BG Plateau - Dusk with dissolve(1.0)
+    scene plateau with dissolve
     r "Jadi ada apa?"
     #show serious kai as kai di tengah
+    show kai_normal at enter
     k "Aku akan menjelaskan latar belakangku dulu."
     k "Singkatnya, Aku adalah pencipta dunia ini, dan sebenarnya Aku telah lama mati. Kurasa Aku belum mengatakan itu."
     r "(Apa?!)"
@@ -1531,11 +1591,14 @@ label b1deca2:
     r "Tunggu- Ini semua tidak masuk akal!"
     r "Ini dunia apa, kenapa Kau bisa menciptakannya?"
     #show laugh kai as kai di tengah
+    show kai_laugh as kai_normal
     k "Hahaha-"
     #show happy kai as kai di tengah
+    show kai_smile  as kai_normal
     k "Maaf, anak sepertimu tidak akan mengerti."
     r "Lalu, bagaimana cara kita kembali?"
     #show serious kai as kai di tengah
+    show kai_normal as kai_normal
     k "..."
     "Kai hanya menatap dengan serius."
     #show normal kai as kai di tengah
@@ -1544,8 +1607,10 @@ label b1deca2:
     "Aku mengarahkan belatiku ke Kai, namun tanganku terhenti"
     k "Kalahkan Aku, maka akan kujelaskan semuanya."
     #hide kai.
+    hide kai_normal
     "Saat itu, Aku terdorong mundur oleh sihir."
     #play sound Strong wind blowing
+    play sound sfx_windblow
 
     r "Kau pasti bercanda."
     "Aku menerobos ke depan sekuat tenaga, tetapi Aku kembali terdorong mundur."
@@ -1555,19 +1620,25 @@ label b1deca2:
     "Aku mengarahkan tinju ke Kai, namun ada dinding tak terlihat yang mematahkan tanganku."
     r "Kai! Aku menyerah!"
     #show suprise kai as kai di tengah
+    show kai_normal at enter
     k "!"
     #show laugh kai as kai di tengah
+    show kai_laugh as kai_normal
     k "Hahahaha, Kamu anak yang jujur."
     r "(?)"
     #show happy kai as kai di tengah
+    show kai_smile as kai_normal
     k "Baiklah, mari kita bicara di luar."
     #show serious kai as kai di tengah
+    show kai_normal as kai_normal
     k "Ikuti Aku."
     r "!"
     #hide out
+    hide kai_normal
     "Aku melihat Cherry mengintip dari kejauhan."
 
     #show normal kai as kai di kanan
+    show kai_normal at enterr1
     k "Kamu tidak jalan?"
     r "Lupakan saja, tolong setidaknya bawa Cherry pergi."
     #show serious kai as kai di kanan
@@ -1575,8 +1646,10 @@ label b1deca2:
     r "!"
     "(Lukaku perlahan menutup sendiri.)"
     #hide out.
+    hide kai_normal
 
     #scene BG Plateau - Dusk with dissolve(1.0)
+    scene plateau with dissolve
     "Saat itu, Kai menunggu di ujung tebing."
     "Di saat Aku melangkahkan kaki di luar, tanganku menembus jantung Kai."
 
@@ -1584,41 +1657,51 @@ label b1deca2:
     uv "Bagaimana kabarmu, Kai?"
     "Gordon yang berbicara melalui kepala mereka"
     #show suprise kai as kai di kanan
+    show kai_normal at enterr1
     k "!"
     uv "Dapat kau. Kau tidak boleh lari karena ini akan jadi menyenangkan. Hihihihi."
     #hide kai
+    hide kai_ normal
     r "Kau, Gordon! Orang sinting, Aku tahu semuanya! Lepaskan Aku!"
     uv "Lalu apa? Kamu merasa kamu bisa mengancamku?"
     uv "Aku adalah penyelamatmu!"
     r "Hah? Berhenti berbicara omong kosong!"
     uv "Kamu hanya anak buangan! Kamu kira kamu bisa hidup kalau bukan karena…"
     #show normal kai as kai di kanan
+    show kai_normal at enterr1
     k "Sh- Jangan dengarkan dia."
     r "!"
     "Aku didorong kembali ke dalam penghalang."
     #show happy kai as kai di kanan
+    show kai_smile as kai_normal
     k "Lakukanlah yang kamu inginkan."
     "Kata Kai dengan sisa tenaganya dan jatuh dari tebing"
     r "Kai!!"
     #hide kai
+    hide kai_normal
     "Aku teringat pada Cherry."
 
     #With fade 1
     #scene BG Plateau - Dusk with fade(1.0)
+    scene plateau with fade
     r "Cherry, kamu dimana!"
     uv "..."
     r "Cherry!!"
+    show cherry_angry at enter
     #show angry as cherry di tengah
     c "Diam!"
     c "Kamu bohong! Kamu bilang semua akan baik-baik saja."
     "Cherry menembakkan pedang cahaya dan mengores bahu Remil"
     r "Maafkan Aku, Cherry-”"
     #show normal as cherry di tengah
+    show cherry_normal as cherry_angry
     c "Cherry sempat percaya padamu! Kamu pikir maaf saja cukup?"
     #show angry as cherry di tengah
+    show cherry_angryl as cherry_angry
     c "Kamu menghancurkan tulang Alios! Kamu memenggal kepala Jeffrey!"
     r " …"
     #show sad as cherry di tengah
+    show cherry_sadpout as cherry_angry
     c "Dan, kamu tidak puas hanya dengan mencekik leher kak Elena!"
     r "Dengarkan Aku!"
     "Aku berusaha mendekat dan menjelaskan semuanya."
@@ -1626,11 +1709,13 @@ label b1deca2:
     c "Berhenti di sana!"
     "Cherry memunculkan sinar besar dari atasnya."
     #hide cherry
+    hide cherry_angry
     "Aku berusaha untuk menghindar, namun bagian kiri tubuhku terpotong habis."
     "Aku terkapar dan Cherry mulai menghampiriku."
 
     #With fade 3
     #show CG Cherry duduk menangis di samping saat Remil kehilangan sebagian badannya (Plateau - Dusk)
+    scene cg_6 with Fade (1.0,1.0,1.0)
     "(Ugh!)"
     #play music  sad music
     play music sad_song
@@ -1639,13 +1724,14 @@ label b1deca2:
     "(Cherry..)"
     r "Cherry, suatu hari.."
     r "Mari kita bertemu yang lain di luar sana."
+    scene plateau with fade
     "Saat barrier tidak lagi melingkupi tubuhku, bahu kiriku tumbuh dan tanganku mencengkeram tangan Cherry."
 
     r "Hentikan- HENTIKAN! GORDOOOOOOON!"
 
 
     #BG Plateau - Dusk with fade(1.0)
-    scene plateau with fade
+    
     "Di saat itu, badan Cherry terpisah dua atas bawah."
     "Tubuhku kembali utuh dan barrier sudah lenyap, seutuhnya."
 
