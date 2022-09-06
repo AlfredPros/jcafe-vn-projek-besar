@@ -11,7 +11,7 @@ label start:
     r "Tidak ada waktu untuk hanya berdiam diri{w=0.1}.{w=0.1}.{w=0.1}. Aku harus segera pergi dari hutan ini!"
 
     #(BG di hutan, night) Fade 2s
-    scene hutan_night with dissolve
+    scene hutan_night with fade
     r "*Grooowl*"
     r "Perutku terasa lapar sekali{w=0.1}.{w=0.1}.{w=0.1}. Aku tidak sanggup berjalan kalau tidak makan sesuatu dulu."
     r "Tunggu,{w=0.3} sepertinya di pohon itu ada buah.{w=0.3} Bentuknya agak aneh tapi mungkin bisa dimakan?"
@@ -69,23 +69,24 @@ label start:
     r "Haaa{w=0.1}.{w=0.1}.{w=0.1}. haa{w=0.1}.{w=0.1}.{w=0.1}. tidak kusangka aku akan terjun bebas dan masih selamat,{w=0.3} sekarang aku hanyut entah di mana{w=0.1}.{w=0.1}.{w=0.1}. paling tidak aku sudah aman dari ular itu."
     r "Hei,{w=0.3} di sebelah sana ada tenda!{w=0.3} Apakah ada yang tinggal di sini?"
     #Elena M in
-    show elena_surprise:
-        align (0.5, -0.1)
+    show elena_surprise at enter
     #*Surprise face M Elena
     n "Aaah!"
     r "(!!!)" with vpunch
     #*Surprise face M Elena
     n "Kamu terluka!{w=0.3} Tunggu sebentar,{w=0.3} biar aku lihat!"
     r "Ini hanya tergores!"
-    show elena_sad as elena_surprise:
-        align (0.5, -0.1)
+    show elena_sad as elena_surprise at sigh
     #*Sad face M Elena
     n "Ini tidak bisa dibiarkan,{w=0.3} aku akan mengobatinya sebelum terinfeksi!{w=0.3} Jadi aku olesi ini dulu{w=0.1}.{w=0.1}.{w=0.1}. lalu{w=0.1}.{w=0.1}.{w=0.1}."
     r "{w=0.1}.{w=0.1}.{w=0.1}."
+    show elena_happy as elena_surprise at normal
     #*Happy face M Elena
     n "{w=0.1}.{w=0.1}.{w=0.1}.Dan selesai!"
     r "Kamu tinggal di sini{w=0.1}.{w=0.1}.{w=0.1}.?"
+    show elena_normal as elena_surprise
     #*Normal face M Elena
+    show elena_happy as elena_surprise at bounce
     n "Benar,{w=0.3} beberapa hari lalu aku terbangun dekat sini dan karena tidak tahu harus bagaimana aku mencoba tinggal di sini."
     r "Sama sepertiku{w=0.1}.{w=0.1}.{w=0.1}."
     #*Happy face M Elena
@@ -95,16 +96,18 @@ label start:
     e "Remil!{w=0.3} Apa kamu lapar?{w=0.3} Aku baru saja memetik buah,{w=0.3} ini ambillah beberapa!"
     r "{w=0.1}.{w=0.1}.{w=0.1}.Tidak usah,{w=0.3} terima kasih"
     r "(Aku tidak boleh merepotkan orang lain,{w=0.3} lagipula sebaiknya aku segera pergi dari sini.)"
+    show elena_surprise as elena_surprise
     #*Surprise face M Elena
     e "Hei kamu mau kemana?!"
     r "Aku akan cari makan sendiri."
     e "Jangan begitu!{w=0.3} Aku tidak keberatan untuk berbagi loh!"
     r "Tidak.{w=0.3} Aku tidak bisa menerimanya."
+    show elena_sad as elena_surprise at sigh
     #*Sad face M Elena
     e "{w=0.1}.{w=0.1}.{w=0.1}."
     e "{w=0.1}.{w=0.1}.{w=0.1}.Setelah akhirnya aku menemukan seseorang di sini{w=0.1}.{w=0.1}.{w=0.1}. aku tidak mau sendirian lagi."
 
-    scene forest_path_2 with dissolve
+    scene hutan_night with Dissolve (2)
     r "Huft{w=0.1}.{w=0.1}.{w=0.1}. sudah berapa lama aku berjalan dan aku masih tidak tahu harus kemana{w=0.1}.{w=0.1}.{w=0.1}. Dan aku sekarang lapar sekali."
     play sound sfx_anakpanahlewat
     "*Syuuung*"
@@ -115,8 +118,10 @@ label start:
     r "{w=0.1}.{w=0.1}.{w=0.1}.!!!!" with vpunch
     r "(Ada panah melesat tepat di sampingku{w=0.1}.{w=0.1}.{w=0.1}.)"
     #Jeffrey M in
+    show jeffrey_angry2 at enter
     #*Angry face M Jeffery
     n "Siapa di sana?"
+    show jeffrey_angry1 as jeffrey_angry2
     r "Orang ini sepertinya sangat berbahaya{w=0.1}.{w=0.1}.{w=0.1}. Sebaiknya aku kabur perlahan saja{w=0.1}.{w=0.1}.{w=0.1}."
     play sound sfx_anakpanahlewat
     "*Syuung*"
@@ -124,45 +129,57 @@ label start:
     n "Tunjukkan dirimu!"
     r "(Orang itu mengarah kemari!{w=0.3} Kalau begitu{w=0.1}.{w=0.1}.{w=0.1}.!)"
     r "Hup!!"
+    show jeffrey_surprised as jeffrey_angry2
     #*Surprise face M Jeffery
     n "Uaaah!!"
+    hide jeffrey_angry2
     #Jeffrey out
     play sound sfx_gedebruk
     "*Bruuuk*" with vpunch
     #Jeffrey M in
     #*Surprise face M Jeffery
+    show jeffrey_surprised at enter
     n "Hei,{w=0.3} hei,{w=0.3} tidak perlu sampai menarik kakiku begini kan?"
     r "Tapi kau menyerangku!"
     n "Itu karena aku kira ada monster!{w=0.3} Maaf,{w=0.1} maaf!{w=0.3} Tolong menyingkir dari badanku!"
     r "Baiklah{w=0.1}.{w=0.1}.{w=0.1}."
     #*Normal face M Jeffery
+    show jeffrey_normal as jeffrey_surprised
     n "Fyuh,{w=0.3} tapi kau berani juga langsung menyerang seperti itu tanpa senjata."
     r "Karena aku melihat ada celah."
     j "Aku rasa kau punya potensi untuk menjadi petarung handal.{w=0.3} Siapa namamu?{w=0.3} Aku Jeffrey."
     r "Aku Remil."
     #*Happy face M Jeffrey
+    show jeffrey_happy as jeffrey_surprised
     j "Remil,{w=0.3} bagaimana kalau kau ikut aku?{w=0.3} Aku akan mengajarimu cara bertarung."
     #*Normal face M Jeffrey
+    show jeffrey_normal as jeffrey_surprised
     j "Kau pasti sudah sadar,{w=0.1} kan,{w=0.3} kalau tempat ini berbahaya?"
     r "Kau benar.{w=0.3} Tapi{w=0.1}.{w=0.1}.{w=0.1}."
     #*Happy face M Jeffrey
+    show jeffrey_happy as jeffrey_surprised
     j "Tidak usah ragu!{w=0.3} Kalau ikut aku kau akan mendapatkan tenda sendiri dan makanan enak tiga kali sehari!"
     r "Makanan enak tiga kali sehari?!"
     j "Benar!{w=0.3} Aku ini bergabung dengan kelompok yang dipimpin Alios."
     j "Kelompok ini terbuka untuk siapa saja yang mau bekerja untuk Alios."
     #*Normal face M Jeffrey
+    show jeffrey_normal as jeffrey_surprised
     j "Tentu saja karena itu untuk bisa tinggal dan makan enak kau harus bekerja!"
     j "Entah sebagai pemburu,{w=0.3} juru masak,{w=0.3} atau lainnya!"
     r "Kalau tidak kerja maka tidak akan dapat makanan ya{w=0.1}.{w=0.1}.{w=0.1}."
     j "Iya! Sekarang pun aku sedang berburu,{w=0.3} tangkapan hari ini cukup besar loh!{w=0.3} Rasanya pasti gurih dan nikmat!"
     r "*Gulp*"
     #*Happy face  M Jeffrey
+    show jeffrey_happy as jeffrey_surprised
     j "Bagaimana Remil?"
     n "Tunggu!{w=0.3} Tolong ajak aku juga!!" with vpunch
     r "E-Elena?!"
     #*Surprise face  M Jeffrey
+    show jeffrey_surprised as jeffrey_surprised
     j "Siapa dia?"
     #Elena R in
+    show jeffrey_surprised as jeffrey_surprised at m2
+    show elena_happy at enterr
     #Jeffery go left
     #*Happy face R Elena
     e "Namaku Elena!{w=0.3} Kelompok yang tadi anda ceritakan{w=0.1}.{w=0.1}.{w=0.1}. Apakah ada banyak orang di sana?"
@@ -170,21 +187,32 @@ label start:
     j "Iya lumayan banyak."
     j "Elena apa kamu mengikutiku?!"
     #*Sad face R Elena
+    show elena_sad as elena_happy at sigh
     e "Habis aku khawatir dengan lukamu!{w=0.3} Dan aku juga{w=0.1}.{w=0.1}.{w=0.1}. tidak mau sendirian lagi."
     #*Happy face L Jeffrey
+    show jeffrey_happy as jeffrey_surprised
     j "Hahaha! Kalau begitu kenapa kau tidak ikut dengan kami saja?"
     #*Happy face R Elena
+    show elena_happy as elena_happy at normal
     e "Boleh?!{w=0.3} Hore!"
     r "Tapi aku tidak bilang{w=0.1}.{w=0.1}.{w=0.1}."
     #*Normal face R Elena
+    show elena_normal as elena_happy
     e "Ayolah Remil!{w=0.3} Aku tahu kamu pasti kelaparan kan setelah berjalan sangat jauh?"
     r "Uuugh{w=0.1}.{w=0.1}.{w=0.1}."
     j "Sudah diputuskan!{w=0.3} Sekarang,{w=0.3} ayo kita pergi ke perkemahan Alios."
-
+    scene black with dissolve
+    pause 1
+    scene chp_blank with dissolve
+    pause 0.5
+    show transition1 with dissolve
+    pause 3
+    scene black with dissolve
+    pause 1
     #Transition
 
     #(BG di perkemahan Alios, dusk with dissolve)
-    scene campsite with dissolve
+    scene tenda_gelap with dissolve
     #Jeffrey L in & Elena R in
     #*Happy face L Jeffrey
     j "Baik,{w=0.3} kita sudah sampai!"
@@ -281,6 +309,8 @@ label start:
     #(BG di perkemahan Alios, dusk) Dissolve 1s
     scene campsite with dissolve
     #Elena L in & Jeffrey R in
+    show jeffrey_normal at enterl
+    show elena_happy at enterr
     #*Happy face L Elena
     e "Ah kalian sudah kembali!"
     #*Normal face R Jeffrey

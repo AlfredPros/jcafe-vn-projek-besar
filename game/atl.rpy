@@ -1,12 +1,32 @@
 transform enter:
     subpixel True
-    zoom 0.80
-    align(0.5, 1.0)
+    zoom 0.65
+    align(0.5, -0.4)
     alpha 0.0
-    ease 0.3 zoom 0.85 alpha 1.0
+    ease 0.3 zoom 0.7 alpha 1.0
 
     on hide:
-        ease 0.3 zoom 0.72 alpha 0.0
+        ease 0.3 zoom 0.6 alpha 0.0
+
+transform enterl:
+    subpixel True
+    zoom 0.65
+    align(0.25, -0.4)
+    alpha 0.0
+    ease 0.3 zoom 0.7 alpha 1.0
+
+    on hide:
+        ease 0.3 zoom 0.6 alpha 0.0
+
+transform enterr:
+    subpixel True
+    zoom 0.65
+    align(0.75, -0.4)
+    alpha 0.0
+    ease 0.3 zoom 0.7 alpha 1.0
+
+    on hide:
+        ease 0.3 zoom 0.6 alpha 0.0
 
 transform bounce:
     subpixel True
@@ -44,7 +64,7 @@ transform sigh:
 
 transform normal:
     subpixel True
-    ease 0.3 yoffset 0
+    ease 0.2 yoffset 0
 
 transform item_show:
     subpixel True
@@ -79,12 +99,10 @@ transform leave1:
 
 transform m4:
     subpixel True
-    pause 0.5
-    ease 0.3 xalign 0.90
+    ease 0.3 xalign 0.75
 transform m2:
     subpixel True
-    pause 0.5
-    ease 0.3 xalign 0.10
+    ease 0.3 xalign 0.25
 
 transform aa:
     subpixel True
