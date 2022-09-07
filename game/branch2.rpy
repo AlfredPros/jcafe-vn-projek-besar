@@ -10,68 +10,124 @@ label branch2:
     scene tenda_gelap with Dissolve (2)
     #BG Perkemahan Alios, night with fade 1s
     #Sad M in  Elena
+    show elena_sad at enter
     e "Hei.. Remil, kamu tidak apa-apa?"
     e "Kamu jadi banyak melamun, waktu makan malam tadi juga kamu tidak lahap seperti biasanya."
     #Nervous Elena
+    show elena_nervous as elena_sad
     e "...Remil?"
+    show elena_confused as elena_sad
     #Confused Elena
     e "(Tendanya kosong. Apa dia kabur?!)"
     e "(Tetapi aneh. Semua barang-barangnya ada disini.)"
+    hide elena_sad
     #Elena out
+    pause 0.5
 
+    scene hutan_night with fade
     #BG Hutan, night with fade 1s
     r "(Sepertinya aku sudah berjalan cukup jauh. Untung saja dari tadi aku belum bertemu dengan monster besar.)"
     #SFX: *Srak* *Srak* (suara semak-semak)
+    play sound sfx_treeshaking
     r "Hm? Sepertinya aku belum pernah ke tempat ini sebelumnya."
 
+    scene gubuk_luar_night with dissolve
     #BG luar gubuk tua, night with dissolve 1s
     r "Ada gubuk tua di tengah hutan gini?"
     r "(Sebelum aku memasukinya, aku harus memeriksanya dulu. Bahaya jika ada jebakan atau sesuatu yang berbahaya di dalamnya.)"
     #SFX: *Srak* *Srak* (suara semak-semak)
+    play sound sfx_treeshaking
     r "(Sepertinya tempat ini kosong.)"
 
     #BG dalam gubuk tua, night
+    scene dalam_gubuk_gelap with dissolve
     r "Haah.. Rupanya tempat ini jauh lebih nyaman dibanding tenda."
+    show vignette with dissolve
+    pause 0.5
+    show buku_2 with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     #show item buku catatan 1
     r "(Buku catatan?)"
     r "!!!"
     r "(Hebat! Buku ini berguna sekali. Di dalamnya banyak informasi mengenai tumbuhan yang dapat dikonsumsi, beracun, dan bahkan ada yang bisa dijadikan obat.)"
     r "(Isi buku ini juga terlihat seperti tulisan tangan, siapa orang yang menulis buku ini?)"
     #item buku catatan 1 out
+    hide buku_2 with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     #*Hiiissss*
+    play sound sfx_snakehiss
     r "(Ada monster di luar, sepertinya aku harus menghabiskan malam di sini.)"
     #Fade in black 1s
+    scene black with dissolve
+    pause 2
 
+    scene gubuk_luar_day with dissolve
     #BG Luar gubuk tua, day
     r "(M-Monster itu masih ada! Itu kan ular yang pernah menyerang aku sebelumnya. Aku tidak bisa tinggal di sekitar sini, aku harus segera pergi)."
     #transition BG Hutan, day
+    scene hutan with dissolve
     r "*Groowl*"
     r "Aku lapar.."
     r "Kebetulan sekali aku menemukan buah beri di sini!"
     r "Tetapi.. Kenapa rasanya aku pernah melihat buah ini sebelumnya ya?"
     #show item buku catatan 1
+    show vignette with dissolve
+    pause 0.5
+    show buku_2 with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     "Aku mengambil buku catatan yang aku temukan di gubuk itu."
     r "(!!!)" with vpunch
     r "Ternyata buah beri yang aku petik barusan ini beracun. Untung saja aku belum memakan satu pun."
     #item buku catatan 1 out
+    hide buku_2 with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "*Groowl*"
     r "Aduh perutku.. Aku harus mulai berburu."
     #show kelinci berbulu pink dan bertanduk
+    show vignette with dissolve
+    pause 0.5
+    show pink_bunny with dissolve:
+        align (0.5, 0.4)
+        zoom 0.3
+    pause 0.5
     "Aku melihat seekor kelinci bertanduk yang sedang melompat ke suatu arah. Dengan cepat aku menangkap kelinci itu dan membunuhnya dengan pisau milikku."
     #kelinci berbulu pink dan bertanduk out
+    hide pink_bunny with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "Lumayan lah."
     r "Sekarang aku harus menyiapkan api unggun."
     #SFX: *Tak* *Tak* (suara mukul kayu?)
-    r "Berhasil!"
+    r "Berhasil!" with vpunch
     r "*Kraus! Kraus!*"
     "*Grrrr..*"
     r "Lagi-lagi ada monster. Aku harus segera pergi dari sini."
 
+
     #BG Hutan 2, day with dissolve 1s
     r "Hawanya mengerikan sekali, sepertinya banyak monster yang jauh lebih mengerikan di sana."
     #show item buku catatan 1
+    show vignette with dissolve
+    pause 0.5
+    show buku_2 with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     r "Tetapi di selipan buku catatan ini, semakin seram wilayahnya maka barang-barang yang tersedia di dalamnya juga semakin bagus."
     #item buku catatan 1 out
+    hide buku_2 with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
 
     menu:
         "Jelajahi hutan.":
@@ -80,9 +136,19 @@ label branch2:
             r "(!!!)" with vpunch
             "Aku melihat sesuatu yang berkilauan. Benda apa itu?"
             #show item pisau belati berwarna ungu
+            show vignette with dissolve
+            pause 0.5
+            show dagger_ungu_jeffry with dissolve:
+                align (0.5, 0.4)
+                zoom 0.3
+            pause 0.5
             r "Wow, ini pisau belati? Keren sekali."
+            hide dagger_ungu_jeffry with dissolve
+            pause 0.5
+            hide vignette with dissolve
+            pause 0.5
             #item pisau belati berwarna ungu out
-
+            scene r2_1_wolf_remil_1 with fade
             #CG serigala dengan bulu yang dihiasi kristal berdiri di belakang Remil 1 with fade in 0,5s
             "*Grrrr*"
             "Rauman dari serigala itu membuat tubuhku terguncang dan tanpa sengaja tangan kananku melepaskan pisau yang barusan aku pungut."
@@ -93,6 +159,7 @@ label branch2:
             #*Roarrr*
 
             #BG Hutan, day with fade in 1s
+            scene hutan with fade
             r "Huft, nyaris saja. Padahal pisau belati itu keren sekali."
 
         "Kembali":
@@ -103,26 +170,48 @@ label branch2:
     #CHAPTER 1 END
     #(Black Screen. With Dissolve 1sec)
     #CHAPTER 2 UWOOOOOOOOOOOH
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_2 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
 
+    scene hutan_night with Dissolve (2)
     #BG Hutan, night with dissolve in 1s
     r "(Sepertinya malam ini aku akan tidur di atas pohon. Semoga tidak ada ular atau hewan berbahaya lainnya.)"
     "Aku pun memanjat pohon yang tertinggi."
-    #*AAAAAA!!*
+    n "{b}AAAAAA!!{/b}" with vpunch
     r "(Suara teriakan siapa itu?!)"
     "Aku melompat turun dari pohon, lalu bergegas mendekati sumber suara."
     #SFX: “Drap Drap” (suara langkah kaki cepat)
+    play sound sfx_drap3x
+    pause 0.5
+    show vignette with dissolve
+    pause 0.5
+    show beruang_ungu with dissolve:
+        align (0.5, 0.4)
+        zoom 0.15
+    pause 0.5
     #show beruang berwarna ungu
     r "(Suara teriakan tadi.. Berasal dari beruang itu?!)"
     "Beruang itu terus meraung kesakitan karena jebakan yang melukainya."
+    hide beruang_ungu with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     #beruang berwarna ungu out
+    play sound sfx_anakpanahlewat
     #SFX: *Ctak* *Ctak* (suara panah)
     "Sebuah anak panah pun meluncur dan menusuk bagian dadanya, suara teriakan dari beruang itu semakin keras hingga bergema."
 
+    show jeffrey_sad at enter
     #Sad M in Jeffrey
     j "Hah.. sepertinya racun yang aku oles di ujung anak panah itu kurang kuat."
     #Happy M Jeffrey
+    show jeffrey_happy as jeffrey_sad
     j "Oh, hai Remil, kita bertemu lagi!"
-    #*Roaarr*
+    ber "{b}Roaarr{/b}" with vpunch
     "Beruang tersebut meraung ke arah kami. Karena kakinya terkena jebakan, beruang tersebut terus mencoba untuk melepaskan kakinya menggunakan cakar tajamnya."
     j "sepertinya beruang itu sedang ingin melepaskan dirinya."
     j "Apa yang bisa kamu lakukan Remil?"
@@ -132,63 +221,91 @@ label branch2:
             #show beruang ungu
             r "Biar aku yang urus, kamu tarik perhatian beruang tersebut dengan panah kamu."
             #Serious M Jeffrey
+            show jeffrey_serious as jeffrey_sad at sigh
             j "Baiklah, aku akan mencoba menarik perhatiannya dari atas pohon dengan panahku."
             #Jeffrey out
+            hide jeffrey_sad
             "Beruang tersebut mulai menyerang mereka, Aku dan Jeffrey akan membalas serangan tersebut."
             "Aku mulai menggores tubuh beruang tersebut bersamaan dengan serangan panah beracun dari jeffrey ke arah wajah beruang tersebut."
             "Karena beruang tersebut dalam kondisi yang hampir dikalahkan, Aku melihat sedikit celah dan dengan penuh percaya diri aku menyerang mata si beruang dari sisi kiri."
             "Namun tiba tiba serangan spontan dariku berhasil dipatahkan oleh beruang tersebut."
             #beruang ungu out
             #SFX: *Bruk!* (suara badan jatuh ke permukaan kasar)
+            play sound sfx_bodydrop
             r "AAKH!!"
             r "(Serangannya cepat sekali!)"
             #show beruang ungu
             #*AAAAAA!!!*
             "Beruang tersebut menggunakan cakarnya yang tajam dan berhasil melepaskan dirinya dari jebakan yang menancap pada kakinya."
             #Angry M in Jeffrey
+            show jeffrey_angry2 at enter
             j "Tidak akan kubiarkan!!"
             "Jeffrey melepaskan anak panah yang dibidiknya ke arah mata beruang dan berhasil membuat beruang kehilangan arah serangan."
-            #*AAAAAAA*
+            ber "{b}Roaarr{/b}" with vpunch
             r "(!!!)" with vpunch
             "Teriakan beruang itu membuat kesadaranku kembali."
             j "Serang lehernya!"
+            hide jeffrey_angry2
             #Jeffrey out
             "Dengan cepat aku bergegas mengambil pisau yang terlempar dan menusukan pisau tersebut ke leher beruang."
-            #*AAAAaaaaa..*
+            ber "{b}{cps=10}Roaarr-{w=0.3}{nw}{/b}"
             #beruang ungu out
             "Teriakan beruang tersendat. Seketika beruang tumbang serta kehilangan penglihatannya."
-
             #BG hutan, night
             "Aku dan Jeffrey akhirnya menarik nafas masing-masing sehabis pertarungan selesai. Kami pun melihat satu sama lain dengan nafas lega."
             r "(Seketika aku merasa lebih aman dengan Jeffrey.)"
             r "(Haruskah aku mempercayainya?)"
+            show jeffrey_happy at enter
             #Happy M in Jeffrey
             j "Hey gerakan bagus yang kau lakukan tadi."
             r "..Panahanmu juga hebat."
+            show jeffrey_normal as jeffrey_happy
             #Normal M Jeffrey
             j "Hmm.. bagaimana jika malam ini kamu ikut ke tempatku?"
             r "Ah, tidak usah. Aku tidak mau berjalan ke tempat lebih jauh."
+            show jeffrey_normal_manipulative as jeffrey_happy
             #Normal manipulative M Jeffrey
             j "Oh tidak, tempatku cukup dekat dari sini dan kamu bisa percaya denganku bahwa tidak ada orang disana. Lagipula aku juga tidak suka banyak orang."
             r "Baiklah aku akan ikut denganmu."
+            show jeffrey_laugh as jeffrey_happy
             #Laugh M Jeffrey
             j "Bagus! Ada beberapa hasil buruanku juga di sana, jadi kita bisa. menghabiskannya malam ini. Tapi sebelum itu, izinkan aku untuk mengobati kepalamu dulu."
+            hide jeffrey_happy
+            pause 0.5
+            scene black with Dissolve (2)
+            pause 1
             #Jeffrey out
 
         "Serang beruang itu sendiri.":
             r "Aku akan menyerangnya sendiri."
             #Surprise M Jeffrey
+            show jeffrey_surprised as jeffrey_sad
             j "Kamu yakin?"
-            j "REMIL AWAS!!"
+            j "REMIL AWAS!!" with vpunch
+            hide jeffrey_sad
+            play sound sfx_bodydrop
             #Jeffrey out
             #SFX: *Bruk!* (suara badan jatuh ke permukaan kasar)
             #show beruang ungu
+            show vignette with dissolve
+            pause 0.5
+            show beruang_ungu with dissolve:
+                align (0.5, 0.4)
+                zoom 0.15
+            pause 0.5
             "Beruang itu menghantamku dengan keras hingga membuatku terpental ke pohon. Aku bisa mendengar cakaran beruang itu yang sangat tajam hingga berhasil melepaskan dirinya dari jebakan itu."
+            hide beruang_ungu with dissolve
+            pause 0.5
+            hide vignette with dissolve
+            pause 0.5
             #beruang ungu out
+            show jeffrey_angry2 at enter
             #Angry M in Jeffrey
             j "Sial.."
+            hide jeffrey_angry2
             #Jeffrey out
 
+            scene black with Dissolve (2)
             #Black screen
             r "(Kepalaku sakit..)"
             j "Shh.. Jangan membuka mata dan bergerak terlalu banyak dahulu. Kepalamu terbentur cukup parah."
@@ -203,6 +320,7 @@ label branch2:
 
     #CG Remil (dengan perban di kepalanya) duduk di samping perapian dengan Jeffrey. Di sekitar perapian banyak daging hasil buruan dan beberapa buah-buahan.
     #*Kraus* *Kraus*
+    scene r2_2_rem_jef with Dissolve (2)
     r "Jeffrey, aku ingin bertanya sesuatu."
     j "*Kraus* Hmm?"
     r "Kamu kenapa membangun tenda disini? Bukannya kamu seharusnya bersama kelompok Alios?"
@@ -214,12 +332,25 @@ label branch2:
     j "Ini buah berinya tidak mau kamu makan?"
     "Jeffrey mengambil beberapa buah beri dan hendak memakannya."
     "Buah beri itu terlihat seperti buah beri beracun yang hampir aku makan tadi, aku pun menepis tangan Jeffrey hingga membuatnya menjatuhkan buah itu."
+    scene hutan_night with dissolve
+    show jeffrey_sad at enter
     #BG hutan, night with dissolve in  0,5s
     #Sad M in Jeffrey
     #show tiga buah beri terjatuh di tanah (menjadi kotor)
+    show vignette with dissolve
+    pause 0.5
+    show berry with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     j "Tidaakk, buah beriku!!"
+    hide berry with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     #tiga buah beri terjatuh di tanah (menjadi kotor) out
     r "Itu beracun."
+    show jeffrey_surprised as jeffrey_sad
     #Surprise M Jeffrey
     j "Dari mana kamu tahu kalau itu beracun?!"
 

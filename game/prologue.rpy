@@ -380,6 +380,12 @@ label start:
     r "Begitu ya{w=0.1}.{w=0.1}.{w=0.1}."
 
     #(BG di perkemahan Alios, dusk) Dissolve 1s
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_1 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
     scene tenda_sore with dissolve
     #Elena L in & Jeffrey R in
     show jeffrey_normal at enterl

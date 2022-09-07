@@ -13,6 +13,7 @@ define b = Character("Orang B")
 define g = Character("Prof. Gordon")
 define k = Character("Prof. Kai")
 define jne = Character("Jeffrey & Elena")
+define ber = Character("Beruang")
 
 label splashscreen:
 

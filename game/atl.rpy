@@ -62,6 +62,9 @@ transform sigh:
     subpixel True
     easein_cubic 0.8 yoffset 30
 
+    on hide:
+        ease 0.3 zoom 0.6 alpha 0.0
+
 transform normal:
     subpixel True
     ease 0.2 yoffset 0
