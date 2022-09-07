@@ -1,7 +1,13 @@
 
 label branch2:
     #WOOOOSH CHAPTER 1
-
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_1 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
+    scene tenda_gelap with Dissolve (2)
     #BG Perkemahan Alios, night with fade 1s
     #Sad M in  Elena
     e "Hei.. Remil, kamu tidak apa-apa?"
