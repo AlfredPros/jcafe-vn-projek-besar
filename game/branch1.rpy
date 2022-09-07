@@ -9,6 +9,7 @@ image cg_6 ="cgColored/R1_6_cherry_remil.png"
 label branch1:
     #CHAPTER 1
     #“Pemimpin dari Kelompok yang Berbahaya” with dissolve(3.0)
+    scene black with Dissolve(1.0)
     scene chp_1 with Dissolve (2.5) 
     "Pemimpin dari Kelompok yang Berbahaya"
 
@@ -32,7 +33,7 @@ label branch1:
     r "(Apa-apaan?)"
     r "Sombong sekali kamu dengan wajah pembunuhmu itu?"
     hide alios_normal
-    #show normal jeffry as jeffry di kanan
+    #show normal jeffrey as jeffrey di kanan
     show jeffrey_normal at enterr1
     j "Tenanglah, kawan. Bos tidak akan melakukan hal yang merugikan kita. Ini pastinya lebih baik, bukan? Dibanding kepala kita yang bergelinding di situ."
     r "(Benar, Aku juga berpikir begitu sekilas{w=0.3}.{w=0.3}.{w=0.3}. Tunggu, apa yang baru saja kupikirkan!)"
@@ -40,16 +41,16 @@ label branch1:
     r "(Aku mengarahkan belatiku ke Jeffrey)"
     j "Baiklah, lupakan masalah seriusnya. {w=0.1}Kita harus cepat memotong daging itu"
     hide jeffrey_normal
-    #hide jeffry
+    #hide jeffrey
     "Setelah itu, Aku memutuskan untuk diam agar tidak merusak suasana. Aku percaya bahwa Alios melakukan ini untuk keselamatan kami."
     #dissolve selama 3s
 
     #scene kantin malam
     scene canteen_night2 with Dissolve (2.5) 
-    #show jeffrey laugh as jeffry di kiri
+    #show jeffrey laugh as jeffrey di kiri
     show jeffrey_laugh at enterl1
     j "Hahaha"
-    #show jeffrey happy as jeffry di kiri
+    #show jeffrey happy as jeffrey di kiri
     show jeffrey_happy as jeffrey_laugh
     j "Anda berlebihan melakukannya, Bos!"
     show alios_sad at enterr1
@@ -65,7 +66,7 @@ label branch1:
     #hide alios
     "Dia terlihat seperti menahan amarahnya... aku harus menenangkanya"
 
-    #show normal  jeffry as jeffry di kiri
+    #show normal  jeffrey as jeffrey di kiri
     show jeffrey_normal at enterl1
     j "Hey, Remil, apa yang kamu lakukan dari tadi mengintip ke sana kemari?"
     r  "Tidak ada"
@@ -140,11 +141,11 @@ label b1deca:
     #hide alios
     "Raut wajah Alios menatap laki-laki tersebut dengan tidak senang, namun dia tidak mundur"
 
-    #show angry jeffry as jefrey di tengah
+    #show angry jeffrey as jefrey di tengah
     show jeffrey_angry1 at enter
     j "Ah tolong tenang, kalian! Berpikirlah dengan jernih dulu."
     r " …"
-    #show normal jeffry as jefrey di tengah
+    #show normal jeffrey as jefrey di tengah
     show jeffrey_normal as jeffrey_angry1
     j "Untuk masalah ini, kurang lebih Aku bisa diandalkan karena sering pergi berburu bersamanya. Biar kita pergi mencari jejaknya dulu, ya?"
     "(Bagaimana kita bisa yakin kita bisa menemukan Elena, jika dia masih hidup)"
@@ -152,7 +153,7 @@ label b1deca:
     #hide jeffrey
     "Jeffrey mendekat dan menepuk pundakku"
 
-    #show normal jeffry as jeffrey di tengah
+    #show normal jeffrey as jeffrey di tengah
     show jeffrey_normal at enter
     j"Aku menemukan tempat yang menarik kemarin, kita akan mulai mencari dari situ"
     #show normal alios as alios di kanan
@@ -168,7 +169,7 @@ label b1deca:
     #show normal alios as alios di kiri
     show alios_normal at enterl1
     al "Kemana kau mengarahkanku, Jeffrey?"
-    #show normal jeffry as jeffrey di kanan
+    #show normal jeffrey as jeffrey di kanan
     show jeffrey_normal at enterr1
     j "Tenang saja, Bos- Maksudku, Alios. Lurus dari sini terdapat rahasia yang mendebarkan"
     #hide alios
@@ -182,7 +183,7 @@ label b1deca:
     scene gubuk_luar_day with Dissolve (1.0)
     r "ini bukannya gazebo biasa?"
     show jeffrey_angry2 at enter
-    #show angry jeffry as jeffrey di tengah
+    #show angry jeffrey as jeffrey di tengah
     j "Kamu pasti bercanda, gubuk ini luar biasa! Lihatlah ke dalam"
     r "Maaf, ini terlalu berdebu, tolong bersihkan"
     "Remil mengibas-ngibas sekitar sambil menutup mulutnya."
@@ -205,19 +206,19 @@ label b1deca:
     #show bored cherry as cherry di tengah
     show cherry_bored at enter
     c "Tidak apa, Cherry menghempas debu dari sekeliling jadi tidak kenapa-napa, tidak sepertimu"
-    #show normal jeffry as jeffry di kanan
+    #show normal jeffrey as jeffrey di kanan
     show  jeffrey_normal at enterr1
     j  "Tunggu, apa kamu melihat seseorang di dalam?"
     #hide cherry
     hide cherry_bored
     r "Bukankah ini tempat yang sudah ditinggalkan? Habis kayak begini sih tempatnya."
-    #show sad jeffry as jeffry di kanan
+    #show sad jeffrey as jeffrey di kanan
     show jeffrey_sad as jeffrey_normal
     j "Tidak, kemarin-kemarin Aku melihat tanda-tanda seseorang tinggal di sini, kupikir tadi kita bisa bertanya kepada orang itu."
 
     #scene bg gubuk dalam day with dissolve(1.0)
     scene dalam_gubuk_api_mati with Dissolve (1.0)
-    #show happy jeffry as jeffry di kiri
+    #show happy jeffrey as jeffrey di kiri
     show jeffrey_happy at enterl1
     j "Hey, tempat ini cukup luas! Tidak bisakah kita pindah ke sini?"
     r "(Orang ini emosinya labil sekali ya)"
@@ -227,7 +228,7 @@ label b1deca:
     hide alios_surprised
     hide jeffrey_happy
     #hide alios
-    #hide jeffry
+    #hide jeffrey
     "Aku masuk ke salah satu ruangan di dalam gubuk?"
 
     r"(Ruangan ini cukup sempit…)"
@@ -264,25 +265,25 @@ label b1deca:
     al  "Mungkin mereka yang meninggalkan ini masih di sekitar sini, Aku jadi suka ini"
     #hide cherry
     hide cherry_bored
-    #show normal jeffry as jeffry di kanan
+    #show normal jeffrey as jeffrey di kanan
     show jeffrey_normal at enterr1
     j "Aku kurang yakin, kertas ini mencurigakan. Mungkin saja sesuatu ini yang menculik Elena, kan?"
     #hide alios
     hide alios_happy
     r " …"
-    #hide jeffry
+    #hide jeffrey
     hide jeffrey_normal
     #show normal alios as alios di kiri
     show alios_normal at enterl1
     al "Dengarkan, kurasa jika kita ingin mencari perempuan itu, kita harus berpencar, sampai kita menemukan kota orang-orang."
-    #show normal jeffry as jeffry di kanan
+    #show normal jeffrey as jeffrey di kanan
     show jeffrey_normal at enter
     j "Baiklah, jika mereka orang jahatnya kita hanya perlu menghajarnya, bukan?"
     #hide alios
     hide alios_normal
     r "Kamu pasti bercanda…"
     j "Kalau begitu, tolong ikuti Aku."
-    #hide jeffry
+    #hide jeffrey
     hide jeffrey_normal
     "Kami berjalan lurus dari arah gubuk"
 
@@ -294,13 +295,13 @@ label b1deca:
     #show bg Hutan - Day with dissolve(3.0)
     show hutan with Dissolve(3.0)
     r "Di hutan ini benar-benar tidak ada orangnya ya?"
-    #show normal jeffry as jeffry di tengah
+    #show normal jeffrey as jeffrey di tengah
     show jeffrey_normal at enter
     j "Kita tidak bisa mengambil kesimpulan itu, semenjak kita bahkan belum keluar dari hutan ini."
     r "(Sungai ini…)"
     j "Kurasa kita harus berpencar.."
     j "Aku akan mengambil jalan di kanan bersama teman kita yang satu ini."
-    r "(jeffry melihat ke arahku)"
+    r "(jeffrey melihat ke arahku)"
     menu:
         "Baiklah. Kalau begitu Aku, Alios, dan Cherry ke kiri":
             jump b1deca1
@@ -312,7 +313,7 @@ label b1deca:
 
 label b1decb1:
     r "Apa kamu yakin? Aku rasa sebaiknya kita tetap jalan bersama"
-    #show angry jeffry as jeffry di tengah
+    #show angry jeffrey as jeffrey di tengah
     show jeffrey_angry1 as jeffrey_normal
     j "Remil, nyawa Elena mungkin sedang terancam. Di saat seperti inilah kita harusnya berpencar"
     r "Baiklah. Kalau begitu Aku, Alios, dan Cherry ke kiri"
@@ -686,7 +687,7 @@ label b1deca2:
     al "Jadi, siapa orang yang kau bawa?"
     #hide elena
     hide elena_angry
-    #show normal jeffrey  as jeffry di kanan
+    #show normal jeffrey  as jeffrey di kanan
     show jeffrey_normal at enterr1
     j "Perkenalkan, ini adalah dokter kita, Kai!"
     #show hapy kai  as kai di tengah
@@ -739,19 +740,19 @@ label b1deca2:
     #scene BG Lembah - Day with dissolve(1.0)
     scene lembah_day with fade
     r "Huf-huf."
-    show jeffrey_surprised at enterl1
-    #show suprise jeffrey  as jeffry di kiri
+    show jeffrey_surprisedd at enterl1
+    #show suprise jeffrey  as jeffrey di kiri
     j "Oh- Elena, kau terlihat tidak enak badan, kamu baik-baik saja?"
     #show nervous elena  as elena di kanan
     show elena_nervous at enterr1
     e "Ya, tetapi Aku tidak bisa terbiasa dengan monster-monster ini."
-    #show laugh jeffrey  as jeffry di kiri
-    show jeffrey_laugh as jeffrey_surprised
+    #show laugh jeffrey  as jeffrey di kiri
+    show jeffrey_laugh as jeffrey_surprisedd
     j  "Hahaha"
     #hide elena
     hide elena_nervous
-    #show normal jeffrey  as jeffry di kiri
-    show jeffrey_normal as jeffrey_surprised
+    #show normal jeffrey  as jeffrey di kiri
+    show jeffrey_normal as jeffrey_surprisedd
     j " Kalau kalian? Apa kalian baik-baik saja?"
     r "Hanya butuh istirahat."
     #show normal alios as alios di kanan
@@ -768,7 +769,7 @@ label b1deca2:
     #hide jeffrey
 
     al "Bagaimana kita bisa percaya pada kau? Aku mau Jeffrey yang pimpin jalannya."
-    #show normal jeffrey  as jeffry di kiri
+    #show normal jeffrey  as jeffrey di kiri
 
     j "Maaf, Bos. Jujur saja, anak ini lebih tahu jalan dibanding Aku."
     #show normal kai  as kai di tengah
@@ -777,7 +778,7 @@ label b1deca2:
     al "Ck. Awas saja kau kalau melakukan sesuatu yang mencurigakan."
     #show laugh kai  as kai di tengah
     k "Hahaha."
-    hide jeffrey_surprised
+    hide jeffrey_surprisedd
     hide kai_normal
     hide alios_normal
     #hide kai
@@ -847,7 +848,7 @@ label b1deca2:
     #show normal  alios as alios di kanan
     show alios_normal at enterr1
     al "Kau tidak terlihat seperti orang yang baik."
-    #show normal  jeffry as jeffrey di kiri
+    #show normal  jeffrey as jeffrey di kiri
     show jeffrey_normal at enterl1
     j "Benarkah? Dia ramah untukku.” balas Jeffrey"
     al "Dia hanya ramah karena kau menjilatinya, Jeffrey."
@@ -867,7 +868,7 @@ label b1deca2:
     "Semua orang terlihat diam, apa mereka sendiri tidak sadar?"
 
     r "Baiklah, lupakan masalah seriusnya. Kita harus membangun perkemahan, benar?"
-    #show normal  jeffry as jeffrey di kiri
+    #show normal  jeffrey as jeffrey di kiri
     show jeffrey_normal at enterl1
     j "Oh, benar."
     r ".. Apa Anda bisa membangun punyamu sendiri, Kai. Kami tidak punya cukup bahan di sekitar sini."
@@ -927,10 +928,10 @@ label b1deca2:
     e "Jadi, saat itu."
     e "Aku sedang pergi ke sungai untuk mengisi air di pagi hari. Lalu, ternyata Aku diincar oleh monster dan kemudian dibawa sampai ke desa."
     #show suprise jeffrey as jeffrey di kiri
-    show jeffrey_surprised at enterl1
+    show jeffrey_surprisedd at enterl1
     j "Jadi kamu tidak diculik orang?"
     #show happy jeffrey as jeffrey di kiri
-    show jeffrey_happy as jeffrey_surprised
+    show jeffrey_happy as jeffrey_surprisedd
     j "Itu sungguh melegakan!"
     r "Bagian mananya?"
     show alios_smirk at enterr1
@@ -938,7 +939,7 @@ label b1deca2:
     al "“Lupakan saja dia, tolong lanjutkan."
     #hide alios
     hide alios_smirk
-    hide jeffrey_surprised
+    hide jeffrey_surprisedd
     #hide jeffrey
     #show serious elena as elena di tengah
     show elena_angry at enter
@@ -1014,7 +1015,7 @@ label b1deca2:
     show alios_serious at enterl1
     al "Jeffrey!"
     #show supprise jeffrey as jeffrey di kanan
-    show jeffrey_surprised as jeffrey_normal
+    show jeffrey_surprisedd as jeffrey_normal
     j "Hah! Ya?"
     #show normal alios as alios di kiri
     show alios_normal as alios_serious
@@ -1109,7 +1110,7 @@ label b1deca2:
     "Kebencian seperti Meminum Racun, Namun Berharap Musuhmu Terbunuh"
     #“Kebencian seperti Meminum Racun, Namun Berharap Musuhmu Terbunuh” with fade(3.0)
     #scene BG Perkemahan - Day with fade(3.0)
-    scene tenda_terang Dissolve (3.0)
+    scene tenda_terang with Dissolve (3.0)
     #show happy jeffrey as jeffrey di tengah
     show jeffrey_happy at enter
     j "Halo, Remil. Tidurmu nyenyak?"
@@ -1132,19 +1133,19 @@ label b1deca2:
     al "Aku tahu kau sampah, tetapi kau jatuh sedalam ini dan sampai melibatkan semuanya!"
     b "AKU TIDAK PEDULI LAGI. MATI KALIAN!"
     #show suprise jeffrey as jeffrey di kiri
-    show jeffrey_surprised at enterl1
+    show jeffrey_surprisedd at enterl1
     j "Waduh, beruangnya banyak banget."
     #show normal jeffrey as jeffrey di kiri
-    show jeffrey_normal as jeffrey_surprised
+    show jeffrey_normal as jeffrey_surprisedd
     j "Tunggu, kemana Remil?"
     #show serious elena as elena di kanan
     show elena_angry at enterr1
     e "!"
     #show suprise elena as elena di kanan
-    show elena_surprised as elena_angry
+    show elena_surprise as elena_angry
     e "Di atas sana, Remil?"
     #show angry jeffrey as jeffrey di kiri
-    show jeffrey_angry as jeffrey_surprise
+    show jeffrey_angry as jeffrey_surprised
     j "Remil, cepat ke sini! Di sini kita kesulitan."
     rg  "Kaaamu siaaapa?"
     j "?"
@@ -1154,7 +1155,7 @@ label b1deca2:
     #hide elena
     hide elena_angry
     #hide jeffrey
-    hide jeffrey_surprise
+    hide jeffrey_surprised
     "Remil menerjang ke arah Alios, tetapi dihadang oleh Elena."
 
     rg "Hmmmmmmmm?"
@@ -1188,17 +1189,17 @@ label b1deca2:
     #show normal alios as alios di kanan
     show alios_normal as alios_angry
     al "Baiklah. Jeffrey! Pindahkan Cherry!"
-    #show normal jeffry as jeffry di kiri
+    #show normal jeffrey as jeffrey di kiri
     show jeffrey_normal at enterl1
     j ".. Bagaimana dengan Elena?"
     #show sad alios as alios di kanan
     show alios_sad as alios_angry
     al "Keadaannya sudah tidak bagus. Dia mati."
-    #show sad jeffry as jeffry di kiri
-    show jeffry_sad as jeffry_normal
+    #show sad jeffrey as jeffrey di kiri
+    show jeffrey_sad as jeffrey_normal
     j "..."
-    #show serious jjeffry as jeffry di kiri
-    show jeffry_serious as jeffry_normal
+    #show serious jjeffrey as jeffrey di kiri
+    show jeffrey_serious as jeffrey_normal
     j "Baiklah, Aku akan menembak dari belakang."
     #hide jeffrey
     hide jeffrey_normal
@@ -1233,14 +1234,14 @@ label b1deca2:
     show alios_angry1 at enterr1
     al "Jeffrey!"
     al "Jeffrey, kuatkan dirimu! Tembakkan panahmu dengan benar!"
-    #show angry jeffry as jeffry di kiri
-    show jeffrey_angry at enterl1
+    #show angry jeffrey as jeffrey di kiri
+    show jeffrey_angry1 at enterl1
     j "Aku tahu!"
     #show normal alios as alios di kanan
     show alios_normal as alios_angry1
     al "Saat kuberi tanda, kau tembaklah perutnya. Aku akan tangkis sihirnya!"
     #hide jeffrey
-    hide jeffrey_angry
+    hide jeffrey_angry1
     hide alios_angry1
     #hide alios
     "Alios kemudian menerjang ke arah beruang dan memanfaatkan pedangnya yang besar untuk menerobos ke depan. Lalu, dia menghantam beruang besar dengan sisi pedangnya."
@@ -1249,8 +1250,8 @@ label b1deca2:
     al "Sekarang!"
 
     #play sound  Bow drawing
-    play sound sfx_bow
-    #show serious jeffry as jeffry di kanan
+    
+    #show serious jeffrey as jeffrey di kanan
     show jeffrey_serious at enterr1
     j "!"
     "Jeffrey kemudian menembak panah yang telah dilumuri racun ke perut beruang."
@@ -1263,14 +1264,14 @@ label b1deca2:
     play sound sfx_fleshtearing
     #hide alios
     hide alios_normal
-    #show happy jeffry as jeffry di kanan
-    show jeffry_happy at enter1
+    #show happy jeffrey as jeffrey di kanan
+    show jeffrey_happy at enterr1
     j "Bagus, Alios! Rajanya sudah dikalahkan."
     #show normal alios as alios di kiri
     show alios_normal at enterl1
     al "Belum, masih ada keroco lainnya."
-    #show serious jeffry as jeffry di kanan
-    show jeffrey_serious as jeffry_happy
+    #show serious jeffrey as jeffrey di kanan
+    show jeffrey_serious as jeffrey_happy
     j "..."
     #hide alios
     hide alios_nomal
@@ -1279,10 +1280,12 @@ label b1deca2:
     "Alios kemudian menerjang ke depan dan melawan beruang-beruang di depannya dan Jeffrey menjaganya dari belakang."
 
     # scene  BG Lembah - Day with dissolve(1.0)
-    scene lemabah_day
+    scene lembah_day
+    show kai_normal at enter
     #show serious kai as kai di tengah
-    show kai_normal as enter
-    k "Sadarlah!!” kata Kai yang mulai kehabisan sebagian mananya"
+    
+    k "Sadarlah!!" 
+    "Kai yang mulai kehabisan sebagian mananya berteriak kepada Remil"
     rg " …"
     rg  "Hentikan sajalah, Kai."
     #show angry kai as kai di tengah
@@ -1325,18 +1328,18 @@ label b1deca2:
     #show normal alios as alios di kiri
     show alios_normal  at enterl1
     al "Jeffrey! Merunduk!"
-    show jeffrey_surprised at enter
+    show jeffrey_surprisedd at enter
     #show suprise jeffrey as jeffrey di tengah
     j "Ap-"
     #hide alios
     hide alios_normal
     #hide jeffrey
-    hide jeffrey_surprised
+    hide jeffrey_surprisedd
     "Kepalanya terpenggal."
 
 
     #scene BG Lembah - Day with fade(1.0)
-    scene lemabah_day with fade
+    scene lembah_day with fade
     #show angry alios as alios di tengah
     show alios_angry1 at enter
     al "Kaaaaaau!"
@@ -1355,6 +1358,7 @@ label b1deca2:
     #play sound Object dropping on sand
     play sound sfx_sanddrop
     #hide alios
+    hide alios_angry1
     pause 1.5
     #play sound  Body falling
     play sound sfx_bodydrop
@@ -1363,25 +1367,26 @@ label b1deca2:
 
     #play music  sad music loop
     play music sad_song
+    show alios_smirk at enter
     #show smirk alios as alios di tengah
     al "Hahaha, jadi kau masih dendam tentang Aku, lalu kau merencanakan semua ini?"
 
     rg "Berhenti berbicara, bocah."
     #show sad alios as alios di tengah
-    show alios_sad at enter
+    show alios_sad as alios_smirk
     al "Kau pasti sangat membenciku, huh?"
     "Kemudian, Remil menghancurkan rusuk Alios dengan pijakannya."
     #play sound  Bone cracking
     play sound sfx_bonecrack
     #show suprise alios as alios di tengah'
-    show alios_surprised as alios_sad
+    show alios_surprised as alios_smirk
     al "!"
     "Alios batuk darah."
     #show sad alios as alios di tengah
-    show alios_sad as alios_sad
+    show alios_sad as alios_smirk
     al "Harusnya kita adalah keluarga. Aku merasa dikhianati..” Alios kehilangan tenaganya untuk bicara"
     #hide alios.
-    hide alios_sad
+    hide alios_smirk
 
     # scene BG Lembah - Day with dissolve(1.0)
     scene lembah_day with dissolve
@@ -1405,7 +1410,7 @@ label b1deca2:
 
 
     #scene CG Lembah dan Remil di tengah jalan yang sedang pincang (Lembah - Day) With fade(3.0)
-    scene cg_5 with fade(1.0,1.0,1.0)
+    scene cg_5 with Fade (1.0,1.0,1.0)
     "Aku terbangun di daratan yang tidak kuketahui."
 
     r "Dimana ini?"
@@ -1610,7 +1615,7 @@ label b1deca2:
     hide kai_normal
     "Saat itu, Aku terdorong mundur oleh sihir."
     #play sound Strong wind blowing
-    play sound sfx_windblow
+    
 
     r "Kau pasti bercanda."
     "Aku menerobos ke depan sekuat tenaga, tetapi Aku kembali terdorong mundur."
@@ -1697,7 +1702,7 @@ label b1deca2:
     show cherry_normal as cherry_angry
     c "Cherry sempat percaya padamu! Kamu pikir maaf saja cukup?"
     #show angry as cherry di tengah
-    show cherry_angryl as cherry_angry
+    show cherry_angry as cherry_angry
     c "Kamu menghancurkan tulang Alios! Kamu memenggal kepala Jeffrey!"
     r " …"
     #show sad as cherry di tengah
