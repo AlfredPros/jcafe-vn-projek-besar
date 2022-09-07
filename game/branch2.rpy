@@ -358,55 +358,92 @@ label branch2:
         "Katakan itu hanya instingmu saja":
             r "Itu hanya naluriku saja."
             #Normal manipulative M Jeffrey
+            show jeffrey_normal_manipulative as jeffrey_sad
             j "Oh begitu.."
             #Laugh M Jeffrey
+            show jeffrey_laugh as jeffrey_sad
             j "Huwah, tidak kebayang kalau di sini tidak ada kamu dan aku malah langsung memakan beri itu. Terima kasih banyak, ya!"
             "Tanpa kusadari aku tersenyum."
             r "Omong-omong, aku waktu itu menemukan gubuk tua dan aku ingin pergi kesana lagi besok pagi. Sekarang sudah larut, boleh aku tidur di sini?"
             #Normal M Jeffrey
+            show jeffrey_normal as jeffrey_sad
             j "O-Oh iya, tentu saja. Selamat malam."
             r "Malam..."
+            hide jeffrey_sad
             #Jeffrey out
 
+            scene hutan_night with fade
+            show jeffrey_sad
             #BG hutan, night with fade in 1s
             #Sad M in Jeffrey
             j "Huaa.. Aku tidak bisa tidur."
+            show vignette with dissolve
+            pause 0.5
+            show buku_2 with dissolve:
+                align (0.5, 0.4)
+                zoom 0.1
+            pause 0.5
             #show item buku catatan 1
             #Serious M Jeffrey
+            show jeffrey_serious as jeffrey_sad
             j "Eh, buku siapa ini di sebelah Remil?"
             j "..."
             j "Dia mencatat semua ini?!"
             j "..atau jika bukan, siapa yang menulis buku ini?"
             j "Apa Remil tahu lebih banyak dariku?"
+            hide buku_2 with dissolve
+            pause 0.5
+            hide vignette with dissolve
+            pause 0.5
+            hide jeffrey_sad
             #item buku catatan 1 out
             #Jeffrey out
 
         "Beri tahu mengenai catatan itu":
             #show item buku catatan 1
+            show vignette with dissolve
+            pause 0.5
+            show buku_2 with dissolve:
+                align (0.5, 0.4)
+                zoom 0.1
+            pause 0.5
             r "Di buku ini tertulis bahwa buah yang kamu petik barusan beracun."
+            show jeffrey_surprised as jeffrey_sad
             #Surprise M Jeffrey
             j "Hah, buku apa itu?"
             r "Aku menemukan buku ini di suatu gubuk yang tua, di isi buku ini ada beberapa informasi mengenai buah-buahan dan tanaman di sekitar hutan ini."
             #item buku catatan 1 out
+            hide buku_2 with dissolve
+            pause 0.5
+            hide vignette with dissolve
+            pause 0.5
+            show jeffrey_normal as jeffrey_sad
             #Normal M Jeffrey
             j "Hmm.."
             j "Aneh ya?"
             r "Eh?"
+            show jeffrey_serious as jeffrey_sad
             #Serious M Jeffrey
             j "Tidak mungkin buku dengan tulisan tangan seperti ini ada dengan sendirinya kan? Pasti ada seseorang yang menulisnya."
             #Happy M Jeffrey
+            show jeffrey_happy as jeffrey_sad
             j "Hey Remil, bisa kah kamu memperlihatkan kepadaku gubuk tua itu?"
             r "(Dia bersemangat sekali..)"
             r "Boleh, mungkin kita bisa kesana besok pagi. Kita harus berhati-hati karena ada monster yang cukup seram di sana."
             #Normal M Jeffrey
+            show jeffrey_normal as jeffrey_sad
             j "Ah.. baiklah selamat malam."
             r "Malam."
+            hide jeffrey_sad
             #Jeffrey out
 
+    scene hutan with fade
+    show jeffrey_happy at enter
     #BG hutan, day with fade in 1s
     #Happy M in Jeffrey
     j "Remil, ayo bangun! Kamu bilang pagi ini akan menunjukan dimana gubuk tua itu kan?"
     r "Hmngh? Oh… iya benar."
+    hide jeffrey_happy
     #Jeffrey out
     "Kami pun bersiap dengan gear masing-masing untuk menelusuri hutan tersebut lagi."
 
@@ -414,6 +451,13 @@ label branch2:
     #(Black Screen. With Dissolve 1sec)
     #CHAPTER 3
     #BG luar gubuk, day with dissolve in 1s
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_3 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
+    scene gubuk_luar_day
     r "Hmm.. gubuknya tidak terlihat seperti yang kulihat sebelumnya.."
     #Surprise M in Jeffrey
     j "Maksudmu ini… gubuk yang salah?!"
