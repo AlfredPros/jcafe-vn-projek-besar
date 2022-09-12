@@ -44,7 +44,7 @@ label branch2:
     r "Haah.. Rupanya tempat ini jauh lebih nyaman dibanding tenda."
     show vignette with dissolve
     pause 0.5
-    show buku_2 with dissolve:
+    show old_book with dissolve:
         align (0.5, 0.4)
         zoom 0.1
     pause 0.5
@@ -54,7 +54,7 @@ label branch2:
     r "(Hebat! Buku ini berguna sekali. Di dalamnya banyak informasi mengenai tumbuhan yang dapat dikonsumsi, beracun, dan bahkan ada yang bisa dijadikan obat.)"
     r "(Isi buku ini juga terlihat seperti tulisan tangan, siapa orang yang menulis buku ini?)"
     #item buku catatan 1 out
-    hide buku_2 with dissolve
+    hide old_book with dissolve
     pause 0.5
     hide vignette with dissolve
     pause 0.5
@@ -77,7 +77,7 @@ label branch2:
     #show item buku catatan 1
     show vignette with dissolve
     pause 0.5
-    show buku_2 with dissolve:
+    show old_book with dissolve:
         align (0.5, 0.4)
         zoom 0.1
     pause 0.5
@@ -85,7 +85,7 @@ label branch2:
     r "(!!!)" with vpunch
     r "Ternyata buah beri yang aku petik barusan ini beracun. Untung saja aku belum memakan satu pun."
     #item buku catatan 1 out
-    hide buku_2 with dissolve
+    hide old_book with dissolve
     pause 0.5
     hide vignette with dissolve
     pause 0.5
@@ -118,13 +118,13 @@ label branch2:
     #show item buku catatan 1
     show vignette with dissolve
     pause 0.5
-    show buku_2 with dissolve:
+    show old_book with dissolve:
         align (0.5, 0.4)
         zoom 0.1
     pause 0.5
     r "Tetapi di selipan buku catatan ini, semakin seram wilayahnya maka barang-barang yang tersedia di dalamnya juga semakin bagus."
     #item buku catatan 1 out
-    hide buku_2 with dissolve
+    hide old_book with dissolve
     pause 0.5
     hide vignette with dissolve
     pause 0.5
@@ -373,13 +373,13 @@ label branch2:
             #Jeffrey out
 
             scene hutan_night with fade
-            show jeffrey_sad
+            show jeffrey_sad at enter
             #BG hutan, night with fade in 1s
             #Sad M in Jeffrey
             j "Huaa.. Aku tidak bisa tidur."
             show vignette with dissolve
             pause 0.5
-            show buku_2 with dissolve:
+            show old_book with dissolve:
                 align (0.5, 0.4)
                 zoom 0.1
             pause 0.5
@@ -391,7 +391,7 @@ label branch2:
             j "Dia mencatat semua ini?!"
             j "..atau jika bukan, siapa yang menulis buku ini?"
             j "Apa Remil tahu lebih banyak dariku?"
-            hide buku_2 with dissolve
+            hide old_book with dissolve
             pause 0.5
             hide vignette with dissolve
             pause 0.5
@@ -403,7 +403,7 @@ label branch2:
             #show item buku catatan 1
             show vignette with dissolve
             pause 0.5
-            show buku_2 with dissolve:
+            show old_book with dissolve:
                 align (0.5, 0.4)
                 zoom 0.1
             pause 0.5
@@ -413,7 +413,7 @@ label branch2:
             j "Hah, buku apa itu?"
             r "Aku menemukan buku ini di suatu gubuk yang tua, di isi buku ini ada beberapa informasi mengenai buah-buahan dan tanaman di sekitar hutan ini."
             #item buku catatan 1 out
-            hide buku_2 with dissolve
+            hide old_book with dissolve
             pause 0.5
             hide vignette with dissolve
             pause 0.5
@@ -459,34 +459,59 @@ label branch2:
     pause 2
     scene gubuk_luar_day
     r "Hmm.. gubuknya tidak terlihat seperti yang kulihat sebelumnya.."
+    show jeffrey_surprised at enter
     #Surprise M in Jeffrey
     j "Maksudmu ini… gubuk yang salah?!"
     r "Mungkin… aku lupa bentuknya."
     j "Hahh?!"
     r "Ayo kita coba masuk."
+    hide jeffrey_surprised
     #Jeffrey out
+    pause 0.5
 
+    scene dalam_gubuk_api_mati with dissolve
+    show jeffrey_happy at enter
     #BG dalam gubuk, day with dissolve in 1s
     #Happy M in Jeffrey
     j "Wah, gubuk ini lebih nyaman dibanding tenda. Tunggu, apa itu?"
+    show vignette with dissolve
+    pause 0.5
+    show buku_2 with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     #show item buku catatan 2
     r "(Berbeda dari buku yang aku temukan sebelumnya, di buku ini isinya mengenai monster-monster dan kelemahannya.)"
+    hide buku_2 with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     #item buku catatan 2 out
+    show jeffrey_laugh as jeffrey_happy
     #Laugh M Jeffrey
     j "Dengan buku ini kita akan semakin mudah untuk membasmi monster di sini. Benar kan? Ya kan?"
     r "Benar."
     r "..."
     #Normal M Jeffrey
+    show jeffrey_normal as jeffrey_happy
     j "..."
+    show jeffrey_normal_manipulative as jeffrey_happy
     #Normal manipulative M Jeffrey
     j "Sekarang bagaimana kalau kita berpencar? Aku akan melihat-lihat luar dan kamu yang menyelidiki area dalam."
     r "Sepertinya itu ide bagus."
+    hide jeffrey_happy
     #Jeffrey out
     "Jeffrey pun keluar dari gubuk, kini aku sendiri yang berada dalam gubuk ini."
     r "(Seperti ada sesuatu...)"
     r "(!!!)" with vpunch
     r "(Ini..)"
     #show ukiran kasar di tembok kayu
+    show vignette with dissolve
+    pause 0.5
+    show ukiran_kayu with dissolve:
+        align (0.5, 0.4)
+        zoom 0.3
+    pause 0.5
     r "(Apa maksud dari gambar ini?!)"
     #ukiran kasar di tembok kayu out
     r "(Ada tulisan di bawahnya, tetapi sebagian huruf dan katanya tercoret.)"
@@ -497,6 +522,10 @@ label branch2:
     r "(Maksudnya?)"
     r "(Aku harus memberitahu Jeffrey tentang ukiran dan tulisan ini.)"
 
+    play sound sfx_drap3x
+    scene gubuk_luar_day with dissolve
+    show elena_surprise at enterl
+    show jeffrey_normal_manipulative at enterr
     #SFX: “Drap Drap” (suara langkah kaki cepat)
     #BG luar gubuk, day with dissolve in 1s
     #Surprise L in Elena
@@ -504,26 +533,35 @@ label branch2:
     e "Itu Remil!"
     r "Elena? Apa yang kamu lakukan disini?"
     #Nervous L Elena
+    show elena_nervous as elena_surprise
     r "Anu, Remil.. Jeffrey.."
     #Normal R Jeffrey
+    show jeffrey_normal as jeffrey_normal_manipulative
     j "Hm?"
     e "Izinkan aku bergabung dengan kalian!"
     r "Eh?"
     #Normal R Jeffrey
     j "Elena maaf.."
+    show jeffrey_normal_manipulative as jeffrey_normal_manipulative
     #Normal manipulative R Jeffrey
     j "Aku tidak mau terlibat lagi dengan kelompok Alios dan sepertinya Alios menganggapmu berguna."
     j "Selain itu, aku dan Remil berpetualang bersama karena kita cocok, bagiku tidak pantas untuk disebut rombongan."
     r "(Jeffrey..)"
     #Surprise Elena & Jeffrey
+    show elena_surprise as elena_surprise
+    show jeffrey_surprised as jeffrey_normal_manipulative
     al "Elena!! Kamu dimana?!"
     j "Sepertinya itu suara Alios. Aku tidak ingin dia melihatku.. Remil, ayo kita lari."
     "Jeffrey menarik tanganku dan membawaku ke suatu tempat."
     #Elena & Jeffrey out
 
+    scene hutan with fade
+    show jeffrey_normal at enter
     #BG hutan 2 with fade in 1s
     #Normal M in Jeffrey
     j "Huft.. hampir saja."
+    show jeffrey_normal as jeffrey_normal at m4
+    show elena_nervous at enterl
     #Nervous L in Elena
     #Jeffrey move to R
     e "..."

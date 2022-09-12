@@ -34,21 +34,21 @@ transform bounce:
     ease 0.1 yoffset 0
 
     on hide:
-        ease 0.3 zoom 0.72 alpha 0.0
+        ease 0.3 zoom 0.6 alpha 0.0
 
 transform talk:
     subpixel True
-    ease 0.3 zoom 0.9 yalign 1.0
+    ease 0.3 zoom 0.70 yoffset -10
 
     on hide:
-        ease 0.3 zoom 0.72 alpha 0.0
+        ease 0.3 zoom 0.6 alpha 0.0
 
 transform notalk:
     subpixel True
-    ease 0.3 zoom 0.85 yalign 1.0
+    ease 0.3 zoom 0.65 yoffset 0
 
     on hide:
-        ease 0.3 zoom 0.72 alpha 0.0
+        ease 0.3 zoom 0.6 alpha 0.0
 
 transform close_up:
     subpixel True
@@ -77,6 +77,12 @@ transform item_show:
 
 transform m34:
     subpixel True
+    ease 0.5 xalign 1.3
+    ease 0.5 xalign 1.0
+
+transform m21:
+    subpixel True
+    ease 0.5 xalign 0.0
     ease 0.5 xalign 1.3
 
 transform m03:
@@ -107,8 +113,8 @@ transform m2:
 transform aa:
     subpixel True
     ease 0.3 xalign 0.5
-    
- 
+
+
 transform enterl1:
     subpixel True
     zoom 0.65
@@ -128,4 +134,3 @@ transform enterr1:
 
     on hide:
         ease 0.3 zoom 0.6 alpha 0.0
-
