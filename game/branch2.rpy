@@ -766,114 +766,184 @@ label branch2:
     pause 0.5
     "Peta ini.. Tulisan tangannya terasa mirip"
     #show item buku catatan 1
+    show vignette with dissolve
+    pause 0.5
+    show old_book with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     r "Tunggu, kamu yang menulis buku ini?"
     #Surprise M Kai
     k "(!!!)" with vpunch
     #Happy M Kai
+    show kai_laugh as kai_normal
     k "Kamu menemukannya ya. Benar, aku yang menulis buku itu."
     #item buku catatan 1 out
+    hide old_book with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "Buku ini berguna sekali. Hampir saja aku dan temanku memakan buah beri beracun."
     r "Kalau begitu, buku ini akan aku kembalikan."
     #Normal M Kai
+    show kai_normal as kai_normal
     k "Tidak usah, aku memang sengaja meninggalkan buku itu untuk membantu."
     k "Lagipula aku tidak butuh buku itu karena aku sudah hafal setiap tanaman dan monster di hutan ini."
     r "(Orang ini sepertinya sudah lama berada di sini.)"
     #show item peta
+    hide map with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "(Di peta ini sama sekali tidak ada petunjuk keluar hutan, bahkan ada gurun disini?!)"
     #item peta out
+    hide map with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "(Setidaknya aku sudah menemukan tempat yang aman disini. Kai meskipun terlihat dingin, namun dia baik sekali.)"
     r "(Sekarang aku harus mencari Jeffrey dan Elena.)"
     r "Terima kasih, Kai. Aku permisi dulu."
     k "Berhati-hatilah."
     #Kai out
+    hide kai_normal
+    pause 0.5
 
+    scene lembah_day with dissolve
     #CG lembah, day with dissolve in 1s
     r "(Aku belum pernah ke tempat ini sebelumnya.)"
     r "Sepertinya tidak ada apa-apa disini, dari tadi juga aku hanya bertemu dengan monster-monster kecil."
     #SFX: *Drap* *Drap* (suara langkah kaki terburu-buru)
+    play sound sfx_drap3x
     r "(!!!)" with vpunch
     r "AARGH!!"
     r "(Mayat ini.. Darahnya masih segar, kemungkinan dia baru saja dibunuh sebelum aku sampai ke tempat ini.)"
     r "(Tunggu, dia bukannya salah satu anggota kelompok Alios ya?)"
     #show item pisau belati berwarna hijau
+    show vignette with dissolve
+    pause 0.5
+    show dagger_hijau with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     "Aku mengeluarkan pisau belati dari saku untuk berjaga-jaga."
     #item pisau belati berwarna hijau out
+    hide dagger_hijau with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "(Aku tidak tahu dia dibunuh oleh manusia atau monster. Tidak aman jika aku diam disini terlalu lama, aku harus segera pergi.)"
     #SFX: *Drap* *Drap* (suara langkah kaki terburu-buru)
+    play sound sfx_drap3x
 
+    scene padang_gurun_day with fade
     #BG gurun, day with fade in 1s
     r "Hah.. aku sudah berlari cukup jauh."
     n "Tolong!!"
     r "Siapa disana?!"
     "Aku bergegas menuju sumber suara."
+    show cherry_serius at enter
     #Serious M in Cherry
     c "I-Ini kak Remil kan?"
     r "Iya.. Ada apa?"
     #Angry M Cherry
+    show cherry_angry as cherry_serius
     c "Kak Alios menggila! Dia hampir membunuh semua anggota kelompoknya!"
     r "(Jangan-jangan mayat yang tadi aku temukan itu..)"
     r "Kamu tahu di mana keberadaan Alios sekarang?"
     #Serious M Cherry
+    show cherry_serius as cherry_serius
     c "Tidak, terakhir kali kita berada di tengah gurun dan disitu ia mulai menggila."
     c "Cherry hampir diserang dan untung saja Cherry bisa bersembunyi."
     #Sad M Cherry
+    show cherry_sadpout as cherry_serius
     c "Sudah seharian Cherry tinggal disini, sekarang cadangan makanan dan minuman Cherry habis."
     r "Baiklah, kalau begitu kamu ikut saja denganku."
     #Angry M Cherry
+    show cherry_angry as cherry_serius
     c "Mana bisa?! Kak Remil kan tidak sekuat kak Alios."
     r "...Trus kamu maunya apa?"
     c "..."
     #Bored M Cherry
+    show cherry_bored as cherry_serius
     c "Baiklah, Cherry ikut."
     #Cherry out
+    hide cherry_serius
     "Aku dan Cherry pun berkeliling gurun."
     #Normal M in Cherry
+    show cherry_normal at enter
     c "Memangnya kak Remil mencari apa disini?"
     r "Entahlah."
     #Angry M Cherry
+    show cherry_angry as cherry_normal
     c "Terus ngapain kita dari tadi?! Ayolah mending kita balik saja. Disini panas, Cherry sudah tidak kuat!"
     r "(Aku merasa di tempat ini ada sesuatu.)"
     r "Tadi Alios tiba-tiba menggila di tempat ini kan?"
     r "Aku penasaran apa yang membuatnya menggila."
     #Normal M Cherry
+    show cherry_normal as cherry_normal
     c "Oh, ikut Cherry."
     #Cherry out
+    hide cherry_normal
+
 
     #BG tengah gurun, day with dissolve in 1s
     #Normal M in Cherry
+    show cherry_normal at enter
     c "Disini."
     #Sad M Cherry
+    show cherry_sadpout as cherry_normal
     c "Aku juga.. terpisah dengan Elena di tempat ini."
     r "Tunggu, kamu sebelumnya bersama Elena?"
     #Serious M Cherry
+    show cherry_serius as cherry_normal
     c "Iya, lalu aku bersembunyi sendiri."
     c "Elena juga menjadi aneh semenjak dia hilang seharian, tatapannya selalu kosong."
     r "..."
     r "(Sepertinya kita bertiga memang terpisah setelah pingsan dari goa itu. Tapi siapa yang memisahkan kita dan ada apa dengan goa itu?)"
     "Aku memperhatikan tiap puing-puing di gurun itu."
     #show item bola kristal
+    show vignette with dissolve
+    pause 0.5
+    show crystal_ball with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     #Happy M Cherry
+    show cherry_happy as cherry_normal
     c "Bola kristal itu cantik sekali! Cherry mau!"
     r "Hati-hati, sepertinya bola ini sedikit berbahaya. Kalau kamu suka, kamu bisa melihatnya saja."
     #Sad M Cherry
+    show cherry_sadpout as cherry_normal
     c "Cih."
     r "(Bisa jadi bola kristal ini ada hubungannya dengan Alios yang tiba-tiba menggila. Lebih baik aku mengamankannya.)"
     #item bola kristal out
     #Bored M Cherry
+    hide crystal_ball with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
+    show cherry_bored as cherry_normal
     c "Hei, kakak sudah menemukan yang kakak cari kan? Ayo kita kembali, Cherry tidak tahan berada di sini lama-lama."
     r "Baiklah."
     #Cherry out
+    hide cherry_normal
+    pause 0.5
 
     #BG plateau, dusk with dissolve in 1s
+    scene plateau with dissolve
+    show cherry_happy at enter
     #Happy M in Cherry
     c "Pisau belati kak Remil bagus dan kuat sekali, dengan pisau itu kakak bisa membunuh monster-monster yang menyerang kita selama perjalanan tadi."
     c "Dari mana kak Remil mendapatkan pisau itu? Cherry mau tongkat dan buku sihir yang baru!"
     r "(Hah.. Aku lelah.)"
     r "(Cherry sama sekali tidak membantu, padahal dia bisa saja meringankan pekerjaanku dengan menyihir monster-monster itu. Tetapi yang dia lakukan hanya meneriaki namaku dan malah membuatku sedikit pusing.)"
     #Angry M Cherry
+    show cherry_angry as cherry_happy
     c "Hei jawab! Kak Remil kok sering mengabaikan Cherry sih."
     r "Ada hutan yang berkabut di sana. Aku menemukan pisau ini dari tempat itu."
     #Happy M Cherry
+    show cherry_happy as cherry_happy
     c "Wah, hutan berkabut? Cherry mau kesana. Ayo temani Cherry!"
     r "Jangan sekarang, aku mau beristirahat."
     r "..."
@@ -881,10 +951,12 @@ label branch2:
     r "(Kenapa semenjak aku terbangun di rumah Kai, aku belum merasakan lapar hingga sekarang?)"
     r "Cherry, apa kamu tidak lapar?"
     #Bored M Cherry
+    show cherry_bored as cherry_happy
     c "Makanan disini aneh dan hambar, membuat nafsu makanku cepat hilang."
     c "Kalau kak Remil mau makan, makan saja sendiri. Cherry tidak lapar."
     n "REMILL!!!"
     r "Suara itu.. Jeffrey?!"
+    show cherry_normal as cherry_happy
     #Normal M Cherry move to R
     #Sad L in Jeffrey
     j "Remil! Kamu disini rupanya!"
