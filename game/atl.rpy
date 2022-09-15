@@ -66,6 +66,9 @@ transform normal:
     subpixel True
     ease 0.2 yoffset 0
 
+    on hide:
+        ease 0.3 zoom 0.6 alpha 0.0
+
 transform item_show:
     subpixel True
     alpha 0

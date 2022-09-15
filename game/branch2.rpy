@@ -619,46 +619,78 @@ label branch2:
     r "Jeffrey, kamu pancing serigala ini dan begitu aku melihat celah, aku akan menyerangnya dengan pisau ini."
     "Dengan gesit Jeffrey mendekat ke serigala itu agar dirinya menjadi umpan. Melihat adanya celah, aku menebas leher serigala dan serigala itu pun langsung tumbang."
 
-    
+
     #BG hutan 2 with fade in 1s
     #Surprise L in Elena
     #Surprise R in Jeffrey
+    scene hutan with fade
+    show elena_surprise at enterl
+    show jeffrey_surprised at enterr
     r "(!!!)" with vpunch
+    show elena_surprise at talk
     e "Wow.. hebat sekali."
+    show elena_surprise at notalk
     #Happy R Jeffrey
+    show jeffrey_happy as jeffrey_surprised at talk
     j "Pisau belati itu pasti sangat tajam. Kau baru saja mengalahkan serigala itu dengan sekali serangan!"
     #Sad R Jeffrey
+    show jeffrey_sad as jeffrey_surprised
     j "Semoga ada busur dan anak panah yang bagus di sekitar sini. Aku merasa tidak berguna karena seranganku tadi tidak ada apa-apanya."
     #Normal L Elena
+    show jeffrey_sad as jeffrey_surprised at notalk
+    show elena_normal as elena_surprise at talk
     e "Hei ayolah, jangan berpikir seperti itu. Kita akan berjuang bersama disini."
+    show elena_normal as elena_surprise at notalk
     r "Aku melihat gua diujung sana. Mau coba masuk ke dalamnya?"
     #Happy Jeffrey & Elena
+    show elena_happy as elena_surprise
+    show jeffrey_happy as jeffrey_surprised
     jne "Ayo."
     #Jeffrey & Elena out
+    hide elena_surprise
+    hide jeffrey_surprised
+    pause 0.5
 
+    show goa1 with dissolve
     #BG gua 1 with dissolve
     #Normal M in Jeffrey
+    show jeffrey_normal at enter
     j "Tidak ada apa-apa, ayo kita telusuri lebih dalam."
     #SFX: “Drap Drap Drap” (suara langkah kaki berjalan)
+    play sound sfx_drap3x
+    show jeffrey_sad as jeffrey_normal at m2
+    show elena_nervous at enterr
     #Jeffrey move to L
     #Sad L Jeffrey
     j "Kepalaku kok tiba-tiba pusing ya.."
     #Nervous R in Elena
     e "Aku juga.."
     r "(Aneh.. Penglihatanku juga tiba-tiba kabur.)"
+    hide jeffrey_normal with fade
     #Jeffrey out with fade
-    "*Bruk*"
+    "{i}Bruk{/i}"
     #Surprise L Elena
+    show elena_surprise as elena_nervous
     e "Jeffrey!!"
-    "*Bruk*"
+    "{i}Bruk{/i}"
+    hide elena_nervous with fade
+    pause 0.5
     #Elena out with fade
 
     #CHAPTER 3 END
     #black screen in 2s
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_4 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
     #CHAPTER 4
     #Scene di rumah Kai, day with dissolve in 1s
+    scene dalam_gubuk_terang with dissolve
     r "Ugh.."
     #Normal M in Kai
+    show kai_normal at enter
     n "Kamu sudah sadar?"
     r "...Kamu siapa?"
     n "Aku penghuni rumah yang berada di desa kosong ini."
@@ -668,20 +700,26 @@ label branch2:
     r "Iya, seingat aku terakhir kali kita berada di gua."
     r "Tetapi entah apa yang terjadi, kami sama-sama merasa pusing dan mungkin kami semua pingsan di dalam gua itu."
     #Serious M Kai
+    show kai_normal as kai_normal at sigh
     n "Gua? hmm.."
     n "Aku menemukanmu pingsan di hutan tidak jauh dari desa ini."
     n "-dan kamu sendirian."
     r " (Apa?!)"
     n "..."
+    show kai_normal as kai_normal at normal
     #Normal M Kai
     n "Mungkin kamu bisa berkeliling sekitar desa untuk menenangkan pikiranmu."
     r "Baiklah.."
     r "Ah iya, sebelum itu terima kasih karena telah menolongku. Boleh tahu namamu siapa?"
     #Happy M Kai
+    show kai_smile as kai_normal
     k "Kai."
     #Kai out
+    hide kai_normal
+    pause 0.5
 
     #BG desa Kai, day with dissolve in 1s (disini memakai versi yang tidak hancur)
+    scene desa_kai with dissolve
     r "(Apa yang barusan terjadi..)"
     r "(Aku bahkan tidak tahu di mana arah menuju tempat ini.)"
     "Aku merogoh-rogoh saku dan tas kecilku."
@@ -689,16 +727,43 @@ label branch2:
     #item pisau belati berwarna hijau out
     #show item buku catatan 1 in 1s
     #item buku catatan 1 out
+    show vignette with dissolve
+    pause 0.5
+    show dagger_hijau with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 1
+    hide dagger_hijau with dissolve
+    pause 0.5
+    show old_book with dissolve:
+        align (0.5, 0.4)
+        zoom 0.2
+    pause 1
+    hide old_book with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     r "Syukurlah dua barang itu masih ada."
+    show kai_normal at enter
     #Normal M in Kai
     k "Permisi."
     k "Siapa namamu?"
     r "Eh, namaku Remil."
     k "Kamu mau mencari teman-temanmu kan? Ini."
     #show item peta
+    show vignette with dissolve
+    pause 0.5
+    show map with dissolve:
+        align (0.5, 0.4)
+        zoom 0.3
+    pause 0.5
     #Serious M Kai
     k "Agar kamu tidak nyasar. Tempat ini adalah tempat teraman, kamu bisa beristirahat disana. Saya rasa kamu adalah orang baik."
     #item peta out
+    hide map with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     "Peta ini.. Tulisan tangannya terasa mirip"
     #show item buku catatan 1
     r "Tunggu, kamu yang menulis buku ini?"

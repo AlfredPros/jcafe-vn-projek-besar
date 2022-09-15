@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 980: u'action' is not a keyword argument or valid child for the grid statement.
-    action ShowMenu("tunjuk","images/cgColored/3_orb_trio2.png")
-          ^
+File "game/branch2.rpy", line 761: expected 'image_name_component' not found.
+    show
+        ^
 
-Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Sep  6 23:51:04 2022
+Ren'Py Version: Ren'Py 7.5.2.22081402
+Thu Sep 15 11:34:17 2022
