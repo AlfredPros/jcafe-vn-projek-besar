@@ -956,19 +956,35 @@ label branch2:
     c "Kalau kak Remil mau makan, makan saja sendiri. Cherry tidak lapar."
     n "REMILL!!!"
     r "Suara itu.. Jeffrey?!"
-    show cherry_normal as cherry_happy
+    show cherry_normal as cherry_happy at m2
     #Normal M Cherry move to R
+    show jeffrey_sad at enterl
     #Sad L in Jeffrey
     j "Remil! Kamu disini rupanya!"
     #show tangan dan kaki Jeffrey terlihat luka dan diperban
+    show vignette with dissolve
+    pause 0.5
+    show tangan_kaki_jeff_perban with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     r "(Tangan dan kakinya terluka?)"
     #tangan dan kaki Jeffrey terlihat luka dan diperban out
+    hide tangan_kaki_jeff_perban with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
+    show jeffrey_serious as jeffrey_sad at talk
     #Serious L Jeffrey
     j "(!!!)"
     j "Hati-hati."
+    hide jeffrey_sad
+    hide cherry_happy
     #Jeffrey & Cherry out
     #Smirk M in Alios
+    show alios_smirk at enter
     al "Di sini kau rupanya, Remil."
+    hide alios_smirk
     #Alios out
     #Surprise M in Jeffrey
     j "Remil.. Sepertinya dia benar-benar membencimu."
