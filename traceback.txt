@@ -1,52 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-Exception: In DynamicImage u'[temp_picture]': Could not find substitution 'temp_picture'.
+  File "game/branch2.rpy", line 959, in script
+    show cherry_normal as cherry_happy at m3
+  File "game/branch2.rpy", line 959, in <module>
+    show cherry_normal as cherry_happy at m3
+NameError: name 'm3' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 173, in script
-    $ ui.interact()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00gamemenu.rpy", line 173, in <module>
-    $ ui.interact()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3325, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 3737, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 441, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/core.py", line 558, in visit_all
-    for d in self.visit():
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/image.py", line 744, in visit
-    self.find_target()
-  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/image.py", line 638, in find_target
-    raise Exception("In DynamicImage %r: Could not find substitution '%s'." % (self.name, str(ke.args[0])))
-Exception: In DynamicImage u'[temp_picture]': Could not find substitution 'temp_picture'.
+  File "game/branch2.rpy", line 959, in script
+    show cherry_normal as cherry_happy at m3
+  File "renpy/ast.py", line 1388, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1347, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "renpy/python.py", line 1080, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 1073, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/branch2.rpy", line 959, in <module>
+    show cherry_normal as cherry_happy at m3
+NameError: name 'm3' is not defined
 
-Windows-10-10.0.19041
-Ren'Py 7.4.11.2266
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.5.0.22062402
 jcafe_vn_projek_besar 1.0
-Tue Sep  6 23:48:05 2022
+Mon Sep 19 19:17:03 2022

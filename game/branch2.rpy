@@ -956,7 +956,7 @@ label branch2:
     c "Kalau kak Remil mau makan, makan saja sendiri. Cherry tidak lapar."
     n "REMILL!!!"
     r "Suara itu.. Jeffrey?!"
-    show cherry_normal as cherry_happy at m2
+    show cherry_normal as cherry_happy at m4
     #Normal M Cherry move to R
     show jeffrey_sad at enterl
     #Sad L in Jeffrey
@@ -986,88 +986,150 @@ label branch2:
     al "Di sini kau rupanya, Remil."
     hide alios_smirk
     #Alios out
+    show jeffrey_surprised at enter
     #Surprise M in Jeffrey
     j "Remil.. Sepertinya dia benar-benar membencimu."
     r "Apa? Kenapa bisa?!"
     #Jeffrey out
+    hide jeffrey_surprised
     #Angry M in Alios
+    show alios_angry3 at enter
     al "Semua ini gara-gara kau, kelompok aku terpecah belah. Kaulah yang mengacaukan kerajaanku!"
     r "(Kerajaan?)"
     al "Remil, ayo bertarung denganku."
+    hide alios_angry3
     #Alios out
     #Surprise M in Cherry
+    show cherry_surprised at enter
     c "Kak Remil hati-hati, Kakak tidak akan bisa melawannya seorang!"
     r "(Cherry benar, terlalu beresiko jika aku bertarung dengannya.)"
     r "(Aku harus kabur.)"
+    hide cherry_surprised
     #Cherry out
     #Angry M in Alios
+    show alios_angry2 at enter
     al "Kau tidak akan bisa kabur dariku!"
     "Tiba-tiba cahaya putih datang menyilaukan pandangan kami."
+    hide alios_angry2
     #Alios out
 
     #CHAPTER 4 END
     #white screen in 1,5s
     #CHAPTER 5
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_5 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
 
     #BG rumah Kai, day with dissolve in 0,5s
+    scene dalam_gubuk_terang with dissolve
     r "Ugh.."
+    show jeffrey_happy at enterl
+    show kai_normal at enterr
+    pause 0.5
     #Happy L in Jeffrey
     #Normal R in Kai
+    show jeffrey_happy as jeffrey_happy at talk
     j "Ah, Remil sudah sadar."
+    show jeffrey_happy as jeffrey_happy at notalk
     #Serious R Kai
+    show kai_normal as kai_normal at talk
     k "Anak itu sangat berbahaya. Jika saja aku terlambat menggunakan sihir untuk melerai kalian, kemungkinan terburuknya kalian semua bisa terbunuh olehnya."
+    show kai_normal as kai_normal at notalk
     #Sad L Jeffrey
+    show jeffrey_sad as jeffrey_happy at talk
     j "Huaa, terima kasih banyak tuan karena telah menyelamatkan kami."
+    show jeffrey_sad as jeffrey_happy at notalk
     r "Tuan?"
     #Normal L Jeffrey
+    show jeffrey_normal as jeffrey_happy at talk
     j "Dari gaya bicaranya kelihatan kalau dia jauh lebih tua dari kita."
+    show jeffrey_normal as jeffrey_happy at notalk
     r "(Tapi tampangnya terlalu muda untuk disebut “tuan”...)"
     #Laugh R Kai
+    show kai_laugh as kai_normal at talk
     k "Hahaha."
+    show kai_normal as kai_normal
     #Normal R Kai
     k "Saya sudah menyiapkan makanan untuk kalian, silahkan dimakan."
+    show kai_normal as kai_normal at notalk
     #Happy L Jeffrey
+    show jeffrey_happy as jeffrey_happy at talk
     j "*Kraus* Ini enak sekali! Rasanya seperti sudah lama aku tidak memakan makanan berbumbu."
+    show jeffrey_happy as jeffrey_happy at notalk
     r "(Benar, ini enak sekali.)"
     #Happy R Kai
+    show kai_smile as kai_normal at talk
     k "Ada beberapa tumbuhan obat-obatan disini yang juga bisa dijadikan bumbu."
     #Normal L Jeffrey
+    show kai_smile as kai_normal at notalk
+    show jeffrey_normal as jeffrey_happy at talk
     j "*Kraus* Sepertinya tuan sudah lama tinggal di hutan ini ya? *Kraus*"
+    show jeffrey_normal as jeffrey_happy at notalk
     r "(Telan dulu makananmu..)"
     #Normal R Kai
+    show kai_normal as kai_normal at talk
     k "Benar, saya tinggal disini bertahun-tahun sebelum kalian."
+    show kai_normal as kai_normal at notalk
     r "(!!!)" with vpunch
     r "(Bertahun-tahun?!)"
     #Normal manipulative L Jeffrey
+    show jeffrey_normal_manipulative as jeffrey_happy at talk
     j "Tunggu, sepertinya kita kurang seorang."
+    show jeffrey_normal_manipulative as jeffrey_happy at notalk
     r "Oh iya! Aku melupakan dia."
+    show kai_normal as kai_normal at talk
     k "Anak berambut pirang itu ya?"
     k "Dia bangun lebih awal dibanding kalian, tetapi begitu melihatku dia malah memarahiku dengan memanggilku “Orang aneh” lalu kabur."
+    show kai_normal as kai_normal at notalk
     r "Haah.."
     #Normal L Jeffrey
+    show jeffrey_normal as jeffrey_happy at talk
     j "Lalu, bagaimana dengan Alios?"
+    show jeffrey_normal as jeffrey_happy at notalk
+    show kai_normal as kai_normal at talk
     k "Saya.. meninggalkannya di tempat tadi."
+    show kai_normal as kai_normal at notalk
+    show jeffrey_normal as jeffrey_happy at talk
     j "Eh Remil, apa habis ini kita cari Cherry saja ya? Masalahnya, dia kan tidak bisa bertarung."
+    show jeffrey_normal as jeffrey_happy at notalk
     r "Boleh."
 
     #BG hutan, day with dissolve in 1s
     #Normal M in Jeffrey
     #show item busur berwarna silver dihiasi bebatuan biru
+    scene hutan with dissolve
+    show vignette with dissolve
+    pause 0.5
+    show item_busur with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     r "Wah, dari mana kamu mendapatkan busur itu?"
     #Happy M Jeffrey
     j "Setelah aku sadar dari gua itu, tiba-tiba saja busur ini sudah ada di sebelahku."
     r "Wow.."
     #item busur berwarna silver dihiasi bebatuan biru out
+    hide item_busur with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
+    show jeffrey_normal_manipulative at enter
     #Normal manipulative M Jeffrey
     j "Oh iya, memangnya kamu pergi ke mana setelah sadar dari gua itu?"
     j "Aku mengira kamu dibawa oleh monster, jadinya aku bertarung hingga ke dasar gua."
     r "Dasar gua? Lalu kamu menemukan apa saja disana?"
+    show jeffrey_laugh at jeffrey_normal_manipulative
     #Laugh M Jeffrey
     j "Yup! Ternyata tidak sedalam yang aku kira dan berkat busur ini aku jadi bisa melawan monster yang tertutupi kristal itu."
     r "Jadi luka-luka di tangan dan kakimu karena monster-monster di gua itu?"
     #Normal M Jeffrey
+    show jeffrey_normal at jeffrey_normal_manipulative
     j "Yah.. Bisa dikatakan begitu."
     #Happy M Jeffrey
+    show jeffrey_happy at jeffrey_normal_manipulative
     j "Oh iya, lupakan soal tadi! Aku juga menemukan sesuatu di sana."
     j "Tapi sebelum aku memberitahukannya, bisa kamu berikan kepadaku bola kristal yang kamu temukan di gurun?"
     r "(Dari mana dia tahu?)"
@@ -1075,45 +1137,74 @@ label branch2:
     menu:
         "Berikan bola kristal":
             #show bola kristal
+            show vignette with dissolve
+            pause 0.5
+            show crystal_ball with dissolve:
+                align (0.5, 0.4)
+                zoom 0.1
+            pause 0.5
             r "Ini."
             j "Wah, keren!"
             r "Kamu tahu fungsi bola kristal ini?"
             #Normal manipulative M Jeffrey
+            show jeffrey_normal_manipulative as jeffrey_normal_manipulative
             j "..Sedikit."
             #bola kristal out
+            hide crystal_ball with dissolve
+            pause 0.5
+            hide vignette with dissolve
+            pause 0.5
+            show cherry_bored as cherry_normal
             r "Oh ya, Apa itu?"
+            play sound sfx_treeshaking
             #SFX: *Srak* *Srak* (suara semak-semak)
             #Serious M Jeffrey
+            show jeffrey_serious as jeffrey_normal_manipulative
             j "Remil, apa kamu mendengar sesuatu?"
             r "Sepertinya ada sesuatu di sana, entah itu manusia atau monster."
             #Sad M Jeffrey
+            show jeffrey_sad as jeffrey_normal_manipulative
             j "Aku takut jika itu Alios, bagaimana kalau kita berpencar lalu bertemu di gubuk tua?"
             r "Sepertinya itu yang terbaik."
             #Jeffrey out
+            hide jeffrey_normal_manipulative
 
         "Tolak":
             r "Maaf, aku tidak bisa."
             #Sad M Jeffrey
+            show jeffrey_sad as jeffrey_normal_manipulative
             j "Kenapa? Aku pikir kamu sudah percaya padaku.."
             r "Ini seperti.. Harus aku yang menjaganya."
             #SFX: *Srak* *Srak* (suara semak-semak)
             #Serious M Jeffrey
+            play sound sfx_treeshaking
+            show jeffrey_serious as jeffrey_normal_manipulative
             j "Remil, apa kamu mendengar sesuatu?"
             r "Sepertinya ada sesuatu di sana, entah itu manusia atau monster."
             #Sad M Jeffrey
+            show jeffrey_sad as jeffrey_normal_manipulative
             j "Aku takut jika itu Alios.."
             r "(Apa yang sudah Alios perbuat hingga Jeffrey ketakutan seperti itu?)"
             #Serious M Jeffrey
+            show jeffrey_serious as jeffrey_normal_manipulative
             j "Remil, sepertinya kamu harus menitipkan bola itu kepadaku. Kamu menganggap itu barang penting kan?"
             j "Akan bahaya kalau Alios mengejarmu dan merampas bola kristal itu. Apalagi Alios sangat mengincarmu."
             r "Kamu benar, ini."
             #show item bola kristal
             #Normal manipulative M Jeffrey
+            show jeffrey_normal_manipulative as jeffrey_normal_manipulative
+            show vignette with dissolve
+            pause 0.5
+            show crystal_ball with dissolve:
+                align (0.5, 0.4)
+                zoom 0.1
+            pause 0.5
             j "Baik, kita bertemu lagi di gubuk tua itu ya."
             #item bola kristal out
             #Jeffrey out
 
     #BG gubuk tua, day with fade in 1s
+    scene gubuk_luar_day with fade
     r "Huft.. aku sudah sampai sini saja, tidak terasa."
     "Aku merogoh tas kecilku."
     r "Hah?! Petanya kok tidak ada?"
@@ -1121,19 +1212,23 @@ label branch2:
     r "Hah.. yah, setidaknya aku bisa tinggal di gubuk ini sementara."
     r "Toh pisau aku sudah cukup kuat untuk melawan monster di hutan ini sendirian."
     #SFX: *Srak* *Srak* (suara semak-semak)
+    play sound sfx_treeshaking
     "Aku mencium bau aneh, aku pun berjalan mengelilingi sisi luar gubuk tua itu."
     r "(!!!)" with vpunch
     #CG Remil melihat mayat Cherry with fade in 1s
+    scene R2_4_remil_deadcherry with fade
     r "Cherry!! Hei!"
     r "Cherry, bangunlah!"
     r "(Tidak ada respon..)"
-    #Aku pun memeriksa denyut nadi Cherry.
+    r "(Aku pun memeriksa denyut nadi Cherry.)"
     r "..."
     #BG gubuk tua, day with dissolve in 1s
+    scene gubuk_luar_day with dissolve
     r "..."
     r "(Darah di lukanya juga sudah mengering, sepertinya dia dibunuh lama sebelum aku tiba di sini.)"
     r "(Seingatku ada beberapa kain di dalam gubuk, mungkin bisa aku gunakan untuk menutupinya.)"
     #fade in 0,5s
+    scene black with dissolve
     "Aku menutupi mayat Cherry dengan kain putih yang tadi aku temukan di dalam gubuk."
     r "(Luka di sekujur tubuhnya memanjang, seperti tebasan.. pedang?!)"
     r "(Dan seseorang yang memiliki senjata pedang disini..)"
