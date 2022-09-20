@@ -1121,15 +1121,15 @@ label branch2:
     j "Oh iya, memangnya kamu pergi ke mana setelah sadar dari gua itu?"
     j "Aku mengira kamu dibawa oleh monster, jadinya aku bertarung hingga ke dasar gua."
     r "Dasar gua? Lalu kamu menemukan apa saja disana?"
-    show jeffrey_laugh at jeffrey_normal_manipulative
+    show jeffrey_laugh as jeffrey_normal_manipulative
     #Laugh M Jeffrey
     j "Yup! Ternyata tidak sedalam yang aku kira dan berkat busur ini aku jadi bisa melawan monster yang tertutupi kristal itu."
     r "Jadi luka-luka di tangan dan kakimu karena monster-monster di gua itu?"
     #Normal M Jeffrey
-    show jeffrey_normal at jeffrey_normal_manipulative
+    show jeffrey_normal as jeffrey_normal_manipulative
     j "Yah.. Bisa dikatakan begitu."
     #Happy M Jeffrey
-    show jeffrey_happy at jeffrey_normal_manipulative
+    show jeffrey_happy as jeffrey_normal_manipulative
     j "Oh iya, lupakan soal tadi! Aku juga menemukan sesuatu di sana."
     j "Tapi sebelum aku memberitahukannya, bisa kamu berikan kepadaku bola kristal yang kamu temukan di gurun?"
     r "(Dari mana dia tahu?)"
@@ -1216,7 +1216,7 @@ label branch2:
     "Aku mencium bau aneh, aku pun berjalan mengelilingi sisi luar gubuk tua itu."
     r "(!!!)" with vpunch
     #CG Remil melihat mayat Cherry with fade in 1s
-    scene R2_4_remil_deadcherry with fade
+    scene r2_4_remil_deadcherry with fade
     r "Cherry!! Hei!"
     r "Cherry, bangunlah!"
     r "(Tidak ada respon..)"
@@ -1237,11 +1237,17 @@ label branch2:
 
     #BG hutan 2, day with fade in 1,5s
     #Normal manipulative M in Jeffrey
+    scene hutan_night with dissolve
+    show jeffrey_normal_manipulative at enter
     j "..."
     #Serious M Jeffrey
+    show jeffrey_serious as jeffrey_normal_manipulative
     j "Ini semua perbuatan kamu kan, Elena?"
     #Jeffrey out
     ##CG Elena berdiri ketakutan di belakang Jeffrey, Jeffrey sedang memeriksa mayat Alios dissolve in 0,5s
+    hide jeffrey_serious
+    pause 0.5
+    scene r2_5_elena_jeffrey_alios with dissolve
     e "A-Ah.."
     j "Aku juga menyadarinya bahwa kamu diam-diam mengikutiku semenjak aku memasuki area hutan ini kan."
     e "A-Aku sama sekali tidak berbuat apa-apa.."
@@ -1250,62 +1256,112 @@ label branch2:
     e "(!!!)"
     #BG hutan 2, day with dissolve in 0,5s
     #Angry M in Elena
+    scene hutan with dissolve
+    show elena_angry at enter
     e "I-Ini tidak seperti yang kamu kira!"
     e "Aku tidak membunuh Alios!!"
     #Elena move to L
     #Normal manipulative R in Jeffrey
+    show elena_angry as elena_angry at m2
+    show jeffrey_normal_manipulative at enterr
+    pause 0.5
+    show jeffrey_serious as jeffrey_normal_manipulative at talk
     j "Lalu? Siapa lagi kalau bukan kamu."
     j "Kamu sangat membenci Alios kan?"
+    show jeffrey_serious as jeffrey_normal_manipulative at notalk
+    show elena_angry as elena_angry at talk
     e "H-Hei, tidak hanya aku saja ya! Kamu juga."
+    show elena_angry as elena_angry at notalk
     #Serious R Jeffrey
+    show jeffrey_serious as jeffrey_normal_manipulative at talk
     j "Lalu, apa aku punya kesempatan untuk membunuhnya?"
     j "Di Antara aku, Remil, dan kamu, hanya kamu yang punya kesempatan untuk menemui Alios kapan saja."
     j "Alios pasti akan menerimamu karena dia membutuhkanmu."
+    show jeffrey_serious as jeffrey_normal_manipulative at notalk
+    show elena_angry as elena_angry at talk
     e "Memangnya apa yang Alios butuhkan kepadaku hah?!"
     #Nervous L Elena
+    show elena_nervous as elena_angry
     e "Lagipula aku.. Aku tidak akan bisa membunuh orang.."
+    show elena_nervous as elena_angry at notalk
+    #show tangan dan kaki Jeffrey terlihat luka dan diperban
+    show vignette with dissolve
+    pause 0.5
+    show tangan_kaki_jeff_perban with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
+    show jeffrey_angry2 as jeffrey_normal_manipulative at talk
     #show luka di tangan dan kaki Jeffrey
     #Angry Jeffrey
     j "Tidak akan bisa katamu?! Lalu luka-luka ini?"
     #luka di tangan dan kaki Jeffrey out
+    hide tangan_kaki_jeff_perban with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     #Surprise L Elena
+    show elena_surprise as elena_angry
     j "Ini semua perbuatanmu."
     j "Kamu tiba-tiba menyerangku dengan tongkatmu itu!"
     j "Aku tidak tahu rupanya tongkatmu tajam, goresan di tangan dan kakiku jadi lumayan parah!"
+    show jeffrey_angry2 as jeffrey_normal_manipulative at notalk
+    show elena_surprise as elena_angry at talk
     e "A-Aku.. Melakukan itu?"
     e "K-Kamu tidak mengarang kan? Aku tidak mengingat ini semua.."
+    show elena_surprise as elena_angry at notalk
+    show jeffrey_normal_manipulative as jeffrey_normal_manipulative at talk
     #Normal manipulative R Jeffrey
     j "Itu karena kamu melakukannya secara tidak sadar, Elena."
     #Serious R Jeffrey
+    show jeffrey_serious as jeffrey_normal_manipulative
     j "Entahlah itu akibat kejadian di gua waktu itu, kamu pernah salah makan, terkena racun monster, atau semacamnya."
     #Angry R Jeffrey
+    show jeffrey_angry1 as jeffrey_normal_manipulative
     j "Faktanya, kamu menyerangku dengan tatapan kosong."
+    show jeffrey_angry1 as jeffrey_normal_manipulative at notalk
+    show elena_surprise as elena_angry at talk
     e "..."
     e "Maafkan.. Maafkan aku… Kumohon maafkan aku!"
+    show elena_sad as elena_angry
     #Sad L Elena
     e "Aku tidak bisa berlama-lama di sini!!"
+    hide elena_angry
+    play sound sfx_drap3x
+    show jeffrey_surprised as jeffrey_normal_manipulative at aa
     #Elena out
     #SFX: *Drap* *Drap* *Drap* (langkah kaki cepat)
     #Jeffrey move to M
     #Surprise M Jeffrey
     j "Elena tunggu!!"
+    show jeffrey_angry2 as jeffrey_normal_manipulative
     #Angry M Jeffrey
     j "Disini sangat berbahaya! Kamu harus berhati-hati!!"
+    hide jeffrey_normal_manipulative
     #Jeffrey out
     #Black Screen. With Dissolve in 0,3s
+    scene black with dissolve
     n "Hahahaha"
     n "Sangat menarik."
 
     #CHAPTER 5 END
     #CHAPTER 6
+    scene black with Dissolve (2)
+    pause 2
+    scene chp_6 with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
 
     #BG dekat sungai, dusk with dissolve in 0,5s
+    scene dekat_sungai_dusk with dissolve
     r "Ini bekas tendanya Elena waktu itu kan?"
     r "Entahlah sudah berapa hari berlalu, sepertinya waktu itu aku pingsan cukup lama."
     r "Aku merasa tertinggal.."
     n "Remil."
     r "...!?!"
     #Normal M in Kai
+    show kai_normal at enter
     r "Kai?! Kenapa kamu bisa berada disini?"
     k "Aku khawatir, jadi aku terus mencarimu."
     k "Ada apa? Kamu terlihat lesu."
@@ -1315,6 +1371,7 @@ label branch2:
     #Surprise M Kai
     k "..."
     #Sad M Kai
+    show kai_normal as kai_normal at sigh
     k "Saya turut berduka.."
     r "Sepertinya.. Dia dibunuh oleh Alios."
     #Serious M Kai
@@ -1322,38 +1379,58 @@ label branch2:
     k "Aku ingin menunjukkan sesuatu."
     r "Apa itu?"
     k "Ikutlah denganku."
+    show kai_normal as kai_normal at normal
+    pause 0.5
+    show kai_normal as kai_normal at m2
+    show jeffrey_angry2 at enterr
     #Kai move to L
     j "Remil!!"
     r "Jeffrey?!"
+    show jeffrey_sad as jeffrey_angry2 at talk
     #Sad face R in Jeffrey
     j "Hosh.. Hosh.."
     #Angry R Jeffrey
+    show jeffrey_angry2 as jeffrey_angry2
     j "Remil, jangan ikuti dia! Ikut denganku, aku tahu sesuatu."
     r "(Ada apa ini?)"
     #Serious R Jeffrey
+    show jeffrey_serious as jeffrey_angry2
     j "Kamu tidak bisa mempercayainya! Dia memang tahu banyak hal dan tinggal di sini lebih lama, tetapi justru itu yang membuatnya makin mencurigakan."
+    show jeffrey_serious as jeffrey_angry2 at notalk
     r "Jeffrey.."
     #Normal L Kai
     k "..."
+    show jeffrey_serious as jeffrey_angry2 at talk
     j "Alios dibunuh.."
+    show jeffrey_serious as jeffrey_angry2 at notalk
     r "Apa?! Bagaimana bisa?!"
     #Sad R Jeffrey
+    show jeffrey_sad as jeffrey_angry2 at talk
     j "Dilihat dari lukanya, sepertinya dia dibunuh oleh pedang."
+    show jeffrey_sad as jeffrey_angry2 at notalk
     r "(Pedang? Tunggu dulu– tapi..)"
     #Serious R Jeffrey
+    show jeffrey_serious as jeffrey_angry2 at talk
     j "Hanya tuan Kai selain Alios yang memiliki pedang, iya kan?"
+    show jeffrey_serious as jeffrey_angry2 at notalk
     k "..."
     #Happy L Kai
+    show kai_smile as kai_normal at talk
     k "Benar, tapi aku jarang membawanya. Aku lebih nyaman memakai sihirku."
+    show kai_smile as kai_normal at notalk
     #Angry R Jeffrey
+    show jeffrey_angry2 as jeffrey_angry2 at talk
     j "Alasan! Bisa jadi itu hanya alibi jadi-jadian dia karena ada bekas darah di pedang itu."
     j "Tadi aku mendengarnya ingin menunjukkan sesuatu padamu, apa kamu tahu itu apa?"
     j "Bagaimana kalau yang dia tunjukkan itu pedang yang ia gunakan untuk membunuh dan akan membunuhmu juga dengan benda itu?!"
+    show jeffrey_angry2 as jeffrey_angry2 at notalk
 
     menu:
         "Ikuti Kai":
             r "Jeffrey, maaf.."
             r "Aku percaya kalau Kai adalah orang baik."
+            hide kai_normal
+            show jeffrey_sad as jeffrey_angry2 at aa
             #Kai out
             #Jeffrey move to M
             #Sad M Jeffrey
@@ -1361,6 +1438,7 @@ label branch2:
             #Jeffrey out
 
             #CG Remil dan Kai di tepi danau with fade in 0,5s
+            scene r2_6_rem_kai with fade
             "Kai membawaku ke tepi danau."
             k "Di dalam pusaran air itu ada gua."
             k "Aku akan mendorongmu. Tenang saja, kamu tidak akan tenggelam."
@@ -1370,28 +1448,39 @@ label branch2:
         "Ikuti Jeffrey":
             r "Jeffrey.. Aku percaya padamu."
             #Normal manipulative R Jeffrey
+            show jeffrey_normal_manipulative as jeffrey_angry2 at talk
             j "Terima kasih sudah percaya padaku. Lagipula aku yang selama ini menemanimu berpetualang kan!"
             #Angry L Kai
+            show kai_normal as kai_normal at sigh
             k "Tidak bisa.."
+            show kai_normal as kai_normal at normal
             "Kai menarik paksa tanganku."
+            hide kai_normal
+            show jeffrey_angry2 as jeffrey_angry2 at aa
             #Kai out
             #Jeffrey move to M
             #Angry M Jeffrey
             j "HEI!!"
             #Jeffrey out
+            scene r2_6_rem_kai with fade
 
             #CG Remil dan Kai di tepi danau with fade in 0,5s
             k "Kamu akan berterima kasih kepadaku nanti."
             "Kai mendorongku menuju pusaran air di danau." with vpunch
 
     #BG gua 2 with fade in 1s
+    scene black with fade
+    pause 1
+    play sound sfx_nyebur
+    pause 2
+    scene goa_2 with dissolve
     r "(Tempat ini.. Di bawah air?)"
     "Aku melihat sekeliling tempat ini, yang paling menarik perhatianku adalah pohon menyala yang berada tepat di tengah gua ini."
     r "Air disini jernih sekali.."
     "Aku spontan mengambil air dengan telapak tanganku dan meminumnya."
     "*Deg*"
 
-    #(blackscreen)
+    scene black with dissolve
 
     r "Tunggu, ini..."
     r "(!!!)" with vpunch
@@ -1401,6 +1490,7 @@ label branch2:
     r "Dan dia memecahkannya dengan sengaja?!"
 
     #BG gua 2 with fade in 0,5s
+    scene goa_2 with dissolve
     r "(!!!)" with vpunch
     r "(Apa yang terjadi barusan?)"
     k "Air yang berada di gua ini memiliki memori para penghuni dunia ini."
@@ -1408,9 +1498,11 @@ label branch2:
     r "(Tunggu.. Suara ini..)"
     r "Kai?!"
     #Happy M in Kai
+    show kai_smile at enter
     k "Saya adalah salah satu pembuat dunia ini."
     r "Dunia.. ini?"
     #Serious M Kai
+    show kai_normal as kai_smile at sigh
     k "Singkat cerita, saya bekerja sama dengan rekan saya untuk menciptakan dunia baru melalui virtual."
     k "Tetapi saya dikhianati oleh rekan saya, begitu saya sedang mencoba untuk memasuki dunia buatan ini, dia membunuhku diri saya yang berada dunia nyata."
     k "Akhirnya saya terjebak disini, meskipun saya yang ada di dunia nyata sudah tiada."
@@ -1421,10 +1513,13 @@ label branch2:
     r "Bagaimana aku bisa berada di dalam sini?"
 
     #Black Screen with dissolve in 0,3s
+    scene black with dissolve
     r "..."
 
     #BG gua 2 with dissolve in 0,3s
     #Serious M in Kai
+    scene goa_2 with dissolve
+    show kai_normal at enter
     r "(Sudah beberapa kali aku mencoba, kenapa aku tidak bisa mengingatnya?!)"
     r "(Yang aku ingat hanyalah latar belakangku, aku sudah biasa hidup di kota yang berbahaya tanpa rumah.)"
     r "Lalu kenapa.."
@@ -1434,76 +1529,116 @@ label branch2:
     k "Serupa tetapi tidak sama, karena latar belakang tiap orang berbeda-beda bukan?"
     k "Lalu alasan rekanku menculik kamu dan teman-temanmu, mungkin hanyalah untuk kesenangan pribadinya."
     #Sad M Kai
+    show kai_normal as kai_normal at sigh
     k "Dia sangat menyukai bermain-main dengan emosi manusia dan membuat kekacauan."
     r "Seperti.. Alios yang sombong dan pemarah ya?"
     #Serious M Kai
     k "..."
     k "Tepatnya lagi-"
+    hide kai_normal
     #Kai out
     #SFX: *Bruuk!* (suara badan jatuh)
-    r "(!!!)"
+    play sound sfx_bodydrop
+    r "(!!!)" with vpunch
     r "Kai!!"
     "Kai jatuh tersungkur akibat ujung pisau menembus dadanya."
     "Kini aku semakin percaya dengan omongannya barusan karena Kai sama sekali tidak mengeluarkan darah dan setelah ia terjatuh, tubuhnya berubah menjadi kepingan cahaya yang melayang ke atas."
     #Normal manipulative M in Jeffrey
+    show jeffrey_normal_manipulative at enter
     j "Hm? Wah, ternyata benar kalau dia bukan manusia."
     "Jeffrey mengambil pisau yang tergeletak di permukaan tanah, tadinya pisau itulah yang menancap di tubuh Kai."
     #show pisau belati bersinar berwarna ungu
+    show vignette with dissolve
+    pause 0.5
+    show dagger_ungu_jeffry with dissolve:
+        align (0.5, 0.4)
+        zoom 0.3
+    pause 0.5
     r "Pisau itu kan.."
     #pisau belati bersinar berwarna ungu out
+    hide dagger_ungu_jeffry with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     #Serious M Jeffrey
+    show jeffrey_serious as jeffrey_normal_manipulative
     j "Tidak kusangka orang itu benar-benar membawamu kesini."
     r "Jeffrey?! Kamu juga tahu tempat ini?"
     #Laugh M Jeffrey
+    show jeffrey_laugh as jeffrey_normal_manipulative
     j "Iya, tetapi ada informasi yang lebih penting dibanding itu."
     #show pisau belati bersinar berwarna ungu
     j "Senjata pembunuhan yang sebenarnya ada di tanganku ini!"
     #Happy M Jeffrey
+    show jeffrey_happy as jeffrey_normal_manipulative
     j "Aku berbohong soal mencurigai Kai, pembunuh mereka adalah diriku sendiri"
     j "Pisau belati ini sangat tajam, bahkan bisa jadi lebih hebat dibanding punyamu. Aku sengaja membuat seolah mereka dibunuh oleh pedang berkat ketajaman pisau ini."
     #pisau belati bersinar berwarna ungu out
     r "J-Jadi.. Pengintai yang dibunuh di lembah.. Cherry.. Bahkan Alios.. Itu semua perbuatanmu?!"
     #Smile M Jeffrey
+    show jeffrey_smile as jeffrey_normal_manipulative
     j "Menggemaskan, kamu polos sekali Remil."
     j "Aku membunuh mereka semua saat aku tidak berada di pandanganmu."
     r "Jangan-Jangan.. Elena juga?!"
     #Happy M Jeffrey
+    show jeffrey_happy as jeffrey_normal_manipulative
     j "Untuk Elena lain cerita~ Dia terbawa emosi hingga lari ke tempat yang berbahaya dan malah mati dibunuh oleh monster di sana."
     #Laugh M Jeffrey
+    show jeffrey_laugh as jeffrey_normal_manipulative
     j "Hahaha, dia percaya saja waktu aku bilang kalau dia membunuh Alios dengan tidak sadar."
     r "..."
     #Sad M Jeffrey
+    show jeffrey_sad as jeffrey_normal_manipulative
     j "Aku ditipu."
     #Normal Manipulative M Jeffrey
+    show jeffrey_normal_manipulative as jeffrey_normal_manipulative
     j "Aku hanyalah seorang murid yang bekerja sambilan menjadi penyanyi sekaligus gitaris di sebuah cafe."
     j "Aku bekerja untuk memenuhi kebutuhan pribadi dan mengejar cita-citaku karena orang tuaku bukan orang yang mampu."
     j "Tiba-tiba seorang paman dengan jas hitam memberikan kartu namanya kepadaku, ia bilang bahwa ia akan menjadikanku idola terkenal apabila aku akan menemuinya di suatu tempat."
     j "Bodohnya aku percaya dengan paman itu."
     #Sad M Jeffrey
+    show jeffrey_sad as jeffrey_normal_manipulative
     j "Paman itu berbohong, ia malah menculikku dan membawaku ke tempat ini."
     j "Bahkan bisa jadi dia dapat mengendalikanku, begitu juga denganmu."
     #Serious M Jeffrey
+    show jeffrey_serious as jeffrey_normal_manipulative
     j "Dia adalah ‘Mastermind’, orang yang mengatur dan merancang segalanya."
     r "D-Dari mana kau tahu semua ini?"
     #show luka di tangan dan kaki Jeffrey
+    show vignette with dissolve
+    pause 0.5
+    show tangan_kaki_jeff_perban with dissolve:
+        align (0.5, 0.4)
+        zoom 0.1
+    pause 0.5
     #Normal M Jeffrey
+    show jeffrey_normal as jeffrey_normal_manipulative
     j "Mungkin.. Hadiah aku membunuh semua monster di gua itu sendirian?"
     j "Lalu tiba-tiba saja aku teringat soal itu. Sulit loh, lihat saja tangan dan kakiku ini."
     #luka di tangan dan kaki Jeffrey out
+    hide tangan_kaki_jeff_perban with dissolve
+    pause 0.5
+    hide vignette with dissolve
+    pause 0.5
     j "Lalu.. Kamu mau tahu alasanmu terpisah denganku dan Elena?"
     j "Setelah aku terbangun di gua itu, aku membawamu dan Elena ke pergi dari gua itu dan membawa kalian ke suatu tempat."
     #Happy M Jeffrey
+    show jeffrey_happy as jeffrey_normal_manipulative
     j "Tentu saja di dua tempat yang berbeda, hanya saja aku menaruhmu di tempat yang sangat aman."
     #Laugh M Jeffrey
+    show jeffrey_laugh as jeffrey_normal_manipulative
     j "Aku sama sekali tidak peduli dengan si Elena itu, hahahaha."
     #Smile M Jeffrey
+    show jeffrey_smile as jeffrey_normal_manipulative
     j "Karena aku tidak mau didahului oleh monster-monster itu untuk membunuhmu."
     r "..Aku tidak peduli apapun masa lalu dan usaha-usahamu."
     r "Itu tidak bisa dijadikan alasan untuk membunuh yang lain!!"
     #Serious M Jeffrey
+    show jeffrey_serious as jeffrey_normal_manipulative
     j "Hei.. Remil."
     #Jeffrey out
 
+    scene r2_7_ jef_rem
     #CG Jeffrey menodong Pisau belati ungu ke leher Remil with fade in 0,3s
     j "Untuk bertahan hidup, kita harus menghabiskan apapun yang menjadi ancaman bagi kita."
     j "Benar kan~? Anak yang hidup gelandangan sepertimu pasti paham soal ini."
@@ -1524,7 +1659,12 @@ label branch2:
 
     #Black Screen with dissolve in 0,2s
     #SFX: *Byuuurr* (suara orang nyebur ke perairan)
+    scene black with fade
+    pause 1
+    play sound sfx_nyebur
+    pause 2
 
+    scene r2_8_remil_drown with Dissolve (2)
     #CG Remil melayang terjatuh di udara with dissolve in 1s
     #(backsound/SFX suara air dalam lautan)
     r "..."
@@ -1533,6 +1673,10 @@ label branch2:
     "Rasanya seperti.."
     "Aku terjatuh selamanya."
 
+    scene black with Dissolve (2)
+    pause 1
+    scene goa_2 with dissolve
+    show jeffrey_normal_manipulative at enter
     #Black screen in 2s with dissolve
     #BG gua 2 with dissolve in 1s
     #Normal manipulative M in Jeffrey
@@ -1540,18 +1684,33 @@ label branch2:
     j "Menurut buku catatan ini, tempat ini disebut ‘The End’."
     j "Jika seseorang terjatuh ke dalam perairan ini, ia akan merasakan terjatuh tenggelam selamanya hingga dunia ini hancur."
     #buku catatan 2 out
+    show jeffrey_sad as jeffrey_normal_manipulative
     #Sad M Jeffrey
     j "Wah~ ngeri juga ya."
     #Normal manipulative M Jeffrey
+    show jeffrey_normal_manipulative as jeffrey_normal_manipulative
     "Jeffrey mendekati pohon bercahaya."
     #show tangan Jeffrey menyentuh batang pohon bersinar
+    show vignette with dissolve
+    pause 0.5
+    show tangan_jeffrey with dissolve:
+        align (0.5, 0.4)
+        zoom 0.3
+    pause 0.5
     j "Selamat tinggal, Remil."
     #Happy M Jeffrey
+    show jeffrey_happy as jeffrey_normal_manipulative
     j "Senang bertemu denganmu, sayang sekali kita bertemu di waktu yang tidak tepat."
     #tangan Jeffrey menyentuh batang pohon bersinar out
     #Jeffrey out
     #Fade in 1s
     #-Bad Ending-
+    scene black with Dissolve (2)
+    pause 2
+    scene end_bad with Dissolve (2)
+    pause 4
+    scene black with Dissolve (2)
+    pause 2
 
 
     return
