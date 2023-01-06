@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/branch2.rpy", line 761: expected 'image_name_component' not found.
-    show
-        ^
+File "game/screens.rpy", line 1249: imagebutton expects a non-empty block.
+    imagebutton at resolusi (297,205):
+                                      ^
 
-Ren'Py Version: Ren'Py 7.5.2.22081402
-Thu Sep 15 11:34:17 2022
+Ren'Py Version: Ren'Py 7.4.11.2266
+Fri Jan  6 17:21:51 2023

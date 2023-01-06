@@ -1,30 +1,68 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/branch2.rpy", line 959, in script
-    show cherry_normal as cherry_happy at m3
-  File "game/branch2.rpy", line 959, in <module>
-    show cherry_normal as cherry_happy at m3
-NameError: name 'm3' is not defined
+After initialization, but before game start.
+  File "game/screens.rpy", line 971, in analyze_screen
+    screen gallery():
+  File "game/screens.rpy", line 971, in analyze
+    screen gallery():
+  File "game/screens.rpy", line 971, in analyze
+    screen gallery():
+  File "game/screens.rpy", line 983, in analyze
+    if halaman_g ==1: #kalo halaman pertama gk ada simbol previous page
+  File "game/screens.rpy", line 1036, in analyze
+    elif halaman_g !=1: #kalo halaman bukan pertama ada simbol previous page sama next page
+  File "game/screens.rpy", line 1289, in analyze
+    if halaman_g ==7:
+  File "game/screens.rpy", line 1289, in analyze
+    if halaman_g ==7:
+  File "game/screens.rpy", line 1290, in analyze
+    grid 2 1:
+  File "game/screens.rpy", line 1290, in analyze
+    grid 2 1:
+  File "game/screens.rpy", line 1295, in analyze
+    if persistent.cg_R2_7_ jef_rem:
+SyntaxError: unexpected EOF while parsing (screens.rpy, line 1295)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/branch2.rpy", line 959, in script
-    show cherry_normal as cherry_happy at m3
-  File "renpy/ast.py", line 1388, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "renpy/ast.py", line 1347, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "renpy/python.py", line 1080, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "renpy/python.py", line 1073, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/branch2.rpy", line 959, in <module>
-    show cherry_normal as cherry_happy at m3
-NameError: name 'm3' is not defined
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/main.py", line 662, in main
+    run(restart)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/main.py", line 89, in run
+    renpy.display.screen.analyze_screens()
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/display/screen.py", line 925, in analyze_screens
+    s.ast.analyze_screen()
+  File "game/screens.rpy", line 971, in analyze_screen
+    screen gallery():
+  File "game/screens.rpy", line 971, in analyze
+    screen gallery():
+  File "game/screens.rpy", line 971, in analyze
+    screen gallery():
+  File "game/screens.rpy", line 983, in analyze
+    if halaman_g ==1: #kalo halaman pertama gk ada simbol previous page
+  File "game/screens.rpy", line 1036, in analyze
+    elif halaman_g !=1: #kalo halaman bukan pertama ada simbol previous page sama next page
+  File "game/screens.rpy", line 1289, in analyze
+    if halaman_g ==7:
+  File "game/screens.rpy", line 1289, in analyze
+    if halaman_g ==7:
+  File "game/screens.rpy", line 1290, in analyze
+    grid 2 1:
+  File "game/screens.rpy", line 1290, in analyze
+    grid 2 1:
+  File "game/screens.rpy", line 1295, in analyze
+    if persistent.cg_R2_7_ jef_rem:
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/pyanalysis.py", line 542, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/pyanalysis.py", line 696, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\ferro\Desktop\SI UMN\VN Code\renpy-7.4.10-sdk/renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: unexpected EOF while parsing (screens.rpy, line 1295)
 
-Windows-10-10.0.19041 AMD64
-Ren'Py 7.5.0.22062402
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
 jcafe_vn_projek_besar 1.0
-Mon Sep 19 19:17:03 2022
+Fri Jan  6 17:22:16 2023

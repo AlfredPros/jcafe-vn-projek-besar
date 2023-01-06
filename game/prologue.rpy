@@ -2,7 +2,7 @@ label start:
     scene black
     n "Aduh{w=0.1}.{w=0.1}.{w=0.1}. kepalaku terasa sakit{w=0.1}.{w=0.1}.{w=0.1}."
     n "{w=0.1}.{w=0.1}.{w=0.1}.?"
-
+ 
     #(BG di hutan, day) Dissolve 1s
     scene hutan with dissolve
     n "Di mana aku{w=0.1}.{w=0.1}.{w=0.1}.?{w=0.3} Aku tidak bisa mengingat apa-apa.{w=0.3} Kecuali{w=0.1}.{w=0.1}.{w=0.1}."

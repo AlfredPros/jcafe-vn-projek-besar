@@ -5,15 +5,14 @@ image cg_3 = "cgColored/R1_3_alios_remil_cherry.png"
 image cg_4 = "cgColored/R1_4_remil_kai.png"
 image cg_5 ="cgColored/R1_5_remil_jalan_pincang.png"
 image cg_6 ="cgColored/R1_6_cherry_remil.png"
- 
+
 label branch1:
     #CHAPTER 1
     #“Pemimpin dari Kelompok yang Berbahaya” with dissolve(3.0)
     scene black with Dissolve(1.0)
-    scene chp_1 with Dissolve (2.5) 
+    scene chp_1 with Dissolve (2.5)
     "Pemimpin dari Kelompok yang Berbahaya"
-
-    scene tenda_gelap with Dissolve (2.5)  
+    scene tenda_gelap with Dissolve (2.5)
     # scene perkemahan dusk with dissolve(3.0)
     #show angry Alios  as alios di kiri
     show alios_angry3 at enterl1
@@ -46,7 +45,7 @@ label branch1:
     #dissolve selama 3s
 
     #scene kantin malam
-    scene canteen_night2 with Dissolve (2.5) 
+    scene canteen_night2 with Dissolve (2.5)
     #show jeffrey laugh as jeffrey di kiri
     show jeffrey_laugh at enterl1
     j "Hahaha"
@@ -176,7 +175,7 @@ label b1deca:
     hide alios_normal
     j "Dan seharusnya kita sudah sampai"
     "Mereka menemukan sebuah gubuk besar yang dibangun di tengah hutan"
-    hide jeffrey_normal 
+    hide jeffrey_normal
     #hide jeffrey
 
     #scene gubuk luar day with dissolve(1.0)
@@ -236,9 +235,9 @@ label b1deca:
     "…"
     "Di dalam sini cahaya sangat minim dan terdapat banyak jasad monster, selain itu juga terdapat potongan organ yang baunya kurang menyenangkan. Di atas meja, Aku menemukan lembaran kertas"
     #show item lembaran penelitian
-    show old_book  
+    show old_book
     pause 2.0
-    hide old_book 
+    hide old_book
     #hide item lembar penelitian
     "(Beruang, serigala, kambing, ikan, semua ini… monster..?)"
     r "Tunggu, ular besar kemarin juga monster, kan? Kenapa tidak ada?"
@@ -250,9 +249,9 @@ label b1deca:
     al "Ada apa, Remil?"
     r  "Ini, baru saja Aku menemukannya"
     #show item lembaran penelitian
-    show old_book 
+    show old_book
     pause 2.0
-    hide old_book 
+    hide old_book
     #hide item lembar penelitian
     show cherry_bored at enterr1
     #show bored cherry as alios di kanan
@@ -535,7 +534,7 @@ label b1deca2:
     #show CG Remil di atas tebing dekat air terjun melihat ke sungai (Dekat Air Terjun - Day) with fade(3.0)
     scene cg_2 with Fade (1.0,1.0,1.0)
     #play sound waterfall
-    play sound sfx_waterfall 
+    play sound sfx_waterfall
     r "(Tempat ini mengingatkanku dengan pengalaman buruk..)"
     r "Woah, ikannya banyak sekali di bawah sana"
     r "(Tunggu, Aku merasa pernah melihat mereka)"
@@ -622,7 +621,7 @@ label b1deca2:
 
     #scene BG Lembah - Day with fade(1.0)
     scene lembah_day with fade
-    r "Monster!” Aku terhenti di depan lembah. "  
+    r "Monster!” Aku terhenti di depan lembah. "
     show alios_smirk at enter
     #show smirk alios as alios di tengah
     al "Akhirnya kau berhenti juga!” kata Alios"
@@ -701,7 +700,7 @@ label b1deca2:
     k "Halo untukmu, Remil. Aku sudah dengar tentangmu. Kamu hebat."
     r "Ah, iya-"
     #hide kai
-    hide kai_smile 
+    hide kai_smile
     #play sound  Bullet whizzing/ whooshing
     play sound sfx_bulletwhizzling
     "Remi kemudian menghindar karena ditembaki proyektil dari atas."
@@ -765,7 +764,7 @@ label b1deca2:
     #show angry alios as alios di kanan
     show alios_angry2 as alios_normal
     al "Tunggu!"
-    
+
     #hide jeffrey
 
     al "Bagaimana kita bisa percaya pada kau? Aku mau Jeffrey yang pimpin jalannya."
@@ -804,7 +803,7 @@ label b1deca2:
     show alios_happy as alios_surprised
     al "Aku melihatnya cukup banyak di hutan. Itu benda yang berguna sekali!"
     #show seriousl kai  as kai di tengah
-    
+
     k "Kamu mengambil itu?! Itu barang yang berbahaya, anak bego."
     r "Lalu Anda memberi kami ini?"
     #hide alios
@@ -1167,7 +1166,7 @@ label b1deca2:
     "Cherry kehabisan tenaganya lalu pingsan."
     #hide cherry
     hide cherry_anggry
-    
+
     #With fade 1
     #scene BG Lembah - Day with fade(1.0)
     scene lembah_day with fade
@@ -1250,7 +1249,7 @@ label b1deca2:
     al "Sekarang!"
 
     #play sound  Bow drawing
-    
+
     #show serious jeffrey as jeffrey di kanan
     show jeffrey_serious at enterr1
     j "!"
@@ -1283,8 +1282,8 @@ label b1deca2:
     scene lembah_day
     show kai_normal at enter
     #show serious kai as kai di tengah
-    
-    k "Sadarlah!!" 
+
+    k "Sadarlah!!"
     "Kai yang mulai kehabisan sebagian mananya berteriak kepada Remil"
     rg " …"
     rg  "Hentikan sajalah, Kai."
@@ -1615,7 +1614,7 @@ label b1deca2:
     hide kai_normal
     "Saat itu, Aku terdorong mundur oleh sihir."
     #play sound Strong wind blowing
-    
+
 
     r "Kau pasti bercanda."
     "Aku menerobos ke depan sekuat tenaga, tetapi Aku kembali terdorong mundur."
@@ -1736,7 +1735,7 @@ label b1deca2:
 
 
     #BG Plateau - Dusk with fade(1.0)
-    
+
     "Di saat itu, badan Cherry terpisah dua atas bawah."
     "Tubuhku kembali utuh dan barrier sudah lenyap, seutuhnya."
 
@@ -1760,7 +1759,7 @@ label b1deca2:
     "Aku menutup mataku dan berharap ini akan berakhir. Dunia yang penuh penderitaan ini."
 
     #With fade to black 3s
-    scene black with Fade(1.0, 1.0, 1.0)  
+    scene black with Fade(1.0, 1.0, 1.0)
     "Jumlah karakter hidup tersisa = 0."
     "Catatan: Avatar subjek E{w=0.3} dicekik oleh subjek R yang berada di luar kendali setelah otaknya beresonansi dengan AI"
     "Catatan: Avatar subjek J{w=0.3} dipenggal oleh subjek R yang dikontrol"

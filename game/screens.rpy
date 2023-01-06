@@ -7,6 +7,35 @@ define config.mouse['default'] = [ ( "gui/detail/cursor.png", 0, 0) ]
 
 init offset = -1
 
+#Gallery Variable Insanity
+default persistent.cg_1_remil_elena_rs = False
+default persistent.cg_2_remil_vs_gordon = False
+default persistent.cg_3_orb_trio = False
+default persistent.cg_3_orb_trio2 = False
+default persistent.cg_4_RemilElena_vs_gordon = False
+default persistent.cg_5_remil_elena_lake = False
+default persistent.cg_6_remil_jeff_prajurit_ = False
+default persistent.cg_7_remil_jeff_prajurit_pingsan = False
+default persistent.cg_8_remil_jeff_pingsan = False
+default persistent.cg_9_remil_jeff_marah = False
+default persistent.cg_R1_1_alios_remil_snake = False
+default persistent.cg_R1_2_remil_airterjun = False
+default persistent.cg_R1_3_alios_remil_cherry = False
+default persistent.cg_R1_4_remil_kai = False
+default persistent.cg_R1_5_remil_jalan_pincang = False
+default persistent.cg_R1_6_cherry_remil = False
+default persistent.cg_R1_7_remil = False
+default persistent.cg_R2_1_wolf_remil_1 = False
+default persistent.cg_R2_1_wolf_remil_2 = False
+default persistent.cg_R2_2_rem_jef = False
+default persistent.cg_R2_3_remil_jeff_elena_wolf = False
+default persistent.cg_R2_4_remil_deadcherry = False
+default persistent.cg_R2_5_elena_jeffrey_alios = False
+default persistent.cg_R2_6_rem_kai = False
+default persistent.cg_R2_7_jef_rem = False
+default persistent.cg_R2_8_remil_drown = False
+
+#Hover button brightness Change effect
 image delete_button_hover = im.MatrixColor("gui/menu/delete_button.png", im.matrix.brightness(+0.2))
 
 image settings_button_hover = im.MatrixColor("gui/menu/settings_button.png", im.matrix.brightness(+0.2))
@@ -29,7 +58,7 @@ image save_button_dark = im.MatrixColor("gui/menu/save_button.png", im.matrix.br
 
 image main_button_dark = im.MatrixColor("gui/menu/main_button.png", im.matrix.brightness(-0.5))
 
-
+#ATL to edit imagebutton (apparently you can't edit imagebutton without it) t(^_^t)
 transform zoom_persen(persen):
     subpixel True
     zoom persen
@@ -953,7 +982,7 @@ screen gallery():
     if halaman_g ==1: #kalo halaman pertama gk ada simbol previous page
         add "gui/menu/menu_gallery1.png"
         imagebutton:
-            xpos 1130
+            xpos 1080
             ypos 70
             idle "gui/detail/next_page.png"
             hover "gui/detail/next_page.png"
@@ -962,36 +991,60 @@ screen gallery():
         grid 2 2:
             xpos 438 ypos 147
             xspacing 136 yspacing 60
-            imagebutton at resolusi (294,202):
-                idle "images/cgColored/1_remil_elena_rs.png"
-                action ShowMenu("tunjuk","images/cgColored/1_remil_elena_rs.png")
 
-            imagebutton at resolusi (297,205):
-                idle "images/cgColored/2_remil_vs_gordon.png"
-                action ShowMenu("tunjuk","images/cgColored/2_remil_vs_gordon.png")
+            #pojok kiri atas
+            if persistent.cg_1_remil_elena_rs:
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/1_remil_elena_rs.png"
+                    action ShowMenu("tunjuk","images/cgColored/1_remil_elena_rs.png")
+                    yoffset -2 xoffset -1
+            else:
+                add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                    yoffset -2 xoffset -1
 
-            imagebutton at resolusi (294,204):
-                idle "images/cgColored/3_orb_trio.png"
-                action ShowMenu("tunjuk","images/cgColored/3_orb_trio.png")
-                yoffset -3
+            #pojok kanan atas
+            if persistent.cg_1_remil_elena_rs:
+                imagebutton at resolusi (297,205):
+                    idle "images/cgColored/2_remil_vs_gordon.png"
+                    action ShowMenu("tunjuk","images/cgColored/2_remil_vs_gordon.png")
+                    yoffset 2 xoffset -2
+            else:
+                add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                    yoffset 2 xoffset -2
 
-            imagebutton at resolusi (297,203):
-                idle "images/cgColored/3_orb_trio2.png"
-                action ShowMenu("tunjuk","images/cgColored/3_orb_trio2.png")
+            #kiri  bawah
+            if persistent.cg_3_orb_trio:
+                imagebutton at resolusi (297,204):
+                    idle "images/cgColored/3_orb_trio.png"
+                    action ShowMenu("tunjuk","images/cgColored/3_orb_trio.png")
+                    yoffset -3 xoffset -1,8
+            else:
+                add "images/cgColored/cg_locked.png" at resolusi (297,204):
+                    yoffset -3 xoffset -1.8
 
+            #kanan bawah
+            if persistent.cg_3_orb_trio2:
+                imagebutton at resolusi (298,203):
+                    idle "images/cgColored/3_orb_trio2.png"
+                    action ShowMenu("tunjuk","images/cgColored/3_orb_trio2.png")
+                    yoffset 1 xoffset -2.8
+            else:
+                add "images/cgColored/cg_locked.png" at resolusi (298,203):
+                    yoffset 1 xoffset -2.8
 
     elif halaman_g !=1: #kalo halaman bukan pertama ada simbol previous page sama next page
         add "gui/menu/menu_gallery2.png"
 
         imagebutton:
             xpos 410
+            xsize 150
             ypos 70
             idle "gui/detail/previous_page.png"
             hover "gui/detail/previous_page.png"
             action SetScreenVariable("halaman_g",halaman_g-1)
         imagebutton:
             sensitive halaman_g <7
-            xpos 1130
+            xpos 1080
             ypos 70
             idle "gui/detail/next_page.png"
             hover "gui/detail/next_page.png"
@@ -1001,118 +1054,263 @@ screen gallery():
             grid 2 2:
                 xpos 438 ypos 147
                 xspacing 136 yspacing 60
-                imagebutton at resolusi (294,202):
-                    idle "images/cgColored/4_RemilElena_vs_gordon.png"
-                    action ShowMenu("tunjuk","images/cgColored/4_RemilElena_vs_gordon.png")
 
-                imagebutton at resolusi (297,205):
-                    idle "images/cgColored/5_remil_elena_lake.png"
-                    action ShowMenu("tunjuk","images/cgColored/5_remil_elena_lake.png")
+                #pojok kiri atas
+                if persistent.cg_4_RemilElena_vs_gordon:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/4_RemilElena_vs_gordon.png"
+                        action ShowMenu("tunjuk","images/cgColored/4_RemilElena_vs_gordon.png")
+                        yoffset -2 xoffset -1
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset -2 xoffset -1
 
-                imagebutton at resolusi (294,204):
-                    idle "images/cgColored/6_remil_jeff_prajurit.png"
-                    action ShowMenu("tunjuk","images/cgColored/6_remil_jeff_prajurit.png")
-                    yoffset -3
+                #pojok kanan atas
+                if persistent.cg_5_remil_elena_lake:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/5_remil_elena_lake.png"
+                        action ShowMenu("tunjuk","images/cgColored/5_remil_elena_lake.png")
+                        xoffset -2 yoffset 2
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset 2 xoffset -2
 
-                imagebutton at resolusi (297,203):
-                    idle "images/cgColored/7_remil_jeff_prajurit_pingsan.png"
-                    action ShowMenu("tunjuk","images/cgColored/7_remil_jeff_prajurit_pingsan.png")
+                #pojok kiri bawah
+                if persistent.cg_6_remil_jeff_prajurit:
+                    imagebutton at resolusi (297,204):
+                        idle "images/cgColored/6_remil_jeff_prajurit.png"
+                        action ShowMenu("tunjuk","images/cgColored/6_remil_jeff_prajurit.png")
+                        yoffset -3 xoffset -1.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,204):
+                        yoffset -3 xoffset -1.8
+
+                #pojok kanan bawah
+                if persistent.cg_7_remil_jeff_prajurit_pingsan:
+                    imagebutton at resolusi (298,203):
+                        idle "images/cgColored/7_remil_jeff_prajurit_pingsan.png"
+                        action ShowMenu("tunjuk","images/cgColored/7_remil_jeff_prajurit_pingsan.png")
+                        yoffset 1 xoffset -2.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (298,203):
+                        yoffset 1 xoffset -2.8
+
 
         if halaman_g ==3:
             grid 2 2:
                 xpos 438 ypos 147
                 xspacing 136 yspacing 60
-                imagebutton at resolusi (294,202):
-                    idle "images/cgColored/8_remil_jeff_pingsan.png"
-                    action ShowMenu("tunjuk","images/cgColored/8_remil_jeff_pingsan.png")
 
-                imagebutton at resolusi (297,205):
-                    idle "images/cgColored/9_remil_jeff_marah.png"
-                    action ShowMenu("tunjuk","images/cgColored/9_remil_jeff_marah.png")
+                #pojok kiri atas
+                if persistent.cg_8_remil_jeff_pingsan:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/8_remil_jeff_pingsan.png"
+                        action ShowMenu("tunjuk","images/cgColored/8_remil_jeff_pingsan.png")
+                        xoffset -1 yoffset -2
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset -2 xoffset -1
 
-                imagebutton at resolusi (294,204):
-                    idle "images/cgColored/R1_1_alios_remil_snake.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_1_alios_remil_snake.png")
-                    yoffset -3
+                #pojok kanan atas
+                if persistent.cg_9_remil_jeff_marah:
+                    imagebutton at resolusi (297,205):
+                        xoffset -2 yoffset 2
+                        idle "images/cgColored/9_remil_jeff_marah.png"
+                        action ShowMenu("tunjuk","images/cgColored/9_remil_jeff_marah.png")
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset 2 xoffset -2
 
-                imagebutton at resolusi (297,203):
-                    idle "images/cgColored/R1_2_remil_airterjun.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_2_remil_airterjun.png")
+                #pojok kiri bawah
+                if persistent.cg_R1_1_alios_remil_snake:
+                    imagebutton at resolusi (297,204):
+                        idle "images/cgColored/R1_1_alios_remil_snake.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_1_alios_remil_snake.png")
+                        yoffset -3 xoffset -1.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,204):
+                        yoffset -3 xoffset -1.8
+
+                #pojok kanan bawah
+                if persistent.cg_R1_2_remil_airterjun:
+                    imagebutton at resolusi (298,203):
+                        idle "images/cgColored/R1_2_remil_airterjun.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_2_remil_airterjun.png")
+                        yoffset 1 xoffset -2.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (298,203):
+                        yoffset 1 xoffset -2.8
+
 
         if halaman_g ==4:
             grid 2 2:
                 xpos 438 ypos 147
                 xspacing 136 yspacing 60
-                imagebutton at resolusi (294,202):
-                    idle "images/cgColored/R1_3_alios_remil_cherry.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_3_alios_remil_cherry.png")
 
-                imagebutton at resolusi (297,205):
-                    idle "images/cgColored/R1_4_remil_kai.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_4_remil_kai.png")
+                #pojok kiri atas
+                if persistent.cg_R1_3_alios_remil_cherry:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R1_3_alios_remil_cherry.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_3_alios_remil_cherry.png")
+                        yoffset -2 xoffset -1
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset -2 xoffset -1
 
-                imagebutton at resolusi (294,204):
-                    idle "images/cgColored/R1_5_remil_jalan_pincang.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_5_remil_jalan_pincang.png")
-                    yoffset -3
+                #pojok kanan atas
+                if persistent.cg_R1_4_remil_kai:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R1_4_remil_kai.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_4_remil_kai.png")
+                        yoffset 2 xoffset -2
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset 2 xoffset -2
 
-                imagebutton at resolusi (297,203):
-                    idle "images/cgColored/R1_6_cherry_remil.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_6_cherry_remil.png")
+                #pojok kiri bawah
+                if persistent.cg_R1_5_remil_jalan_pincang:
+                    imagebutton at resolusi (297,204):
+                        idle "images/cgColored/R1_5_remil_jalan_pincang.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_5_remil_jalan_pincang.png")
+                        yoffset -3 xoffset -1.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,204):
+                        yoffset -3 xoffset -1.8
+
+
+                #pojok kanan bawah
+                if persistent.cg_R1_6_cherry_remil:
+                    imagebutton at resolusi (298,203):
+                        idle "images/cgColored/R1_6_cherry_remil.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_6_cherry_remil.png")
+                        yoffset 1 xoffset -2.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (298,203):
+                        yoffset 1 xoffset -2.8
+
 
         if halaman_g ==5:
             grid 2 2:
                 xpos 438 ypos 147
                 xspacing 136 yspacing 60
-                imagebutton at resolusi (294,202):
-                    idle "images/cgColored/R1_7_remil.png"
-                    action ShowMenu("tunjuk","images/cgColored/R1_7_remil.png")
 
-                imagebutton at resolusi (297,205):
-                    idle "images/cgColored/R2_1_wolf_remil_1.png"
-                    action ShowMenu("tunjuk","images/cgColored/R2_1_wolf_remil_1.png")
+                #pojok kiri atas
+                if persistent.cg_R1_7_remil:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R1_7_remil.png"
+                        action ShowMenu("tunjuk","images/cgColored/R1_7_remil.png")
+                        yoffset -2 xoffset -1
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset -2 xoffset -1
 
-                imagebutton at resolusi (294,204):
-                    idle "images/cgColored/R2_1_wolf_remil_2.png"
-                    action ShowMenu("tunjuk","images/cgColored/R2_1_wolf_remil_2.png")
-                    yoffset -3
 
-                imagebutton at resolusi (297,203):
-                    idle "images/cgColored/R2_2_rem_jef.png"
-                    action ShowMenu("tunjuk","images/cgColored/R2_2_rem_jef.png")
+                #pojok kanan atas
+                if persistent.cg_R2_1_wolf_remil_1:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R2_1_wolf_remil_1.png"
+                        action ShowMenu("tunjuk","images/cgColored/R2_1_wolf_remil_1.png")
+                        yoffset 2 xoffset -2
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset 2 xoffset -2
+
+
+                #pojok kiri bawah
+                if persistent.cg_R2_1_wolf_remil_2:
+                    imagebutton at resolusi (297,204):
+                        idle "images/cgColored/R2_1_wolf_remil_2.png"
+                        action ShowMenu("tunjuk","images/cgColored/R2_1_wolf_remil_2.png")
+                        yoffset -3 xoffset -1.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,204):
+                        yoffset -3 xoffset -1.8
+
+                #pojok kanan bawah
+                if persistent.cg_R2_2_rem_jef:
+                    imagebutton at resolusi (298,203):
+                        idle "images/cgColored/R2_2_rem_jef.png"
+                        action ShowMenu("tunjuk","images/cgColored/R2_2_rem_jef.png")
+                        yoffset 1 xoffset -2.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (298,203):
+                        yoffset 1 xoffset -2.8
+
+
 
         if halaman_g ==6:
             grid 2 2:
                 xpos 438 ypos 147
                 xspacing 136 yspacing 60
-                imagebutton at resolusi (294,202):
-                    idle "images/cgColored/R2_3_remil_jeff_elena_wolf.png"
-                    action ShowMenu("tunjuk","images/cgColored/R2_3_remil_jeff_elena_wolf.png")
 
-                imagebutton at resolusi (297,205):
-                    idle "images/cgColored/R2_4_remil_deadcherry.PNG"
-                    action ShowMenu("tunjuk","images/cgColored/R2_4_remil_deadcherry.PNG")
+                #pojok kiri atas
+                if persistent.cg_R2_3_remil_jeff_elena_wolf:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R2_3_remil_jeff_elena_wolf.png"
+                        action ShowMenu("tunjuk","images/cgColored/R2_3_remil_jeff_elena_wolf.png")
+                        yoffset -2 xoffset -1
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset -2 xoffset -1
 
-                imagebutton at resolusi (294,204):
-                    idle "images/cgColored/R2_5_elena_jeffrey_alios.PNG"
-                    action ShowMenu("tunjuk","images/cgColored/R2_5_elena_jeffrey_alios.PNG")
-                    yoffset -3
+                #pojok kanan atas
+                if persistent.cg_R2_4_remil_deadcherry:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R2_4_remil_deadcherry.PNG"
+                        action ShowMenu("tunjuk","images/cgColored/R2_4_remil_deadcherry.PNG")
+                        yoffset 2 xoffset -2
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset 2 xoffset -2
 
-                imagebutton at resolusi (297,203):
-                    idle "images/cgColored/R2_6_rem_kai.PNG"
-                    action ShowMenu("tunjuk","images/cgColored/R2_6_rem_kai.PNG")
+
+                #pojok kiri bawah
+                if persistent.cg_R2_5_elena_jeffrey_alios:
+                    imagebutton at resolusi (297,204):
+                        idle "images/cgColored/R2_5_elena_jeffrey_alios.PNG"
+                        action ShowMenu("tunjuk","images/cgColored/R2_5_elena_jeffrey_alios.PNG")
+                        yoffset -3 xoffset -1.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,204):
+                        yoffset -3 xoffset -1.8
+
+                #pojok kanan bawah
+                if persistent.cg_R2_6_rem_kai:
+                    imagebutton at resolusi (298,203):
+                        idle "images/cgColored/R2_6_rem_kai.PNG"
+                        action ShowMenu("tunjuk","images/cgColored/R2_6_rem_kai.PNG")
+                        yoffset 1 xoffset -2.8
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (298,203):
+                        yoffset 1 xoffset -2.8
+
 
         if halaman_g ==7:
             grid 2 1:
                 xpos 438 ypos 147
                 xspacing 136 yspacing 60
-                imagebutton at resolusi (294,202):
-                    idle "images/cgColored/R2_7_ jef_rem.PNG"
-                    action ShowMenu("tunjuk","images/cgColored/R2_7_ jef_rem.PNG")
 
-                imagebutton at resolusi (297,205):
-                    idle "images/cgColored/R2_8_remil_drown.PNG"
-                    action ShowMenu("tunjuk","images/cgColored/R2_8_remil_drown.PNG")
+                #pojok kiri atas
+                if persistent.cg_R2_7_jef_rem:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R2_7_ jef_rem.PNG"
+                        action ShowMenu("tunjuk","images/cgColored/R2_7_ jef_rem.PNG")
+                        yoffset -2 xoffset -1
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset -2 xoffset -1
+
+
+                #pojok kanan atas
+                if persistent.cg_R2_8_remil_drown:
+                    imagebutton at resolusi (297,205):
+                        idle "images/cgColored/R2_8_remil_drown.PNG"
+                        action ShowMenu("tunjuk","images/cgColored/R2_8_remil_drown.PNG")
+                        yoffset 2 xoffset -1
+                else:
+                    add "images/cgColored/cg_locked.png" at resolusi (297,205):
+                        yoffset 2 xoffset -1
+
 
 
 
