@@ -1,10 +1,10 @@
-image remi_cg_end= "cgColored/R1_7_remil.png"
 image cg_1 = "cgColored/R1_1_alios_remil_snake.png"
 image cg_2 = "cgColored/R1_2_remil_airterjun.png"
 image cg_3 = "cgColored/R1_3_alios_remil_cherry.png"
 image cg_4 = "cgColored/R1_4_remil_kai.png"
 image cg_5 ="cgColored/R1_5_remil_jalan_pincang.png"
 image cg_6 ="cgColored/R1_6_cherry_remil.png"
+image remi_cg_end= "cgColored/R1_7_remil.png"
 
 label branch1:
     #CHAPTER 1
@@ -390,6 +390,7 @@ label b1deca1:
     "Remi mendaki ke atas pohon dan merangkak ke dahan besar, kemudian ular tersebut melihat Remi lalu memutar badannya ke arah Remi"
 
     #show CG Alios dan Remil melawan ular besar di hutan (Hutan - Day) with fade(3.0)
+    $ persistent.cg_R1_1_alios_remil_snake = True
     scene cg_1 with Fade (1.0, 1.0, 1.0)
     al "Kemana kau melihat, dasar serangga!” Mengayunkan kapak untuk mensayat perut ular yang melilit pohon"
     #play sound axe slashing
@@ -532,6 +533,7 @@ label b1deca2:
 
 
     #show CG Remil di atas tebing dekat air terjun melihat ke sungai (Dekat Air Terjun - Day) with fade(3.0)
+    $ persistent.cg_R1_2_remil_airterjun = True
     scene cg_2 with Fade (1.0,1.0,1.0)
     #play sound waterfall
     play sound sfx_waterfall
@@ -600,6 +602,7 @@ label b1deca2:
 
 
     #show CG Remil, Alios, dan Cherry di jalan setapak alami dari bebatuan di pinggir hutan (Hutan - Day) with fade(3.0)
+    $ persistent.cg_R1_3_alios_remil_cherry = True
     scene cg_3 with Fade (1.0,1.0,1.0)
     al "Hey, Remil. Ini begitu menggangguku sejak kemarin.."
     al  "Bagaimana kalau kita bertarung?"
@@ -1055,6 +1058,7 @@ label b1deca2:
 
 
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with fade(3.0)
+    $ persistent.cg_R1_4_remil_kai = True
     scene cg_4 with Fade (1.0,1.0,1.0)
     r "Aku tahu Anda berbohong dari tadi."
     k "Hmm?"
@@ -1082,6 +1086,7 @@ label b1deca2:
 
 
     #scene CG Remil dan Kai berbicara di lembah (Lembah - Night) with fade(1.0)
+    #$ persistent.cg_R1_4_remil_kai = True
     scene cg_4 with Fade (0.5,1.0,0.5)
     r "..."
     rg "Ah, lama tidak berjumpa, wahai rekanku-"
@@ -1409,6 +1414,7 @@ label b1deca2:
 
 
     #scene CG Lembah dan Remil di tengah jalan yang sedang pincang (Lembah - Day) With fade(3.0)
+    $ persistent.cg_R1_5_remil_jalan_pincang = True
     scene cg_5 with Fade (1.0,1.0,1.0)
     "Aku terbangun di daratan yang tidak kuketahui."
 
@@ -1719,6 +1725,7 @@ label b1deca2:
 
     #With fade 3
     #show CG Cherry duduk menangis di samping saat Remil kehilangan sebagian badannya (Plateau - Dusk)
+    $ persistent.cg_R1_6_cherry_remil = True
     scene cg_6 with Fade (1.0,1.0,1.0)
     "(Ugh!)"
     #play music  sad music
@@ -1740,6 +1747,7 @@ label b1deca2:
     "Tubuhku kembali utuh dan barrier sudah lenyap, seutuhnya."
 
     #scene CG Remil berjalan ke ujung tebing di plateau (Plateau - Dusk) wirth dissolve(3.0)
+    $ persistent.cg_R1_7_remil = True
     scene remi_cg_end with Dissolve(3.0)
     r "Hahahaha- Akhirnya begini!"
     c "Hentikan- Remil"

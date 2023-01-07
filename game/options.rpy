@@ -46,7 +46,7 @@ define config.developer = True  # Make sure this is set to False when releasing.
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("jcafe_vn_projek_besar")
+define config.name = _("Fantasystem")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -72,7 +72,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "jcafe_vn_projek_besar"
+define build.name = "Fantasystem"
 
 
 ## Sounds and music ############################################################
@@ -178,7 +178,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "jcafe_vn_projek_besar-1652273497"
+define config.save_directory = "Fantasystem-1652273497"
 
 
 ## Icon ########################################################################
