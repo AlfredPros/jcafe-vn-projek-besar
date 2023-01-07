@@ -28,15 +28,13 @@ define config.skip_sounds = True  # Don't play sound when skipping
 define config.enter_yesno_transition = Dissolve(.125)
 define config.exit_yesno_transition = Dissolve(.125)
 
-define config.skip_sounds = True
-
 
 ## Important Mode ##############################################################
 
 ## For developers who wants to customize, analyze, or make my codes even
 ## better and smoother, I welcome you to set this to True. (-Alfred)
 
-define config.developer = True  # Make sure this is set to False when releasing.
+define config.developer = False  # Make sure this is set to False when releasing.
 
 
 ## Basics ######################################################################
@@ -155,7 +153,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 60
+default preferences.text_cps = 75
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
