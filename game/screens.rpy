@@ -298,13 +298,13 @@ screen choice(items):
 
     vbox:
         for i in items:
-            if len(i.caption) >=50:
+            if len(i.caption)>=40:
                 textbutton i.caption action i.action:
                     text_size 28
                     text_ypos -5
                     ysize 100
 
- 
+
             else:
                 textbutton i.caption action i.action
 
