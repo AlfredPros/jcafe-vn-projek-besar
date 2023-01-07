@@ -1,12 +1,12 @@
-image cg_end="cgColored/1_remil_elena_rs.png"
-image cg_1= "cgColored/5_remil_elena_lake.png"
-image cg_2= "cgColored/6_remil_jeff_prajurit.png"
-image cg_3= "cgColored/7_remil_jeff_prajurit_pingsan.png"
-image cg_4= "cgColored/8_remil_jeff_pingsan.png"
-image cg_5= "cgColored/9_remil_jeff_marah.png"
-image cg_6= "cgColored/3_orb_trio2.png"
-image cg_8 ="cgColored/4_remilElena_vs_gordon.png"
-image cg_9 ="cgColored/2_remil_vs_gordon.png"
+image cg_end = "cgColored/1_remil_elena_rs.png"
+image cg3_1 = "cgColored/5_remil_elena_lake.png"
+image cg3_2 = "cgColored/6_remil_jeff_prajurit.png"
+image cg3_3 = "cgColored/7_remil_jeff_prajurit_pingsan.png"
+image cg3_4 = "cgColored/8_remil_jeff_pingsan.png"
+image cg3_5 = "cgColored/9_remil_jeff_marah.png"
+image cg3_6 = "cgColored/3_orb_trio2.png"
+image cg3_8 = "cgColored/4_remilElena_vs_gordon.png"
+image cg3_9 = "cgColored/2_remil_vs_gordon.png"
 
 label branch3:
 
@@ -641,7 +641,7 @@ label b3deca2:
 
     #CG mereka depan mata air. With dissolve(1.0)
     $ persistent.cg_5_remil_elena_lake = True
-    scene cg_1 with dissolve
+    scene cg3_1 with dissolve
     e "Wah segar sekali!"
     r "Ayo segera isi botolnya sebagai air minum tambahan sebelum pergi dari sini."
     e "Tunggu, aku mau cuci muka juga…"
@@ -1066,13 +1066,13 @@ label b3decb3:
 label b3deca4:
     #scene CG Remil mengincar prajuritnya. Menampilkan Jeffrey di belakang prajurit. with Dissolve(1.0)
     $ persistent.cg_6_remil_jeff_prajurit = True
-    scene cg_2 with dissolve
+    scene cg3_2 with dissolve
     
     r "(Aku akan mengalahkan prajuritnya dulu)"
     r "(Aku akan mengincar secara jumlah. Masalah ini akan selesai dengan cepat)"
     #scene CG Remil berdiri dan prajurit semua tewas. Menampilkan Jeffrey. With fade(2.0)
     $ persistent.cg_7_remil_jeff_prajurit_pingsan = True
-    scene cg_3 with fade
+    scene cg3_3 with fade
     j "Kamu memang ingin duel denganku ya…"
     r "(Ada yang ingin kutanyakan padanya…)"
     r "Kenapa kau dan Alios menginginkan benda itu?"
@@ -1081,7 +1081,7 @@ label b3deca4:
     
     # scene CG Remil menang melawan Jeffrey. Remil terluka. With fade(1.0)
     $ persistent.cg_8_remil_jeff_pingsan = True
-    scene cg_4 with fade
+    scene cg3_4 with fade
     r "Akhirnya aku menang…"
     al "Hei ada ribut-ribut ap…"
     al "APA YANG KAMU LAKUKAN PADA TEMPATKU?"
@@ -1099,7 +1099,7 @@ label b3deca4:
 label b3decb4:
     #scene CG Remil mengincar Jeffrey. Tidak ada prajurit. Jeffrey muka emosi. with Dissolve(1.0)
     $ persistent.cg_9_remil_jeff_marah = True
-    scene cg_5 with dissolve
+    scene cg3_5 with dissolve
     r "(Aku hanya harus menghancurkan intinya, bukan)"
     r "Hei, Jeffrey. Aku tahu kamu mencurigakan sejak awal…"
     j "Oh? Aku membiarkanmu lolos dulu, tapi itu demi rencanaku sih… hahaha."
@@ -1117,7 +1117,7 @@ label b3decb4:
 
     #scene CG Remil menang melawan Jeffrey. Remil terluka. With fade(2.0)
     $ persistent.cg_8_remil_jeff_pingsan = True
-    scene cg_4 with fade
+    scene cg3_4 with fade
     r "Akhirnya aku menang..."
     al "Hei ada ribut-ribut ap…"
     al "APA YANG KAMU LAKUKAN PADA TEMPATKU?"
@@ -1162,7 +1162,7 @@ label b3ch7:
     #CG Pedestal di tengah desa With dissolve(1.0)
     $ persistent.cg_3_orb_trio = True
     $ persistent.cg_3_orb_trio2 = True
-    scene cg_6 with Dissolve (2.0) 
+    scene cg3_6 with Dissolve (2.0) 
     e "Apa ini?"
     k "Aku akan menaruh benda ini di sana, lalu kalian bisa kembali."
     r "Kembali? Kemana?"
@@ -1220,7 +1220,7 @@ label b3ch7:
 
     #CG fasilitas penelitian, ada Gordon duduk. Remil & Elena mau menghampirinya. With white fade(1.0)
     $ persistent.cg_4_RemilElena_vs_gordon = True
-    scene cg_8 with fade
+    scene cg3_8 with fade
     r "Kau…!"
     n "Wah, wah… Ada dua orang yang lolos?"
     e "A… aku ingat semuanya! Kamu adalah orang aneh yang menculik aku!"
@@ -1270,7 +1270,7 @@ label b3ch7:
     #fade in
     #scene CG Gordon nyerang Remil, pisau depan lehernya
     $ persistent.cg_2_remil_vs_gordon = True
-    scene cg_9 with Fade(1.0,1.0,1.0)
+    scene cg3_9 with Fade(1.0,1.0,1.0)
     e " REMIL!!!"
     r "Si… sial…!!"
     g "Aku sangat tidak senang kalau kalian pergi dari sini!! Hei wanita! Cepat lapor polisi kalau kau tidak masalah temanmu ini mati!!"

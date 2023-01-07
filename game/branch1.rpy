@@ -2,8 +2,8 @@ image cg_1 = "cgColored/R1_1_alios_remil_snake.png"
 image cg_2 = "cgColored/R1_2_remil_airterjun.png"
 image cg_3 = "cgColored/R1_3_alios_remil_cherry.png"
 image cg_4 = "cgColored/R1_4_remil_kai.png"
-image cg_5 ="cgColored/R1_5_remil_jalan_pincang.png"
-image cg_6 ="cgColored/R1_6_cherry_remil.png"
+image cg_5 = "cgColored/R1_5_remil_jalan_pincang.png"
+image cg_6 = "cgColored/R1_6_cherry_remil.png"
 image remi_cg_end= "cgColored/R1_7_remil.png"
 
 label branch1:
