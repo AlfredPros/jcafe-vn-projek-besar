@@ -148,6 +148,7 @@ label branch2:
             hide vignette with dissolve
             pause 0.5
             #item pisau belati berwarna ungu out
+            $ persistent.cg_R2_1_wolf_remil_1 = True
             scene r2_1_wolf_remil_1 with fade
             #CG serigala dengan bulu yang dihiasi kristal berdiri di belakang Remil 1 with fade in 0,5s
             "*Grrrr*"
@@ -320,6 +321,7 @@ label branch2:
 
     #CG Remil (dengan perban di kepalanya) duduk di samping perapian dengan Jeffrey. Di sekitar perapian banyak daging hasil buruan dan beberapa buah-buahan.
     #*Kraus* *Kraus*
+    $ persistent.cg_R2_2_rem_jef = True
     scene r2_2_rem_jef with Dissolve (2)
     r "Jeffrey, aku ingin bertanya sesuatu."
     j "*Kraus* Hmm?"
@@ -599,12 +601,14 @@ label branch2:
     pause 0.5
     hide vignette with dissolve
     pause 0.5
+    $ persistent.cg_R2_1_wolf_remil_2 = True
     scene r2_1_wolf_remil_2 with fade
     #CG serigala dengan bulu yang dihiasi kristal berdiri di belakang Remil 2 with fade in 0,5s
     "*Grrrr*"
     "*Roarrr*"
     e "REMIL AWAS!!"
     #CG Elena, Jeffrey, dan Remil menyerang serigala itu with dissolve in 0,5s
+    $ persistent.cg_R2_3_remil_jeff_elena_wolf = True
     scene r2_3_remil_jeff_elena_wolf with dissolve
     e "Remil, kau tidak apa-apa?!"
     r "Aku tidak apa-apa, terima kasih Jeffrey sudah menarikku."
@@ -810,7 +814,7 @@ label branch2:
     pause 0.5
 
     scene lembah_day with dissolve
-    #CG lembah, day with dissolve in 1s
+    #BG lembah, day with dissolve in 1s
     r "(Aku belum pernah ke tempat ini sebelumnya.)"
     r "Sepertinya tidak ada apa-apa disini, dari tadi juga aku hanya bertemu dengan monster-monster kecil."
     #SFX: *Drap* *Drap* (suara langkah kaki terburu-buru)
@@ -1216,6 +1220,7 @@ label branch2:
     "Aku mencium bau aneh, aku pun berjalan mengelilingi sisi luar gubuk tua itu."
     r "(!!!)" with vpunch
     #CG Remil melihat mayat Cherry with fade in 1s
+    $ persistent.cg_R2_4_remil_deadcherry = True
     scene r2_4_remil_deadcherry with fade
     r "Cherry!! Hei!"
     r "Cherry, bangunlah!"
@@ -1247,6 +1252,7 @@ label branch2:
     ##CG Elena berdiri ketakutan di belakang Jeffrey, Jeffrey sedang memeriksa mayat Alios dissolve in 0,5s
     hide jeffrey_serious
     pause 0.5
+    $ persistent.cg_R2_5_elena_jeffrey_alios = True
     scene r2_5_elena_jeffrey_alios with dissolve
     e "A-Ah.."
     j "Aku juga menyadarinya bahwa kamu diam-diam mengikutiku semenjak aku memasuki area hutan ini kan."
@@ -1438,6 +1444,7 @@ label branch2:
             #Jeffrey out
 
             #CG Remil dan Kai di tepi danau with fade in 0,5s
+            $ persistent.cg_R2_6_rem_kai = True
             scene r2_6_rem_kai with fade
             "Kai membawaku ke tepi danau."
             k "Di dalam pusaran air itu ada gua."
@@ -1462,8 +1469,8 @@ label branch2:
             #Angry M Jeffrey
             j "HEI!!"
             #Jeffrey out
+            $ persistent.cg_R2_6_rem_kai = True
             scene r2_6_rem_kai with fade
-
             #CG Remil dan Kai di tepi danau with fade in 0,5s
             k "Kamu akan berterima kasih kepadaku nanti."
             "Kai mendorongku menuju pusaran air di danau." with vpunch
@@ -1637,8 +1644,9 @@ label branch2:
     show jeffrey_serious as jeffrey_normal_manipulative
     j "Hei.. Remil."
     #Jeffrey out
-
-    scene r2_7_ jef_rem
+    
+    $ persistent.cg_R2_7_jef_rem = True
+    scene r2_7_jef_rem with fade
     #CG Jeffrey menodong Pisau belati ungu ke leher Remil with fade in 0,3s
     j "Untuk bertahan hidup, kita harus menghabiskan apapun yang menjadi ancaman bagi kita."
     j "Benar kan~? Anak yang hidup gelandangan sepertimu pasti paham soal ini."
@@ -1664,6 +1672,7 @@ label branch2:
     play sound sfx_nyebur
     pause 2
 
+    $ persistent.cg_R2_8_remil_drown = True
     scene r2_8_remil_drown with Dissolve (2)
     #CG Remil melayang terjatuh di udara with dissolve in 1s
     #(backsound/SFX suara air dalam lautan)

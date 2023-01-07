@@ -1185,19 +1185,19 @@ label b1deca2:
     show kai_normal at enter
     k "Kalian, tolong urus beruangnya dan jaga anak perempuan di sana."
     #show angry alios as alios di kanan
-    show alios_angry at enterr1
+    show alios_angry1 at enterr1  # 1-3, not sure.
     al "Ck, darimana saja kau?"
     k "Maafkan Aku."
     #hide kai
     hide kai_normal
     #show normal alios as alios di kanan
-    show alios_normal as alios_angry
+    show alios_normal as alios_angry1
     al "Baiklah. Jeffrey! Pindahkan Cherry!"
     #show normal jeffrey as jeffrey di kiri
     show jeffrey_normal at enterl1
     j ".. Bagaimana dengan Elena?"
     #show sad alios as alios di kanan
-    show alios_sad as alios_angry
+    show alios_sad as alios_angry1
     al "Keadaannya sudah tidak bagus. Dia mati."
     #show sad jeffrey as jeffrey di kiri
     show jeffrey_sad as jeffrey_normal
@@ -1209,13 +1209,13 @@ label b1deca2:
     hide jeffrey_normal
     #show normal alios as alios di kanan
     al "Dan kau bocah putih, kita bicarakan masalah ini nanti!"
-    show alios_normal as alios_angry
+    show alios_normal as alios_angry1
     #show normal kai as kai di kiri
     show kai_normal at enterl1
     k "Bocah.."
     #hide kai
     hide kai_normal
-    hide alios_angry
+    hide alios_angry1
     #hide alios
     "Kai melempar Remil dengan sihirnya lalu membuatnya lumpuh sementara."
 

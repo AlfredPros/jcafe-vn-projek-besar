@@ -7,6 +7,7 @@ image cg_5= "cgColored/9_remil_jeff_marah.png"
 image cg_6= "cgColored/3_orb_trio2.png"
 image cg_8 ="cgColored/4_remilElena_vs_gordon.png"
 image cg_9 ="cgColored/2_remil_vs_gordon.png"
+
 label branch3:
 
     #Chapter 1
@@ -639,6 +640,7 @@ label b3deca2:
     e "Well kalau begitu mari kita dekati mata air itu."
 
     #CG mereka depan mata air. With dissolve(1.0)
+    $ persistent.cg_5_remil_elena_lake = True
     scene cg_1 with dissolve
     e "Wah segar sekali!"
     r "Ayo segera isi botolnya sebagai air minum tambahan sebelum pergi dari sini."
@@ -1063,11 +1065,13 @@ label b3decb3:
 
 label b3deca4:
     #scene CG Remil mengincar prajuritnya. Menampilkan Jeffrey di belakang prajurit. with Dissolve(1.0)
+    $ persistent.cg_6_remil_jeff_prajurit = True
     scene cg_2 with dissolve
     
     r "(Aku akan mengalahkan prajuritnya dulu)"
     r "(Aku akan mengincar secara jumlah. Masalah ini akan selesai dengan cepat)"
     #scene CG Remil berdiri dan prajurit semua tewas. Menampilkan Jeffrey. With fade(2.0)
+    $ persistent.cg_7_remil_jeff_prajurit_pingsan = True
     scene cg_3 with fade
     j "Kamu memang ingin duel denganku ya…"
     r "(Ada yang ingin kutanyakan padanya…)"
@@ -1076,6 +1080,7 @@ label b3deca4:
     r "(Dasar penjilat, aku akan mengalahkanmu secepat mungkin!)"
     
     # scene CG Remil menang melawan Jeffrey. Remil terluka. With fade(1.0)
+    $ persistent.cg_8_remil_jeff_pingsan = True
     scene cg_4 with fade
     r "Akhirnya aku menang…"
     al "Hei ada ribut-ribut ap…"
@@ -1093,6 +1098,7 @@ label b3deca4:
 
 label b3decb4:
     #scene CG Remil mengincar Jeffrey. Tidak ada prajurit. Jeffrey muka emosi. with Dissolve(1.0)
+    $ persistent.cg_9_remil_jeff_marah = True
     scene cg_5 with dissolve
     r "(Aku hanya harus menghancurkan intinya, bukan)"
     r "Hei, Jeffrey. Aku tahu kamu mencurigakan sejak awal…"
@@ -1110,6 +1116,7 @@ label b3decb4:
     r "Ayo kita lakukan."
 
     #scene CG Remil menang melawan Jeffrey. Remil terluka. With fade(2.0)
+    $ persistent.cg_8_remil_jeff_pingsan = True
     scene cg_4 with fade
     r "Akhirnya aku menang..."
     al "Hei ada ribut-ribut ap…"
@@ -1153,6 +1160,8 @@ label b3ch7:
     r " Semoga ini bukan sesuatu yang buruk."
 
     #CG Pedestal di tengah desa With dissolve(1.0)
+    $ persistent.cg_3_orb_trio = True
+    $ persistent.cg_3_orb_trio2 = True
     scene cg_6 with Dissolve (2.0) 
     e "Apa ini?"
     k "Aku akan menaruh benda ini di sana, lalu kalian bisa kembali."
@@ -1210,6 +1219,7 @@ label b3ch7:
     #“Akhir Dari Semua” with dissolve(1.0)
 
     #CG fasilitas penelitian, ada Gordon duduk. Remil & Elena mau menghampirinya. With white fade(1.0)
+    $ persistent.cg_4_RemilElena_vs_gordon = True
     scene cg_8 with fade
     r "Kau…!"
     n "Wah, wah… Ada dua orang yang lolos?"
@@ -1259,6 +1269,7 @@ label b3ch7:
 
     #fade in
     #scene CG Gordon nyerang Remil, pisau depan lehernya
+    $ persistent.cg_2_remil_vs_gordon = True
     scene cg_9 with Fade(1.0,1.0,1.0)
     e " REMIL!!!"
     r "Si… sial…!!"
@@ -1297,6 +1308,7 @@ label b3deca5:
 
     #fade in
     #scene (CG Remil di rumah sakit dengan perban di lehernya, Elena tersenyum)
+    $ persistent.cg_1_remil_elena_rs = True
     scene cg_end with fade
     e "(...Remil akhirnya sadar dari koma.)"
 
