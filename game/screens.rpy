@@ -1403,7 +1403,7 @@ screen kontrol():
             imagebutton:
                 idle "gui/detail/next_page.png"
                 hover "gui/detail/next_page.png"
-                xpos 1040
+                xpos 989
                 ypos 125
                 action SetScreenVariable("halaman",2)
 
@@ -1413,7 +1413,7 @@ screen kontrol():
             imagebutton:
                 idle "gui/detail/previous_page.png"
                 hover "gui/detail/previous_page.png"
-                xpos 980
+                xpos 979
                 ypos 125
                 action SetScreenVariable("halaman",1)
 
