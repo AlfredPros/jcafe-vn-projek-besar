@@ -1013,7 +1013,7 @@ screen gallery():
                 imagebutton at resolusi (297,204):
                     idle "images/cgColored/3_orb_trio.png"
                     action ShowMenu("tunjuk","images/cgColored/3_orb_trio.png")
-                    yoffset -3 xoffset -1,8
+                    yoffset -3 xoffset -1.8
             else:
                 add "images/cgColored/cg_locked.png" at resolusi (297,204):
                     yoffset -3 xoffset -1.8
