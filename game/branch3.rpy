@@ -168,7 +168,7 @@ label b3decb:
     e "Benar juga, kalau begitu sebelum ada yang sadar, ayo kita pergi."
     #hide elena
     hide elena_sad
-    show jeffrey_normal at entetrr1
+    show jeffrey_normal at enterr1
     #show normal jeffrey as jeffrey di kanan
     #show serious elena as elena di kiri
     show elena_angry at enterl1

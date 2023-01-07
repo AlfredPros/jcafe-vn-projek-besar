@@ -438,7 +438,7 @@ label b1deca1:
 
 
     #show BG Dekat Sungai - Dusk with dissolve(3.0)
-    scene  dekat_sungai_dusk with Dissolve(3.0)
+    scene dekat_sungai_dusk with Dissolve(3.0)
     r "Daging ular ini banyak sekali…"
     # show happy alios  as alios di tengah
     show alios_happy at enter
@@ -1283,7 +1283,7 @@ label b1deca2:
     hide jeffrey_happy
     "Alios kemudian menerjang ke depan dan melawan beruang-beruang di depannya dan Jeffrey menjaganya dari belakang."
 
-    # scene  BG Lembah - Day with dissolve(1.0)
+    # scene BG Lembah - Day with dissolve(1.0)
     scene lembah_day
     show kai_normal at enter
     #show serious kai as kai di tengah
@@ -1493,14 +1493,14 @@ label b1deca2:
 
 
     #BG Lembah - Daywith dissolve(3.0)
-    scene  lembah_dusk with Dissolve (2.5)
+    scene lembah_dusk with Dissolve (2.5)
     r "(Monster di sini memang semakin banyak)"
     "Aku menyadari, Aku tidak pernah memikirkan ini."
     r "(Tetapi, sebenarnya dari mana semua monster ini?)"
 
     #With fade 3
     #BG Plateau - Dusk with fade (3.0)
-    scene  plateau with Fade (1.0,1.0,1.0)
+    scene plateau with Fade (1.0,1.0,1.0)
     "Aku merasakan atmosfer yang berbeda di hadapanku."
     "Masuk di dalamnya, Aku melihat perkemahan di dalam."
 
