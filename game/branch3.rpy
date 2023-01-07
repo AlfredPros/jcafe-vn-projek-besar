@@ -212,8 +212,8 @@ label b3decb:
     hide jeffrey_normal
     #hide elena
     #show happy elena as elena di kanan
-    show elena_happy enterr1
-    show jeffrey_happy enterl1
+    show elena_happy at enterr1
+    show jeffrey_happy at enterl1
     #show happy jeffrey as jeffrey di kiri
     j "Tenang saja, aku serius! Kalian tunggu saja di luar hutan sana, aku akan mempersiapkan kebutuhan kalian."
     e "Terima kasih banyak Jeffrey."
@@ -310,14 +310,14 @@ label b3ch2:
     k "Bawa orang itu dan wanita ini kerumahku."
 
     #scene BG dalam rumah Kai. With Dissolve(2.0)
-    scene rumah_kai with Dissolve (2.0)
+    scene dalam_gubuk_api_mati with Dissolve (2.0)
     #show normal kai as kai di tengah
     show kai_normal at enter
     k "Istirahatlah dengan tenang. Pria ini hanya tidak punya stamina lagi, sama sepertimu."
     k "Apa ya yang harus ku masak…"
 
     #scene BG dalam rumah Kai with Fade(1.0)
-    scene rumah_kai with Fade 
+    scene dalam_gubuk_api_mati with Fade 
     #show normal kai as kai di tengah
     show kai_normal at enter
     k "Pagi semuanya, oh kamu bangun terlebih dahulu."
@@ -412,7 +412,7 @@ label b3deca2:
     #show sad kai as kai di kanan
     k "Sudah kuduga… Urgh ini sungguh mengesalkan!"
     #show serious elena as elena di kiri
-    show elena_angryl as elena_normal
+    show elena_angry as elena_normal
     e "Kai, coba ucapkan sekali lagi! Kami pasti akan mengerti."
     r "Hei kamu benar-benar tidak pantang menyerah ya?"
     #show serious kai as kai di kanan
@@ -537,7 +537,7 @@ label b3deca2:
 
     #scene Black Screen with Fade(1.0)
     scene black with fade
-    scene rumah_kai with dissolve
+    scene dalam_gubuk_api_mati with dissolve
     #show normal elena as elena di kiri
     show elena_normal at enterl1
     e "Baik, akan ku ulangi sekarang… Kita harus pergi ke Utara melewati lembah dan plateau sampai menemukan gurun, lalu di tengah gurun adalah tempat jawaban yang kita cari?"
@@ -559,7 +559,7 @@ label b3deca2:
 
     #scene Black Screen with Dissolve(1.0)
     scene black with dissolve
-    scene rumah_kai with dissolve
+    scene dalam_gubuk_api_mati with dissolve
 
     #show happy kai as kai di tengah
     show kai_smile at enter

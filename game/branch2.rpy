@@ -46,7 +46,7 @@ label branch2:
     pause 0.5
     show old_book with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     #show item buku catatan 1
     r "(Buku catatan?)"
@@ -79,7 +79,7 @@ label branch2:
     pause 0.5
     show old_book with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     "Aku mengambil buku catatan yang aku temukan di gubuk itu."
     r "(!!!)" with vpunch
@@ -120,7 +120,7 @@ label branch2:
     pause 0.5
     show old_book with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     r "Tetapi di selipan buku catatan ini, semakin seram wilayahnya maka barang-barang yang tersedia di dalamnya juga semakin bagus."
     #item buku catatan 1 out
@@ -192,7 +192,7 @@ label branch2:
     pause 0.5
     show beruang_ungu with dissolve:
         align (0.5, 0.4)
-        zoom 0.15
+        zoom 0.3
     pause 0.5
     #show beruang berwarna ungu
     r "(Suara teriakan tadi.. Berasal dari beruang itu?!)"
@@ -292,7 +292,7 @@ label branch2:
             pause 0.5
             show beruang_ungu with dissolve:
                 align (0.5, 0.4)
-                zoom 0.15
+                zoom 0.3
             pause 0.5
             "Beruang itu menghantamku dengan keras hingga membuatku terpental ke pohon. Aku bisa mendengar cakaran beruang itu yang sangat tajam hingga berhasil melepaskan dirinya dari jebakan itu."
             hide beruang_ungu with dissolve
@@ -343,7 +343,7 @@ label branch2:
     pause 0.5
     show berry with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     j "Tidaakk, buah beriku!!"
     hide berry with dissolve
@@ -383,7 +383,7 @@ label branch2:
             pause 0.5
             show old_book with dissolve:
                 align (0.5, 0.4)
-                zoom 0.1
+                zoom 0.3
             pause 0.5
             #show item buku catatan 1
             #Serious M Jeffrey
@@ -407,7 +407,7 @@ label branch2:
             pause 0.5
             show old_book with dissolve:
                 align (0.5, 0.4)
-                zoom 0.1
+                zoom 0.3
             pause 0.5
             r "Di buku ini tertulis bahwa buah yang kamu petik barusan beracun."
             show jeffrey_surprised as jeffrey_sad
@@ -480,7 +480,7 @@ label branch2:
     pause 0.5
     show buku_2 with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     #show item buku catatan 2
     r "(Berbeda dari buku yang aku temukan sebelumnya, di buku ini isinya mengenai monster-monster dan kelemahannya.)"
@@ -591,7 +591,7 @@ label branch2:
     pause 0.5
     show dagger_hijau with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     #show item pisau belati berwarna hijau with dissolve
     r "(Pisau itu..)"
@@ -735,7 +735,7 @@ label branch2:
     pause 0.5
     show dagger_hijau with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 1
     hide dagger_hijau with dissolve
     pause 0.5
@@ -774,7 +774,7 @@ label branch2:
     pause 0.5
     show old_book with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     r "Tunggu, kamu yang menulis buku ini?"
     #Surprise M Kai
@@ -828,7 +828,7 @@ label branch2:
     pause 0.5
     show dagger_hijau with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     "Aku mengeluarkan pisau belati dari saku untuk berjaga-jaga."
     #item pisau belati berwarna hijau out
@@ -911,7 +911,7 @@ label branch2:
     pause 0.5
     show crystal_ball with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     #Happy M Cherry
     show cherry_happy as cherry_normal
@@ -970,7 +970,7 @@ label branch2:
     pause 0.5
     show tangan_kaki_jeff_perban with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     r "(Tangan dan kakinya terluka?)"
     #tangan dan kaki Jeffrey terlihat luka dan diperban out
@@ -1109,7 +1109,7 @@ label branch2:
     pause 0.5
     show item_busur with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     r "Wah, dari mana kamu mendapatkan busur itu?"
     #Happy M Jeffrey
@@ -1145,7 +1145,7 @@ label branch2:
             pause 0.5
             show crystal_ball with dissolve:
                 align (0.5, 0.4)
-                zoom 0.1
+                zoom 0.3
             pause 0.5
             r "Ini."
             j "Wah, keren!"
@@ -1158,7 +1158,7 @@ label branch2:
             pause 0.5
             hide vignette with dissolve
             pause 0.5
-            show cherry_bored as cherry_normal
+            #show cherry_bored as cherry_normal at enterr
             r "Oh ya, Apa itu?"
             play sound sfx_treeshaking
             #SFX: *Srak* *Srak* (suara semak-semak)
@@ -1201,7 +1201,7 @@ label branch2:
             pause 0.5
             show crystal_ball with dissolve:
                 align (0.5, 0.4)
-                zoom 0.1
+                zoom 0.3
             pause 0.5
             j "Baik, kita bertemu lagi di gubuk tua itu ya."
             #item bola kristal out
@@ -1295,7 +1295,7 @@ label branch2:
     pause 0.5
     show tangan_kaki_jeff_perban with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     show jeffrey_angry2 as jeffrey_normal_manipulative at talk
     #show luka di tangan dan kaki Jeffrey
@@ -1616,7 +1616,7 @@ label branch2:
     pause 0.5
     show tangan_kaki_jeff_perban with dissolve:
         align (0.5, 0.4)
-        zoom 0.1
+        zoom 0.3
     pause 0.5
     #Normal M Jeffrey
     show jeffrey_normal as jeffrey_normal_manipulative

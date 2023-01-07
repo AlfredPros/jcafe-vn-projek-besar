@@ -1289,8 +1289,8 @@ screen gallery():
                 #pojok kiri atas
                 if persistent.cg_R2_7_jef_rem:
                     imagebutton at resolusi (297,205):
-                        idle "images/cgColored/R2_7_ jef_rem.PNG"
-                        action ShowMenu("tunjuk","images/cgColored/R2_7_ jef_rem.PNG")
+                        idle "images/cgColored/R2_7_jef_rem.PNG"
+                        action ShowMenu("tunjuk","images/cgColored/R2_7_jef_rem.PNG")
                         yoffset -2 xoffset -1
                 else:
                     add "images/cgColored/cg_locked.png" at resolusi (297,205):

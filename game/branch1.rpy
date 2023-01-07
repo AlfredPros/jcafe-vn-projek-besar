@@ -742,19 +742,19 @@ label b1deca2:
     #scene BG Lembah - Day with dissolve(1.0)
     scene lembah_day with fade
     r "Huf-huf."
-    show jeffrey_surprisedd at enterl1
+    show jeffrey_surprised at enterl1
     #show suprise jeffrey  as jeffrey di kiri
     j "Oh- Elena, kau terlihat tidak enak badan, kamu baik-baik saja?"
     #show nervous elena  as elena di kanan
     show elena_nervous at enterr1
     e "Ya, tetapi Aku tidak bisa terbiasa dengan monster-monster ini."
     #show laugh jeffrey  as jeffrey di kiri
-    show jeffrey_laugh as jeffrey_surprisedd
+    show jeffrey_laugh as jeffrey_surprised
     j  "Hahaha"
     #hide elena
     hide elena_nervous
     #show normal jeffrey  as jeffrey di kiri
-    show jeffrey_normal as jeffrey_surprisedd
+    show jeffrey_normal as jeffrey_surprised
     j " Kalau kalian? Apa kalian baik-baik saja?"
     r "Hanya butuh istirahat."
     #show normal alios as alios di kanan
@@ -780,7 +780,7 @@ label b1deca2:
     al "Ck. Awas saja kau kalau melakukan sesuatu yang mencurigakan."
     #show laugh kai  as kai di tengah
     k "Hahaha."
-    hide jeffrey_surprisedd
+    hide jeffrey_surprised
     hide kai_normal
     hide alios_normal
     #hide kai
@@ -930,10 +930,10 @@ label b1deca2:
     e "Jadi, saat itu."
     e "Aku sedang pergi ke sungai untuk mengisi air di pagi hari. Lalu, ternyata Aku diincar oleh monster dan kemudian dibawa sampai ke desa."
     #show suprise jeffrey as jeffrey di kiri
-    show jeffrey_surprisedd at enterl1
+    show jeffrey_surprised at enterl1
     j "Jadi kamu tidak diculik orang?"
     #show happy jeffrey as jeffrey di kiri
-    show jeffrey_happy as jeffrey_surprisedd
+    show jeffrey_happy as jeffrey_surprised
     j "Itu sungguh melegakan!"
     r "Bagian mananya?"
     show alios_smirk at enterr1
@@ -941,7 +941,7 @@ label b1deca2:
     al "“Lupakan saja dia, tolong lanjutkan."
     #hide alios
     hide alios_smirk
-    hide jeffrey_surprisedd
+    hide jeffrey_surprised
     #hide jeffrey
     #show serious elena as elena di tengah
     show elena_angry at enter
@@ -1017,7 +1017,7 @@ label b1deca2:
     show alios_serious at enterl1
     al "Jeffrey!"
     #show supprise jeffrey as jeffrey di kanan
-    show jeffrey_surprisedd as jeffrey_normal
+    show jeffrey_surprised as jeffrey_normal
     j "Hah! Ya?"
     #show normal alios as alios di kiri
     show alios_normal as alios_serious
@@ -1133,14 +1133,14 @@ label b1deca2:
     show alios_surprised at enter
     al "Kau!"
     #show angry alios as alios di tengah
-    show alios_angry as alios_surprise
+    show alios_angry1 as alios_surprised
     al "Aku tahu kau sampah, tetapi kau jatuh sedalam ini dan sampai melibatkan semuanya!"
     b "AKU TIDAK PEDULI LAGI. MATI KALIAN!"
     #show suprise jeffrey as jeffrey di kiri
-    show jeffrey_surprisedd at enterl1
+    show jeffrey_surprised at enterl1
     j "Waduh, beruangnya banyak banget."
     #show normal jeffrey as jeffrey di kiri
-    show jeffrey_normal as jeffrey_surprisedd
+    show jeffrey_normal as jeffrey_surprised
     j "Tunggu, kemana Remil?"
     #show serious elena as elena di kanan
     show elena_angry at enterr1
@@ -1149,13 +1149,13 @@ label b1deca2:
     show elena_surprise as elena_angry
     e "Di atas sana, Remil?"
     #show angry jeffrey as jeffrey di kiri
-    show jeffrey_angry as jeffrey_surprised
+    show jeffrey_angry1 as jeffrey_surprised
     j "Remil, cepat ke sini! Di sini kita kesulitan."
     rg  "Kaaamu siaaapa?"
     j "?"
     al "Remil! Berhenti bercanda, kita semua sedang dihadang monster!"
     # hide alios
-    hide alios_surprise
+    hide alios_surprised
     #hide elena
     hide elena_angry
     #hide jeffrey
@@ -1332,13 +1332,13 @@ label b1deca2:
     #show normal alios as alios di kiri
     show alios_normal  at enterl1
     al "Jeffrey! Merunduk!"
-    show jeffrey_surprisedd at enter
+    show jeffrey_surprised at enter
     #show suprise jeffrey as jeffrey di tengah
     j "Ap-"
     #hide alios
     hide alios_normal
     #hide jeffrey
-    hide jeffrey_surprisedd
+    hide jeffrey_surprised
     "Kepalanya terpenggal."
 
 
