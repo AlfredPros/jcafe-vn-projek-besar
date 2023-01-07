@@ -298,17 +298,13 @@ screen choice(items):
 
     vbox:
         for i in items:
-            if i.caption == "Iya, aku tidak apa-apa. Jangan hiraukan aku dan lanjutkan rencana ":
+            if len(i.caption)>=40:
                 textbutton i.caption action i.action:
                     text_size 28
                     text_ypos -5
                     ysize 100
 
-            elif i.caption == "Uh, aku hanya mual. Aku masih sanggup untuk mengikuti rencana.":
-                textbutton i.caption action i.action:
-                    text_size 28
-                    text_ypos -5
-                    ysize 100
+
             else:
                 textbutton i.caption action i.action
 
